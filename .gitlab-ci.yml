@@ -1,14 +1,13 @@
-variables:
-  GIT_STRATEGY: clone
-  GIT_DEPTH: "0"
-
 stages:
-- semver
+  - release
 
-create_release:
-  stage: semver
-  image: mooltiverse/nyx:latest
+release:
+  image: node:17-buster-slim
+  stage: release
+  before_script:
+    - apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
+    - npm install -g semantic-release @semantic-release/gitlab @semantic-release/changelog conventional-changelog-conventionalcommits @semantic-release/commit-analyzer @semantic-release/git
+  script:
+    - semantic-release
   only:
     - main
-  script:
-    - echo "test"
