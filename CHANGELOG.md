@@ -1,3 +1,17 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 1.0.0 (2024-02-08)
+
+
+### Bug Fixes
+
+* moce gamescope to home-manager package ([be954c3](https://gitlab.com/simonoscr/nixfiles/commit/be954c3bc656b26615a4751fb09e6fcaf22ad9d8))
+* README center nixos ([8277bb6](https://gitlab.com/simonoscr/nixfiles/commit/8277bb64371e75c1f3a812ffbcf66d6bd26c9c69))
+* remove docker pull from image reference in semver stage ([4619a2a](https://gitlab.com/simonoscr/nixfiles/commit/4619a2add8675315ed064fcb7e5fe4ee06f365c2))
+
 ## [1.8.12](https://github.com/simonoscr/dotfiles/compare/1.8.11...1.8.12) (2024-02-07)
 
 
@@ -1102,6 +1116,3 @@
 
 * test ([718f12c](https://github.com/simonoscr/dotfiles/commit/718f12c18253c49b60f3e4963f48708772c5f57b))
 * update nixos with more modules ([e82ced4](https://github.com/simonoscr/dotfiles/commit/e82ced4c65128b4f94382bc27b991ae001613f8e))
-
-
-
