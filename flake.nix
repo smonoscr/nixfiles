@@ -21,6 +21,12 @@
       url = github:nix-community/NUR;
     };
 
+    # firefox addons
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # nix neovim
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -71,8 +77,6 @@
     #ags = {
     #  url = "github:Aylur/ags";
     #};
-
-    #gBar.url = "github:scorpion-26/gBar";
   };
 
   outputs = {
@@ -88,6 +92,7 @@
     stylix,
     nix-gaming,
     nixvim,
+    firefox-addons,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -100,12 +105,13 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/cosmos/configuration.nix
-          {nixpkgs.overlays = [nur.overlay];}
+          #{nixpkgs.overlays = [nur.overlay];}
           # inputs.nixpkgs-wayland.overlay
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {inherit inputs;};
             home-manager.users.simon = import ./home/simon/home.nix;
           }
         ];

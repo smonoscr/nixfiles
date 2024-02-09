@@ -1,8 +1,6 @@
 {
-  config,
-  inputs,
   pkgs,
-  home-manager,
+  inputs,
   ...
 }: {
   programs.firefox = {
@@ -47,12 +45,13 @@
         name = "default";
         bookmarks = import ./bookmarks.nix;
         isDefault = true;
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
           ublock-origin
           bitwarden
           startpage-private-search
           darkreader
         ];
+        #https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1
         search = {
           force = true;
           default = "Startpage";
@@ -93,7 +92,6 @@
             };
           };
         };
-
         settings = {
           "general.smoothScroll" = true;
 
