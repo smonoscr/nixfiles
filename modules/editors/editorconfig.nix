@@ -1,8 +1,4 @@
-{
-  pkgs,
-  home-manager,
-  ...
-}: {
+{pkgs, ...}: {
   editorconfig = {
     enable = true;
     settings = {

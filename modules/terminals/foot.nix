@@ -1,8 +1,4 @@
-{
-  default,
-  config,
-  ...
-}: let
+{config, ...}: let
   colors = {
     dark = {
       foreground = "cdd6f4"; # Text
