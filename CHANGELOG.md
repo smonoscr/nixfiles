@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0](https://gitlab.com/simonoscr/nixfiles/compare/v1.0.2...v1.1.0) (2024-02-09)
+
+
+### Features
+
+* add home-manager as a module to cosmos and remove standalone-hm config ([2a61f8f](https://gitlab.com/simonoscr/nixfiles/commit/2a61f8f221d05e8de217f69bc60f8b95f7579691))
+
 ## [1.0.2](https://gitlab.com/simonoscr/nixfiles/compare/v1.0.1...v1.0.2) (2024-02-09)
 
 
