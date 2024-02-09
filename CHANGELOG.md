@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://gitlab.com/simonoscr/nixfiles/compare/v1.1.0...v1.2.0) (2024-02-09)
+
+
+### Features
+
+* **cosmos:** switch to home-manager module from standalone for cosmos host and fix some configuration problems ([0024eb1](https://gitlab.com/simonoscr/nixfiles/commit/0024eb1602fa3f763106a4d38e50e957ef8e5506))
+
 ## [1.1.0](https://gitlab.com/simonoscr/nixfiles/compare/v1.0.2...v1.1.0) (2024-02-09)
 
 
