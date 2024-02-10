@@ -28,6 +28,8 @@ sudo nixos-rebuild boot --flake .#host
 
 ### Home-Manager
 
+(only when using standalone hm)
+
 ```shell
 home-manager switch --flake .#user@host
 ```
@@ -76,4 +78,11 @@ services.nginx.enable = true;
 
 ```nix
 programs.git.enable = true;
+```
+
+
+## TestVM
+
+```shell
+nixos-rebuild buil-vm --flake .#host
 ```
