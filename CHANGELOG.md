@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://gitlab.com/simonoscr/nixfiles/compare/v1.2.1...v1.3.0) (2024-02-11)
+
+
+### Features
+
+* switch kernel to linux_latest (6.7); use mesa-git (24.0); remove unused programs; cleanup code; add corectrl as program, activate OC for AMD GPU ([e7975cf](https://gitlab.com/simonoscr/nixfiles/commit/e7975cfba16a9fb2b40ee7528d2d198e71c87b00))
+
 ## [1.2.1](https://gitlab.com/simonoscr/nixfiles/compare/v1.2.0...v1.2.1) (2024-02-10)
 
 
