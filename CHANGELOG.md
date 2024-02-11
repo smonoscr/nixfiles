@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://gitlab.com/simonoscr/nixfiles/compare/v1.3.0...v1.3.1) (2024-02-11)
+
+
+### Bug Fixes
+
+* small fixes to gaming related things; remove mimeApps; remove unused inputs ([27cfb73](https://gitlab.com/simonoscr/nixfiles/commit/27cfb735fa236f95c29aec6a71db17caa1c13525))
+
 ## [1.3.0](https://gitlab.com/simonoscr/nixfiles/compare/v1.2.1...v1.3.0) (2024-02-11)
 
 
