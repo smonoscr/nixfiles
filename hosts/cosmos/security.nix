@@ -3,7 +3,7 @@
   security.pam.services.swaylock = {};
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
-
+  security.sudo.wheelNeedsPassword = false;
 
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {

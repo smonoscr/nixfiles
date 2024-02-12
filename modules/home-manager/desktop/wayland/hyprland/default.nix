@@ -21,12 +21,6 @@
 
   fonts.fontconfig.enable = true;
 
-  # FIXME  https://www.reddit.com/r/NixOS/comments/1ajhwxv/hyprland_homemanager_does_not_inherit/
-  systemd.user.sessionVariables = {
-    "NIXOS_OZONE_WL" = "1";
-    "MOZ_ENABLE_WAYLAND" = "1";
-    "MOZ_WEBRENDER" = "1";
-  };
   home.file.".config/wayland-sessions/hyprland.desktop".text = ''
     [Desktop Entry]
     Name=Hyprland

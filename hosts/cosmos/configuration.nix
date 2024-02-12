@@ -45,7 +45,7 @@
       "vm.swappiness" = 20;
     };
     kernelParams = [
-      "amd_pstate=passive"
+      "amd_pstate=active"
     ];
   };
 
