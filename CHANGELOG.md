@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://gitlab.com/simonoscr/nixfiles/compare/v1.3.1...v1.3.2) (2024-02-12)
+
+
+### Bug Fixes
+
+* small fixes in audio like removed unused pkgs; ([421c503](https://gitlab.com/simonoscr/nixfiles/commit/421c503ecf8b93b56ef73cc1df9d912971ad4c56))
+
 ## [1.3.1](https://gitlab.com/simonoscr/nixfiles/compare/v1.3.0...v1.3.1) (2024-02-11)
 
 
