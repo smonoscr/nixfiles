@@ -41,6 +41,5 @@
     pulsemixer
     easyeffects
     pamixer
-    pulseaudio
   ];
 }
