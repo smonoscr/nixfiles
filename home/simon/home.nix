@@ -25,6 +25,9 @@
     "zathura.nix"
     "shell/zsh.nix"
     "sops.nix"
+    "shell/bat.nix"
+    "direnv.nix"
+    "yazi/yazi.nix"
     # "stylix.nix"
   ];
 in {

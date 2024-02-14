@@ -8,7 +8,7 @@
   imports = [inputs.nix-gaming.nixosModules.pipewireLowLatency];
 
   sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  hardware.pulseaudio.enable = lib.mkForce false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

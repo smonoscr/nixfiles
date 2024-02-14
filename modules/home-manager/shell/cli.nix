@@ -10,4 +10,9 @@
     yazi
     joshuto
   ];
+
+  programs.dircolors = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 }

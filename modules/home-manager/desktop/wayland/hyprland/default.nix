@@ -12,12 +12,30 @@
     #./plugins.nix
   ];
 
+  home = {
+    packages = with pkgs; [
+      seatd
+      xwaylandvideobridge
+    ];
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    systemd.enable = true;
+    systemd = {
+      enable = true;
+      variables = ["--all"];
+      extraCommands = [
+        "systemctl --user stop graphical-session.target"
+        "systemctl --user start hyprland-session.target"
+      ];
+    };
   };
+
+  # start swayidle as part of hyprland, not sway
+  systemd.user.services.swayidle.Install.WantedBy =
+    lib.mkForce ["hyprland-session.target"];
 
   fonts.fontconfig.enable = true;
 
