@@ -8,8 +8,8 @@
     sessionVariables = {
       AMD_VULKAN_ICD = "RADV";
       #NIXOS_OZONE_WL = "1";	# break vscodium on wayland
-      MOZ_ENABLE_WAYLAND = "1";
-      MOZ_WEBRENDER = "1";
+      #MOZ_ENABLE_WAYLAND = "1";
+      #MOZ_WEBRENDER = "1";
     };
   };
 
