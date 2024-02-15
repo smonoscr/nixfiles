@@ -1,10 +1,10 @@
 [
   {
+    name = "Bookmarks Folder";
     toolbar = true;
     bookmarks = [
       {
         name = "News";
-        toolbar = true;
         bookmarks = [
           {
             name = "Zeit";
@@ -22,7 +22,6 @@
       }
       {
         name = "Tech";
-        toolbar = true;
         bookmarks = [
           {
             name = "MeinMMO";
@@ -49,7 +48,7 @@
             url = "https://blurbusters.com";
           }
           {
-            name = "HabeIBeenPwned";
+            name = "HaveIBeenPwned";
             url = "https://haveibeenpwned.com";
           }
           {
@@ -60,7 +59,6 @@
       }
       {
         name = "Streaming";
-        toolbar = true;
         bookmarks = [
           {
             name = "Prime Video";
@@ -106,7 +104,6 @@
       }
       {
         name = "Proton";
-        toolbar = true;
         bookmarks = [
           {
             name = "Proton Calendar";
@@ -128,7 +125,6 @@
       }
       {
         name = "Banking";
-        toolbar = true;
         bookmarks = [
           {
             name = "ING DiBa";
@@ -146,7 +142,6 @@
       }
       {
         name = "Server";
-        toolbar = true;
         bookmarks = [
           {
             name = "Grafana";
@@ -172,7 +167,6 @@
       }
       {
         name = "Games";
-        toolbar = true;
         bookmarks = [
           {
             name = "Star Citizen";
@@ -279,7 +273,6 @@
       }
       {
         name = "Nix/OS";
-        toolbar = true;
         bookmarks = [
           {
             name = "Manual";
