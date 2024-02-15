@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    inputs.hyprland.homeManagerModules.default
     ./config.nix
     ../swayidle.nix
     ../swaylock.nix

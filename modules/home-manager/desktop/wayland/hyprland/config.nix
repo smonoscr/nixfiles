@@ -21,24 +21,6 @@
     xwayland.enable = true;
 
     settings = {
-      env = ''
-
-        GDK_BACKEND,wayland,x11
-        QT_QPA_PLATFORM,wayland;xcb
-        SDL_VIDEO_DRIVER,wayland
-        SDL_VIDEODRIVER,wayland
-        CLUTTER_BACKEND,wayland
-
-        XDG_CURRENT_DESKTOP,Hyprland
-        XDG_SESSION_TYPE,wayland
-        XDG_SESSION_DESKTOP,Hyprland
-
-        WLR_NO_HARDWARE_CURSORS,1
-        WLR_DRM_NO_ATOMIC,1
-
-        OZONE_PLATFORM,wayland
-      '';
-
       exec-once = [
         #"ags -b hypr"
         "waybar"
@@ -197,5 +179,19 @@
         "SUPER, mouse:272, movewindow"
       ];
     };
+    extraConfig = ''
+      env = GDK_BACKEND,wayland,x11
+      env = QT_QPA_PLATFORM,wayland;xcb
+      env = SDL_VIDEO_DRIVER,wayland
+      env = SDL_VIDEODRIVER,wayland
+      env = CLUTTER_BACKEND,wayland
+      env = XDG_CURRENT_DESKTOP,Hyprland
+      env = XDG_SESSION_TYPE,wayland
+      env = XDG_SESSION_DESKTOP,Hyprland
+      env = WLR_NO_HARDWARE_CURSORS,1
+      env = WLR_DRM_NO_ATOMIC,1
+      env = OZONE_PLATFORM,wayland
+      env = QT_AUTO_SCREEN_SCALE_FACTOR,1
+    '';
   };
 }
