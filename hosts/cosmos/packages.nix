@@ -12,12 +12,6 @@
     lm_sensors
     radeon-profile
     lact
-    # Hyprland
-    wlogout
-    wl-clipboard
-    hyprpicker
-    grim
-    slurp
     # i3
     rofi
     i3blocks
