@@ -78,6 +78,7 @@
           "networkmanager"
           "audio"
           "video"
+          "gamemode"
         ];
       };
     };

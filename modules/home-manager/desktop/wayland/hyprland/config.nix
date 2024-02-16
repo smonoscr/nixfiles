@@ -1,20 +1,17 @@
 {
   config,
   default,
+  pkgs,
   ...
 }: {
-  home = {
-    sessionVariables = {
-      GDK_BACKEND = "wayland,x11";
-      QT_QPA_PLATFORM = "wayland;xcb";
-      SDL_VIDEO_DRIVER = "wayland";
-      SDL_VIDEODRIVER = "wayland"; # deprecated?
-      CLUTTER_BACKEND = "wayland";
-      XDG_CURRENT_DESKTOP = "Hyprland";
-      XDG_SESSION_TYPE = "wayland";
-      XDG_SESSION_DESKTOP = "Hyprland";
-    };
-  };
+  home.packages = with pkgs; [
+    hyprshot
+    wlogout
+    wl-clipboard
+    hyprpicker
+    grim
+    slurp
+  ];
 
   wayland.windowManager.hyprland = {
     systemd.enable = true;
@@ -98,6 +95,8 @@
         workspace_swipe = "off";
       };
 
+      xwayland.force_zero_scaling = true;
+
       windowrule = let
         f = regex: "float, .*(${regex}).*";
       in [
@@ -110,11 +109,11 @@
         (f "btop")
         "immediate, class:(.gamescope-wrapped)"
         "immediate, title:(Counter-Strike 2)"
-        "nomaximizerequest, class:.*"
       ];
       windowrulev2 = [
         "stayfocused, title:^()$, class:^(steam)$"
         "minsize 1 1, title:^()$, class:^(steam)$"
+        "suppressevent maximize, class:.*"
       ];
 
       bind = let
@@ -130,8 +129,11 @@
         [
           #"ALT, Space,     ${e} -t applauncher" # this is for AGS
           #"SUPER, Tab,     ${e} -t overview"
-          #",Print,         ${e} -r 'recorder.screenshot()'"
+          #"Print,         ${e} -r 'recorder.screenshot()'"
           #"SHIFT,Print,    ${e} -r 'recorder.screenshot(true)'"
+          ",Print,exec,hyprshot -m region -o ~/Pictures/Screenshots -- imv"
+          "CTRL,Print,exec,hyprshot -m output -o ~/Pictures/Screenshots -- imv"
+          "SUPER,Print,exec,hyprshot -m window -o ~/Pictures/Screenshots -- imv"
           "ALT, Space, exec, wofi --show drun"
           "SUPER, W, exec, firefox"
           "SUPER, T, exec, kitty"
@@ -182,8 +184,6 @@
     extraConfig = ''
       env = GDK_BACKEND,wayland,x11
       env = QT_QPA_PLATFORM,wayland;xcb
-      env = SDL_VIDEO_DRIVER,wayland
-      env = SDL_VIDEODRIVER,wayland
       env = CLUTTER_BACKEND,wayland
       env = XDG_CURRENT_DESKTOP,Hyprland
       env = XDG_SESSION_TYPE,wayland
@@ -191,7 +191,6 @@
       env = WLR_NO_HARDWARE_CURSORS,1
       env = WLR_DRM_NO_ATOMIC,1
       env = OZONE_PLATFORM,wayland
-      env = QT_AUTO_SCREEN_SCALE_FACTOR,1
     '';
   };
 }
