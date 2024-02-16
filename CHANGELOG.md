@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.6](https://gitlab.com/simonoscr/nixfiles/compare/v1.4.5...v1.4.6) (2024-02-16)
+
+
+### Bug Fixes
+
+* gamemode CAPs; hyprland config window rules ([0398306](https://gitlab.com/simonoscr/nixfiles/commit/0398306bec3d002df254c16d5474cb65dab54952))
+
 ## [1.4.5](https://gitlab.com/simonoscr/nixfiles/compare/v1.4.4...v1.4.5) (2024-02-16)
 
 
