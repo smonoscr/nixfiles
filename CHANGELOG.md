@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.7](https://gitlab.com/simonoscr/nixfiles/compare/v1.4.6...v1.4.7) (2024-02-16)
+
+
+### Bug Fixes
+
+* keep website settings in firefox ([24cc88c](https://gitlab.com/simonoscr/nixfiles/commit/24cc88c08b836ec52bcda78e9207994ba3c63c26))
+
 ## [1.4.6](https://gitlab.com/simonoscr/nixfiles/compare/v1.4.5...v1.4.6) (2024-02-16)
 
 
