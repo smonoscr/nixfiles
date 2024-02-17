@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.9](https://gitlab.com/simonoscr/nixfiles/compare/v1.4.8...v1.4.9) (2024-02-17)
+
+
+### Bug Fixes
+
+* ref graphics to hardware.nix; add udiskie for auto mount sb sticks; set sysctl settings like increase zram swap; max_m ap_count and page-cluster ([251bf9e](https://gitlab.com/simonoscr/nixfiles/commit/251bf9e25e5821a4a9c8cc7a67d35c728898cdc5))
+
 ## [1.4.8](https://gitlab.com/simonoscr/nixfiles/compare/v1.4.7...v1.4.8) (2024-02-17)
 
 
