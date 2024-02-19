@@ -40,3 +40,25 @@ hyprctl keyword monitor "DP-1,2560x1440@165,0x0,1"
 MESA_VK_WSI_PRESENT_MODE=immediate MANGOHUD=1 gamescope -w 1920 -h 1080 -W 3440 -H 1440 -r 165 -f -e --immediate-flips -F fsr -- gamemoderun %command% -vulkan -nojoy
 
 MESA_VK_WSI_PRESENT_MODE=immediate gamescope -w 1920 -h 1080 -W 3440 -H 1440 -r 165 -f -e --immediate-flips -F fsr -- gamemoderun %command% -vulkan -nojoy
+
+## NETEM
+
+### no delay
+```shell
+tc qdisc del dev enp14s0 root netem
+```
+
+### add delay
+```shell
+tc qdisc add dev enp14s0 root netem
+```
+
+### increase delay
+```shell
+tc qdisc change dev enp14s0 root netem delay 20ms
+```
+
+### add delay + jitter
+```shell
+tc qdisc add dev br0 root netem delay 10ms 20ms
+```

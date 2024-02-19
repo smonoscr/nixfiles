@@ -6,7 +6,7 @@
   imports = [inputs.stylix.homeManagerModules.stylix];
 
   stylix = {
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/brewer.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/spacemacs.yaml";
     autoEnable = false;
     cursor = {
       package = pkgs.capitaine-cursors;
@@ -42,13 +42,15 @@
     };
     polarity = "dark";
     targets = {
+      alacritty.enable = true;
       bat.enable = true;
+      dunst.enable = true;
       firefox.enable = true;
       foot.enable = true;
       gtk.enable = true;
       helix.enable = true;
       hyprland.enable = false; # needs image set
-      i3.enable = false; # needs image set
+      i3.enable = true;
       kde.enable = false; # needs image set
       kitty.enable = true;
       kitty.variant256Colors = true;

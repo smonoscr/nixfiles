@@ -11,11 +11,11 @@
         padding = 10;
         horizontal_padding = 10;
         frame_width = 0;
-        frame_color = "#232323";
-        separator_color = "frame";
+        #frame_color = "#232323";
+        #separator_color = "frame";
         sort = "yes";
         idle_threshold = 120;
-        font = "Roboto";
+        #font = "Roboto";
         line_height = 0;
         markup = "full";
         format = "<span><b>%s %p</b></span>\n%b";
@@ -41,20 +41,20 @@
       };
 
       urgency_low = {
-        background = "#3a3a3a";
-        foreground = "#f5f5f5";
+        #background = "#3a3a3a";
+        #foreground = "#f5f5f5";
         timeout = 2;
       };
 
       urgency_normal = {
-        background = "#3a3a3a";
-        foreground = "#f5f5f5";
+        #background = "#3a3a3a";
+        #foreground = "#f5f5f5";
         timeout = 2;
       };
 
       urgency_critical = {
-        background = "#3a3a3a";
-        foreground = "#f5f5f5";
+        #background = "#3a3a3a";
+        #foreground = "#f5f5f5";
         timeout = 2;
       };
     };

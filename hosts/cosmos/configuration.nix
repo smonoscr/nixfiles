@@ -39,9 +39,9 @@
       };
       efi.canTouchEfiVariables = true;
     };
-    kernelPackages = pkgs.linuxPackages_latest; # pkgs.linuxPackages_xanmod_latest, pkgs.linuxPackages_zen, pkgs.linuxPackages_lqx
+    kernelPackages = pkgs.linuxPackages_xanmod_latest; # pkgs.linuxPackages_xanmod_latest, pkgs.linuxPackages_zen, pkgs.linuxPackages_lqx
     kernel.sysctl = {
-      "vm.swappiness" = 100; # because of ZRAM swap more aggresivly
+      "vm.swappiness" = 20; # because of ZRAM swap more aggresivly
       # zram is in memory, no need to readahead
       # page-cluster refers to the number of pages up to which
       # consecutive pages are read in from swap in a single attempt
