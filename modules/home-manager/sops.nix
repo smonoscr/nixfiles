@@ -11,7 +11,7 @@ in {
 
   sops = {
     validateSopsFiles = false;
-    defaultSopsFile = "${userhome}/nixfiles/home/simon/secrets.yaml";
+    defaultSopsFile = "${userhome}/nixsecrets/secrets/simon/secrets.yaml";
     age.keyFile = "${config.xdg.configHome}/sops/age/keys.txt";
     secrets = {
       c3NoLXB1Yi1rZXk = {
