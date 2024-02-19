@@ -4,6 +4,14 @@
   security = {
     sudo.wheelNeedsPassword = false;
     pam.services.greetd.enableGnomeKeyring = true;
+    pam.loginLimits = [
+      {
+        domain = "@users";
+        item = "rtprio";
+        type = "-";
+        value = 1;
+      }
+    ];
     polkit.enable = true;
     # userland niceness
     rtkit.enable = true;
