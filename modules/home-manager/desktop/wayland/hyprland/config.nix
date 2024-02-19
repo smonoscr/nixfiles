@@ -17,6 +17,7 @@
         "corectrl"
         "hyprctl setcursor capitaine-cursors 26"
         "udiskie &" # automatically mount usb
+        "solaar --window=hide"
       ];
 
       monitor = [

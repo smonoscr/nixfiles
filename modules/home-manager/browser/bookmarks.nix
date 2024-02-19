@@ -319,6 +319,10 @@
             name = "Noogle";
             url = "https://noogle.dev";
           }
+          {
+            name = "nixpkgs PR-Tracker";
+            url = "https://nixpk.gs/pr-tracker.html";
+          }
         ];
       }
       {

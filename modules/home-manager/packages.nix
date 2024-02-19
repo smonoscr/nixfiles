@@ -3,5 +3,6 @@
     webcord-vencord
     element-desktop
     spotify
+    solaar
   ];
 }
