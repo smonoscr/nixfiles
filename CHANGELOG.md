@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://gitlab.com/simonoscr/nixfiles/compare/v1.4.11...v1.5.0) (2024-02-21)
+
+
+### Features
+
+* update flock; disable nixpkgs-wayland flake input; docs; i3 configuration; polybar ([72b20ec](https://gitlab.com/simonoscr/nixfiles/commit/72b20ec0369e9945af47b02a917840371bd09c60))
+
 ## [1.4.11](https://gitlab.com/simonoscr/nixfiles/compare/v1.4.10...v1.4.11) (2024-02-19)
 
 
