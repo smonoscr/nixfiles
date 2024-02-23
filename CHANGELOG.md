@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.6](https://gitlab.com/simonoscr/nixfiles/compare/v1.5.5...v1.5.6) (2024-02-23)
+
+
+### Bug Fixes
+
+* open steam and webcord always on workspace 2 ([c05765c](https://gitlab.com/simonoscr/nixfiles/commit/c05765cff20209ff4513112d8aeb039745b152c1))
+
 ## [1.5.5](https://gitlab.com/simonoscr/nixfiles/compare/v1.5.4...v1.5.5) (2024-02-23)
 
 
