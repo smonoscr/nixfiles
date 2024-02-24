@@ -39,14 +39,27 @@
       };
       efi.canTouchEfiVariables = true;
     };
-    kernelPackages = pkgs.linuxPackages_latest; # pkgs.linuxPackages_xanmod_latest, pkgs.linuxPackages_zen, pkgs.linuxPackages_lqx, linuxPackages_latest
+    kernelPackages = pkgs.linuxPackages_xanmod_latest; # pkgs.linuxPackages_xanmod_latest, pkgs.linuxPackages_zen, pkgs.linuxPackages_lqx, linuxPackages_latest
     kernel.sysctl = {
+      # Avoid swapping (locking pages that introduces latency and uses disk IO) unless the system has no more free memory
       "vm.swappiness" = 20; # because of ZRAM swap more aggresivly
       # zram is in memory, no need to readahead
       # page-cluster refers to the number of pages up to which
       # consecutive pages are read in from swap in a single attempt
       "vm.page-cluster" = 0;
       "vm.max_map_count" = 16777216; # increasing is good for gaming
+      # If you have enough free RAM increase the watermark scale factor to further reduce the likelihood of allocation stalls (explanations [7][8]). Setting watermark distances to 5% of RAM:
+      "vm.watermark_scale_factor" = 500;
+      # Proactive compaction for (Transparent) Hugepage allocation reduces the average but not necessarily the maximum allocation stalls. Disable proactive compaction because it introduces jitter according to kernel documentation (inner workings):
+      "vm.compaction_proactiveness" = 0;
+      # If you have enough free RAM increase the number of minimum free Kilobytes to avoid stalls on memory allocations: [5][6]. Do not set this below 1024 KB or above 5% of your systems memory. Reserving 1GB:
+      "vm.min_free_kbytes" = 1048576;
+      # Disable zone reclaim (locking and moving memory pages that introduces latency spikes)
+      "vm.zone_reclaim_mode" = 0;
+      # Reduce the watermark boost factor to defragment only one pageblock (2MB on 64-bit x86) in case of memory fragmentation. After a memory fragmentation event this helps to better keep the application data in the last level processor cache.
+      "vm.watermark_boost_factor" = 1;
+      # Reduce the maximum page lock acquisition latency while retaining adequate throughput [13][14][15]:
+      "vm.page_lock_unfairness" = 1;
     };
     kernelParams = [
       "amd_pstate=active"

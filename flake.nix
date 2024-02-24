@@ -52,10 +52,16 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprland-portal.url = "github:hyprwm/xdg-desktop-portal-hyprland";
 
     # nyx
     chaotic = {
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    };
+
+    mesa-git = {
+      url = "git+https://gitlab.freedesktop.org/mesa/mesa?ref=24.0";
+      flake = false;
     };
 
     # stylix

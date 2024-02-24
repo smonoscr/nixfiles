@@ -7,7 +7,7 @@
   imports = [inputs.chaotic.nixosModules.default];
 
   environment = {
-    sessionVariables = {
+    variables = {
       AMD_VULKAN_ICD = "RADV";
     };
   };
@@ -15,6 +15,20 @@
   chaotic = {
     mesa-git = {
       enable = true;
+    };
+  };
+
+  environment.etc = {
+    "drirc/00-low-latency.conf" = {
+      text = ''
+        <driconf>
+           <device>
+               <application name="Default">
+                   <option name="vblank_mode" value="0" />
+               </application>
+           </device>
+        </driconf>
+      '';
     };
   };
 
