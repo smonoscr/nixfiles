@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://gitlab.com/simonoscr/nixfiles/compare/v1.6.0...v1.6.1) (2024-02-28)
+
+
+### Bug Fixes
+
+* update and fix pipewire configuration. environment.etc not possible anymore. ([513f635](https://gitlab.com/simonoscr/nixfiles/commit/513f635d6cafdefc43627bbadb8d89875d9300b1))
+
 ## [1.6.0](https://gitlab.com/simonoscr/nixfiles/compare/v1.5.7...v1.6.0) (2024-02-25)
 
 
