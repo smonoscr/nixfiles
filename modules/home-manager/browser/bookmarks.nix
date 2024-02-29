@@ -330,6 +330,15 @@
         ];
       }
       {
+        name = "DevOps";
+        bookmarks = [
+          {
+            name = "LF Training";
+            url = "https://trainingportal.linuxfoundation.org";
+          }
+        ];
+      }
+      {
         name = "Nix Search";
         url = "https://search.nixos.org";
       }
