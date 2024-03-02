@@ -9,17 +9,17 @@
     general = {
       disable_loading_bar = false;
       hide_cursor = true;
-      grace = 2;
+      grace = 3;
       no_fade_in = false;
     };
 
     backgrounds = [
       {
         path = "";
-        color = "rgba(0, 0, 0, 0.5)";
+        color = "rgba(20, 20, 20, 1)";
 
         # Blur
-        blur_passes = 3; # 0 disables blurring
+        blur_passes = 0; # 0 disables blurring
         blur_size = 10;
         noise = 0.0117;
         contrast = 0.8916;
@@ -78,7 +78,7 @@
         valign = "top";
       }
       {
-        text = "Hi there, <i>$USER</i>!";
+        text = "Henlo, <i>$USER</i>!";
         color = "rgb(255, 255, 255)";
         font_size = 32;
         position = {

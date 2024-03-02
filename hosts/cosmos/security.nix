@@ -16,7 +16,7 @@
     # userland niceness
     rtkit.enable = true;
     # allow wayland lockers to unlock the screen
-    pam.services.swaylock.text = "auth include login";
+    #pam.services.swaylock.text = "auth include login";   # switched to hyprlock
     # allow wayland lockers to unlock the screen
     pam.services.hyprlock.text = "auth include login";
   };
