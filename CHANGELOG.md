@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://gitlab.com/simonoscr/nixfiles/compare/v2.0.0...v2.0.1) (2024-03-02)
+
+
+### Bug Fixes
+
+* **finally:** capitaine cursor; wrong size was set ([b8f6a1d](https://gitlab.com/simonoscr/nixfiles/commit/b8f6a1d2f8fce22658562c46dee7c333e9a051de))
+
 ## [2.0.0](https://gitlab.com/simonoscr/nixfiles/compare/v1.6.9...v2.0.0) (2024-03-02)
 
 
