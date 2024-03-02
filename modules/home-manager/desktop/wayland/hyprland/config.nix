@@ -152,6 +152,7 @@
           "SUPER, P, pseudo"
           "SUPER, C, exec, codium"
           "SUPER, D, exec, webcord"
+          "SUPER, L, exec, hyprlock"
           "SUPER, Next, exec, hyprctl keyword monitor 'DP-1,2560x1440@165,auto,1'; hyprctl --batch keyword 'animations:enabled 0'; corectrl -m 'gaming'"
           "SUPER, Prior, exec, hyprctl keyword monitor 'DP-1,3440x1440@165,auto,1'; hyprctl --batch 'keyword animations:enabled 1'; corectrl -m 'gaming'"
 
