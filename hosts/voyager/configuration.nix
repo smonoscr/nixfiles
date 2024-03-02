@@ -17,7 +17,7 @@
     ./packages.nix
     ./services.nix
     ./virtualisation.nix
-    #./k3s.nix
+    ./k3s.nix
     ./ssh.nix
     ./security.nix
     ./users.nix
@@ -29,6 +29,7 @@
     ./dashy.nix
     ./cockpit.nix
     ./pihole.nix
+    #./kubernetes.nix
   ];
 
   ## systemd-boot

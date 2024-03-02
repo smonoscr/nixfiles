@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
-    ../../modules/shell/starship.nix
-    ../../modules/shell/zsh.nix
+    ../../modules/home-manager/shell/starship.nix
+    ../../modules/home-manager/shell/zsh.nix
   ];
 
   programs.home-manager.enable = true;

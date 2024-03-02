@@ -114,8 +114,8 @@
         "workspace 2 silent,^(Steam)|(steam)$"
       ];
       windowrulev2 = [
-        "stayfocused, title:^()$, class:^(steam)$"
-        "minsize 1 1, title:^()$, class:^(steam)$"
+        #"stayfocused, title:^()$, class:^(steam)$"
+        #"minsize 1 1, title:^()$, class:^(steam)$"
         "suppressevent maximize, class:.*"
         "noinitialfocus, title:(^notificationtoasts.*)"
       ];
@@ -138,7 +138,7 @@
           ",Print,exec,hyprshot -m region -o ~/Pictures/Screenshots -- imv"
           "CTRL,Print,exec,hyprshot -m output -o ~/Pictures/Screenshots -- imv"
           "SUPER,Print,exec,hyprshot -m window -o ~/Pictures/Screenshots -- imv"
-          #"ALT, Space, exec, wofi --show drun" # when using waybar 
+          #"ALT, Space, exec, wofi --show drun" # when using waybar
           "SUPER, W, exec, firefox"
           "SUPER, T, exec, kitty"
           "SUPER, E, exec, thunar"
