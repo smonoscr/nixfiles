@@ -25,6 +25,12 @@ in {
           "sntrup761x25519-sha512@openssh.com"
         ];
       };
+      #knownHosts = {
+      #  gitlab = {
+      #    hostNames = ["gitlab.com"];
+      #    publicKey = "ssh-ed25519 XXXXXXXXXXXXxxx";
+      #  };
+      #};
       extraConfig = ''
         StreamLocalBindUnlink yes
         AllowTcpForwarding yes
