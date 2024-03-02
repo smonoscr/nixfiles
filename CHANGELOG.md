@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.4](https://gitlab.com/simonoscr/nixfiles/compare/v1.6.3...v1.6.4) (2024-03-02)
+
+
+### Bug Fixes
+
+* update voyager and flock ([3f95ddb](https://gitlab.com/simonoscr/nixfiles/commit/3f95ddb755d558da56a812b300a0c79256a67d0e))
+
 ## [1.6.3](https://gitlab.com/simonoscr/nixfiles/compare/v1.6.2...v1.6.3) (2024-02-29)
 
 
