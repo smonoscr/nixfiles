@@ -86,3 +86,29 @@ programs.git.enable = true;
 ```shell
 nixos-rebuild buil-vm --flake .#host
 ```
+
+
+
+
+I would use modules config like (untested):
+
+{ config, lib, pkgs, ...}:
+{
+  options = {
+    myamd = { enable = lib.mkEnableOption "Enable my AMD GPU"; };
+  },
+  config = lib.mkIf cfg.myamd.enable {
+    boot.initrd.kernelModules = [ "amdgpu" ];
+    services.xserver.videoDrivers = [ "amdgpu" ];
+    hardware.opengl = {
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+  },
+}
+
+then later you can do:
+
+{myamd.enable = true;}
+
+and it will turn that stuff on if it was included somewhere in your modules.
