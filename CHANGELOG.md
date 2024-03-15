@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.0...v2.1.1) (2024-03-15)
+
+
+### Bug Fixes
+
+* steam extraCompatPackages see https://github.com/fufexan/nix-gaming/issues/163 ([f721f2a](https://gitlab.com/simonoscr/nixfiles/commit/f721f2afa5d990ab43746d32ace97c1287eeee93))
+
 ## [2.1.0](https://gitlab.com/simonoscr/nixfiles/compare/v2.0.2...v2.1.0) (2024-03-05)
 
 
