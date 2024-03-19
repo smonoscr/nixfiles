@@ -107,17 +107,28 @@
         (f "TeamSpeak")
         (f "btop")
         (f "Picture-in-Picture")
-        "immediate, class:^(.gamescope-wrapped)$"
-        "immediate, title:^(Counter-Strike 2)$"
-        "immediate, class:^(cs2)$"
         "workspace 2 silent,^(WebCord)$"
         "workspace 2 silent,^(Steam)|(steam)$"
       ];
       windowrulev2 = [
-        #"stayfocused, title:^()$, class:^(steam)$"
-        #"minsize 1 1, title:^()$, class:^(steam)$"
-        "suppressevent maximize, class:.*"
-        "noinitialfocus, title:(^notificationtoasts.*)"
+        #"stayfocused,title:^()$,class:^(steam)$"
+        #"minsize 1 1,title:^()$,class:^(steam)$"
+        "suppressevent maximize,class:.*"
+        "noinitialfocus,title:(^notificationtoasts.*)"
+        "immediate, class:^(cs2)$"
+        "immediate, class:^(gamescope|steam_app).*"
+        "immediate, fullscreen:1"
+
+        # xwaylandvideobridge
+        "opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$"
+        "noanim,class:^(xwaylandvideobridge)$"
+        "noinitialfocus,class:^(xwaylandvideobridge)$"
+        "maxsize 1 1,class:^(xwaylandvideobridge)$"
+        "noblur,class:^(xwaylandvideobridge)$"
+
+        # make Firefox PiP window floating and sticky
+        "float, title:^(Picture-in-Picture)$"
+        "pin, title:^(Picture-in-Picture)$"
       ];
 
       bind = let
@@ -198,7 +209,6 @@
       env = XDG_CURRENT_DESKTOP,Hyprland
       env = XDG_SESSION_TYPE,wayland
       env = XDG_SESSION_DESKTOP,Hyprland
-      env = WLR_DRM_NO_ATOMIC,1
       env = OZONE_PLATFORM,wayland
     '';
   };
