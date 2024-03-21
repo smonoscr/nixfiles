@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.4](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.3...v2.1.4) (2024-03-21)
+
+
+### Bug Fixes
+
+* make tearing under hyprland work (ags bar was the problem) ([9a440a7](https://gitlab.com/simonoscr/nixfiles/commit/9a440a74a870fbddb3e29c18405184be04d6aff4))
+
+
+### Reverts
+
+* switch to xanmod 6.7.9 instead of latest 6.8.1; remove useless extraLibraries from steam; enable lowLatency pipewire; enable tearing in hyprland ([ca89e62](https://gitlab.com/simonoscr/nixfiles/commit/ca89e62eac893eb7e0f4ceb857aff2b430e92af4))
+
 ## [2.1.3](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.2...v2.1.3) (2024-03-19)
 
 
