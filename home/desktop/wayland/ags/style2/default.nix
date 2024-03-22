@@ -4,9 +4,10 @@
 , stdenv
 , cage
 , swww
-, bun
+, esbuild
 , dart-sass
 , fd
+, fzf
 , brightnessctl
 , accountsservice
 , slurp
@@ -31,6 +32,7 @@ let
     which
     dart-sass
     fd
+    fzf
     brightnessctl
     swww
     inputs.matugen.packages.${system}.default
@@ -63,15 +65,19 @@ let
     src = ./.;
 
     buildPhase = ''
-      ${bun}/bin/bun build ./main.ts \
-        --outfile main.js \
-        --external "resource://*" \
-        --external "gi://*"
+      ${esbuild}/bin/esbuild \
+        --bundle ./main.ts \
+        --outfile=main.js \
+        --format=esm \
+        --external:resource://\* \
+        --external:gi://\* \
 
-      ${bun}/bin/bun build ./greeter/greeter.ts \
-        --outfile greeter.js \
-        --external "resource://*" \
-        --external "gi://*"
+      ${esbuild}/bin/esbuild \
+        --bundle ./greeter/greeter.ts \
+        --outfile=greeter.js \
+        --format=esm \
+        --external:resource://\* \
+        --external:gi://\* \
     '';
 
     installPhase = ''

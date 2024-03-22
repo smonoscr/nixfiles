@@ -72,9 +72,14 @@
       # data in the sender’s initial TCP SYN. Setting 3 = enable TCP Fast Open for
       # both incoming and outgoing connections:
       "net.ipv4.tcp_fastopen" = 3;
+      "net.core.wmem_max" = 1073741824;
+      "net.core.rmem_max" = 1073741824;
+      "net.ipv4.tcp_wmem" = "4096 87380 1073741824";
+      "net.ipv4.tcp_rmem" = "4096 87380 1073741824";
     };
     kernelParams = [
       "amd_pstate=active"
+      "nohibernate"
     ];
   };
 
