@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.8](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.7...v2.1.8) (2024-03-23)
+
+
+### Bug Fixes
+
+* ags applauncher to launcher; wine waylandFull; cachix for nix-gaming; star-citizen from nix-gaming ([a8a5b91](https://gitlab.com/simonoscr/nixfiles/commit/a8a5b916a49cf627801fbfa64828444c1bfbfb94))
+
 ## [2.1.7](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.6...v2.1.7) (2024-03-22)
 
 
