@@ -52,9 +52,6 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-    hyprland-portal = {
-      url = "github:hyprwm/xdg-desktop-portal-hyprland";
-    };
     hypridle = {
       url = "github:hyprwm/hypridle";
     };
@@ -65,11 +62,6 @@
     # nyx
     chaotic = {
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    };
-
-    # stylix
-    stylix = {
-      url = "github:danth/stylix";
     };
 
     nix-gaming = {
@@ -98,7 +90,6 @@
     hyprlock,
     nur,
     chaotic,
-    stylix,
     nix-gaming,
     nixvim,
     firefox-addons,
