@@ -80,6 +80,8 @@
     kernelParams = [
       "amd_pstate=active"
       "nohibernate"
+      "nowatchdog"
+      "modprobe.blacklist=sp5100_tco"
     ];
   };
 
