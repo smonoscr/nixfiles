@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.11](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.10...v2.1.11) (2024-03-28)
+
+
+### Bug Fixes
+
+* update sysctl configuration ([284a076](https://gitlab.com/simonoscr/nixfiles/commit/284a07638df430273d53691fa08aed6f4e1f48fe))
+
 ## [2.1.10](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.9...v2.1.10) (2024-03-28)
 
 
