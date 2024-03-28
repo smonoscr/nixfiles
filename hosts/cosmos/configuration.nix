@@ -32,10 +32,10 @@
   boot = {
     tmp.cleanOnBoot = true;
     loader = {
-      timeout = 2;
+      timeout = 1;
       systemd-boot = {
         enable = true;
-        configurationLimit = 10;
+        configurationLimit = 5;
       };
       efi.canTouchEfiVariables = true;
     };
@@ -66,8 +66,8 @@
       "vm.page_lock_unfairness" = 1;
       # enable BBR congestion control # Bufferbloat mitigations + slight improvement in throughput & latency
       "net.ipv4.tcp_congestion_control" = "bbr";
-      "net.core.default_qdisc" = "fq";
-      ## TCP optimization
+      "net.core.default_qdisc" = "cake";
+      ## TCP optimization and hardening
       # TCP Fast Open is a TCP extension that reduces network latency by packing
       # data in the sender’s initial TCP SYN. Setting 3 = enable TCP Fast Open for
       # both incoming and outgoing connections:
@@ -76,6 +76,25 @@
       "net.core.rmem_max" = 1073741824;
       "net.ipv4.tcp_wmem" = "4096 87380 1073741824";
       "net.ipv4.tcp_rmem" = "4096 87380 1073741824";
+      # Prevent bogus ICMP errors from filling up logs.
+      "net.ipv4.icmp_ignore_bogus_error_responses" = 1;
+      # Reverse path filtering causes the kernel to do source validation of
+      # packets received from all interfaces. This can mitigate IP spoofing.
+      "net.ipv4.conf.default.rp_filter" = 1;
+      "net.ipv4.conf.all.rp_filter" = 1;
+      # Do not accept IP source route packets (we're not a router)
+      "net.ipv4.conf.all.accept_source_route" = 0;
+      "net.ipv6.conf.all.accept_source_route" = 0;
+      # Don't send ICMP redirects (again, we're on a router)
+      "net.ipv4.conf.all.send_redirects" = 0;
+      "net.ipv4.conf.default.send_redirects" = 0;
+      # Protects against SYN flood attacks
+      "net.ipv4.tcp_syncookies" = 1;
+      # Incomplete protection again TIME-WAIT assassination
+      "net.ipv4.tcp_rfc1337" = 1;
+      # Enable MTU probing
+      "net.ipv4.tcp_mtu_probing" = true;
+      "net.ipv4.tcp_slow_start_after_idle" = "0";
     };
     kernelParams = [
       "amd_pstate=active"
