@@ -10,7 +10,7 @@
       plugin {
         csgo-vulkan-fix {
           res_w = 1920
-          res_h = 1080
+          res_h = 1440
           class = cs2
         }
       }
