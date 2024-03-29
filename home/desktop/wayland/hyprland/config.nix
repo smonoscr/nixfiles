@@ -34,11 +34,14 @@
         key_press_enables_dpms = true;
         no_direct_scanout = false;
         disable_autoreload = true;
+        focus_on_activate = true;
       };
 
       input = {
         kb_layout = "de";
-        follow_mouse = 2;
+        follow_mouse = 0;
+        float_switch_override_focus = 2;
+        mouse_refocus = true;
         accel_profile = "flat";
         sensitivity = 0;
       };
