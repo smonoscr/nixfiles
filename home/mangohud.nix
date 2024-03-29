@@ -4,6 +4,7 @@
     enableSessionWide = false;
     settings = {
       fps_limit = "300";
+      toggle_fps_limit = "F3";
       vsync = 1;
       gl_vsync = 0;
       legacy_layout = false;
@@ -13,7 +14,7 @@
       gpu_text = "GPU";
       cpu_stats = true;
       cpu_temp = true;
-      cpu_color = "2 e97cb";
+      cpu_color = "2e97cb";
       cpu_text = "CPU";
       io_color = "a491d3";
       vram = true;
@@ -21,11 +22,11 @@
       ram_color = "c26693";
       fps = true;
       engine_color = "eb5b5b";
-      gpu_color = "2 e9762";
+      gpu_color = "2e9762";
       vulkan_driver = true;
       wine_color = "eb5b5b";
       frame_timing = 0;
-      frametime_color = "00 ff00";
+      frametime_color = "00ff00";
       show_fps_limit = true;
       gamemode = true;
       media_player_color = "ffffff";
