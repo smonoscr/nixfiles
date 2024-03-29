@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.14](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.13...v2.1.14) (2024-03-29)
+
+
+### Bug Fixes
+
+* enable hyprland plugins; mangohud config ([379f8bb](https://gitlab.com/simonoscr/nixfiles/commit/379f8bbf7ef6d76ed1b3e956d4863ca2636a71e0))
+
 ## [2.1.13](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.12...v2.1.13) (2024-03-29)
 
 
