@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.18](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.17...v2.1.18) (2024-03-30)
+
+
+### Bug Fixes
+
+* some hyprland config settings ([9e218e6](https://gitlab.com/simonoscr/nixfiles/commit/9e218e6f181e8e273e30e03c9d7aa755616fca1f))
+
 ## [2.1.17](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.16...v2.1.17) (2024-03-30)
 
 
