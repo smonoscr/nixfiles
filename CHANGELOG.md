@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.17](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.16...v2.1.17) (2024-03-30)
+
+
+### Bug Fixes
+
+* hyprland mouse focus behaviour ([784747b](https://gitlab.com/simonoscr/nixfiles/commit/784747b5c43af8acf39b3cccc417090787975e11))
+
 ## [2.1.16](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.15...v2.1.16) (2024-03-30)
 
 
