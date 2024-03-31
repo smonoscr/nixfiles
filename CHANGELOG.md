@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.20](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.19...v2.1.20) (2024-03-31)
+
+
+### Bug Fixes
+
+* add firefox custom css theme ([99fe78e](https://gitlab.com/simonoscr/nixfiles/commit/99fe78e9bb44115ef43e861b70867e6e4590ece0))
+
 ## [2.1.19](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.18...v2.1.19) (2024-03-30)
 
 
