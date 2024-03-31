@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.22](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.21...v2.1.22) (2024-03-31)
+
+
+### Bug Fixes
+
+* firefox autohide tabs ([dbdf2d0](https://gitlab.com/simonoscr/nixfiles/commit/dbdf2d0d2d93f63ae739145c9d60fcb7a7446b9e))
+
 ## [2.1.21](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.20...v2.1.21) (2024-03-31)
 
 
