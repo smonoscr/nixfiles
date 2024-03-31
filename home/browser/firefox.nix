@@ -5,6 +5,7 @@
 }: {
   home = {
     sessionVariables.BROWSER = "firefox";
+    file.".mozilla/firefox/default/chrome/theme".source = ./themes/ffultimate/theme;
   };
 
   programs.firefox = {

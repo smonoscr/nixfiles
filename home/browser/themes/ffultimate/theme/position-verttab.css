@@ -54,7 +54,7 @@ scrollbox[orient="horizontal"] {
 display: var(--uc-scrollbox-box-model,flex);
 -webkit-box-orient: vertical;
 height: 100%;
-overflow: var(--uc-scrollbox-overflow,initial) !important;} 
+overflow: var(--uc-scrollbox-overflow,initial) !important;}
 
 #tabbrowser-tabs:is(haspinnedtabs="") scrollbox[orient="horizontal"],
 #tabbrowser-tabs[positionpinnedtabs] scrollbox[orient="horizontal"]
@@ -82,7 +82,7 @@ top: calc(var(--uc-bookbar-height) + 36px) !important;
 height: calc(var(--uc-tabbar-height-adjust) - 52px) !important;}
 
 :root:not([customizing]) #toolbar-menubar[autohide="false"] + #TabsToolbar #tabbrowser-tabs{
-top: var(--uc-bookbar-height) !important; 
+top: var(--uc-bookbar-height) !important;
 height: var(--uc-tabbar-height-adjust) !important;}
 
 :root:not([customizing]) #titlebar > #toolbar-menubar:not([inactive="true"]) ~ #TabsToolbar > #tabbrowser-tabs{
@@ -90,13 +90,13 @@ top: var(--uc-bookbar-height) !important;
 height: var(--uc-tabbar-height-adjust) !important;}
 
 :root:not([customizing]) #titlebar > #toolbar-menubar[autohide="false"] ~ #TabsToolbar > #tabbrowser-tabs{
-top: var(--uc-bookbar-height) !important; 
+top: var(--uc-bookbar-height) !important;
 height: var(--uc-tabbar-height-adjust) !important;}
 */
 /*--height when bookmark bar activated--*/
 
 :root:has([collapsed="false"]) #tabbrowser-tabs{
-top: calc(var(--uc-bookbar-height) + var(--uc-navbar-height));  
+top: calc(var(--uc-bookbar-height) + var(--uc-navbar-height));
 height:var(--uc-tabbar-height-adjust) !important;}
 
 /*--height in full screen mode--*/
@@ -194,12 +194,12 @@ min-width: 0 !important;}
 margin-inline-end: -3px !important;
 height: 16px !important; width: 16px !important;
 border-radius: var(--uc-button-border) !important;
-display: none !important; /*--removable--*/
+display: block !important; /*--removable--*/
 }
 #tabbrowser-tabs .close-icon {
 padding: 2px !important;
 border-radius: var(--uc-button-border) !important;
-display: none !important; /*--removable--*/
+display: block !important; /*--removable--*/
 }
 
 .tab-throbber, .tab-icon-pending, .tab-icon-image,
@@ -215,7 +215,7 @@ display: none !important; /*--removable--*/
 /*-------------------tab container extra buttons--------------------*/
 
 #tabs-newtab-button, #tabs-newtab-button > .toolbarbutton-icon {
-background: none !important; 
+background: none !important;
 border-radius: var(--tab-border-radius);}
 
 #tabbrowser-tabs[hasadjacentnewtabbutton] #tabs-newtab-button {
@@ -290,10 +290,10 @@ flex: 100 100;}
 /*THIS IS THE EXTRA NEW TAB BUTTON THAT TRIGGERS THE ELEMENT SITTING UNDER TABS*/
 /* DO NOT TOUCH THIS. FIREFOX REALLY F'D THIS ONE UP. */
 
-#tabbrowser-tabs[hasadjacentnewtabbutton]:not([overflow]) ~ #new-tab-button, 
-#tabbrowser-tabs[overflow] > #tabbrowser-arrowscrollbox > #tabbrowser-arrowscrollbox-periphery > 
-#tabs-newtab-button, #tabbrowser-tabs:not([hasadjacentnewtabbutton]) > 
-#tabbrowser-arrowscrollbox > #tabbrowser-arrowscrollbox-periphery > 
+#tabbrowser-tabs[hasadjacentnewtabbutton]:not([overflow]) ~ #new-tab-button,
+#tabbrowser-tabs[overflow] > #tabbrowser-arrowscrollbox > #tabbrowser-arrowscrollbox-periphery >
+#tabs-newtab-button, #tabbrowser-tabs:not([hasadjacentnewtabbutton]) >
+#tabbrowser-arrowscrollbox > #tabbrowser-arrowscrollbox-periphery >
 #tabs-newtab-button, #TabsToolbar[customizing="true"] #tabs-newtab-button
 { display: flex !important; justify-content: left; pointer-events: none !important;}
 

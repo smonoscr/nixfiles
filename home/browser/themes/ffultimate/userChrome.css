@@ -1,4 +1,4 @@
-/* 
+/*
 https://github.com/soulhotel/FF-CSS-ULTIMA
 
 Tabs Size: (XS = 40px) (S = 140px) (L = 250px)
@@ -23,7 +23,7 @@ Tabs Size: (XS = 40px) (S = 140px) (L = 250px)
 /*----------------------------------------------------------------------*/
 
 @import url(theme/all-global-theme-fullmoon.css);
-@import url(theme/all-global-theme-dusky.css);
+/*@import url(theme/all-global-theme-dusky.css);*/
 
 @import url(theme/position-verttab.css);
 @import url(theme/position-findbar.css);
