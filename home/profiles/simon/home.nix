@@ -5,7 +5,6 @@
     ../../browser/firefox.nix
     ../../shell/starship.nix
     ../../shell/zsh.nix
-    ../../fonts.nix
     ../../games.nix
     ../../mangohud.nix
     ../../git.nix
