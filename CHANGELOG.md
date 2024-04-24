@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.0](https://gitlab.com/simonoscr/nixfiles/compare/v2.2.0...v2.3.0) (2024-04-24)
+
+
+### Features
+
+* big update nixos, hyprland ([5e35450](https://gitlab.com/simonoscr/nixfiles/commit/5e3545087c123a8c3650e15742e47af43c99c9cb))
+
 ## [2.2.0](https://gitlab.com/simonoscr/nixfiles/compare/v2.1.28...v2.2.0) (2024-04-07)
 
 
