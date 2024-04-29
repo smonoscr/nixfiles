@@ -43,7 +43,7 @@
         float_switch_override_focus = 1;
         accel_profile = "flat";
         force_no_accel = false;
-        sensitivity = 0.7;
+        sensitivity = 1;
       };
 
       general = {
