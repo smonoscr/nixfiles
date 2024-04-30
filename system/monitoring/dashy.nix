@@ -1,4 +1,4 @@
-{...}: {
+_: {
   systemd.tmpfiles.rules = [
     "d /etc/containers/dashy 0755 -"
   ];

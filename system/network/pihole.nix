@@ -1,4 +1,4 @@
-{...}: {
+_: {
   systemd.tmpfiles.rules = [
     "d /etc/containers/pihole/pihole 0755 -" #The - disables automatic cleanup, so the file wont be removed after a period
     "d /etc/containers/pihole/dnsmasq.d 0755 -" #The - disables automatic cleanup, so the file wont be removed after a period

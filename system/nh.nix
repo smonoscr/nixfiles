@@ -1,4 +1,4 @@
-{...}: {
+_: {
   environment.variables.FLAKE = "/home/simon/nixfiles";
 
   programs.nh = {

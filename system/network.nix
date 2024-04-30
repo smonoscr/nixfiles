@@ -45,9 +45,11 @@ in {
   };
 
   config = {
-    networking.hostName = cfg.hostName;
-    networking.networkmanager.enable = cfg.networkManager;
-    networking.nameservers = cfg.nameservers;
+    networking = {
+      inherit (cfg) hostName;
+      networkmanager.enable = cfg.networkManager;
+      inherit (cfg) nameservers;
+    };
 
     services.resolved = {
       enable = true; # Assuming you always want this enabled as per your config

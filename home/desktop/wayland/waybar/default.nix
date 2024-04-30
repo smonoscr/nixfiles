@@ -183,9 +183,9 @@ in {
         height = 32;
 
         tray = {spacing = 12;};
-        modules-left = modules-left;
-        modules-right = modules-right;
-        modules-center = modules-center;
+        inherit modules-left;
+        inherit modules-right;
+        inherit modules-center;
 
         "custom/menu" = {
           format = "  ";

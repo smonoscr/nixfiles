@@ -23,7 +23,7 @@
 
     # nur nix user repository
     nur = {
-      url = github:nix-community/NUR;
+      url = "github:nix-community/NUR";
     };
 
     # firefox addons
