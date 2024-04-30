@@ -33,9 +33,9 @@
       package = pkgs.adw-gtk3;
     };
     cursorTheme = {
-      name = config.home.pointerCursor.name;
-      package = config.home.pointerCursor.package;
-      size = config.home.pointerCursor.size;
+      inherit (config.home.pointerCursor) name;
+      inherit (config.home.pointerCursor) package;
+      inherit (config.home.pointerCursor) size;
     };
 
     gtk2 = {

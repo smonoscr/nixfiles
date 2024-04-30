@@ -1,4 +1,4 @@
-{...}: {
+_: {
   networking = {
     hostName = "nixos";
     wireless.enable = false; #disable wpa-supplicant. nmcli usable for wifi in networkmanager

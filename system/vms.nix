@@ -1,4 +1,4 @@
-{...}: {
+_: {
   # Define VMs
   virtualisation.qemu.vms = {
     vm1 = {

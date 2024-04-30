@@ -1,4 +1,4 @@
-{...}: {
+_: {
   virtualisation.oci-containers.containers = {
     lancache = {
       image = "lancachenet/monolithic:latest";
