@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.8](https://gitlab.com/simonoscr/nixfiles/compare/v2.4.7...v2.4.8) (2024-05-01)
+
+
+### Bug Fixes
+
+* update flock and lint ([755a334](https://gitlab.com/simonoscr/nixfiles/commit/755a334aa4f5b98f9ee6ba48f2080056cb1c2453))
+
 ## [2.4.7](https://gitlab.com/simonoscr/nixfiles/compare/v2.4.6...v2.4.7) (2024-05-01)
 
 
