@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.2](https://gitlab.com/simonoscr/nixfiles/compare/v2.5.1...v2.5.2) (2024-05-01)
+
+
+### Bug Fixes
+
+* update git for sign commits ([49cc2d7](https://gitlab.com/simonoscr/nixfiles/commit/49cc2d7809625e5bbac2272f8c80d8a8ede2ca50))
+
 ## [2.5.1](https://gitlab.com/simonoscr/nixfiles/compare/v2.5.0...v2.5.1) (2024-05-01)
 
 
