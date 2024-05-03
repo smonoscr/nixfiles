@@ -74,7 +74,7 @@ build_nixos_iso:
   stage: build_iso
   script:
     - nix build .#iso
-    - nix build .#install-iso
+    #- nix build .#install-iso
   artifacts:
     paths:
       - result
