@@ -12,6 +12,7 @@ verifyConditions:
 
 analyzeCommits:
   - path: '@semantic-release/commit-analyzer'
+    preset: "conventionalcommits"
     releaseRules:
       - type: milestone # A milestone release marking a huge step forward in development
         release: major
@@ -46,6 +47,7 @@ analyzeCommits:
 
 generateNotes:
   - path: '@semantic-release/release-notes-generator'
+    preset: "conventionalcommits"
     writerOpts:
       groupBy: 'type'
       commitGroupsSort: 'title'
@@ -111,6 +113,7 @@ publish:
     assets:
       - nixos.iso
 
-success: false
 
+ci: true
+success: false
 fail: false
