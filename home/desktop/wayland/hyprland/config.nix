@@ -188,10 +188,9 @@ _: {
         "SUPER, mouse:273, resizewindow"
         "SUPER, mouse:272, movewindow"
       ];
-      #debug = {
-      #  disable_logs = false;
-      #
-      #};
+      debug = {
+        disable_logs = true;
+      };
     };
     extraConfig = ''
       env = WLR_DRM_NO_ATOMIC,1
