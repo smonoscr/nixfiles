@@ -1,3 +1,20 @@
+## [2.6.2](https://gitlab.com/simonoscr/nixfiles/compare/2.6.1...2.6.2) (2024-05-05)
+
+
+### :scissors: Refactor
+
+* avoid repeated keys in attribute sets ([70c8d7f](https://gitlab.com/simonoscr/nixfiles/commit/70c8d7f0c60b692a0a5fcf2b9d179168b490e1bd))
+
+
+### 📦 Other
+
+* update flock ([9008b0e](https://gitlab.com/simonoscr/nixfiles/commit/9008b0e61666cda780a1ef522ba641914f6df7f9))
+
+
+### 🛠 Fixes
+
+* **ags:** update ags version to 1.8.2 and disable matugen ([54147fd](https://gitlab.com/simonoscr/nixfiles/commit/54147fdb4b51ba0803989f08a46ee4a6875dd116))
+
 ## [2.6.1](https://gitlab.com/simonoscr/nixfiles/compare/2.6.0...2.6.1) (2024-05-04)
 
 
