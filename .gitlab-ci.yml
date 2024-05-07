@@ -60,8 +60,7 @@ build:
   before_script:
     - cachix use "$CACHIX_CACHE_NAME"
   script:
-    - cachix watch-exec $CACHIX_CACHE_NAME -- nixos-rebuild --flake .#cosmos
-    #- cachix watch-exec $CACHIX_CACHE_NAME -- nixos-rebuild --flake .#voyager
+    - nix-shell -p --run "nh os switch -H cosmos" | cachix push nixos-gitlab
   artifacts:
     paths:
       - result
