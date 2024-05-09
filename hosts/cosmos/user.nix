@@ -5,14 +5,13 @@
       simon = {
         initialPassword = "123";
         isNormalUser = true;
-        shell = pkgs.zsh;
         extraGroups = [
-          "audio"
-          "corectrl"
-          "gamemode"
-          "networkmanager"
-          "video"
           "wheel"
+          "networkmanager"
+          "audio"
+          "video"
+          "gamemode"
+          "corectrl"
         ];
       };
     };
