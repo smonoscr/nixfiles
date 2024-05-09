@@ -399,11 +399,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1715203037,
-        "narHash": "sha256-yWsrCPhBpin7AXVI66/EAE+YPJTweS8CDCZJQliB10k=",
+        "lastModified": 1715261268,
+        "narHash": "sha256-1v1GlsO7clzEcJS8OEC60k7PRiSkZeueqt2LYnQAhD8=",
         "ref": "refs/heads/main",
-        "rev": "e4e84064f2d07810e0c150bce1369a0a00503e9a",
-        "revCount": 4638,
+        "rev": "d7aed240db408259228bf09708986c82bdca23eb",
+        "revCount": 4643,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/hyprwm/Hyprland"
@@ -620,42 +620,6 @@
         "type": "github"
       }
     },
-    "nixlib": {
-      "locked": {
-        "lastModified": 1712450863,
-        "narHash": "sha256-K6IkdtMtq9xktmYPj0uaYc8NsIqHuaAoRBaMgu9Fvrw=",
-        "owner": "nix-community",
-        "repo": "nixpkgs.lib",
-        "rev": "3c62b6a12571c9a7f65ab037173ee153d539905f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nixpkgs.lib",
-        "type": "github"
-      }
-    },
-    "nixos-generators": {
-      "inputs": {
-        "nixlib": "nixlib",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1713783234,
-        "narHash": "sha256-3yh0nqI1avYUmmtqqTW3EVfwaLE+9ytRWxsA5aWtmyI=",
-        "owner": "nix-community",
-        "repo": "nixos-generators",
-        "rev": "722b512eb7e6915882f39fff0e4c9dd44f42b77e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nixos-generators",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1714253743,
@@ -800,11 +764,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1715243633,
-        "narHash": "sha256-z4hWuUk6o/gPLQ873W6DF/tHcg2cAb8YMc+VT1ARdu8=",
+        "lastModified": 1715265912,
+        "narHash": "sha256-4uu7Elrs/fgISAohBV292NquBwgK1494L7xlMUH5QSY=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "5dea7f0b438b1d8f60590049dd83f680553b669c",
+        "rev": "9ab77d2356bee9096ccf091dd75a3522d682d92d",
         "type": "github"
       },
       "original": {
@@ -853,7 +817,6 @@
         "hyprlock": "hyprlock",
         "matugen": "matugen",
         "nix-gaming": "nix-gaming",
-        "nixos-generators": "nixos-generators",
         "nixpkgs": "nixpkgs_4",
         "nixvim": "nixvim",
         "nur": "nur",

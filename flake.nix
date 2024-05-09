@@ -5,11 +5,6 @@
     # nixos unstable
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    ## nix unstable
-    #nix = {
-    #  url = "github:NixOS/nix";
-    #};
-
     # home-manager
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -68,11 +63,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-generators = {
-      url = "github:nix-community/nixos-generators";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-gaming = {
       url = "github:fufexan/nix-gaming/6e2db2c21be525330942380e2e839277574404fa";
     };
@@ -88,7 +78,6 @@
     nixpkgs,
     home-manager,
     nur,
-    nixos-generators,
     ...
   } @ inputs: let
     system = "x86_64-linux";
