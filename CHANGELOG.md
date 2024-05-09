@@ -1,3 +1,38 @@
+## [4.0.0](https://gitlab.com/simonoscr/nixfiles/compare/3.0.0...4.0.0) (2024-05-09)
+
+
+### 💈 Style
+
+* **nix:** format nix code ([cbafa7b](https://gitlab.com/simonoscr/nixfiles/commit/cbafa7bf32e7ec28ae712c60f2843d25f378243c))
+
+
+### 📔 Docs
+
+* added multiple READMEs to folders ([69d24bc](https://gitlab.com/simonoscr/nixfiles/commit/69d24bc1bf0cacb6edb72c6b204d6199a9fec782))
+
+
+### 📦 Other
+
+* **flake:** cleanup flake.nix and update flake.lock ([fe06b28](https://gitlab.com/simonoscr/nixfiles/commit/fe06b28f0471e893b41b9907ebad77128db342a0))
+
+
+### 🦊 CI/CD
+
+* fix deadnix dead code fixes ([38a73ee](https://gitlab.com/simonoscr/nixfiles/commit/38a73eedff9ebcae1f24f29e3f9c8f30ca45810f))
+* **fix:** remove before_script from release job to use default before_script ([adcff49](https://gitlab.com/simonoscr/nixfiles/commit/adcff49e0a90add26987d08f72c9ad24554ced80))
+* **fix:** remove cachix from release job before_script ([d337d38](https://gitlab.com/simonoscr/nixfiles/commit/d337d382cd85a9a28526aafa492ad04b621376a7))
+* **fix:** set extra before_script for release job ([2a1dd6c](https://gitlab.com/simonoscr/nixfiles/commit/2a1dd6cf51ac7aa2b85d3b4c46a63cca207db3bb))
+
+
+### 🧨 Breaking changes!
+
+* refactor home-manager configurations like in the release before to better reflect programs, services etc and find things faster ([7dacad4](https://gitlab.com/simonoscr/nixfiles/commit/7dacad461c254b376c24fbebaea1792a16fa55c3))
+
+
+### 🛠 Fixes
+
+* missing boolean in bash.nix ([b39632e](https://gitlab.com/simonoscr/nixfiles/commit/b39632e88a126b9900520b2450e8b225f4c88541))
+
 ## [3.0.0](https://gitlab.com/simonoscr/nixfiles/compare/2.7.2...3.0.0) (2024-05-09)
 
 
