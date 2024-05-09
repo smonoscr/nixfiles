@@ -96,11 +96,12 @@
     # nixos configuration entrypoint
     # available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      "desktop" = nixpkgs.lib.nixosSystem {
+      "cosmos" = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
-          ./hosts/desktop/configuration.nix
+          ./hosts/cosmos/configuration.nix
+          #{nixpkgs.overlays = [inputs.nixpkgs-wayland.overlay];}
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -110,21 +111,55 @@
           }
         ];
       };
-      "server" = nixpkgs.lib.nixosSystem {
+      "voyager" = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
           {nixpkgs.overlays = [nur.overlay];}
-          ./hosts/server/configuration.nix
+          ./hosts/voyager/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
               extraSpecialArgs = {inherit inputs;};
               users.oscar = import ./home/profiles/oscar/home.nix;
             };
           }
         ];
       };
+    };
+
+    # standalone home-manager configuration entrypoint
+    # available through 'home-manager --flake .#your-username@your-hostname'
+    homeConfigurations = {
+      # work user
+      "simon@work" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = {inherit inputs;};
+        modules = [
+          ./home/work/home.nix
+        ];
+      };
+    };
+
+    # nixos-generators format entrypoint
+    # available through 'nix build .#yourFormat'
+    iso = nixos-generators.nixosGenerate {
+      inherit system;
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/cosmos/configuration.nix
+      ];
+      format = "iso";
+    };
+    install-iso = nixos-generators.nixosGenerate {
+      inherit system;
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/cosmos/configuration.nix
+      ];
+      format = "install-iso";
     };
   };
 }
