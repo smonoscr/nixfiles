@@ -1,3 +1,20 @@
+## [4.0.1](https://gitlab.com/simonoscr/nixfiles/compare/4.0.0...4.0.1) (2024-05-09)
+
+
+### 💈 Style
+
+* **nix:** format nix code ([5f69c7d](https://gitlab.com/simonoscr/nixfiles/commit/5f69c7d9004fd770c9046a95deb8dcbc0eade70f))
+
+
+### 📦 Other
+
+* **semantic-release:** cleanup unsued things ([3b2fd3d](https://gitlab.com/simonoscr/nixfiles/commit/3b2fd3db739651071c6c177f18e86c527d6e575c))
+
+
+### 🛠 Fixes
+
+* **sops:** add pulling private nixsecrets repo for sops setup; remove NUR; adjust flake.nix ([4b3c7f0](https://gitlab.com/simonoscr/nixfiles/commit/4b3c7f02bd89c401ef179dbf47fd8787a3690ac0))
+
 ## [4.0.0](https://gitlab.com/simonoscr/nixfiles/compare/3.0.0...4.0.0) (2024-05-09)
 
 
