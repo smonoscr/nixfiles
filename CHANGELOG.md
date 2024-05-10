@@ -1,3 +1,10 @@
+## [5.0.2](https://gitlab.com/simonoscr/nixfiles/compare/5.0.1...5.0.2) (2024-05-10)
+
+
+### 🛠 Fixes
+
+* add pkgs.cachix to utilize own cachix cache ([a47031a](https://gitlab.com/simonoscr/nixfiles/commit/a47031a630f950a8672a0792655730b2867556e2))
+
 ## [5.0.1](https://gitlab.com/simonoscr/nixfiles/compare/5.0.0...5.0.1) (2024-05-10)
 
 
