@@ -1,3 +1,15 @@
+## [5.2.0](https://gitlab.com/simonoscr/nixfiles/compare/5.1.3...5.2.0) (2024-05-11)
+
+
+### 💈 Style
+
+* lint2 ([83eeaba](https://gitlab.com/simonoscr/nixfiles/commit/83eeaba7897dd175c05b06ee0a74f990cb72e22e))
+
+
+### 🚀 Features
+
+* added new programs and services and refarctor some existing thing like fonts, gaming, programs, services for hm and nixos ([48135c4](https://gitlab.com/simonoscr/nixfiles/commit/48135c404e3c4c58ee386e402ce92d77304454e0))
+
 ## [5.1.3](https://gitlab.com/simonoscr/nixfiles/compare/5.1.2...5.1.3) (2024-05-11)
 
 
