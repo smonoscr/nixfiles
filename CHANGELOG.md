@@ -1,3 +1,10 @@
+## [5.1.3](https://gitlab.com/simonoscr/nixfiles/compare/5.1.2...5.1.3) (2024-05-11)
+
+
+### 🛠 Fixes
+
+* **ags:** add missing dependencies ([5849759](https://gitlab.com/simonoscr/nixfiles/commit/5849759280f3eebce8f452043f22d07c7c9d17ef))
+
 ## [5.1.2](https://gitlab.com/simonoscr/nixfiles/compare/5.1.1...5.1.2) (2024-05-11)
 
 
