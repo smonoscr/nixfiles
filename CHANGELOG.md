@@ -1,3 +1,21 @@
+## [5.1.1](https://gitlab.com/simonoscr/nixfiles/compare/5.1.0...5.1.1) (2024-05-11)
+
+
+### 📔 Docs
+
+* remove docs folder, transfer to wiki ([ee719b2](https://gitlab.com/simonoscr/nixfiles/commit/ee719b21a324171e892f74ddb1f158d8156b1252))
+
+
+### 📦 Other
+
+* **flake:** update flake.lock ([6316d49](https://gitlab.com/simonoscr/nixfiles/commit/6316d4978e36abefbcca43c204c2d0290469aa44))
+* **flake:** update flake.lock ([72e63f6](https://gitlab.com/simonoscr/nixfiles/commit/72e63f6b86d86bf2d39fec32b8caa2e91a58b1a0))
+
+
+### 🛠 Fixes
+
+* **gitignore:** added .direnv to gitignore git config ([acceb58](https://gitlab.com/simonoscr/nixfiles/commit/acceb58b3d83861a11dda0b7d2bc197d3aee2f90))
+
 ## [5.1.0](https://gitlab.com/simonoscr/nixfiles/compare/5.0.2...5.1.0) (2024-05-10)
 
 
