@@ -1,35 +1,5 @@
-default:
-  image: nixpkgs/cachix-flakes
-  before_script:
-    - git config --global user.email ""
-    - git config --global user.name "Gitlab CI"
-    - git config --global push.followTags true
-    - git checkout $CI_COMMIT_REF_NAME
-    - git remote set-url origin "https://gitlab-ci:${GITLAB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
-    - git pull origin $CI_COMMIT_REF_NAME
-    - cachix use "$CACHIX_CACHE_NAME"
-
-variables:
-  NIX_PATH: nixpkgs=channel:nixos-unstable
-  CACHIX_CACHE_NAME: simonoscr
-  NIX_BUILD_FLAGS: "--no-update-lock-file --print-build-logs --show-trace"
-
 stages:
-  - check
   - release
-
-check:
-  stage: check
-  script:
-    - git clone "https://gitlab-ci:${GITLAB_TOKEN}@${CI_SERVER_HOST}/simonoscr/nixsecrets.git"
-    - nix flake show --all-systems
-    - nix flake check $NIX_BUILD_FLAGS
-    - |
-      if ! git diff --quiet --exit-code; then
-        git add -A;
-        git commit -m "style: alejandra, deadnix, statix, shellcheck, ...";
-        git push -o ci.skip origin "$CI_COMMIT_REF_NAME"
-      fi
 
 release:
   image: node:slim
