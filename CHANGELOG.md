@@ -1,3 +1,17 @@
+## [5.2.8](https://gitlab.com/simonoscr/nixfiles/compare/5.2.7...5.2.8) (2024-05-12)
+
+
+### 📦 Other
+
+* **flake:** update flock ([d6967e6](https://gitlab.com/simonoscr/nixfiles/commit/d6967e6dafd12e15d2ecaa6bc2ee0816bac9b950))
+
+
+### 🛠 Fixes
+
+* hypridle config now valid, remove unused mbsync.service, fix polkit.service config ([44c3eaf](https://gitlab.com/simonoscr/nixfiles/commit/44c3eaf9c515e0fe3917e0c3944f22c3138156e1))
+* **audio:** pipewire rate to 48000 and fix configs for pipewire and wireplumber ([7e497a0](https://gitlab.com/simonoscr/nixfiles/commit/7e497a0bf115fa2b05099833f1bdfb4d27d7affe))
+* **pre-commit-hook:** fix paths ([b2a50cf](https://gitlab.com/simonoscr/nixfiles/commit/b2a50cf6625a23701cea8517b1e388e390de0bfa))
+
 ## [5.2.7](https://gitlab.com/simonoscr/nixfiles/compare/5.2.6...5.2.7) (2024-05-12)
 
 
