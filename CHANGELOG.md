@@ -1,3 +1,17 @@
+## [5.2.10](https://gitlab.com/simonoscr/nixfiles/compare/5.2.9...5.2.10) (2024-05-14)
+
+
+### 📦 Other
+
+* **flake:** update flock ([69b98bd](https://gitlab.com/simonoscr/nixfiles/commit/69b98bdc1c7d589c218ab1a8ee1c0601f3fdef1b))
+* **flake:** update flock ([9822df4](https://gitlab.com/simonoscr/nixfiles/commit/9822df45b86b1b16e5e702a04fbf73f7455e19d6))
+
+
+### 🛠 Fixes
+
+* **hyprland:** update plugins and add hyprexpo and hyprexpo shortcut ([45688eb](https://gitlab.com/simonoscr/nixfiles/commit/45688ebbe604e674bd4b244d40759f038396df64))
+* **vscodium:** make direnv restart automatic ([f74e6f8](https://gitlab.com/simonoscr/nixfiles/commit/f74e6f8b9a3f97fe63388b1b9ba96630d5937dea))
+
 ## [5.2.9](https://gitlab.com/simonoscr/nixfiles/compare/5.2.8...5.2.9) (2024-05-12)
 
 
