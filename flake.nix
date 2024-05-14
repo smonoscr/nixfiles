@@ -77,12 +77,12 @@
         ...
       }: {
         devShells.default = pkgs.mkShell {
-          packages = [
-            pkgs.alejandra
-            pkgs.deadnix
-            pkgs.statix
-            pkgs.git
-            pkgs.nodePackages.prettier
+          nativeBuildInputs = with pkgs; [
+            alejandra
+            deadnix
+            statix
+            git
+            nodePackages.prettier
           ];
           name = "nixfiles";
           DIRENV_LOG_FORMAT = "";
