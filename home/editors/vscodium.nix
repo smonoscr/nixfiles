@@ -40,6 +40,7 @@
       "git.defaultCloneDirectory" = "$HOME/code";
       "editor.tabSize" = 2;
       "git.rebaseWhenSync" = true;
+      "direnv.restart.automatic" = true;
     };
   };
 }
