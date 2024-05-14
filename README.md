@@ -65,15 +65,15 @@ Feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 </div>
 
-- **nix-flake**: Manage NixOS and Home-Manager configurations.
+* [**nix-flake**](https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-flake.html): Manage NixOS and Home-Manager configurations.
 
-- **flake-parts**: A good way to manage flake with less boilerplate.
+* [**flake-parts**](https://github.com/hercules-ci/flake-parts): A good way to manage flake with less boilerplate.
 
-- **home-manager**: Manage your dotfiles, home environment, and user-specific configurations with Home Manager.
+* [**home-manager**](https://github.com/nix-community/home-manager): Manage your dotfiles, home environment, and user-specific configurations with Home Manager.
 
-- **nh**: "yet-another-nix-helper". NH reimplements some basic nix commands. Adding functionality on top of the existing solutions, like nixos-rebuild, home-manager cli or nix itself.
+* [**nh**](https://github.com/viperML/nh): "yet-another-nix-helper". `nh` reimplements some basic nix commands. Adding functionality on top of the existing solutions, like nixos-rebuild, home-manager cli or nix itself.
 
-- **NixVim**: Nix Flake Neovim
+- [**NixVim**](https://www.startpage.com/do/dsearch?query=nixvim+github): Nix Flake Neovim
 
 <div align="center">
 
@@ -81,13 +81,13 @@ Feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 </div>
 
-- **docs**: This folder contains different README files. Like a little wiki but not really structured. Sorry.
+* [**wiki**](https://gitlab.com/simonoscr/nixfiles/-/wikis/home)
 
-- **home**: This folder contains configurations for home-manager. In the profiles subfolder are the differenct home-manager profiles. Here i have everything user related in it.
+* [**home**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/home): This folder contains configurations for home-manager. In the profiles subfolder are the differenct home-manager profiles. Here i have everything user related in it.
 
-- **hosts**: The hosts/ folder helps me organize my different hosts. At the moment there are two hosts: My Desktop PC and my Home-Server.
+* [**hosts**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/hosts?ref_type=heads): The hosts/ folder helps me organize my different hosts. At the moment there are two hosts: My Desktop PC and my Home-Server.
 
-- **system**: This folder contains everything thats is nixos related. Like program, service, network and nix configuration itself. Like the counterpart of the home/ folder for system-wide things.
+* [**system**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/system?ref_type=heads): This folder contains everything thats is nixos related. Like program, service, network and nix configuration itself. Like the counterpart of the home/ folder for system-wide things.
 
 <div align="center">
 
@@ -95,15 +95,15 @@ Feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 </div>
 
-- [NixOS Search](https://search.nixos.org) - Search for Nix packages, NixOS options or Flakes
-  - [Options Search](https://search.nixos.org/options)
-  - [Packages Search](https://search.nixos.org/packages)
-  - [Flakes Search](https://search.nixos.org/flakes)
-- [Home-Manager Options](https://mipmip.github.io/home-manager-option-search/) - Search for Home-Manager options
-- [Nixhub.io](https://www.nixhub.io/) - Search Versions of nix packages
-- [Noogle.dev](https://noogle.dev/) - Noogle is a Nix API search engine. It lets you search nix functions.
-- [Hound](https://search.nix.gsc.io/) - Search things
-- [nixpkgs PR-Tracker](https://nixpk.gs/pr-tracker.html)
+* [NixOS Search](https://search.nixos.org) - Search for Nix packages, NixOS options or Flakes
+  * [Options Search](https://search.nixos.org/options)
+  * [Packages Search](https://search.nixos.org/packages)
+  * [Flakes Search](https://search.nixos.org/flakes)
+* [Home-Manager Options](https://mipmip.github.io/home-manager-option-search/) - Search for Home-Manager options
+* [Nixhub.io](https://www.nixhub.io/) - Search Versions of nix packages
+* [Noogle.dev](https://noogle.dev/) - Noogle is a Nix API search engine. It lets you search nix functions.
+* [Hound](https://search.nix.gsc.io/) - Search things
+* [nixpkgs PR-Tracker](https://nixpk.gs/pr-tracker.html)
 
 <div align="center">
 
@@ -111,11 +111,11 @@ Feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 </div>
 
-- [NixOS Wiki](https://nixos.wiki/)
-  - [NixOS Installation Guide](https://nixos.wiki/wiki/NixOS_Installation_Guide)
-  - [Nix Installation Guide](https://nixos.wiki/wiki/Nix_Installation_Guide)
-  - [Nix Flake Installation Guide](https://nixos.wiki/wiki/Flakes)
-- [Cachix Docs](https://docs.cachix.org/)
+* [NixOS Wiki](https://nixos.wiki/)
+  * [NixOS Installation Guide](https://nixos.wiki/wiki/NixOS_Installation_Guide)
+  * [Nix Installation Guide](https://nixos.wiki/wiki/Nix_Installation_Guide)
+  * [Nix Flake Installation Guide](https://nixos.wiki/wiki/Flakes)
+* [Cachix Docs](https://docs.cachix.org/)
 
 <div align="center">
 
@@ -125,11 +125,11 @@ Feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 My repository is inspired by a diverse range of dotfiles and nix-configurations repositories across GitHub, GitLab (and maybe Codeberg). While I've gathered ideas from numerous places, there are a few key repositories that significantly influenced this repository:
 
-- [fufexan Dotfiles](https://github.com/fufexan/dotfiles)
-  - helped me very much to find a good repository structure and also good and clean .nix configurations and i learned from his repos how to build with nix
-- [Matt Dotfiles](https://gitlab.com/usmcamp0811/dotfiles)
-  - also borrowed a little structure and content of .nix files
-- [ryan4yin nix-config](https://github.com/ryan4yin/nix-config)
-  - helped me a lot for server related configurations
-- [Aylur dotfiles](https://github.com/Aylur/dotfiles)
-  - thank you very much for ags config
+* [fufexan Dotfiles](https://github.com/fufexan/dotfiles)
+  * helped me very much to find a good repository structure and also good and clean .nix configurations and i learned from his repos how to build with nix
+* [Matt Dotfiles](https://gitlab.com/usmcamp0811/dotfiles)
+  * also borrowed a little structure and content of .nix files
+* [ryan4yin nix-config](https://github.com/ryan4yin/nix-config)
+  * helped me a lot for server related configurations
+* [Aylur dotfiles](https://github.com/Aylur/dotfiles)
+  * thank you very much for ags config
