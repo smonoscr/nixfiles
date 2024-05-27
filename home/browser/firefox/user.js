@@ -15,8 +15,9 @@ user_pref("ultima.xstyle.closetabsbutton", true);
 user_pref("ultima.theme.extensions", true);
 
 user_pref("ultima.OS.kde", false);
-user_pref("ultima.OS.gnome", true);
+user_pref("ultima.OS.gnome", false);
 user_pref("ultima.OS.mac", false);
+user_pref("ultima.OS.linux", true);
 
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
