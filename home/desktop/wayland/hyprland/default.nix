@@ -20,6 +20,7 @@
     hyprshot
     wl-clipboard
     hyprpicker
+    wlr-randr
   ];
 
   wayland.windowManager.hyprland = {
