@@ -5,7 +5,7 @@
 }: {
   imports = [
     inputs.matugen.nixosModules.default
-    ../../browser/firefox.nix
+    ../../browser/firefox
     ../../desktop/wayland/hyprland
     ../../desktop/x11/i3
     ../../editors/nixvim.nix

@@ -3,22 +3,20 @@ _: {
     settings = {
       windowrulev2 = [
         # webcord
-        "float, initialclass:^(WebCord)$"
-        "workspace 2, initialclass:^(WebCord)$"
-        "size 450 600, initialclass:^(WebCord)$"
-        "center, initialclass:^(WebCord)$"
+        "float, class:^(WebCord)$"
+        "workspace 2, class:^(WebCord)$"
+        "size 450 600, class:^(WebCord)$"
+        "center, class:^(WebCord)$"
 
         # steam
-        "float, title:^(Steam)$"
-        "workspace 2, title:^(Steam)$"
+        "float, class:^(steam)$"
+        "float, initialclass:^(steam)$"
+        "workspace 2, class:^(steam)$"
         "size 450 600, title:^(Steam)$"
 
-        "float, title:^(Steam)$"
+        "float, title:^(Friends List)$"
         "size 1000 300, title:^(Friends List)$"
-        "workspace 2, title:^(Steam)$"
-
         "size 800 800, title:^(Steam Settings)$"
-        "workspace 2, title:^(Steam)$"
 
         # ts3
         "float, title:^(TeamSpeak 3)$"
