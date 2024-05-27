@@ -8,7 +8,6 @@
         "corectrl"
         "udiskie &"
         "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
-        "hypridle"
         "hyprlock"
       ];
       env = [
@@ -99,6 +98,13 @@
       xwayland = {
         force_zero_scaling = true;
         use_nearest_neighbor = false;
+      };
+
+      group = {
+        groupbar = {
+          font_size = 10;
+          gradients = false;
+        };
       };
     };
   };
