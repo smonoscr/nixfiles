@@ -2,10 +2,17 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  ffTheme = pkgs.fetchFromGitHub {
+    owner = "soulhotel";
+    repo = "FF-ULTIMA";
+    rev = "main";
+    sha256 = "1fcs799kvc6glzjc605pkf0l5n2d06j5k79ignn59cv3lmlri9ba";
+  };
+in {
   home = {
     sessionVariables.BROWSER = "firefox";
-    file.".mozilla/firefox/default/chrome/theme".source = ./themes/ffultimate/theme;
+    file.".mozilla/firefox/default/chrome/theme".source = "${ffTheme}/theme";
   };
 
   programs.firefox = {
@@ -77,6 +84,8 @@
           bitwarden
           startpage-private-search
           darkreader
+          side-view
+          multi-account-containers
         ];
         #https://sourcegraph.com/search?q=context:global+lang:nix&patternType=standard&sm=1
         search = {
@@ -542,9 +551,11 @@
           "permissions.manager.defaultsUrl" = "";
         };
         # custom theme
-        userChrome = builtins.readFile ./themes/ffultimate/userChrome.css;
-        userContent = builtins.readFile ./themes/ffultimate/userContent.css;
-        extraConfig = builtins.readFile ./themes/ffultimate/user.js;
+        userChrome = builtins.readFile "${ffTheme}/userChrome.css";
+        userContent = builtins.readFile "${ffTheme}/userContent.css";
+        #userChrome = builtins.readFile ./themes/ffultimate/userChrome.css;
+        #userContent = builtins.readFile ./themes/ffultimate/userContent.css;
+        extraConfig = builtins.readFile ./user.js;
       };
     };
   };
