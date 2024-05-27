@@ -1,3 +1,21 @@
+## [5.3.0](https://gitlab.com/simonoscr/nixfiles/compare/5.2.14...5.3.0) (2024-05-27)
+
+
+### 📦 Other
+
+* **flake:** update flock ([3f1e240](https://gitlab.com/simonoscr/nixfiles/commit/3f1e2409841505c5026fc7f8c1cfc2b4d289d5e1))
+
+
+### 🚀 Features
+
+* **browser:** fetchFromGit for firefox theme to remove manual steps ([f544203](https://gitlab.com/simonoscr/nixfiles/commit/f544203a87d3ed9dd00fa72bb007b4a830e4e64c))
+* **server:** k3s, argocd, helm, network settings and general configuration for server ([cda1f2f](https://gitlab.com/simonoscr/nixfiles/commit/cda1f2fc6454d83563d570b4d9dcb3910765fce0))
+
+
+### 🛠 Fixes
+
+* hyprland window rules and cleanup imports ([989c855](https://gitlab.com/simonoscr/nixfiles/commit/989c8559a883f2f98ca88ebbb126413f85e4d6da))
+
 ## [5.2.14](https://gitlab.com/simonoscr/nixfiles/compare/5.2.13...5.2.14) (2024-05-22)
 
 
