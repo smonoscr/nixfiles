@@ -105,7 +105,7 @@ in
             kube_env = os.environ.copy()
             kube_env['KUBECONFIG'] = '/etc/rancher/k3s/k3s.yaml'
             requested_charts = json.loads(HELM_CHARTS)
-            existing_charts = json.loads(run(HELM, "list", "-A", "-ojson")[0])
+            existing_charts = json.loads(run(HELM, "list", "-A", "-ojson")[0].decode())
             print(f'need: {requested_charts} have {existing_charts}')
             for chart_name, chart_details in requested_charts.items():
               if len([p for p in filter(lambda f: f['name'] == chart_name, existing_charts)]) == 1:

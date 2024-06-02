@@ -21,6 +21,8 @@
               url: https://gitlab.com/simonoscr/gitops-bootstrap.git
               name: gitlab.com/simonoscr
               type: git
+        dex:
+          enabled: false
         server:
           ingress:
             enabled: true
@@ -30,6 +32,7 @@
             tls: false
       '';
     };
+    # for bootstrap repository
     argocd-apps = {
       chart = "argocd-apps";
       namespace = "argocd";
@@ -89,5 +92,13 @@
             - argocd
       '';
     };
+    #cilium = {
+    #  chart = "cilium";
+    #  namespace = "kube-system";
+    #  version = "1.15.1";
+    #  repo = "https://helm.cilium.io";
+    #  valuesYaml = ''
+    #  '';
+    #};
   };
 }

@@ -19,40 +19,40 @@ in
         };
 
         nodeName = mkOption {
-          type = with types; uniq string;
+          type = with types; uniq str;
           default = config.networking.hostName;
         };
 
         clusterDomain = mkOption {
-          type = with types; uniq string;
+          type = with types; uniq str;
           default = "${cfg.nodeName}";
         };
 
         clusterCIDR = mkOption {
-          type = with types; uniq string;
+          type = with types; uniq str;
         };
 
         clusterCIDRv6 = mkOption {
           default = "";
-          type = with types; uniq string;
+          type = with types; uniq str;
         };
 
         serviceCIDR = mkOption {
-          type = with types; uniq string;
+          type = with types; uniq str;
         };
 
         serviceCIDRv6 = mkOption {
           default = "";
-          type = with types; uniq string;
+          type = with types; uniq str;
         };
 
         clusterDNS = mkOption {
-          type = with types; uniq string;
+          type = with types; uniq str;
         };
 
         nodeIP = mkOption {
           default = "";
-          type = with types; uniq string;
+          type = with types; uniq str;
         };
 
         zfs = mkOption {
@@ -92,12 +92,12 @@ in
 
         tlsSAN = mkOption {
           default = "";
-          type = with types; uniq string;
+          type = with types; uniq str;
         };
 
         apiServerArgs = mkOption {
           default = [];
-          type = with types; types.listOf string;
+          type = with types; types.listOf str;
         };
 
         deviceOwnershipFromSecurityContext = mkOption {
@@ -146,9 +146,8 @@ in
                         "--service-cidr ${finalServiceCIDR}"
                         "--cluster-dns ${cfg.clusterDNS}"
                         "--cluster-domain ${cfg.clusterDomain}"
-                        "--disable servicelb"
                       ]
-                      ++ (optional cfg.disableTraefik "--disable traefik")
+                      ++ (optional cfg.disableTraefik "--disable traefik --disable servicelb")
                       ++ (optional (cfg.tlsSAN != "") "--tls-san ${cfg.tlsSAN}")
                       ++ (optional cfg.disableLocalPV "--disable local-storage")
                       ++ (optional cfg.disableMetricsServer "--disable metrics-server")
@@ -160,7 +159,10 @@ in
                       ++ (optional cfg.disableKubeProxy "--disable-kube-proxy")
                       ++ (optional (cfg.apiServerArgs != "") (toString (map (s: "--kube-apiserver-arg ${s}") cfg.apiServerArgs)))
                     )
-                  else []
+                  else [
+                    "--server https://${cfg.nodeIP}:6443" # Connect to the control node
+                    "--node-label node-role.kubernetes.io/worker=true"
+                  ]
                 )
               );
           };
