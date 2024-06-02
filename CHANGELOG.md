@@ -1,3 +1,9 @@
+## [5.7.0](https://gitlab.com/simonoscr/nixfiles/compare/5.6.0...5.7.0) (2024-06-02)
+
+### 🚀 Features
+
+* update packages for server ([4e0a300](https://gitlab.com/simonoscr/nixfiles/commit/4e0a30052cdb7985925e4fe6a756ae7a24e6b70a))
+
 ## [5.6.0](https://gitlab.com/simonoscr/nixfiles/compare/5.5.2...5.6.0) (2024-06-02)
 
 ### 📦 Other
