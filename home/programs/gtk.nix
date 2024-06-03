@@ -3,8 +3,6 @@
   config,
   ...
 }: {
-  #};
-
   home = {
     pointerCursor = {
       package = pkgs.capitaine-cursors;

@@ -9,13 +9,20 @@
     ../../programs/gtk.nix
     #../../programs/qt.nix
     ../../programs/utils.nix
-    #../../programs/xdg.nix
+    ../../programs/xdg.nix
     ../../programs/zathura.nix
     ../../editors/zed.nix
     ../../editors/nixvim.nix
+    #../../desktop/x11/i3
+    ../../services/system/polkit-agent.nix
   ];
 
   programs.home-manager.enable = true;
+
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = _: true;
+  };
 
   home = {
     username = "simon";
@@ -24,7 +31,16 @@
       SHELL = "${pkgs.zsh}/bin/zsh";
     };
     stateVersion = "23.11";
+    packages = with pkgs; [
+      slack
+      virt-manager
+      libreoffice
+      remmina
+      obsidian
+    ];
+    sessionVariables.BROWSER = "firefox";
   };
+
   manual = {
     html.enable = false;
     json.enable = false;
