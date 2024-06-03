@@ -2,6 +2,7 @@
   imports = [
     ./config.nix
     #../polybar.nix
+    ./i3status.nix
   ];
   xsession = {
     enable = true;
@@ -16,6 +17,5 @@
     i3blocks
     i3lock
     xautolock
-    i3status
   ];
 }

@@ -2,7 +2,7 @@
   programs = {
     #eza.enable = true;
     #man.enable = true;
-    #tmux.enable = true;
+    tmux.enable = true;
 
     dircolors = {
       enable = true;
