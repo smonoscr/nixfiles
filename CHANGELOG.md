@@ -1,3 +1,13 @@
+## [5.8.2](https://gitlab.com/simonoscr/nixfiles/compare/5.8.1...5.8.2) (2024-06-04)
+
+### 📦 Other
+
+* **flake:** update flock ([db2e5fe](https://gitlab.com/simonoscr/nixfiles/commit/db2e5fe6a6e9bdd9f7634c71f21d926046f11804))
+
+### 🛠 Fixes
+
+* **sops-nix:** add to sharedModule ([d679f31](https://gitlab.com/simonoscr/nixfiles/commit/d679f31f5bedbac115de920c90c7b12521867fb9))
+
 ## [5.8.1](https://gitlab.com/simonoscr/nixfiles/compare/5.8.0...5.8.1) (2024-06-03)
 
 ### 📦 Other
