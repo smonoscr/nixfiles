@@ -1,3 +1,9 @@
+## [5.10.1](https://gitlab.com/simonoscr/nixfiles/compare/5.10.0...5.10.1) (2024-06-10)
+
+### 🛠 Fixes
+
+* remove containderd ([d45307a](https://gitlab.com/simonoscr/nixfiles/commit/d45307a52e9b25e45bc459820a68c0599b0bd7f9))
+
 ## [5.10.0](https://gitlab.com/simonoscr/nixfiles/compare/5.9.0...5.10.0) (2024-06-10)
 
 ### 📦 Other
