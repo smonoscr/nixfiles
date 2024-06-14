@@ -8,7 +8,6 @@
         "corectrl"
         "udiskie &"
         "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
-        "hyprlock"
       ];
       env = [
         "WLR_DRM_NO_ATOMIC,1"
