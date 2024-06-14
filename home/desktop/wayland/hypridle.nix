@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }: let
   suspendScript = pkgs.writeShellScript "suspend-script" ''
@@ -14,6 +15,7 @@
 in {
   services.hypridle = {
     enable = true;
+    package = inputs.hypridle.packages.${pkgs.system}.hypridle;
     settings = {
       general = {
         before_sleep_cmd = "${pkgs.systemd}/bin/loginctl lock-session";

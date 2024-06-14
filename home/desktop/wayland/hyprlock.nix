@@ -1,15 +1,23 @@
-_: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.hyprlock = {
+    enable = true;
+    package = inputs.hyprlock.packages.${pkgs.system}.hyprlock;
     settings = {
       general = {
         disable_loading_bar = false;
-        hide_cursor = true;
+        hide_cursor = false;
         grace = 3;
         no_fade_in = false;
+        ignore_empty_input = true;
       };
 
       background = [
         {
+          monitor = "";
           path = "";
           color = "rgba(20, 20, 20, 1)";
 
@@ -25,24 +33,22 @@ _: {
 
       input-field = [
         {
+          monitor = "DP-1";
+
           size = {
             width = 300;
             height = 50;
           };
-          outline_thickness = 3;
-          dots_size = 0.33;
+          outline_thickness = 1;
+          dots_size = 0.30;
           dots_spacing = 0.15;
           dots_center = true;
-          outer_color = "rgba(255, 255, 255, 0.1)";
-          inner_color = "rgba(255, 255, 255, 0.1)";
+          outer_color = "rgba(20, 20, 20, 1)";
+          inner_color = "rgba(51, 209, 122, 1)";
           font_color = "rgb(255, 255, 255)";
-          fade_on_empty = true;
-          placeholder_text = "<i>Input Password...</i>";
+          fade_on_empty = false;
+          placeholder_text = ''<span font_family="Inter">passwd</span>'';
           hide_input = false;
-          position = {
-            x = 0;
-            y = -90;
-          };
           halign = "center";
           valign = "center";
         }
@@ -50,47 +56,42 @@ _: {
 
       label = [
         {
+          monitor = "";
           text = "<b>$TIME</b>";
           color = "rgb(255, 255, 255)";
+          font_family = "Inter";
           font_size = 96;
-          position = {
-            x = 0;
-            y = 0;
-          };
+          position = "0, 0";
           halign = "center";
           valign = "top";
         }
         {
+          monitor = "";
           text = ''cmd[update:1000] echo "$(date "+%a %d %b")"'';
           color = "rgb(255, 255, 255)";
+          font_family = "Inter";
           font_size = 24;
-          position = {
-            x = 0;
-            y = -150;
-          };
+          position = "0, -150";
           halign = "center";
           valign = "top";
         }
         {
-          text = "Henlo, <i>$USER</i>!";
+          monitor = "";
+          text = "henlo <i>$USER</i>";
           color = "rgb(255, 255, 255)";
+          font_family = "Inter";
           font_size = 32;
-          position = {
-            x = 0;
-            y = 0;
-          };
+          position = "0, 200";
           halign = "center";
           valign = "center";
         }
         {
+          monitor = "";
           text = "";
           color = "rgb(255, 255, 255)";
-          font_family = "monospace";
+          font_family = "Inter";
           font_size = 32;
-          position = {
-            x = 0;
-            y = 0;
-          };
+          position = "0, 20";
           halign = "center";
           valign = "bottom";
         }
