@@ -131,13 +131,6 @@
             specialArgs = {inherit inputs;};
             modules = [
               ./hosts/server/configuration.nix
-              inputs.home-manager.nixosModules.home-manager
-              {
-                home-manager = {
-                  extraSpecialArgs = {inherit inputs;};
-                  users.oscar.imports = [./home/profiles/oscar/home.nix];
-                };
-              }
             ];
           };
         };

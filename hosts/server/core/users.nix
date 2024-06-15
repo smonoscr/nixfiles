@@ -1,29 +1,12 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{config, ...}: {
   sops.secrets.dXNlcl9wYXNzd29yZA.neededForUsers = true;
   users = {
-    mutableUsers = false; # disable useradd + passwd
+    mutableUsers = true; # disable useradd + passwd
 
     users = {
-      #root = {
-      #  hashedPassword = "*"; # set a invalid hashed password "disables" root
-      #};
-      oscar = {
-        group = "nixos";
-        home = "/home/oscar";
-        hashedPasswordFile = config.sops.secrets.dXNlcl9wYXNzd29yZA.path;
-        isNormalUser = true;
-        extraGroups = [
-          "wheel"
-        ];
-        shell = pkgs.zsh;
+      root = {
+        hashedPasswordFile = config.sops.secrets.dXNlcl9wYXNzd29yZA.path; # set a invalid hashed or empty password "disables" root
       };
-    };
-    groups = {
-      nixos = {};
     };
   };
 }
