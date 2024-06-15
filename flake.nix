@@ -121,7 +121,7 @@
               {
                 home-manager = {
                   extraSpecialArgs = {inherit inputs;};
-                  users.simon.imports = [./home/profiles/simon/home.nix];
+                  users.simon.imports = [./home/simon/home.nix];
                 };
               }
             ];
@@ -138,7 +138,7 @@
           work = inputs.home-manager.lib.homeManagerConfiguration {
             pkgs = inputs.nixpkgs.legacyPackages."x86_64-linux";
             extraSpecialArgs = {inherit inputs;};
-            modules = [./home/profiles/work/home.nix];
+            modules = [./home/work/home.nix];
           };
         };
       };

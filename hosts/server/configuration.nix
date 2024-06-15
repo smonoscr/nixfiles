@@ -8,7 +8,6 @@
     ./core/console.nix
     ./core/locale.nix
     ./core/security.nix
-    ./core/sops.nix
     ./core/systemd.nix
     ./core/users.nix
     ./core/zram.nix
@@ -21,6 +20,7 @@
     ./programs/dconf.nix
     ./programs/gnupg.nix
     ./programs/zsh.nix
+    ./secrets/sops.nix
     ./services/kubernetes/helm.nix
     ./services/kubernetes/k3s.nix
     ./services/podman.nix
