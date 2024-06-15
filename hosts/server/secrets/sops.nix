@@ -3,7 +3,7 @@
 
   sops = {
     validateSopsFiles = false;
-    defaultSopsFile = "/root/code/nixsecrets/secrets/oscar/secrets.yaml";
+    defaultSopsFile = "/root/code/nixsecrets/secrets/server/secrets.yaml";
     age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
     secrets = {
       c3NoLXB1Yi1rZXk = {
