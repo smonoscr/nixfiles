@@ -1,3 +1,9 @@
+## [7.0.1](https://gitlab.com/simonoscr/nixfiles/compare/7.0.0...7.0.1) (2024-06-15)
+
+### 🛠 Fixes
+
+* rename secret profile and adjust path for server secrets ([c8d2c02](https://gitlab.com/simonoscr/nixfiles/commit/c8d2c0263ae2ebee8d0b8dc3ab087fe2b1e5861e))
+
 ## [7.0.0](https://gitlab.com/simonoscr/nixfiles/compare/6.0.1...7.0.0) (2024-06-15)
 
 ### ✨ Milestone
