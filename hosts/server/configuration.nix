@@ -8,6 +8,7 @@
     ./core/console.nix
     ./core/locale.nix
     ./core/security.nix
+    ./core/sops.nix
     ./core/systemd.nix
     ./core/users.nix
     ./core/zram.nix
