@@ -1,3 +1,17 @@
+## [7.0.3](https://gitlab.com/simonoscr/nixfiles/compare/7.0.2...7.0.3) (2024-06-16)
+
+### 📦 Other
+
+* **flake:** update flake ([aef59aa](https://gitlab.com/simonoscr/nixfiles/commit/aef59aa055689a7b1c64e69969daff533670a98f))
+
+### 🛠 Fixes
+
+* **greetd:** enable autologin to utilize hyprlock login-screen ([aceca86](https://gitlab.com/simonoscr/nixfiles/commit/aceca868a33760666297d31fef4bcb20781f05d3))
+* **home-manager:** fix setup for work profile ([8008803](https://gitlab.com/simonoscr/nixfiles/commit/8008803edf98d1abc4632d2293f11bfd950d2d76))
+* **network:** add fail2ban and restructure for server ([c68dc6b](https://gitlab.com/simonoscr/nixfiles/commit/c68dc6ba3e4d8444c9253dd786d0daba44da7abb))
+* **nix:** nix settings ([52d5ae5](https://gitlab.com/simonoscr/nixfiles/commit/52d5ae51daf87fbe0d53e0e09cb1e85abf2b1b0a))
+* **server:** add git as module and adjust zsh settings for server ([38b64a9](https://gitlab.com/simonoscr/nixfiles/commit/38b64a9465c86b8621d2d970ba6fde05c0fbeda6))
+
 ## [7.0.2](https://gitlab.com/simonoscr/nixfiles/compare/7.0.1...7.0.2) (2024-06-16)
 
 ### 💈 Style
