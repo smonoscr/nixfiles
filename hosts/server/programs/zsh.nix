@@ -7,6 +7,10 @@ _: {
 
     zsh = {
       enable = true;
+      enableLsColors = true;
+      enableGlobalCompInit = true;
+      enableCompletion = true;
+      enableBashCompletion = true;
       autosuggestions.enable = true;
       syntaxHighlighting = {
         enable = true;
