@@ -6,9 +6,9 @@
   ffTheme = pkgs.fetchFromGitHub {
     owner = "soulhotel";
     repo = "FF-ULTIMA";
-    rev = "main";
+    rev = "1.7.8";
     #sha256 = pkgs.lib.fakeSha256; # used to get the latest hash
-    hash = "sha256-xaHugFRlUgVZd3wXsbF63gX/X/iSmm4N/ZsalG4s6Lk=";
+    sha256 = "6WgZMvHIozChYvoySBmCNwXW/VZ0XGgS/Eh5Q3Fn4JM=";
   };
 in {
   home = {
