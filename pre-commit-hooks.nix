@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [ inputs.pre-commit-hooks.flakeModule ];
 
@@ -16,6 +16,10 @@
       #    check = false;
       #  };
       #};
+      nixfmt = {
+        enable = true;
+        package = pkgs.nixfmt-rfc-style;
+      };
 
       statix = {
         enable = true;
@@ -84,12 +88,6 @@
       #    write = true;
       #  };
       #};
-
-      shellcheck = {
-        enable = true;
-        excludes = [ "png" ];
-        types_or = [ "shell" ];
-      };
 
       pre-commit-hook-ensure-sops.enable = true;
     };
