@@ -1,3 +1,21 @@
+## [7.0.2](https://gitlab.com/simonoscr/nixfiles/compare/7.0.1...7.0.2) (2024-06-16)
+
+### 💈 Style
+
+* **cursor:** switch cursor style to bibata ([9a5a341](https://gitlab.com/simonoscr/nixfiles/commit/9a5a3418255f7121ab1638b101019a2f0b700589))
+
+### 📦 Other
+
+* **flake:** update flake ([b62cd4f](https://gitlab.com/simonoscr/nixfiles/commit/b62cd4fa59d08e70274f9ea39ecc9586b00faf1b))
+
+### 🛠 Fixes
+
+* add sops-nix config file for profile w ([825ee26](https://gitlab.com/simonoscr/nixfiles/commit/825ee26aece2706e8b4522df842f8b391a2258fb))
+* **ags:** update ags ([0e9909f](https://gitlab.com/simonoscr/nixfiles/commit/0e9909f39999930b98ace880efd62b04a3c7af77))
+* **firefox:** update FF theme ([21ccab5](https://gitlab.com/simonoscr/nixfiles/commit/21ccab5c5b48c39dcf7abf549d68c5b479970110))
+* **hypr:** update hyprland config and hypridle and hyprlock ([06be0a0](https://gitlab.com/simonoscr/nixfiles/commit/06be0a00248d606a022870081900253fc55de492))
+* **hyprland:** remove deprecated setting ([f9eabf3](https://gitlab.com/simonoscr/nixfiles/commit/f9eabf318e550ff71ca33cbb6056c51d77cd3354))
+
 ## [7.0.1](https://gitlab.com/simonoscr/nixfiles/compare/7.0.0...7.0.1) (2024-06-15)
 
 ### 🛠 Fixes
