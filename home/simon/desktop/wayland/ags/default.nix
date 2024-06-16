@@ -18,13 +18,12 @@ in {
   ];
 
   home.packages = with pkgs; [
-    swww
-    brightnessctl
+    brightnessctl # not working anyway because of OLED
     bun
     dart-sass
     fd
+    swww
     inputs.matugen.packages.${system}.default
-    gnome.gnome-bluetooth_1_0
   ];
 
   programs.ags = {
