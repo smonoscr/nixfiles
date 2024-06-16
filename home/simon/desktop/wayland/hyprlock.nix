@@ -9,7 +9,7 @@
     settings = {
       general = {
         disable_loading_bar = false;
-        hide_cursor = false;
+        hide_cursor = true;
         grace = 3;
         no_fade_in = false;
         ignore_empty_input = true;
