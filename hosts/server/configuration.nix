@@ -14,10 +14,10 @@
     ./hardware/fwupd.nix
     ./hardware/hardware-configuration.nix
     ./network
-    ./network/tailscale.nix
     ./nix
     ./pkgs/packages.nix
     ./programs/dconf.nix
+    ./programs/git.nix
     ./programs/gnupg.nix
     ./programs/zsh.nix
     ./secrets/sops.nix
