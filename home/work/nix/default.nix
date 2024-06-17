@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./nix.nix
     ./nixos.nix
@@ -6,7 +7,5 @@
     ./substituters.nix
   ];
 
-  home.packages = with pkgs; [
-    cachix
-  ];
+  home.packages = with pkgs; [ cachix ];
 }

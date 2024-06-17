@@ -1,8 +1,5 @@
+{ config, pkgs, ... }:
 {
-  config,
-  pkgs,
-  ...
-}: {
   xdg = {
     enable = true;
     cacheHome = config.home.homeDirectory + "/.local/cache";

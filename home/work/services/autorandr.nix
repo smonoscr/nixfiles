@@ -1,3 +1,1 @@
-_: {
-  services.autorandr.enable = true;
-}
+_: { services.autorandr.enable = true; }

@@ -1,9 +1,10 @@
-{config, ...}: {
+{ config, ... }:
+{
   sops = {
     validateSopsFiles = false;
     defaultSopsFile = "${config.home.homeDirectory}/code/nixsecrets/secrets/work/secrets.yaml";
     age = {
-      sshKeyPaths = ["${config.home.homeDirectory}/.ssh/id_rsa"];
+      sshKeyPaths = [ "${config.home.homeDirectory}/.ssh/id_rsa" ];
       keyFile = "${config.xdg.configHome}/sops/age/keys.txt";
       generateKey = false;
     };

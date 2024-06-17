@@ -13,7 +13,7 @@ _: {
         indent_size = 2;
       };
       "Makefile" = {
-        indent_style = tab;
+        indent_style = "tab";
       };
       "*.md" = {
         max_line_length = "off";

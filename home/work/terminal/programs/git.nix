@@ -1,7 +1,9 @@
-{config, ...}: let
+{ config, ... }:
+let
   email = "simon.siedl@mecom.de";
   name = "Simon Siedl";
-in {
+in
+{
   programs.git = {
     enable = true;
     lfs.enable = true;
@@ -49,7 +51,17 @@ in {
       sw = "switch";
     };
 
-    ignores = [".DS_Store" "*.swp" "Thumbs.db" ".idea" ".vscode" ".vscodium" ".direnv" "pre-commit-config.yaml" "results"];
+    ignores = [
+      ".DS_Store"
+      "*.swp"
+      "Thumbs.db"
+      ".idea"
+      ".vscode"
+      ".vscodium"
+      ".direnv"
+      "pre-commit-config.yaml"
+      "results"
+    ];
 
     signing = {
       key = "${config.home.homeDirectory}/.ssh/id_ed25519";
