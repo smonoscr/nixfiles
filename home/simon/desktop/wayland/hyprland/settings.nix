@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   wayland.windowManager.hyprland = {
     settings = {
       exec-once = [
@@ -21,7 +22,7 @@
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
         "OZONE_PLATFORM,wayland"
-        "NIXOS_OZONE_WL,1"
+        #"NIXOS_OZONE_WL,1"
         #"SDL_VIDEODRIVER,wayland"
       ];
 
@@ -30,9 +31,7 @@
         error_position = 1;
       };
 
-      monitor = [
-        "DP-1,3440x1440@165,auto,1"
-      ];
+      monitor = [ "DP-1,3440x1440@165,auto,1" ];
 
       misc = {
         disable_splash_rendering = true;
