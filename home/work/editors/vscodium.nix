@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
@@ -34,9 +35,7 @@
       "editor.fontVariations" = false;
       "github.gitProtocol" = "ssh";
       "git.alwaysShowStagedChangesResourceGroup" = true;
-      "git.branchRandomName.dictionary" = [
-        "colors"
-      ];
+      "git.branchRandomName.dictionary" = [ "colors" ];
       "git.branchSortOrder" = "alphabetically";
       "git.defaultCloneDirectory" = "$HOME/code";
       "editor.tabSize" = 2;

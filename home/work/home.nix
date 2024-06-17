@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ inputs, pkgs, ... }:
+{
   imports = [
     inputs.sops-nix.homeManagerModules.sops
     ./browser/firefox

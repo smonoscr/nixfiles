@@ -1,8 +1,5 @@
+{ pkgs, ... }:
 {
-  pkgs,
-  config,
-  ...
-}: {
   xsession.windowManager.i3 = {
     enable = true;
     config = {
@@ -55,10 +52,10 @@
         #{
         #  command = "xrandr --output DP-1 --mode 3440x1440 --rate 165";
         #}
-        {command = "--no-startup-id nm-applet";}
-        {command = "--no-startup-id blueman-applet";}
-        {command = "--no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork";}
-        {command = "--no-startup-id dex --autostart --environment i3";}
+        { command = "--no-startup-id nm-applet"; }
+        { command = "--no-startup-id blueman-applet"; }
+        { command = "--no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork"; }
+        { command = "--no-startup-id dex --autostart --environment i3"; }
       ];
 
       window = {
@@ -67,80 +64,82 @@
         hideEdgeBorders = "smart";
       };
 
-      keybindings = let
-        mod = "Mod4";
-      in {
-        "${mod}+t" = "exec nixGL kitty";
-        "${mod}+w" = "exec firefox";
-        "${mod}+z" = "exec zoom";
-        "${mod}+s" = "exec slack";
-        "${mod}+o" = "exec obsidian";
-        "Print" = "exec flameshot";
-        "${mod}+Shift+e" = "exec nautilus";
-        "${mod}+e" = "exec nixGL kitty -e yazi";
-        "${mod}+c" = "exec codium";
-        "${mod}+Shift+q" = "kill";
-        "${mod}+j" = "focus left";
-        "${mod}+k" = "focus down";
-        #"${mod}+l" = "focus up"; #FIXME
-        "${mod}+semicolon" = "focus right";
-        "${mod}+Left" = "focus left";
-        "${mod}+Down" = "focus down";
-        "${mod}+Up" = "focus up";
-        "${mod}+Right" = "focus right";
-        "${mod}+Shift+j" = "move left";
-        "${mod}+Shift+k" = "move down";
-        "${mod}+Shift+l" = "move up";
-        "${mod}+Shift+semicolon" = "move right";
-        "${mod}+Shift+Left" = "move left";
-        "${mod}+Shift+Down" = "move down";
-        "${mod}+Shift+Up" = "move up";
-        "${mod}+Shift+Right" = "move right";
-        "${mod}+Ctrl+Left" = "resize grow left";
-        "${mod}+Ctrl+Down" = "resize grow down";
-        "${mod}+Ctrl+Up" = "resize grow up";
-        "${mod}+Ctrl+Right" = "resize grow right";
-        "${mod}+h" = "layout toggle split";
-        "${mod}+Shift+v" = "split v";
-        "${mod}+f" = "fullscreen";
-        "${mod}+Shift+s" = "layout stacking";
-        "${mod}+Shift+t" = "layout tabbed";
-        "${mod}+Shift+g" = "sticky toggle";
-        "${mod}+v" = "floating toggle";
-        "${mod}+space" = "exec --no-startup-id dmenu_run";
-        #"${mod}+space" = "focus mode_toggle";
-        "${mod}+Ctrl+greater" = "move workspace to output right";
-        "${mod}+Ctrl+less" = "move workspace to output left";
-        "${mod}+d" = "exec rofi -show drun -show-icons";
-        "${mod}+1" = "workspace 1";
-        "${mod}+2" = "workspace 2";
-        "${mod}+3" = "workspace 3";
-        "${mod}+4" = "workspace 4";
-        "${mod}+5" = "workspace 5";
-        "${mod}+6" = "workspace 6";
-        "${mod}+7" = "workspace 7";
-        "${mod}+8" = "workspace 8";
-        "${mod}+9" = "workspace 9";
-        "${mod}+0" = "workspace 10";
-        "${mod}+Shift+1" = "move container to workspace 1";
-        "${mod}+Shift+2" = "move container to workspace 2";
-        "${mod}+Shift+3" = "move container to workspace 3";
-        "${mod}+Shift+4" = "move container to workspace 4";
-        "${mod}+Shift+5" = "move container to workspace 5";
-        "${mod}+Shift+6" = "move container to workspace 6";
-        "${mod}+Shift+7" = "move container to workspace 7";
-        "${mod}+Shift+8" = "move container to workspace 8";
-        "${mod}+Shift+9" = "move container to workspace 9";
-        "${mod}+Shift+0" = "move container to workspace 10";
-        "${mod}+Shift+c" = "reload";
-        "${mod}+Shift+r" = "restart";
-        "${mod}+Shift+o" = "exec 'i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'";
-        #"${mod}+l" = "exec i3lock -c 000000";
-        "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status";
-        "XF86AudioPlay" = "exec --no-startup-id 'playerctl --player=spotify,firefox play-pause'";
-        "XF86AudioPrev" = "exec --no-startup-id 'playerctl --player=spotify,firefox previous'";
-        "XF86AudioNext" = "exec --no-startup-id 'playerctl --player=spotify,firefox next'";
-      };
+      keybindings =
+        let
+          mod = "Mod4";
+        in
+        {
+          "${mod}+t" = "exec nixGL kitty";
+          "${mod}+w" = "exec firefox";
+          "${mod}+z" = "exec zoom";
+          "${mod}+s" = "exec slack";
+          "${mod}+o" = "exec obsidian";
+          "Print" = "exec flameshot";
+          "${mod}+Shift+e" = "exec nautilus";
+          "${mod}+e" = "exec nixGL kitty -e yazi";
+          "${mod}+c" = "exec codium";
+          "${mod}+Shift+q" = "kill";
+          "${mod}+j" = "focus left";
+          "${mod}+k" = "focus down";
+          #"${mod}+l" = "focus up"; #FIXME
+          "${mod}+semicolon" = "focus right";
+          "${mod}+Left" = "focus left";
+          "${mod}+Down" = "focus down";
+          "${mod}+Up" = "focus up";
+          "${mod}+Right" = "focus right";
+          "${mod}+Shift+j" = "move left";
+          "${mod}+Shift+k" = "move down";
+          "${mod}+Shift+l" = "move up";
+          "${mod}+Shift+semicolon" = "move right";
+          "${mod}+Shift+Left" = "move left";
+          "${mod}+Shift+Down" = "move down";
+          "${mod}+Shift+Up" = "move up";
+          "${mod}+Shift+Right" = "move right";
+          "${mod}+Ctrl+Left" = "resize grow left";
+          "${mod}+Ctrl+Down" = "resize grow down";
+          "${mod}+Ctrl+Up" = "resize grow up";
+          "${mod}+Ctrl+Right" = "resize grow right";
+          "${mod}+h" = "layout toggle split";
+          "${mod}+Shift+v" = "split v";
+          "${mod}+f" = "fullscreen";
+          "${mod}+Shift+s" = "layout stacking";
+          "${mod}+Shift+t" = "layout tabbed";
+          "${mod}+Shift+g" = "sticky toggle";
+          "${mod}+v" = "floating toggle";
+          "${mod}+space" = "exec --no-startup-id dmenu_run";
+          #"${mod}+space" = "focus mode_toggle";
+          "${mod}+Ctrl+greater" = "move workspace to output right";
+          "${mod}+Ctrl+less" = "move workspace to output left";
+          "${mod}+d" = "exec rofi -show drun -show-icons";
+          "${mod}+1" = "workspace 1";
+          "${mod}+2" = "workspace 2";
+          "${mod}+3" = "workspace 3";
+          "${mod}+4" = "workspace 4";
+          "${mod}+5" = "workspace 5";
+          "${mod}+6" = "workspace 6";
+          "${mod}+7" = "workspace 7";
+          "${mod}+8" = "workspace 8";
+          "${mod}+9" = "workspace 9";
+          "${mod}+0" = "workspace 10";
+          "${mod}+Shift+1" = "move container to workspace 1";
+          "${mod}+Shift+2" = "move container to workspace 2";
+          "${mod}+Shift+3" = "move container to workspace 3";
+          "${mod}+Shift+4" = "move container to workspace 4";
+          "${mod}+Shift+5" = "move container to workspace 5";
+          "${mod}+Shift+6" = "move container to workspace 6";
+          "${mod}+Shift+7" = "move container to workspace 7";
+          "${mod}+Shift+8" = "move container to workspace 8";
+          "${mod}+Shift+9" = "move container to workspace 9";
+          "${mod}+Shift+0" = "move container to workspace 10";
+          "${mod}+Shift+c" = "reload";
+          "${mod}+Shift+r" = "restart";
+          "${mod}+Shift+o" = "exec 'i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'";
+          #"${mod}+l" = "exec i3lock -c 000000";
+          "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status";
+          "XF86AudioPlay" = "exec --no-startup-id 'playerctl --player=spotify,firefox play-pause'";
+          "XF86AudioPrev" = "exec --no-startup-id 'playerctl --player=spotify,firefox previous'";
+          "XF86AudioNext" = "exec --no-startup-id 'playerctl --player=spotify,firefox next'";
+        };
       bars = [
         {
           statusCommand = "${pkgs.i3status}/bin/i3status";
@@ -186,19 +185,19 @@
         titlebar = false;
         border = 1;
         criteria = [
-          {class = "^steam$";}
-          {class = "^TeamSpeak$";}
-          {class = "^WebCord$";}
-          {class = "KeePassXC";}
-          {class = "zoom";}
-          {class = "Slack";}
+          { class = "^steam$"; }
+          { class = "^TeamSpeak$"; }
+          { class = "^WebCord$"; }
+          { class = "KeePassXC"; }
+          { class = "zoom"; }
+          { class = "Slack"; }
         ];
       };
 
       terminal = "${pkgs.kitty}/bin/kitty";
 
       fonts = {
-        names = ["Roboto"];
+        names = [ "Roboto" ];
         size = 16.0;
       };
     };

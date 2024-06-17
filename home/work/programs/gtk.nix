@@ -1,8 +1,5 @@
+{ pkgs, config, ... }:
 {
-  pkgs,
-  config,
-  ...
-}: {
   home = {
     pointerCursor = {
       package = pkgs.capitaine-cursors;
@@ -28,12 +25,14 @@
     };
     theme = {
       name = "adw-gtk3-dark";
-      package = pkgs.adw-gtk3.overrideAttrs (_self: _super: {
-        postInstall = ''
-          rm -rf $out/share/themes/adw-gtk3/gtk-4.0
-          rm -rf $out/share/themes/adw-gtk3-dark/gtk-4.0
-        '';
-      });
+      package = pkgs.adw-gtk3.overrideAttrs (
+        _self: _super: {
+          postInstall = ''
+            rm -rf $out/share/themes/adw-gtk3/gtk-4.0
+            rm -rf $out/share/themes/adw-gtk3-dark/gtk-4.0
+          '';
+        }
+      );
     };
     cursorTheme = {
       inherit (config.home.pointerCursor) name;
