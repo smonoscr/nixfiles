@@ -13,11 +13,9 @@
     ./core/users.nix
     ./core/zram.nix
     ./gaming/gamemode.nix
-    #./gaming/gamescope.nix
+    ./gaming/gamescope.nix
     ./gaming/steam.nix
-    ./hardware/amdgpu.nix
-    ./hardware/fwupd.nix
-    ./hardware/hardware-configuration.nix
+    ./hardware
     ./network
     ./network/tailscale.nix
     ./nix
@@ -33,8 +31,6 @@
     ./services/gnome-services.nix
     ./services/greetd.nix
     ./services/libinput.nix
-    #./services/ollama.nix # holy shit need to build HOURS with my potato
-    #./services/openrecall.nix #FIXME TESTING
     ./services/pipewire.nix
     ./services/podman.nix
     ./services/powerprofile.nix

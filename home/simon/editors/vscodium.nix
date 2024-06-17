@@ -82,7 +82,6 @@
         nixd = {
           formatting = {
             command = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
-            options = true;
           };
         };
       };

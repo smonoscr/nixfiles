@@ -12,8 +12,7 @@
     ./core/systemd.nix
     ./core/users.nix
     ./core/zram.nix
-    ./hardware/fwupd.nix
-    ./hardware/hardware-configuration.nix
+    ./hardware
     ./network
     ./nix
     ./pkgs/packages.nix

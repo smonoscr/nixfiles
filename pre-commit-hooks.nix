@@ -16,18 +16,19 @@
           enable = true;
         };
 
-        statix = {
-          enable = true;
-          fail_fast = true;
-        };
+        ## statix and deadnix should be covered by nixfmt
+        #statix = {
+        #  enable = true;
+        #  fail_fast = true;
+        #};
 
-        deadnix = {
-          enable = true;
-          fail_fast = true;
-          settings = {
-            edit = true;
-          };
-        };
+        #deadnix = {
+        #  enable = true;
+        #  fail_fast = true;
+        #  settings = {
+        #    edit = true;
+        #  };
+        #};
 
         yamllint = {
           enable = true;
@@ -67,22 +68,19 @@
           };
         };
 
-        #typos = {
-        #  enable = true;
-        #  settings = {
-        #    write = true;
-        #    configPath = "./.typos.toml";
-        #  };
-        #};
-
-        #prettier = {
-        #  enable = true;
-        #  fail_fast = true;
-        #  excludes = [".js" ".md" ".ts" ".scss" ".css"];
-        #  settings = {
-        #    write = true;
-        #  };
-        #};
+        prettier = {
+          enable = true;
+          fail_fast = true;
+          excludes = [
+            ".md"
+            ".nix"
+            ".yaml"
+            ".yml"
+          ];
+          settings = {
+            write = true;
+          };
+        };
 
         pre-commit-hook-ensure-sops.enable = true;
       };
