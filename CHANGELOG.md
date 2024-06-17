@@ -1,3 +1,20 @@
+## [7.0.5](https://gitlab.com/simonoscr/nixfiles/compare/7.0.4...7.0.5) (2024-06-17)
+
+### :scissors: Refactor
+
+* format repository with nixfmt-rfc-style ([aa6d171](https://gitlab.com/simonoscr/nixfiles/commit/aa6d1712be8e5c3bad7d027a9f843fc116b52ac0))
+
+### 📦 Other
+
+* **flake:** update flake ([78eef32](https://gitlab.com/simonoscr/nixfiles/commit/78eef324b30bed1f1db743b9b99044da9922cb08))
+
+### 🛠 Fixes
+
+* add nixfmt-rfc-style formatter to pre-commit-hook ([c81a47e](https://gitlab.com/simonoscr/nixfiles/commit/c81a47e99c925d396317f4caf5eb034d661d8906))
+* small fixes ([7275678](https://gitlab.com/simonoscr/nixfiles/commit/727567834123fceae110c1612c892f2b00d67a24))
+* try nixfmt for pre-commit-hook ([9e7dd47](https://gitlab.com/simonoscr/nixfiles/commit/9e7dd47f8df5d9b9aba9c480aff6b27eb4e87d15))
+* use nix-pre-commit-hooks ([e7bdcf9](https://gitlab.com/simonoscr/nixfiles/commit/e7bdcf9d8424a5e226c2459a5a2e67ffc6527616))
+
 ## [7.0.4](https://gitlab.com/simonoscr/nixfiles/compare/7.0.3...7.0.4) (2024-06-16)
 
 ### 🛠 Fixes
