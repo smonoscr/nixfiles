@@ -1,3 +1,14 @@
+## [7.0.6](https://gitlab.com/simonoscr/nixfiles/compare/7.0.5...7.0.6) (2024-06-17)
+
+### 💈 Style
+
+* format with nixfmt-rfc-style ([9ec1298](https://gitlab.com/simonoscr/nixfiles/commit/9ec129858c7024f3352b394ee9e0edbe8200fce7))
+
+### 🛠 Fixes
+
+* **editor:** huge update to vscodium settings and extensions ([54f20bb](https://gitlab.com/simonoscr/nixfiles/commit/54f20bb8adeee8e1fb2abb68ec7c4661156215be))
+* **fonts:** adjust font config and added font config to work profile ([ec64082](https://gitlab.com/simonoscr/nixfiles/commit/ec64082e501a4c235cc50c5e4d841dfb949851f3))
+
 ## [7.0.5](https://gitlab.com/simonoscr/nixfiles/compare/7.0.4...7.0.5) (2024-06-17)
 
 ### :scissors: Refactor
