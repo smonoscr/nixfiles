@@ -1,3 +1,9 @@
+## [7.1.3](https://gitlab.com/simonoscr/nixfiles/compare/7.1.2...7.1.3) (2024-06-18)
+
+### 🛠 Fixes
+
+* adjust work profile with custom configs ([8396f6b](https://gitlab.com/simonoscr/nixfiles/commit/8396f6b852fbb843ccc87d6fa31b50d020fc56b0))
+
 ## [7.1.2](https://gitlab.com/simonoscr/nixfiles/compare/7.1.1...7.1.2) (2024-06-18)
 
 ### 🛠 Fixes
