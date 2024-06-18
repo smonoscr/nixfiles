@@ -56,6 +56,28 @@
         ];
         cache_dir = "${config.xdg.cacheHome}";
       };
+      opener = {
+        edit = [
+          {
+            run = ''nvim "$@"'';
+            block = true;
+          }
+        ];
+        open = [
+          {
+            run = ''xdg-open "$@"'';
+            desc = "Open";
+          }
+        ];
+      };
+      plugin = {
+        prepend_previewers = [
+          {
+            name = "text/*";
+            run = "bat";
+          }
+        ];
+      };
     };
   };
 }
