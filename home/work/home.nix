@@ -25,6 +25,7 @@
     ./programs/zathura.nix
     #./secrets/sops.nix #FIXME
     ./services/autorandr.nix
+    ./services/flameshot.nix
     ./services/fonts.nix
     ./services/polkit-agent.nix
     ./services/remmina.nix

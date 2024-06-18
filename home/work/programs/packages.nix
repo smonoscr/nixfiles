@@ -26,6 +26,7 @@
 
     # devops tools
     kubectl
+    kubelogin-oidc
     kubernetes-helm
     argocd
     fluxctl
