@@ -11,4 +11,5 @@
       identityFile = "${config.home.homeDirectory}/.ssh/id_rsa";
     };
   };
+  services.ssh-agent.enable = true;
 }

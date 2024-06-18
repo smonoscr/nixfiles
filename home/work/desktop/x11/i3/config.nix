@@ -56,7 +56,6 @@
         #}
         { command = "--no-startup-id nm-applet"; }
         { command = "--no-startup-id blueman-applet"; }
-        { command = "--no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork"; }
         { command = "--no-startup-id dex --autostart --environment i3"; }
       ];
 
@@ -134,7 +133,7 @@
           "${mod}+Shift+c" = "reload";
           "${mod}+Shift+r" = "restart";
           "${mod}+Shift+o" = "exec 'i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'";
-          #"${mod}+l" = "exec i3lock -c 000000";
+          "${mod}+l" = "exec i3lock -c 000000";
           "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status";
           "XF86AudioPlay" = "exec --no-startup-id 'playerctl --player=spotify,firefox play-pause'";
           "XF86AudioPrev" = "exec --no-startup-id 'playerctl --player=spotify,firefox previous'";
@@ -145,7 +144,6 @@
           statusCommand = "${pkgs.i3status}/bin/i3status";
           position = "top";
           workspaceButtons = true;
-          trayPadding = 6;
           trayOutput = "primary";
           colors = {
             background = "#222222";
