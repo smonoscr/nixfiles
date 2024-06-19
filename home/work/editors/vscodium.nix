@@ -44,6 +44,10 @@
       "workbench.editor.highlightModifiedTabs" = true;
       "workbench.editorAssociations"."*.md" = "vscode.markdown.preview.editor";
       "workbench.list.smoothScrolling" = true;
+      "workbench.colorCustomizations" = {
+        "window.activeBorder" = "#00F4A2";
+        "window.inactiveBorder" = "#333333";
+      };
       "window.titleBarStyle" = "custom";
       "redhat.telemetry.enabled" = false;
       "git.enableSmartCommit" = true;

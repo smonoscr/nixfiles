@@ -61,7 +61,7 @@
 
       window = {
         titlebar = false;
-        border = 2;
+        border = 1;
         hideEdgeBorders = "smart";
       };
 
@@ -185,6 +185,7 @@
         criteria = [
           { class = "KeePassXC"; }
           { class = "zoom"; }
+          { class = "Zoom Meeting"; }
           { class = "Slack"; }
         ];
       };
