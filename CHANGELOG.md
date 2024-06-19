@@ -1,3 +1,14 @@
+## [7.1.5](https://gitlab.com/simonoscr/nixfiles/compare/7.1.4...7.1.5) (2024-06-19)
+
+### 📦 Other
+
+* **flake:** update flake ([a70fd49](https://gitlab.com/simonoscr/nixfiles/commit/a70fd49586ff2ec8465fd08ea15420149fdec0b7))
+* **flake:** update flake ([1be28c8](https://gitlab.com/simonoscr/nixfiles/commit/1be28c8cffce4caf876e22b94f8a51f3ee91ad5f))
+
+### 🛠 Fixes
+
+* work profile i3 setup and configs ([e96c9bf](https://gitlab.com/simonoscr/nixfiles/commit/e96c9bfa8265b747cd3c1cde50625e2c7a0cde8e))
+
 ## [7.1.4](https://gitlab.com/simonoscr/nixfiles/compare/7.1.3...7.1.4) (2024-06-18)
 
 ### 🛠 Fixes
