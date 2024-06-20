@@ -3,6 +3,7 @@
   imports = [
     inputs.hyprland.homeManagerModules.default
     ./binds.nix
+    ./hyprmode.nix
     ./settings.nix
     ./rules.nix
     ../hyprlock.nix
