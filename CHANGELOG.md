@@ -1,3 +1,9 @@
+## [7.1.8](https://gitlab.com/simonoscr/nixfiles/compare/7.1.7...7.1.8) (2024-06-20)
+
+### 🛠 Fixes
+
+* update hyprland settings and configuration ([5c04611](https://gitlab.com/simonoscr/nixfiles/commit/5c04611c72b85c315147419fde69728238ab393c))
+
 ## [7.1.7](https://gitlab.com/simonoscr/nixfiles/compare/7.1.6...7.1.7) (2024-06-20)
 
 ### 🛠 Fixes
