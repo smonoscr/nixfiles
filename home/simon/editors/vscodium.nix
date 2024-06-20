@@ -30,9 +30,6 @@
         "**/.pre-commit-config.yaml" = true;
         "**/.direnv" = true;
       };
-      "files.readonlyInclude" = {
-        "**/flake.lock" = true;
-      };
       "workbench.iconTheme" = "material-icon-theme";
       "workbench.startupEditor" = "none";
       "workbench.editor.highlightModifiedTabs" = true;
