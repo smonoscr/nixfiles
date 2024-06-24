@@ -2,7 +2,7 @@
 {
   home.file."${config.xdg.configHome}/hypr/hypr_gamemode.sh" = {
     text = ''
-      #!/usr/bin/env sh
+      #!/usr/bin/env zsh
 
       HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 
