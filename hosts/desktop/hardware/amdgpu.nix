@@ -22,10 +22,22 @@
   };
 
   hardware = {
-    opengl = {
+    amdgpu = {
+      legacySupport.enable = false;
+      initrd.enable = true;
+      opencl.enable = false; # ROCM maybe for LLM
+      amdvlk = {
+        enable = false; # I am using RADV
+        #package = "";
+        #settings = "";
+        #support32Bit.enable = true;
+        #support32Bit.package = [];
+        #supportExperimental.enable = false;
+      };
+    };
+    graphics = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
       extraPackages = with pkgs; [
         libva
         vaapiVdpau

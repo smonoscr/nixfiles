@@ -15,7 +15,6 @@
         "ahci"
         "usbhid"
       ];
-      kernelModules = [ "amdgpu" ];
     };
     kernelModules = [
       "kvm-amd"
