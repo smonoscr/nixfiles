@@ -71,6 +71,7 @@
         in
         {
           "${mod}+t" = "exec nixGL kitty";
+          "${mod}+r" = "exec nixGL alacritty";
           "${mod}+w" = "exec firefox";
           "${mod}+z" = "exec zoom";
           "${mod}+s" = "exec slack";

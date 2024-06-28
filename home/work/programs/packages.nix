@@ -33,8 +33,10 @@
     fluxctl
     ansible
     vault
+    vagrant
     minikube
     podman
+    docker
 
     # security
     keepassxc
