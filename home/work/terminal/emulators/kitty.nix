@@ -1,9 +1,14 @@
-_: {
+{ pkgs, ... }:
+{
   programs.kitty = {
     enable = true;
+    shellIntegration = {
+      enableZshIntegration = true;
+      enableBashIntegration = true;
+    };
     font = {
       size = 10;
-      name = "JetBrains Mono";
+      name = "JetBrainsMono Nerd Font";
     };
 
     settings = {
@@ -23,6 +28,9 @@ _: {
       foreground = "#eeeeee";
 
       cursor = "#d8caac";
+    };
+    environment = {
+      "SHELL" = "${pkgs.zsh}/bin/zsh";
     };
   };
 }

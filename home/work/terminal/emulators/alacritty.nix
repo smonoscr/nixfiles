@@ -3,7 +3,7 @@ _: {
     enable = true;
     settings = {
       window = {
-        decorations = "none";
+        decorations = "Full";
         dynamic_padding = true;
         padding = {
           x = 5;
@@ -17,37 +17,40 @@ _: {
       scrolling.history = 10000;
 
       font = {
-        normal.family = "JetBrains Mono";
-        bold.family = "JetBrains Mono";
-        italic.family = "JetBrains Mono";
-        size = 10;
+        normal.family = "JetBrainsMono Nerd Font";
+        bold.family = "JetBrainsMono Nerd Font";
+        italic.family = "JetBrainsMono Nerd Font";
+        size = 9;
       };
       colors = {
+        draw_bold_text_with_bright_colors = true;
         primary = {
-          background = "#2D353B";
-          foreground = "#D3C6AA";
+          background = "#171717";
+          foreground = "#eeeeee";
         };
-        # Normal colors
         normal = {
-          black = "#7A8478";
-          red = "#E67E80";
-          green = "#A7C080";
-          yellow = "#DBBC7F";
-          blue = "#7FBBB3";
-          magenta = "#D699B6";
-          cyan = "#83C092";
-          white = "#D3C6AA";
+          black = "#10100E";
+          red = "#C40233";
+          green = "#009F6B";
+          yellow = "#FFD700";
+          blue = "#0087BD";
+          magenta = "#9A4EAE";
+          cyan = "#20B2AA";
+          white = "#edecee";
         };
-        # Bright colors
         bright = {
-          black = "#859289";
-          red = "#E67E80";
-          green = "#A7C080";
-          yellow = "#DBBC7F";
-          blue = "#7FBBB3";
-          magenta = "#D699B6";
-          cyan = "#83C092";
-          white = "#D3C6AA";
+          black = "#4d4d4d";
+          red = "#FF2400";
+          green = "#03C03C";
+          yellow = "#ffca85";
+          blue = "#007FFF";
+          magenta = "#FF1493";
+          cyan = "#00CCCC";
+          white = "#FDFF00";
+        };
+        selection = {
+          text = "CellForeground";
+          background = "#29263c";
         };
       };
       cursor = {
@@ -59,7 +62,6 @@ _: {
           shape = "Block";
         };
       };
-      draw_bold_text_with_bright_colors = true;
     };
   };
 }

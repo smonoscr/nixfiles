@@ -50,20 +50,6 @@
         UrlbarInterventions = false;
         MoreFromMozilla = false;
       };
-      #ExtensionSettings = with builtins; let
-      #  extension = shortId: uuid: {
-      #    name = uuid;
-      #    value = {
-      #      install_url = "https://addons.mozilla.org/en-US/firefox/downloads/latest/${shortId}/latest.xpi";
-      #      installation_mode = "force_installed";
-      #    };
-      #  };
-      #in
-      #  listToAttrs [
-      #    (extension "ublock-origin" "uBlock0@raymondhill.net")
-      #    (extension "bitwarden-password-manager" "{446900e4-71c2-419f-a6a7-df9c091e268b}")
-      #  ];
-      #"*".installation_mode = "blocked";
     };
     profiles = {
       work = {
@@ -74,7 +60,7 @@
           bitwarden
           darkreader
           foxyproxy-standard
-          keepassxc
+          keepassxc-browser
         ];
         search = {
           force = true;
