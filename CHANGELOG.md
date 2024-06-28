@@ -1,3 +1,9 @@
+## [7.4.3](https://gitlab.com/simonoscr/nixfiles/compare/7.4.2...7.4.3) (2024-06-28)
+
+### 🛠 Fixes
+
+* work profile ([50074ed](https://gitlab.com/simonoscr/nixfiles/commit/50074ed207497687e87fe7b7c6c97cec2de95280))
+
 ## [7.4.2](https://gitlab.com/simonoscr/nixfiles/compare/7.4.1...7.4.2) (2024-06-27)
 
 ### 📦 Other
