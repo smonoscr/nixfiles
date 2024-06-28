@@ -23,7 +23,7 @@
     ./programs/tmux.nix
     ./programs/xdg.nix
     ./programs/zathura.nix
-    #./secrets/sops.nix #FIXME
+    ./secrets/sops.nix
     ./services/autorandr.nix
     ./services/flameshot.nix
     ./services/fonts.nix

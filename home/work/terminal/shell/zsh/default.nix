@@ -1,4 +1,5 @@
-_: {
+{ ... }:
+{
   imports = [
     ./aliases.nix
     ./plugins.nix
@@ -24,6 +25,7 @@ _: {
       zstyle ':completion:*' menu select
       zstyle ':completion:*' verbose true
       zstyle ':completion:*' completer _complete _ignored _approximate
+
       if [ -f ~/.zshrc_custom ]; then
         source ~/.zshrc_custom
       fi
