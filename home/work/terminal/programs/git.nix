@@ -1,14 +1,9 @@
 { config, ... }:
 let
-  email = "";
+  email = "214-simon.siedl@users.noreply.gitlab.mecom.de";
   name = "Simon Siedl";
 in
 {
-
-  #home.file.".config/git/allowed_signers".source = "${config.home.homeDirectory}/.ssh/id_rsa.pub}";
-
-  #home.file.".ssh/allowed_signers".text = "* ${builtins.readFile /home/simon/.ssh/id_rsa.pub}";
-
   programs.git = {
     enable = true;
     lfs.enable = true;
@@ -31,6 +26,7 @@ in
       auto.fetch = true;
       #core.sshCommand = "ssh -i ${config.home.homeDirectory}/.ssh/id_rsa";
     };
+
     userEmail = email;
     userName = name;
 
