@@ -11,6 +11,7 @@
         XDG_SCREENSHOTS_DIR = "${config.xdg.userDirs.pictures}/Screenshots";
       };
     };
+    systemDirs.data = [ "${config.home.homeDirectory}/.nix-profile/share/applications" ];
   };
   home.packages = [
     # used by `gio open` and xdp-gtk
