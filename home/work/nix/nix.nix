@@ -19,6 +19,8 @@
         "nix-command"
         "flakes"
       ];
+      # Whether to accept nix configuration from a flake without prompting.
+      accept-flake-config = true;
       cores = 0;
       max-jobs = "auto";
       connect-timeout = 5;
