@@ -1,3 +1,14 @@
+## [7.7.4](https://gitlab.com/simonoscr/nixfiles/compare/7.7.3...7.7.4) (2024-07-06)
+
+### 📦 Other
+
+* **flake:** update flake ([9c778ba](https://gitlab.com/simonoscr/nixfiles/commit/9c778ba4049c90625bf673d181a5f03a192aec61))
+
+### 🛠 Fixes
+
+* **cleanup:** remove unused imports ([033fd67](https://gitlab.com/simonoscr/nixfiles/commit/033fd67ec37a7f4210ab6370e514b63b10c42998))
+* **terminal:** adjust starship and kitty settings etc ([b6b1e23](https://gitlab.com/simonoscr/nixfiles/commit/b6b1e237180ca4acbc30d98f0d5dbb33d5f5f3af))
+
 ## [7.7.3](https://gitlab.com/simonoscr/nixfiles/compare/7.7.2...7.7.3) (2024-07-06)
 
 ### 📦 Other
