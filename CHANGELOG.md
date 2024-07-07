@@ -1,3 +1,9 @@
+## [7.8.1](https://gitlab.com/simonoscr/nixfiles/compare/7.8.0...7.8.1) (2024-07-07)
+
+### 🛠 Fixes
+
+* **starship:** update style and better reflect different prompt states ([840a6d5](https://gitlab.com/simonoscr/nixfiles/commit/840a6d577e09b247501e913cbee2991b7365df26))
+
 ## [7.8.0](https://gitlab.com/simonoscr/nixfiles/compare/7.7.4...7.8.0) (2024-07-07)
 
 ### 📦 Other
