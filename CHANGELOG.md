@@ -1,3 +1,14 @@
+## [7.8.0](https://gitlab.com/simonoscr/nixfiles/compare/7.7.4...7.8.0) (2024-07-07)
+
+### 📦 Other
+
+* **flake:** update flake ([4896a04](https://gitlab.com/simonoscr/nixfiles/commit/4896a04c2add02c211db9eec4d6dea5e6636c743))
+* **flake:** update flake ([2d0a080](https://gitlab.com/simonoscr/nixfiles/commit/2d0a080bc3e8d5f9e1a29ad53931c91f7b1ca83b))
+
+### 🚀 Features
+
+* add shortcut script with yad for shortcut overview ([978134c](https://gitlab.com/simonoscr/nixfiles/commit/978134c3eb03c61315c0867cd6da69e73ba21c20))
+
 ## [7.7.4](https://gitlab.com/simonoscr/nixfiles/compare/7.7.3...7.7.4) (2024-07-06)
 
 ### 📦 Other
