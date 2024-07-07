@@ -1,3 +1,9 @@
+## [7.9.0](https://gitlab.com/simonoscr/nixfiles/compare/7.8.3...7.9.0) (2024-07-07)
+
+### 🚀 Features
+
+* add wezterm ([fa509b7](https://gitlab.com/simonoscr/nixfiles/commit/fa509b72ad627609bac296edc62e1be26c3e4f0b))
+
 ## [7.8.3](https://gitlab.com/simonoscr/nixfiles/compare/7.8.2...7.8.3) (2024-07-07)
 
 ### 🛠 Fixes
