@@ -8,8 +8,10 @@ in
   hardware.pulseaudio.enable = lib.mkForce false;
   services.pipewire = {
     enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
     pulse.enable = true;
     jack.enable = true;
     wireplumber.enable = true;
@@ -38,8 +40,10 @@ in
                 nice.level = -15;
                 rt = {
                   prio = 70;
-                  time.soft = 200000;
-                  time.hard = 200000;
+                  time = {
+                    soft = 200000;
+                    hard = 200000;
+                  };
                 };
               };
             }
@@ -47,10 +51,18 @@ in
               name = "libpipewire-module-protocol-pulse";
               args = {
                 server.address = [ "unix:native" ];
-                pulse.min = {
-                  req = qr;
-                  quantum = qr;
-                  frag = qr;
+                pulse = {
+                  default.req = qr;
+                  min = {
+                    req = qr;
+                    quantum = qr;
+                    frag = qr;
+                  };
+                  max = {
+                    req = qr;
+                    quantum = qr;
+                    frag = qr;
+                  };
                 };
               };
             }
