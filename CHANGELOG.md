@@ -1,3 +1,13 @@
+## [7.10.1](https://gitlab.com/simonoscr/nixfiles/compare/7.10.0...7.10.1) (2024-07-08)
+
+### 📦 Other
+
+* **flake:** update flake ([afcdbe0](https://gitlab.com/simonoscr/nixfiles/commit/afcdbe0b8df3ec875e56c82de3ed40b979a6822b))
+
+### 🛠 Fixes
+
+* update wezterm config ([17083e7](https://gitlab.com/simonoscr/nixfiles/commit/17083e7680ee9e322ceee11961340558c192ed7f))
+
 ## [7.10.0](https://gitlab.com/simonoscr/nixfiles/compare/7.9.2...7.10.0) (2024-07-08)
 
 ### 🚀 Features
