@@ -1,3 +1,9 @@
+## [7.10.0](https://gitlab.com/simonoscr/nixfiles/compare/7.9.2...7.10.0) (2024-07-08)
+
+### 🚀 Features
+
+* **podman:** WIP add podman module and config ([2c80209](https://gitlab.com/simonoscr/nixfiles/commit/2c802092c0846fe70da284aec3a9125721065e83))
+
 ## [7.9.2](https://gitlab.com/simonoscr/nixfiles/compare/7.9.1...7.9.2) (2024-07-08)
 
 ### 🛠 Fixes
