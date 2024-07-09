@@ -75,7 +75,6 @@
     tpm2.enable = true;
   };
   environment = {
-    variables.BROWSER = "echo";
     defaultPackages = lib.mkForce [ ]; # no extra default packages are installed
   };
 }
