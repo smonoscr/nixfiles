@@ -1,3 +1,13 @@
+## [7.11.2](https://gitlab.com/simonoscr/nixfiles/compare/7.11.1...7.11.2) (2024-07-10)
+
+### 📦 Other
+
+* **flake:** ommit extra- prefix for nixConfig substituters and public key ([7d4cc0b](https://gitlab.com/simonoscr/nixfiles/commit/7d4cc0bd2303f46f7d1c241ac0cc69b160ec0fd1))
+
+### 🛠 Fixes
+
+* **pkgs:** disable bitwarden-desktop ([d8ff823](https://gitlab.com/simonoscr/nixfiles/commit/d8ff8236c2da5a82cc69de2736f67efef2f4f7c6))
+
 ## [7.11.1](https://gitlab.com/simonoscr/nixfiles/compare/7.11.0...7.11.1) (2024-07-09)
 
 ### 🛠 Fixes
