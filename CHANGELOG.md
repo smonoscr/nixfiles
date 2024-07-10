@@ -1,3 +1,13 @@
+## [7.11.3](https://gitlab.com/simonoscr/nixfiles/compare/7.11.2...7.11.3) (2024-07-10)
+
+### 📦 Other
+
+* **flake:** update flake ([840699b](https://gitlab.com/simonoscr/nixfiles/commit/840699b630648dac4360b6fd24f1861e0729a65b))
+
+### 🛠 Fixes
+
+* allow OCSP in work profile ([e81c48e](https://gitlab.com/simonoscr/nixfiles/commit/e81c48e0636736d676b467c6836bde8020541025))
+
 ## [7.11.2](https://gitlab.com/simonoscr/nixfiles/compare/7.11.1...7.11.2) (2024-07-10)
 
 ### 📦 Other
