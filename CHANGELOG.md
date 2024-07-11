@@ -1,3 +1,9 @@
+## [7.12.0](https://gitlab.com/simonoscr/nixfiles/compare/7.11.3...7.12.0) (2024-07-11)
+
+### 🚀 Features
+
+* yubikey login,sudo,hyprlock WIP ([80e7e08](https://gitlab.com/simonoscr/nixfiles/commit/80e7e087348b5fd3075ff717d586ceef4af16538))
+
 ## [7.11.3](https://gitlab.com/simonoscr/nixfiles/compare/7.11.2...7.11.3) (2024-07-10)
 
 ### 📦 Other
