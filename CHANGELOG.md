@@ -1,3 +1,9 @@
+## [8.0.0](https://gitlab.com/simonoscr/nixfiles/compare/7.12.1...8.0.0) (2024-07-12)
+
+### 🧨 Breaking changes!
+
+* switch to nixos for work laptop ([736c1b5](https://gitlab.com/simonoscr/nixfiles/commit/736c1b58ed85b676ffb3f677cab5fc6cffd514f2))
+
 ## [7.12.1](https://gitlab.com/simonoscr/nixfiles/compare/7.12.0...7.12.1) (2024-07-11)
 
 ### 🛠 Fixes
