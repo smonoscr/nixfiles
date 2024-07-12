@@ -1,3 +1,9 @@
+## [8.0.3](https://gitlab.com/simonoscr/nixfiles/compare/8.0.2...8.0.3) (2024-07-12)
+
+### 🛠 Fixes
+
+* **work:** add hyprland to work profile ([e7e113c](https://gitlab.com/simonoscr/nixfiles/commit/e7e113cb86ac363b9daadc3754e4bc0d63be2e3e))
+
 ## [8.0.2](https://gitlab.com/simonoscr/nixfiles/compare/8.0.1...8.0.2) (2024-07-12)
 
 ### 🛠 Fixes
