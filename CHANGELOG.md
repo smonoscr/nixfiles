@@ -1,3 +1,13 @@
+## [8.0.1](https://gitlab.com/simonoscr/nixfiles/compare/8.0.0...8.0.1) (2024-07-12)
+
+### 📦 Other
+
+* **flake:** update flake ([5b36b30](https://gitlab.com/simonoscr/nixfiles/commit/5b36b30949f4e813f9ef1d78f2ac7e31582d9b29))
+
+### 🛠 Fixes
+
+* **work:** hardware-configuration.nix ([84b3369](https://gitlab.com/simonoscr/nixfiles/commit/84b3369753a66855012117dd3ec9e3dbd33ed110))
+
 ## [8.0.0](https://gitlab.com/simonoscr/nixfiles/compare/7.12.1...8.0.0) (2024-07-12)
 
 ### 🧨 Breaking changes!
