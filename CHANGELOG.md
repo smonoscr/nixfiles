@@ -1,3 +1,9 @@
+## [8.3.0](https://gitlab.com/simonoscr/nixfiles/compare/8.2.6...8.3.0) (2024-07-13)
+
+### 🚀 Features
+
+* move work to own repository ([6f6b745](https://gitlab.com/simonoscr/nixfiles/commit/6f6b745dd3d7d6a1418ff1ffdb4f49795e4d5856))
+
 ## [8.2.6](https://gitlab.com/simonoscr/nixfiles/compare/8.2.5...8.2.6) (2024-07-13)
 
 ### 📦 Other
