@@ -1,3 +1,9 @@
+## [8.2.1](https://gitlab.com/simonoscr/nixfiles/compare/8.2.0...8.2.1) (2024-07-13)
+
+### 🛠 Fixes
+
+* **work:** openssh as own file ([33ff56f](https://gitlab.com/simonoscr/nixfiles/commit/33ff56fe03bbe8dd2d87dadf8822100c39aca921))
+
 ## [8.2.0](https://gitlab.com/simonoscr/nixfiles/compare/8.1.2...8.2.0) (2024-07-13)
 
 ### 🚀 Features
