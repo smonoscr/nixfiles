@@ -1,3 +1,9 @@
+## [8.2.0](https://gitlab.com/simonoscr/nixfiles/compare/8.1.2...8.2.0) (2024-07-13)
+
+### 🚀 Features
+
+* **work:** add fingerprint for laptop ([49fd696](https://gitlab.com/simonoscr/nixfiles/commit/49fd69639e3db66494c973cb3c5388babd4a275c))
+
 ## [8.1.2](https://gitlab.com/simonoscr/nixfiles/compare/8.1.1...8.1.2) (2024-07-13)
 
 ### 🛠 Fixes
