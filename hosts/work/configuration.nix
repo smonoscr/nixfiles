@@ -9,7 +9,7 @@
     ./core/console.nix
     ./core/dbus.nix
     ./core/locale.nix
-    ./core/secureboot.nix
+    #./core/secureboot.nix
     ./core/security.nix
     ./core/users.nix
     ./core/zram.nix
