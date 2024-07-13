@@ -33,6 +33,7 @@
     ./services/gnome-services.nix
     ./services/greetd.nix
     ./services/libinput.nix
+    ./services/openssh.nix
     ./services/pipewire.nix
     ./services/udev.nix
     ./services/xserver.nix
