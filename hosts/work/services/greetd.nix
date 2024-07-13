@@ -10,9 +10,9 @@ let
   sessionsData = config.services.displayManager.sessionData.desktops;
   xsessionsPath = "${sessionsData}/share/xsessions";
   wayland-sessionsPath = "${sessionsData}/share/wayland-sessions";
-  #nixos = "${config.system.nixos.label}";
-  kernel = "${config.boot.kernelPackages.kernel.version}";
 in
+#nixos = "${config.system.nixos.label}";
+#kernel = "${config.boot.kernelPackages.kernel.version}";
 {
   # greetd DM with tuigreet
   services = {
@@ -22,11 +22,10 @@ in
         terminal.vt = 1;
         default_session = {
           user = "simon";
-          command = "${tuigreet} --greeting 'NixOS: unstable, Kernel: ${kernel}' --time --asterisks --user-menu --theme 'border=cyan;button=yellow' --sessions ${wayland-sessionsPath}:${xsessionsPath}";
+          command = "${tuigreet} --time --asterisks --user-menu --xsessions ${xsessionsPath}";
         };
       };
     };
   };
-
   security.pam.services.greetd.enableGnomeKeyring = true;
 }
