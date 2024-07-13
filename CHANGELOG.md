@@ -1,3 +1,20 @@
+## [8.1.0](https://gitlab.com/simonoscr/nixfiles/compare/8.0.3...8.1.0) (2024-07-13)
+
+### 📦 Other
+
+* **flake:** update flake.lock ([f85e47f](https://gitlab.com/simonoscr/nixfiles/commit/f85e47f6fc6b7a712a649a8ff7273dde99d4df80))
+
+### 🚀 Features
+
+* add lanzaboote ([c8ea393](https://gitlab.com/simonoscr/nixfiles/commit/c8ea3932b7d2137b474f2de7152b36d222c36893))
+* update hardware and add software ([0d5367a](https://gitlab.com/simonoscr/nixfiles/commit/0d5367aaa2bf14a9d96e67b916f56330f6a60bfc))
+* update hardware like gpu and bluetooth ([9977f02](https://gitlab.com/simonoscr/nixfiles/commit/9977f02a14ea1701a4dab74cea590eab9ff0a8c6))
+* update i3 ([c7f9138](https://gitlab.com/simonoscr/nixfiles/commit/c7f91387710eca03f895ac14c9c94dc30ee3704c))
+
+### 🛠 Fixes
+
+* cleanup unsused files ([c86b03b](https://gitlab.com/simonoscr/nixfiles/commit/c86b03b00416a1cfc92702c1a5b82ff50a174983))
+
 ## [8.0.3](https://gitlab.com/simonoscr/nixfiles/compare/8.0.2...8.0.3) (2024-07-12)
 
 ### 🛠 Fixes
