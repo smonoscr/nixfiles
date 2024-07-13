@@ -4,5 +4,6 @@
     zoom-us
     glxinfo
     lshw
+    sbctl
   ];
 }
