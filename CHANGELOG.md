@@ -1,3 +1,14 @@
+## [8.2.5](https://gitlab.com/simonoscr/nixfiles/compare/8.2.4...8.2.5) (2024-07-13)
+
+### 📦 Other
+
+* **flake:** update flake.lock ([8331a72](https://gitlab.com/simonoscr/nixfiles/commit/8331a729c416553d71132fc64a0df0638ad447f3))
+
+### 🛠 Fixes
+
+* enable fingerprint and secureboot ([55571da](https://gitlab.com/simonoscr/nixfiles/commit/55571da417726202cbe84cce52055c02ea5ccb8d))
+* security opti ([f1178bd](https://gitlab.com/simonoscr/nixfiles/commit/f1178bda90f9275668ee9059d10f89f043f71ab5))
+
 ## [8.2.4](https://gitlab.com/simonoscr/nixfiles/compare/8.2.3...8.2.4) (2024-07-13)
 
 ### 🛠 Fixes
