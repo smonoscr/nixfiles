@@ -1,3 +1,14 @@
+## [8.3.1](https://gitlab.com/simonoscr/nixfiles/compare/8.3.0...8.3.1) (2024-07-13)
+
+### 📦 Other
+
+* **flake:** update flake ([d584c01](https://gitlab.com/simonoscr/nixfiles/commit/d584c01cf7a020d6916a08b8ef37d92fb773772e))
+* **flake:** update flake ([6541b57](https://gitlab.com/simonoscr/nixfiles/commit/6541b579b7d2214e9304e6ae6ff1094a6a6f8605))
+
+### 🛠 Fixes
+
+* update security ([0ac63d2](https://gitlab.com/simonoscr/nixfiles/commit/0ac63d2503af1b330b1ec1dd508211835d620923))
+
 ## [8.3.0](https://gitlab.com/simonoscr/nixfiles/compare/8.2.6...8.3.0) (2024-07-13)
 
 ### 🚀 Features
