@@ -3,8 +3,9 @@
   imports = [
     ./browser/firefox
     ./desktop/x11/i3
-    ./editors/vscodium.nix
+    #./editors/editorconfig.nix
     ./editors/nixvim.nix
+    ./editors/vscodium.nix
     ./editors/zed.nix
     ./programs/autorandr.nix
     ./programs/gpg.nix
