@@ -6,18 +6,6 @@
       custom = {
         blocks = [
           {
-            block = "custom";
-            json = true;
-            command = ''
-              if ip link show vpn0 &>/dev/null && ip addr show vpn0 | grep -q 'inet '; then
-                echo '{"text": " VPN ", "state": "Good"}'
-              else
-                echo '{"text": " VPN ", "state": "Critical"}'
-              fi
-            '';
-            interval = 5;
-          }
-          {
             block = "net";
             interval = 5;
             format = " $icon ";
