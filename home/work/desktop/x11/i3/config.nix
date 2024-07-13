@@ -51,10 +51,11 @@
       };
 
       startup = [
-        { command = "--no-startup-id keepassxc"; }
+        { command = "--no-startup-id dex --autostart --environment i3"; }
         { command = "--no-startup-id nm-applet"; }
         { command = "--no-startup-id blueman-applet"; }
-        { command = "--no-startup-id dex --autostart --environment i3"; }
+        { command = "--no-startup-id keepassxc"; }
+        { command = "--no-startup-id zoom"; }
       ];
 
       window = {
@@ -172,7 +173,7 @@
         }
       ];
       gaps = {
-        inner = 4;
+        inner = 1;
         outer = 2;
         smartGaps = true;
         smartBorders = "on";
@@ -185,11 +186,10 @@
           { class = "KeePassXC"; }
           { class = "zoom"; }
           { class = "Zoom Meeting"; }
-          { class = "Slack"; }
         ];
       };
 
-      terminal = "${pkgs.kitty}/bin/kitty";
+      terminal = "${pkgs.wezterm}/bin/wezterm";
 
       fonts = {
         names = [ "Inter Variable" ];
