@@ -18,18 +18,5 @@ _: {
       enable = true;
     };
   };
-
-  services = {
-    openssh = {
-      enable = true;
-      settings.UseDns = true;
-    };
-
-    resolved = {
-      enable = true;
-      dnssec = "allow-downgrade";
-      dnsovertls = "opportunistic";
-    };
-  };
   #systemd.services.NetworkManager-wait-online.enable = false;
 }
