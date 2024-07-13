@@ -14,6 +14,7 @@
     ./core/users.nix
     ./core/zram.nix
     ./hardware
+    ./hardware/luks.nix
     ./network
     ./nix
     ./pkgs/packages.nix
