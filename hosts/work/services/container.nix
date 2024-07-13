@@ -1,27 +1,21 @@
 { pkgs, ... }:
 {
   virtualisation = {
-    containers.enable = true;
+    containers = {
+      enable = true;
+      cdi.dynamic.nvidia.enable = true;
+    };
     podman = {
       enable = true;
-      # Create a `docker` alias for podman, to use it as a drop-in replacement
-      dockerCompat = false;
-      autoPrune.enable = true;
-      enableNvidia = true;
-    };
-    docker = {
-      #enable = true;
-      rootless = {
-        enable = true;
-        setSocketVariable = true;
-      };
-      enableNvidia = true;
-      autoPrune.enable = true;
+      dockerCompat = true;
+      dockerSocket = true;
+      networkSocket.enable = true;
+      autoPrune.enable = false;
+      defaultNetwork.settings.dns_enabled = true;
     };
   };
   environment.systemPackages = with pkgs; [
     dive
     podman-tui
   ];
-  #environment.variables.DOCKER_HOST = "unix://$XDG_RUNTIME_DIR/docker.sock";
 }
