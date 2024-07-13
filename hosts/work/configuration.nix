@@ -23,14 +23,17 @@
     ./programs/gnupg.nix
     ./programs/home-manager.nix
     ./programs/i3lock.nix
-    ./programs/xdg.nix
+    ./programs/seahorse.nix
     ./programs/virt-manager.nix
+    ./programs/xdg.nix
     ./programs/zsh.nix
+    ./services/autorandr.nix
+    ./services/container.nix
+    ./services/fingerprint.nix
     ./services/gnome-services.nix
     ./services/greetd.nix
     ./services/libinput.nix
     ./services/pipewire.nix
-    ./services/container.nix
     ./services/udev.nix
     ./services/xserver.nix
   ];
