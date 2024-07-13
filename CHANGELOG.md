@@ -1,3 +1,13 @@
+## [8.1.1](https://gitlab.com/simonoscr/nixfiles/compare/8.1.0...8.1.1) (2024-07-13)
+
+### 📦 Other
+
+* **flake:** update flake ([5d5f988](https://gitlab.com/simonoscr/nixfiles/commit/5d5f988d2499db634ceb04ee4ab2b8048aebfa84))
+
+### 🛠 Fixes
+
+* **work:** disable secureboot for initial setup ([fb76ff8](https://gitlab.com/simonoscr/nixfiles/commit/fb76ff8a02d02fd03f38a63a7adba83183a9dcfc))
+
 ## [8.1.0](https://gitlab.com/simonoscr/nixfiles/compare/8.0.3...8.1.0) (2024-07-13)
 
 ### 📦 Other
