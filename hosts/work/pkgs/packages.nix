@@ -7,7 +7,9 @@
       zoom-us
       glxinfo
       lshw
-      sbctl
+      sbctl # secureboot key-gen
+      perl # for fzf
+
     ];
   };
 }
