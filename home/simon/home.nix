@@ -21,7 +21,7 @@
     ./secrets/sops.nix
     ./services/audio.nix
     ./services/polkit-agent.nix
-    ./services/tailtray.nix
+    ./services/tailray.nix
     ./services/udiskie.nix
     ./terminal
   ];
