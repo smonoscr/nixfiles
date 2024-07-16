@@ -1,3 +1,21 @@
+## [8.4.0](https://gitlab.com/simonoscr/nixfiles/compare/8.3.1...8.4.0) (2024-07-16)
+
+### 📦 Other
+
+* WIP prepare impermanence ([cf2d586](https://gitlab.com/simonoscr/nixfiles/commit/cf2d5863fb5857ac7d64175666ece5acf7156837))
+* **flake:** update flake ([7a328c6](https://gitlab.com/simonoscr/nixfiles/commit/7a328c6cb03576f8e9aaccb25e30fe0381b4a382))
+* **flake:** update flake ([7a8e47c](https://gitlab.com/simonoscr/nixfiles/commit/7a8e47ca7cc8342bf0067caa754407b36e3e780c))
+* **flake:** update flake ([be8a53a](https://gitlab.com/simonoscr/nixfiles/commit/be8a53a0937e9a40bdda895f4e6bf81ed26e09e8))
+* **flake:** update flake ([89e07f1](https://gitlab.com/simonoscr/nixfiles/commit/89e07f178bee5897206160c3f7d8616013508370))
+
+### 🚀 Features
+
+* init tailtray ([46c269b](https://gitlab.com/simonoscr/nixfiles/commit/46c269b113db435f32460298996f3b50affff5a4))
+
+### 🛠 Fixes
+
+* dont suspend when audio ([2fdb5af](https://gitlab.com/simonoscr/nixfiles/commit/2fdb5af8980415dd6534d5bdfcb7da91191e3046))
+
 ## [8.3.1](https://gitlab.com/simonoscr/nixfiles/compare/8.3.0...8.3.1) (2024-07-13)
 
 ### 📦 Other
