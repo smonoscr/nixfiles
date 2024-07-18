@@ -5,5 +5,6 @@
     ./nix.nix
     ./nixos.nix
     ./nixpkgs.nix
+    ./substituters.nix
   ];
 }
