@@ -4,5 +4,6 @@ _: {
     nix-direnv.enable = true;
     enableZshIntegration = true;
     enableBashIntegration = true;
+    silent = true;
   };
 }
