@@ -1,3 +1,20 @@
+## [8.5.0](https://gitlab.com/simonoscr/nixfiles/compare/8.4.3...8.5.0) (2024-07-19)
+
+### 📦 Other
+
+* **flake:** update flake ([82d3907](https://gitlab.com/simonoscr/nixfiles/commit/82d3907ccadbb0c26187a785cccbe014d4eeb960))
+* **flake:** update flake ([0ee3858](https://gitlab.com/simonoscr/nixfiles/commit/0ee38584e5a78a6514baa7f27035f1a859410f53))
+
+### 🚀 Features
+
+* nix-index ([7941299](https://gitlab.com/simonoscr/nixfiles/commit/7941299181c57e5a5e70cbd5776cb75772d8c00b))
+
+### 🛠 Fixes
+
+* make nixpkgs available in the nixpath ([c19f3b0](https://gitlab.com/simonoscr/nixfiles/commit/c19f3b08925f03d5a85209d896193342615ce8e5))
+* move pre-commit-hooks into flake.nix instead of own file! ([47fb966](https://gitlab.com/simonoscr/nixfiles/commit/47fb966f15f6e1182a1a8ad220a0224e9f862c83))
+* **firefox:** update bookmarks ([f78f9ef](https://gitlab.com/simonoscr/nixfiles/commit/f78f9efbdb4ae861d03cb699c82e2f851ddc3bb6))
+
 ## [8.4.3](https://gitlab.com/simonoscr/nixfiles/compare/8.4.2...8.4.3) (2024-07-19)
 
 ### 📦 Other
