@@ -2,31 +2,17 @@
 {
   imports = [
     inputs.matugen.nixosModules.default
-    inputs.tailray.homeManagerModules.default
     ./browser/firefox
     ./desktop/wayland/hyprland
-    ./editors/editorconfig.nix
-    ./editors/nixvim.nix
-    ./editors/vscodium.nix
-    ./editors/zed.nix
-    ./programs/gtk.nix
-    ./programs/mangohud.nix
-    ./programs/mpv.nix
-    ./programs/nix-index.nix
-    ./programs/packages.nix
-    ./programs/qt.nix
-    ./programs/ssh.nix
-    ./programs/xdg.nix
-    ./programs/zathura.nix
-    ./secrets/sops.nix
-    ./services/audio.nix
-    ./services/polkit-agent.nix
-    ./services/tailray.nix
-    ./services/udiskie.nix
+    ./editors
+    ./nix
+    ./pkgs
+    ./programs
+    ./secrets
+    ./services
     ./terminal
+    ./themes
   ];
-
-  programs.home-manager.enable = true;
 
   home = {
     username = "simon";
@@ -37,9 +23,6 @@
     stateVersion = "23.11";
   };
 
-  manual = {
-    html.enable = false;
-    json.enable = false;
-    manpages.enable = false;
-  };
+  # reload system units when changing configs
+  systemd.user.startServices = "sd-switch"; # or "legacy" if "sd-switch" breaks again
 }
