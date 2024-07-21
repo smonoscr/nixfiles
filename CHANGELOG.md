@@ -1,3 +1,22 @@
+## [8.7.0](https://gitlab.com/simonoscr/nixfiles/compare/8.6.0...8.7.0) (2024-07-21)
+
+### 📦 Other
+
+* **flake:** update flake ([6547ef4](https://gitlab.com/simonoscr/nixfiles/commit/6547ef4cdbf4b92baee372efa606c802b0d2b06a))
+* **flake:** update flake ([46f8637](https://gitlab.com/simonoscr/nixfiles/commit/46f86379eeacbe125b45592f339ce625b51cbea6))
+
+### 🚀 Features
+
+* **all:** refactor and utilize default.nix files ([808f3e6](https://gitlab.com/simonoscr/nixfiles/commit/808f3e6796b59357b1fa3916ce58d0a2a1bdde00))
+* **hm:** move and refactor home-manager ([c49779f](https://gitlab.com/simonoscr/nixfiles/commit/c49779f39a6ab5f8b0d48f563d597b2a6e7a29b9))
+
+### 🛠 Fixes
+
+* add power-profiles-daemon ([8a47463](https://gitlab.com/simonoscr/nixfiles/commit/8a47463b198c1c11a39ee62baaf749944b9e9ee7))
+* **firefox:** use tmpfs ([10bdeeb](https://gitlab.com/simonoscr/nixfiles/commit/10bdeeb8e114a599eeea041b00366820676d77ea))
+* **flake:** drop tailray input ([4a4853e](https://gitlab.com/simonoscr/nixfiles/commit/4a4853e0b5f2a24afd45663269891d97189da294))
+* **hyprland:** move hyprland universum files closer together ([fcb6898](https://gitlab.com/simonoscr/nixfiles/commit/fcb689855448e8f930e364f84aacf3b4f2a319e3))
+
 ## [8.6.0](https://gitlab.com/simonoscr/nixfiles/compare/8.5.1...8.6.0) (2024-07-21)
 
 ### 📦 Other
