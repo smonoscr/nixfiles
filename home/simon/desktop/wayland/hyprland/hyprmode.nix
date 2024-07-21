@@ -11,11 +11,11 @@ let
       hyprctl keyword general:gaps_out 0
       hyprctl keyword general:border_size 1
       hyprctl keyword decoration:rounding 0
-      hyprctl keyword monitor "DP-1,2560x1440@165,auto,1" 2> /dev/null
+      hyprctl keyword monitor "DP-1,2560x1440@143.97,auto,1" 2> /dev/null
       pkill -f ags
       exit
     fi
-    hyprctl keyword monitor "DP-1,3440x1440@165,auto,1" 2> /dev/null
+    hyprctl keyword monitor "DP-1,3440x1440@164.90,auto,1" 2> /dev/null
     hyprctl reload
     hyprctl dispatch -- exec "ags -b hypr" --single-instance
   '';
