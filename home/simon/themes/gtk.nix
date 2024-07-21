@@ -1,22 +1,5 @@
 { pkgs, config, ... }:
 {
-  home = {
-    pointerCursor = {
-      name = "Bibata-Modern-Classic";
-      package = pkgs.bibata-cursors;
-      # available sizes for are:
-      # 16 20 22 24 28 32 40 48 56 64 72 80 88 96
-      size = 20;
-      gtk.enable = true;
-      x11.enable = true;
-    };
-    sessionVariables = {
-      GTK_THEME = config.gtk.theme.name;
-      XCURSOR_SIZE = config.home.pointerCursor.size;
-      XCURSOR_THEME = config.home.pointerCursor.name;
-    };
-  };
-
   gtk = {
     enable = true;
     font = {
@@ -46,18 +29,42 @@
       '';
     };
     gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+
+      # Decorations
+      gtk-decoration-layout = "appmenu:none";
+      gtk-toolbar-style = "GTK_TOOLBAR_BOTH";
+      gtk-toolbar-icon-size = "GTK_ICON_SIZE_LARGE_TOOLBAR";
+      gtk-button-images = 1;
+      gtk-menu-images = 1;
+
+      # Silence bells and whistles, quite literally.
+      gtk-error-bell = 0;
+      gtk-enable-event-sounds = 0;
+      gtk-enable-input-feedback-sounds = 0;
+
+      # Fonts
       gtk-xft-antialias = 1;
       gtk-xft-hinting = 1;
       gtk-xft-hintstyle = "hintslight";
       gtk-xft-rgba = "rgb";
-      gtk-application-prefer-dark-theme = 1;
     };
     gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+
+      # Decorations.
+      gtk-decoration-layout = "appmenu:none";
+
+      # Sounds, again.
+      gtk-error-bell = 0;
+      gtk-enable-event-sounds = 0;
+      gtk-enable-input-feedback-sounds = 0;
+
       gtk-xft-antialias = 1;
       gtk-xft-hinting = 1;
       gtk-xft-hintstyle = "hintslight";
       gtk-xft-rgba = "rgb";
-      gtk-application-prefer-dark-theme = 1;
+
     };
   };
 }
