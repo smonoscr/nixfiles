@@ -6,10 +6,10 @@
     ./hyprmode.nix
     ./settings.nix
     ./rules.nix
-    ../hyprlock.nix
-    ../hypridle.nix
+    ./hyprlock.nix
+    ./hypridle.nix
     ../ags
-    ../shortcuts_info.nix
+    ./shortcuts_info.nix
     #./plugins.nix
   ];
 
