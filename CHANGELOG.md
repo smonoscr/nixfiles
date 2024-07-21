@@ -1,3 +1,9 @@
+## [8.7.1](https://gitlab.com/simonoscr/nixfiles/compare/8.7.0...8.7.1) (2024-07-21)
+
+### 🛠 Fixes
+
+* **hyprmode:** hz to allowed ([e961d34](https://gitlab.com/simonoscr/nixfiles/commit/e961d34ee41718e014bf1cfa26439a2a52dfe75e))
+
 ## [8.7.0](https://gitlab.com/simonoscr/nixfiles/compare/8.6.0...8.7.0) (2024-07-21)
 
 ### 📦 Other
