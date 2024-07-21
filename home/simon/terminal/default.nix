@@ -1,17 +1,14 @@
 {
   imports = [
-    ./emulators/kitty.nix
+    #./emulators/kitty.nix
     ./emulators/wezterm.nix
+    ./programs/git
+    ./programs/yazi
     ./programs/bat.nix
     ./programs/btop.nix
-    ./programs/cli.nix
-    ./programs/fzf.nix
-    ./programs/git.nix
-    ./programs/tmux.nix
-    ./programs/direnv.nix
     ./programs/dircolors.nix
-    ./programs/yazi
-    ./shell/starship.nix
-    ./shell/zsh
+    ./programs/direnv.nix
+    ./programs/fzf.nix
+    ./shell
   ];
 }

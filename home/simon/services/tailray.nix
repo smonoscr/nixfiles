@@ -1,4 +1,0 @@
-{ ... }:
-{
-  services.tailray.enable = true;
-}

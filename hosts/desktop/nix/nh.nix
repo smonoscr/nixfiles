@@ -6,6 +6,7 @@ _: {
     flake = "/home/simon/code/nixfiles";
     clean = {
       enable = true;
+      dates = "weekly";
       extraArgs = "--keep 3";
     };
   };

@@ -1,101 +1,67 @@
 { config, pkgs, ... }:
 let
-  browser = [ "firefox" ];
-  editor = [ "codium" ];
-  imageViewer = [ "org.gnome.Loupe" ];
-  videoPlayer = [ "mpv" ];
-  audioPlayer = [ "mpv" ];
+  browser = [ "firefox.desktop" ];
+  zathura = [ "zathura.desktop" ];
+  fileManager = [ "yazi.desktop" ];
+  mailer = [ "proton-mail.desktop" ];
 
-  xdgAssociations =
-    type: program: list:
-    builtins.listToAttrs (
-      map (e: {
-        name = "${type}/${e}";
-        value = program;
-      }) list
-    );
+  associations = {
+    "text/html" = browser;
+    "x-scheme-handler/http" = browser;
+    "x-scheme-handler/https" = browser;
+    "x-scheme-handler/ftp" = browser;
+    "x-scheme-handler/about" = browser;
+    "x-scheme-handler/unknown" = browser;
+    "application/xhtml+xml" = browser;
+    "application/x-extension-htm" = browser;
+    "application/x-extension-html" = browser;
+    "application/x-extension-shtml" = browser;
+    "application/x-extension-xhtml" = browser;
+    "application/x-extension-xht" = browser;
 
-  image = xdgAssociations "image" imageViewer [
-    "png"
-    "jpeg"
-    "gif"
-  ];
-  video = xdgAssociations "video" videoPlayer [
-    "mp4"
-    "avi"
-    "mkv"
-  ];
-  audio = xdgAssociations "audio" audioPlayer [
-    "mp3"
-    "flac"
-    "wav"
-    "aac"
-  ];
-  browserTypes =
-    (xdgAssociations "application" browser [
-      "json"
-      "x-extension-htm"
-      "x-extension-html"
-      "x-extension-shtml"
-      "x-extension-xht"
-      "x-extension-xhtml"
-      "xhtml+xml"
-    ])
-    // (xdgAssociations "x-scheme-handler" browser [
-      "about"
-      "ftp"
-      "http"
-      "https"
-      "unknown"
-    ]);
+    "inode/directory" = fileManager;
 
-  # XDG MIME types
-  associations = builtins.mapAttrs (_: v: (map (e: "${e}.desktop") v)) (
-    {
-      "application/x-shellscript" = editor;
-      "inode/directory" = [ "yazi" ];
-      "application/pdf" = [ "org.pwmt.zathura-pdf-mupdf" ];
-      "x-scheme-handler/chrome" = [ "chromium-browsee" ];
-      "x-scheme-handler/spotify" = [ "spotify" ];
-      "image/svg" = editor;
-      "image/svg+xml" = editor;
-      "text/plain" = editor;
-      "text/html" = browser;
-      "text/x-csrc" = [
-        "codium"
-        "nvim"
-      ];
-      "text/css" = editor;
-    }
-    // image
-    // video
-    // audio
-    // browserTypes
-  );
+    "audio/*" = [ "mpv.desktop" ];
+    "video/*" = [ "mpv.desktop" ];
+    "image/*" = [ "imv.desktop" ];
+    "application/json" = browser;
+    "application/pdf" = zathura;
+
+    "x-scheme-handler/spotify" = [ "spotify.desktop" ];
+    "x-scheme-handler/discord" = [ "WebCord.desktop" ];
+    "x-scheme-handler/mailto" = mailer;
+  };
 in
 {
   xdg = {
     enable = true;
-    cacheHome = config.home.homeDirectory + "/.local/cache";
-
-    mimeApps = {
-      enable = true;
-      defaultApplications = associations;
-    };
+    cacheHome = "${config.home.homeDirectory}/.cache";
+    configHome = "${config.home.homeDirectory}/.config";
+    dataHome = "${config.home.homeDirectory}/.local/share";
+    stateHome = "${config.home.homeDirectory}/.local/state";
 
     userDirs = {
       enable = true;
       createDirectories = true;
+
+      download = "${config.home.homeDirectory}/Downloads";
+      desktop = "${config.home.homeDirectory}/Desktop";
+      documents = "${config.home.homeDirectory}/Documents";
+      pictures = "${config.home.homeDirectory}/Media/Pictures";
+      videos = "${config.home.homeDirectory}/Media/Videos";
+      publicShare = null;
+      music = null;
+      templates = null;
+
       extraConfig = {
         XDG_SCREENSHOTS_DIR = "${config.xdg.userDirs.pictures}/Screenshots";
       };
     };
+
+    mimeApps = {
+      enable = true;
+      associations.added = associations;
+      defaultApplications = associations;
+    };
   };
-  home.packages = [
-    # used by `gio open` and xdp-gtk
-    (pkgs.writeShellScriptBin "xdg-terminal-exec" ''
-      foot "$@"
-    '')
-    pkgs.xdg-utils
-  ];
 }

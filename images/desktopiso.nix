@@ -12,7 +12,6 @@
     ../hosts/desktop/programs/dconf.nix
     ../hosts/desktop/programs/fonts.nix
     ../hosts/desktop/programs/gnupg.nix
-    ../hosts/desktop/programs/home-manager.nix
     ../hosts/desktop/programs/hyprland.nix
     ../hosts/desktop/programs/seahorse.nix
     ../hosts/desktop/programs/xdg.nix

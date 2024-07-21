@@ -17,7 +17,6 @@
     ./programs/fonts.nix
     ./programs/git.nix
     ./programs/gnupg.nix
-    ./programs/home-manager.nix
     ./programs/hyprland.nix
     ./programs/less.nix
     ./programs/seahorse.nix
@@ -31,10 +30,11 @@
     ./services/greetd.nix
     ./services/libinput.nix
     ./services/power.nix
-    ./services/print.nix
+    ./services/printing.nix
     ./services/udev.nix
     ./services/virtualisation.nix
     ./services/zram.nix
+    ../../home/home-manager.nix
   ];
 
   ### DON'T TOUCH!

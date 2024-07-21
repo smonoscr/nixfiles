@@ -34,4 +34,5 @@
       "2620:fe::9"
     ];
   };
+  #programs.nm-applet.enable = true;
 }
