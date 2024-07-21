@@ -1,4 +1,4 @@
-{ config, ... }:
+{ inputs, config, ... }:
 let
   inCI = builtins.getEnv "CI" == "true";
   secretsPath =
@@ -8,6 +8,8 @@ let
       "${config.home.homeDirectory}/code/nixsecrets/secrets/simon/secrets.yaml";
 in
 {
+  imports = [ inputs.sops-nix.homeManagerModules.sops ];
+
   sops = {
     validateSopsFiles = false;
     defaultSopsFile = secretsPath;

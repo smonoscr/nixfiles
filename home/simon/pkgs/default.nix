@@ -1,22 +1,32 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+
+    # desktop apps
     webcord-vencord
-    spotify
     protonmail-desktop
     (lowPrio proton-pass) # FIXME package collision between proton-mail and proton-pass app.asar
     #bitwarden-desktop
-    ## gaming
+
+    # media
+    spotify
+
+    # audio
     teamspeak_client
+    #teamspeak5_client
+
+    # gaming
+    #r2modman
     #lutris
-    ## WINE
     #wineWowPackages.stable
     #wineWowPackages.waylandFull
     #winetricks
-    #teamspeak5_client
     #bottles
     #path-of-building
-    ## Mods
-    r2modman
+
+    # archives
+    zip
+    unzip
+    unrar
   ];
 }
