@@ -13,11 +13,7 @@
       "kvm-amd"
       "zenpower"
     ];
-    kernelParams = [
-      "amd_pstate=active"
-      "amd_pstate.shared_mem=1"
-      "amdgpu.exp_hw_support=1"
-    ];
+    kernelParams = [ "amd_pstate=active" ];
     blacklistedKernelModules = [ "k10temp" ];
     extraModulePackages = [ config.boot.kernelPackages.zenpower ];
   };
