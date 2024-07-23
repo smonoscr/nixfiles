@@ -6,7 +6,7 @@ _: {
     enable = true;
     shellInit = ''
       # Make sure we always use the correct zsh dotdir.
-      export ZDOTDIR=$HOME
+      export ZDOTDIR=$HOME/.zsh
     '';
 
     # We actually like zsh completion, but its setup belongs in home-manager

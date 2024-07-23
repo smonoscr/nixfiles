@@ -5,6 +5,7 @@ _: {
   ];
   programs.zsh = {
     enable = true;
+    dotDir = ".zsh";
     enableCompletion = true;
     completionInit = "autoload -U compinit && compinit";
     autosuggestion.enable = true;
@@ -42,6 +43,7 @@ _: {
     '';
 
     history = {
+      path = "$ZDOTDIR/.zsh_history";
       share = true;
       expireDuplicatesFirst = true;
       extended = false;
