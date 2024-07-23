@@ -1,3 +1,9 @@
+## [8.7.5](https://gitlab.com/simonoscr/nixfiles/compare/8.7.4...8.7.5) (2024-07-23)
+
+### 👀 Reverts
+
+* drop substis from nixConfig ([b0066ab](https://gitlab.com/simonoscr/nixfiles/commit/b0066abefde110bf11c6733f079fe2c553b8c86b))
+
 ## [8.7.4](https://gitlab.com/simonoscr/nixfiles/compare/8.7.3...8.7.4) (2024-07-23)
 
 ### 📦 Other
