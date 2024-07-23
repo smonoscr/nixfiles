@@ -7,17 +7,6 @@
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
-  boot = {
-    initrd = {
-      availableKernelModules = [
-        "nvme"
-        "xhci_pci"
-        "ahci"
-        "usbhid"
-      ];
-    };
-  };
-
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-uuid/322918cb-9eb4-40df-a3a8-44965f8750a1";
