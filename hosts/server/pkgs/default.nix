@@ -2,8 +2,6 @@
 {
   environment = {
     systemPackages = with pkgs; [
-      git
-      #neofetch
       neovim
       btop
       bat
@@ -12,6 +10,7 @@
       # hypervisor
       qemu
       k9s
+      cachix
     ];
     defaultPackages = lib.mkForce [ ]; # no extra default packages are installed
   };
