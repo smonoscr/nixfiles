@@ -5,28 +5,27 @@
 { ... }:
 {
   imports = [
-    ./core/boot.nix
-    ./core/console.nix
-    ./core/locale.nix
-    ./core/security.nix
-    ./core/systemd.nix
-    ./core/users.nix
-    ./core/zram.nix
+    ./core
     ./hardware
     ./network
     ./nix
-    ./pkgs/packages.nix
+    ./pkgs
     ./programs/dconf.nix
     ./programs/git.nix
     ./programs/gnupg.nix
+    ./programs/less.nix
     ./programs/zsh.nix
-    ./secrets/sops.nix
+    ./secrets
+    ./security
     ./services/kubernetes/helm.nix
     ./services/kubernetes/k3s.nix
     ./services/gitlab-runner.nix
     ./services/podman.nix
+    ./services/power.nix
     ./services/ssh.nix
     ./services/udev.nix
+    #./services/vms.nix
+    ./services/zram.nix
   ];
 
   ### DON'T TOUCH!

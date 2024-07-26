@@ -1,24 +1,16 @@
 _: {
   imports = [
     ./fail2ban.nix
+    ./firewall.nix
+    ./networkmanager.nix
+    ./openssh.nix
+    ./optimize.nix
+    ./resolved.nix
     ./tailscale.nix
   ];
 
   networking = {
-    hostName = "nixos-server";
-    #networkmanager.enable = true;
-    wireless.enable = true;
-    firewall = {
-      enable = true;
-      allowPing = true;
-      allowedTCPPorts = [
-        53
-        80
-        443
-        6443
-      ];
-      allowedUDPPorts = [ 53 ];
-    };
+    hostName = "nixos";
   };
 
   ## FIXME add initrd ssh host key
