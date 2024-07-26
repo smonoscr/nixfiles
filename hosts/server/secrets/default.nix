@@ -1,10 +1,14 @@
 { inputs, ... }:
+let
+  secretsDirectory = builtins.toString inputs.nixsecrets;
+  secretsFile = "${secretsDirectory}/secrets/server/secrets.yaml";
+in
 {
   imports = [ inputs.sops-nix.nixosModules.sops ];
 
   sops = {
-    validateSopsFiles = false;
-    defaultSopsFile = "/root/code/nixsecrets/secrets/server/secrets.yaml";
+    validateSopsFiles = true;
+    defaultSopsFile = secretsFile;
     age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
     secrets = {
       c3NoLXB1Yi1rZXk = {
