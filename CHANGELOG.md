@@ -1,3 +1,14 @@
+## [8.8.2](https://gitlab.com/simonoscr/nixfiles/compare/8.8.1...8.8.2) (2024-07-27)
+
+### 📦 Other
+
+* **flake:** update flock ([b1b617d](https://gitlab.com/simonoscr/nixfiles/commit/b1b617d0f4d577cf43b0085123a6f843038ff931))
+
+### 🛠 Fixes
+
+* **llm:** default config and location ([50d484a](https://gitlab.com/simonoscr/nixfiles/commit/50d484af198bfcd23e91c66fd580e3f75974c979))
+* **wezterm:** make it uising the dgpu instead of the cpu and/or igpu ([788e195](https://gitlab.com/simonoscr/nixfiles/commit/788e195c8df95fdcf9a51a42ea205446f1f7f690))
+
 ## [8.8.1](https://gitlab.com/simonoscr/nixfiles/compare/8.8.0...8.8.1) (2024-07-27)
 
 ### 📔 Docs
