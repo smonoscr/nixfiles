@@ -1,3 +1,18 @@
+## [8.8.1](https://gitlab.com/simonoscr/nixfiles/compare/8.8.0...8.8.1) (2024-07-27)
+
+### 📔 Docs
+
+* add desc to vscode settings ([6a1a246](https://gitlab.com/simonoscr/nixfiles/commit/6a1a246e4e623d14eb868000fe69cb4adc7b42c7))
+
+### 📦 Other
+
+* **flake:** update flock ([8f4f351](https://gitlab.com/simonoscr/nixfiles/commit/8f4f351d88e7148179c63608970ec875be080a10))
+
+### 🛠 Fixes
+
+* **llm:** create own folder and splitup backend and frontend ([4c640a1](https://gitlab.com/simonoscr/nixfiles/commit/4c640a154e16eae906ac563f094e996cd253cf3c))
+* **tty:** disable ALL ttys ([029cdd8](https://gitlab.com/simonoscr/nixfiles/commit/029cdd8f7fa130fbbd631c2a1d2d1d276ccd8df1))
+
 ## [8.8.0](https://gitlab.com/simonoscr/nixfiles/compare/8.7.7...8.8.0) (2024-07-27)
 
 ### 📦 Other
