@@ -16,7 +16,18 @@
   "tabAutocompleteModel": {
     "title": "Autocompletion",
     "provider": "ollama",
-    "model": "deepseek-coder-v2"
+    "model": "deepseek-coder-v2:16b"
+  },
+  "embeddingsProvider": {
+    "provider": "ollama",
+    "model": "nomic-embed-text:latest",
+    "apiBase": "http://desktop:8080/ollama/",
+    "requestOptions": {
+      "headers": {
+        "Authorization": "Bearer sk-0b043a79c6e94074904d990fcc19889c",
+        "Content-Type": "application/json"
+      }
+    }
   },
   "allowAnonymousTelemetry": false
 }
