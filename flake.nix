@@ -63,6 +63,7 @@
       url = "github:hyprwm/hyprlock";
       inputs = {
         hyprlang.follows = "hyprland/hyprlang";
+        hyprutils.follows = "hyprland/hyprutils";
         nixpkgs.follows = "hyprland/nixpkgs";
         systems.follows = "hyprland/systems";
       };
@@ -71,6 +72,7 @@
       url = "github:hyprwm/hypridle";
       inputs = {
         hyprlang.follows = "hyprland/hyprlang";
+        hyprutils.follows = "hyprland/hyprutils";
         nixpkgs.follows = "hyprland/nixpkgs";
         systems.follows = "hyprland/systems";
       };
