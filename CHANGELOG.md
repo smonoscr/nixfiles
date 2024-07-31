@@ -1,3 +1,17 @@
+## [9.0.4](https://gitlab.com/simonoscr/nixfiles/compare/9.0.3...9.0.4) (2024-07-31)
+
+### 📦 Other
+
+* **flake:** update flake ([7d850ef](https://gitlab.com/simonoscr/nixfiles/commit/7d850ef3d3b5ce8dd1d2cece0783aa1635dc1e1c))
+
+### 🛠 Fixes
+
+* **kernel:** dont use custom kernel ([99b0d69](https://gitlab.com/simonoscr/nixfiles/commit/99b0d692e2e762938ea25d995307d838334f40f7))
+* **nix:** try access-token again to prevent api rate limit DOESNT WORK ([2928588](https://gitlab.com/simonoscr/nixfiles/commit/2928588373c6f559cfc2cdc3f9d61150828f3455))
+* **yazi:** enable without latest git use from module ([f5eb144](https://gitlab.com/simonoscr/nixfiles/commit/f5eb14498b231d2a2791818e5b8532ad6bd76863))
+* **zed:** add config file ([abc4287](https://gitlab.com/simonoscr/nixfiles/commit/abc4287ed6ae3e734bfc4608654707501a65b2bb))
+* **zed:** adjust config and make nix to json ([412c59b](https://gitlab.com/simonoscr/nixfiles/commit/412c59bb6a66a41e8eaf11f4323e990a9355f6df))
+
 ## [9.0.3](https://gitlab.com/simonoscr/nixfiles/compare/9.0.2...9.0.3) (2024-07-29)
 
 ### 📦 Other
