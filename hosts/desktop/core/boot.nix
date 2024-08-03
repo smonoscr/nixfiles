@@ -1,6 +1,21 @@
 { pkgs, lib, ... }:
 {
+  chaotic.scx.enable = true; # by default uses scx_rustland scheduler
+
   boot = {
+    ## use custom xanmod kernel no
+    kernelPackages = pkgs.linuxPackages_cachyos; # pkgs.linuxPackages_cachyos, pkgs.linuxPackages_xanmod_latest, pkgs.linuxPackages_zen, pkgs.linuxPackages_lqx, linuxPackages_latest
+
+    supportedFilesystems = [
+      "ext4"
+      "vfat"
+      "btrfs"
+      "nfts"
+      "xfs"
+      "fat"
+      "exfat"
+    ];
+
     swraid.enable = lib.mkDefault false;
 
     loader = {
@@ -10,7 +25,7 @@
 
       systemd-boot = {
         enable = true;
-        configurationLimit = 5;
+        configurationLimit = 15;
         consoleMode = lib.mkDefault "max";
         editor = false;
       };
@@ -49,19 +64,16 @@
       };
     };
 
-    ## use custom xanmod kernel no
-    kernelPackages = pkgs.linuxPackages_xanmod_latest; # pkgs.linuxPackages_xanmod_latest, pkgs.linuxPackages_zen, pkgs.linuxPackages_lqx, linuxPackages_latest
-
     kernelParams = [
       # https://en.wikipedia.org/wiki/Kernel_page-table_isolation
       # auto means kernel will automatically decide the pti state
       "pti=auto" # on | off
 
-      # CPU idle behaviour
+      # CPU idle behaviour only Intel CPU
       #  poll: slightly improve performance at cost of a hotter system (not recommended)
       #  halt: halt is forced to be used for CPU idle
       #  nomwait: Disable mwait for CPU C-states
-      "idle=nomwait" # poll | halt | nomwait
+      #"idle=nomwait" # poll | halt | nomwait
 
       # disable usb autosuspend
       "usbcore.autosuspend=-1"
