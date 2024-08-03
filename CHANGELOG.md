@@ -1,3 +1,20 @@
+## [9.1.0](https://gitlab.com/simonoscr/nixfiles/compare/9.0.5...9.1.0) (2024-08-03)
+
+### 📦 Other
+
+* **flake:** added chaotic nyx input ([3c9d6ae](https://gitlab.com/simonoscr/nixfiles/commit/3c9d6aecaef1cdf336f689da7e353172c2a1237a))
+* **flake:** update flake ([d0245f0](https://gitlab.com/simonoscr/nixfiles/commit/d0245f021bbf82dc6f7c263599cf818e939aa921))
+
+### 🚀 Features
+
+* **kernel:** add and use cachyos kernel and adjust kernelParams and bootParams ([4b5de33](https://gitlab.com/simonoscr/nixfiles/commit/4b5de33bdc96b69a08989005422f3c27f8b8bdfc))
+
+### 🛠 Fixes
+
+* **firefox:** add simplelogin extension ([a666008](https://gitlab.com/simonoscr/nixfiles/commit/a666008a33b4fbd7706291dceb1c91d93010d583))
+* **hyprland:** update config ([c94ea8b](https://gitlab.com/simonoscr/nixfiles/commit/c94ea8b34a686dec39d19198742437a5709fca0d))
+* **zed:** updae theme, settings and config ([108118a](https://gitlab.com/simonoscr/nixfiles/commit/108118ae281c361755ec55dc7aba92781949fb0a))
+
 ## [9.0.5](https://gitlab.com/simonoscr/nixfiles/compare/9.0.4...9.0.5) (2024-07-31)
 
 ### 🛠 Fixes
