@@ -73,7 +73,7 @@
       # to the device. P.S. I chose to mention "Evil Maid" specifically because it sounds
       # funny. Do not think that is the only attack you are vulnerable to.
       # See: <https://en.wikipedia.org/wiki/Evil_maid_attack>
-      "nohibernate"
+      "nohibernate" # disabled in cachyos kernel, but in case we switch, always keep it disabled for desktop
       # make stack-based attacks on the kernel harder
       "randomize_kstack_offset=on"
       # Disable vsyscalls as they are obsolete and have been replaced with vDSO.
@@ -110,7 +110,8 @@
       # ArchWiki recommends opting in for "integrity", however since we avoid modifying
       # running kernel (by the virtue of using NixOS and locking module hot-loading) the
       # confidentiality mode is a better solution.
-      "lockdown=confidentiality"
+      # FYI: integrity is better solution when using sched-ext scheduler with BPF functionality.
+      "lockdown=integrity"
       # enable buddy allocator free poisoning
       #  on: memory will befilled with a specific byte pattern
       #      that is unlikely to occur in normal operation.
@@ -120,14 +121,14 @@
       # reduces the predictability of page allocations
       "page_alloc.shuffle=1"
       # for debugging kernel-level slab issues
-      "slub_debug=FZP"
+      #"slub_debug=FZP"
       # ignore access time (atime) updates on files
       # except when they coincide with updates to the ctime or mtime
       "rootflags=noatime"
       # linux security modules
-      "lsm=landlock,lockdown,yama,loadpin,safesetid,integrity,apparmor,bpf,tomoyo,selinux"
+      #"lsm=landlock,lockdown,yama,loadpin,safesetid,integrity,apparmor,bpf,tomoyo,selinux"
       # prevent the kernel from blanking plymouth out of the fb
-      "fbcon=nodefer"
+      #"fbcon=nodefer"
       # the format that will be used for integrity audit logs
       #  0 (default): basic integrity auditing messages
       #  1: additional integrity auditing messages
