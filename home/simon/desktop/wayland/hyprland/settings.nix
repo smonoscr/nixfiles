@@ -66,12 +66,16 @@
         key_press_enables_dpms = true;
         disable_autoreload = true;
         focus_on_activate = true;
-        no_direct_scanout = false;
       };
 
       xwayland = {
         use_nearest_neighbor = false;
         force_zero_scaling = true;
+      };
+
+      render = {
+        direct_scanout = true;
+        explicit_sync = 1;
       };
 
       debug = {
