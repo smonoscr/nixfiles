@@ -16,34 +16,9 @@ let
   #  }
   #  + "/ags";
 
-  agsDirectory = inputs.hyprpanel.outPath;
 in
 {
   imports = [ inputs.ags.homeManagerModules.ags ];
-
-  home.packages = with pkgs; [
-    bun # needed
-    dart-sass # needed
-    brightnessctl # needed
-
-    bluez
-    bluez-tools
-    grimblast
-    gpu-screen-recorder
-    python3
-    gpustat
-  ];
-
-  xdg.configFile."ags" = {
-    source = agsDirectory;
-    target = "ags";
-    recursive = true;
-    #onChange = ''
-    #  rm -rf ${config.xdg.configHome}/ags
-    #  cp -r ${config.xdg.configHome}/ags_init ${config.xdg.configHome}/ags
-    #  chmod -R u+w ${config.xdg.configHome}/ags
-    #'';
-  };
 
   programs.ags = {
     enable = true;
