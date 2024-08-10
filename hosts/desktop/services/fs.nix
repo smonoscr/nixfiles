@@ -1,5 +1,4 @@
-{ lib, ... }:
-{
+_: {
   services.fstrim = {
     enable = true;
     # The timer interval passed to the systemd service. The default is monthly

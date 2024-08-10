@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   xdg.configFile."zed/themes/theme.json".text = builtins.toJSON {
     "$schema" = "https://zed.dev/schema/themes/v0.1.0.json";
     name = "Visual studio code themes";

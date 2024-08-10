@@ -1,1 +1,1 @@
-{ programs.seahorse.enable = true; }
+_: { programs.seahorse.enable = true; }

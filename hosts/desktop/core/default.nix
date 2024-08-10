@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   imports = [
     ./boot.nix
     ./console.nix

@@ -1,14 +1,5 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ config, pkgs, ... }:
 let
-  inherit (lib.lists) filter;
-  inherit (lib.strings) hasSuffix;
-  inherit (lib.filesystem) listFilesRecursive;
-
   # get hostname
   inherit (config.networking) hostName;
 

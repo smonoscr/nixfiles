@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   system = {
     # Automatic/Unattended upgrades in general are one of the dumbest things you can set up
     # on virtually any Linux distribution. While NixOS would logically mitigate some of its

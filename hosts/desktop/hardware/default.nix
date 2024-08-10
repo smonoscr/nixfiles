@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   imports = [
     ./amdcpugpu.nix
     #./bluetooth.nix
