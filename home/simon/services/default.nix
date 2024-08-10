@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   imports = [
     ./audio.nix
     ./dconf.nix

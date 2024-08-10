@@ -1,4 +1,4 @@
-{
+_: {
   programs.git = {
     aliases = {
       ad = "add";

@@ -1,4 +1,4 @@
-{
+_: {
   imports = [
     #./emulators/kitty.nix
     ./emulators/wezterm.nix

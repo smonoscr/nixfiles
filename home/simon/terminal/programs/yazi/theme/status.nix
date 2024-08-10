@@ -1,4 +1,4 @@
-{
+_: {
   programs.yazi.theme.status = {
     separator_open = "";
     separator_close = "";

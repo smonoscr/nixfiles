@@ -1,6 +1,6 @@
 { lib, ... }:
 let
-  inherit (lib.kernel) yes no freeform;
+  inherit (lib.kernel) yes freeform;
   inherit (lib.attrsets) mapAttrs;
   inherit (lib.modules) mkForce;
 in

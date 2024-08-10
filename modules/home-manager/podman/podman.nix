@@ -12,17 +12,17 @@ let
 
   inherit (lib) mkOption types;
 
-  podmanPackage = (pkgs.podman.override { inherit (cfg) extraPackages; });
+  podmanPackage = pkgs.podman.override { inherit (cfg) extraPackages; };
 
-  defaultPolicy = ''
-    {
-        "default": [
-            {
-                "type": "insecureAcceptAnything"
-            }
-        ]
-    }
-  '';
+  #defaultPolicy = ''
+  #  {
+  #      "default": [
+  #          {
+  #              "type": "insecureAcceptAnything"
+  #          }
+  #      ]
+  #  }
+  #'';
 
   podmanSetupScript =
     let
@@ -106,7 +106,7 @@ in
       {
         home.packages = [ cfg.package ];
 
-        systemd.user = lib.mkIf (pkgs.stdenv.hostPlatform.isLinux) {
+        systemd.user = lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
 
           services.podman = {
             Unit = {

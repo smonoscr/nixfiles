@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+_: {
   services = {
     open-webui = {
       enable = true;
