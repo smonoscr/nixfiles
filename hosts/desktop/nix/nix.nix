@@ -7,7 +7,7 @@
 }:
 {
   nix = {
-    #package = pkgs.nixVersions.latest; # Versions.latest;
+    package = pkgs.lix; # nixVersions.latest, lix
     # pin the registry to avoid downloading and evaling a new nixpkgs version every time
     registry = lib.mapAttrs (_: v: { flake = v; }) inputs;
 

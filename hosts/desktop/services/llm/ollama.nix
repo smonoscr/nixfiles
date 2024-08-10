@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+_: {
   services = {
     ollama = {
       enable = true;

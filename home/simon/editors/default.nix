@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   imports = [
     ./editorconfig.nix
     ./nixvim.nix

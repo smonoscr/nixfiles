@@ -1,4 +1,4 @@
-{
+_: {
   programs.git = {
     ignores = [
       ".DS_Store"

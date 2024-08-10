@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+_: {
   programs.gamescope = {
     enable = true;
     capSysNice = true; # FIXME https://discourse.nixos.org/t/unable-to-activate-gamescope-capsysnice-option/37843

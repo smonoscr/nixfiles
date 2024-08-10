@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   imports = [
     ./docs.nix
     ./nh.nix
