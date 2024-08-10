@@ -84,10 +84,6 @@
       url = "github:Jas-SinghFSU/HyprPanel";
     };
 
-    yazi = {
-      url = "github:sxyazi/yazi";
-    };
-
     ags = {
       url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -153,6 +149,14 @@
                     write = true;
                   };
                 };
+                deadnix = {
+                  enable = true;
+                  fail_fast = true;
+                };
+                #statix = {
+                #  enable = true;
+                #  fail_fast = true;
+                #};
 
                 pre-commit-hook-ensure-sops.enable = true;
               };
