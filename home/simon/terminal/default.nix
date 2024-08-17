@@ -1,6 +1,6 @@
 _: {
   imports = [
-    #./emulators/kitty.nix
+    ./emulators/kitty.nix
     ./emulators/wezterm.nix
     ./programs/git
     ./programs/yazi
