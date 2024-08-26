@@ -1,3 +1,16 @@
+## [9.1.4](https://gitlab.com/simonoscr/nixfiles/compare/9.1.3...9.1.4) (2024-08-26)
+
+### 📦 Other
+
+* **flake:** update flake ([f1288bd](https://gitlab.com/simonoscr/nixfiles/commit/f1288bdc5d90d7a54f4802008524bce6c6459308))
+* **flake:** update flake ([a3fc38f](https://gitlab.com/simonoscr/nixfiles/commit/a3fc38f804510d8f7e1dc6a7dfb6ce6c5a477876))
+* **flake:** update flake ([a61b07f](https://gitlab.com/simonoscr/nixfiles/commit/a61b07f93c8717a7582f664decdbb9a65eca5a22))
+
+### 🛠 Fixes
+
+* **firefox:** update shyfox to 3.8.1 and user.js ([a968919](https://gitlab.com/simonoscr/nixfiles/commit/a9689199a2c6de2d15bbd0ebf1bee37a0a1942d6))
+* **zed:** update config ([7d88a31](https://gitlab.com/simonoscr/nixfiles/commit/7d88a312a1beb38d2bb52902aac1b428ce2bd6da))
+
 ## [9.1.3](https://gitlab.com/simonoscr/nixfiles/compare/9.1.2...9.1.3) (2024-08-19)
 
 ### 💈 Style
