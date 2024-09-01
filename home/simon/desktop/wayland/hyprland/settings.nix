@@ -3,13 +3,11 @@
   wayland.windowManager.hyprland = {
     settings = {
       exec-once = [
-        "hyprlock"
         "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
         "ags -b hypr"
         "steam -silent"
         "corectrl"
         "udiskie &"
-
       ];
       env = [
         #"AQ_NO_ATOMIC,1"
@@ -22,7 +20,7 @@
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
         "OZONE_PLATFORM,wayland"
-        #"NIXOS_OZONE_WL,1"
+        "NIXOS_OZONE_WL,1"
         #"SDL_VIDEODRIVER,wayland"
         "HYPRCURSOR_THEME,${config.home.pointerCursor.name}"
         "HYPRCURSOR_SIZE,${toString config.home.pointerCursor.size}"
