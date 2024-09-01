@@ -26,10 +26,10 @@ in
           user = "simon";
           command = "${tuigreet} --greeting 'NixOS: unstable, Kernel: XanMod ${kernel}' --time --asterisks --remember --remember-user-session  --theme 'border=cyan;button=yellow' --cmd Hyprland --sessions '${sessionsPaths}'";
         };
-        initial_session = {
-          command = "${lib.getExe config.programs.hyprland.package}";
-          user = "simon";
-        };
+        #initial_session = {
+        #  command = "${lib.getExe config.programs.hyprland.package}";
+        #  user = "simon";
+        #};
       };
     };
   };
