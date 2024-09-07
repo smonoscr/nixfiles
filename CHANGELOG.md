@@ -1,3 +1,18 @@
+## [9.1.5](https://gitlab.com/simonoscr/nixfiles/compare/9.1.4...9.1.5) (2024-09-07)
+
+### 📦 Other
+
+* **deps:** update node.js to v22.8.0 ([49bfb06](https://gitlab.com/simonoscr/nixfiles/commit/49bfb06b039111c30edf054f4aa253529afcccee))
+* **flake:** update flake ([af418d6](https://gitlab.com/simonoscr/nixfiles/commit/af418d62985b01afc6cdfd494d1e11e8dcdf724f))
+* **flake:** update flake ([5ca0262](https://gitlab.com/simonoscr/nixfiles/commit/5ca0262418abe9bf2de2dcde654709bdad31f394))
+
+### 🛠 Fixes
+
+* **gamescope:** disable cap_sys ([a7b5bc8](https://gitlab.com/simonoscr/nixfiles/commit/a7b5bc85dc8b51e14933c59f0743df86ba89d9bf))
+* **login:** remove autologin for tuigreet and disable hyprlock on startup ([93691ad](https://gitlab.com/simonoscr/nixfiles/commit/93691ad8e71be7cf4c438688007ab1a91a4c9cec))
+* **ollama:** update module options ([b7af414](https://gitlab.com/simonoscr/nixfiles/commit/b7af414ef3d3282665f26c6f9db7d5e4a67f750b))
+* **zed:** remove themes and update config ([3618b3d](https://gitlab.com/simonoscr/nixfiles/commit/3618b3dafc652e5e5f007e2df4aa3663fc4aced4))
+
 ## [9.1.4](https://gitlab.com/simonoscr/nixfiles/compare/9.1.3...9.1.4) (2024-08-26)
 
 ### 📦 Other
