@@ -1,10 +1,13 @@
 { pkgs, ... }:
+let
+  jsonFormat = pkgs.formats.json { };
+in
 {
-  xdg.configFile."zed/settings.json".text = builtins.toJSON {
+  xdg.configFile."zed/settings.json".source = jsonFormat.generate "zed-settings.json" {
     theme = {
       mode = "system";
-      light = "VSCode Dark Modern - Custom";
-      dark = "VSCode Dark Modern - Custom";
+      light = "VSCode Dark Modern";
+      dark = "VSCode Dark Modern";
     };
     base_keymap = "VSCode";
     features = {
@@ -155,9 +158,6 @@
       version = 2;
       enabled = true;
       button = true;
-      dock = "right";
-      default_width = 640;
-      default_height = 320;
       default_model = {
         provider = "ollama";
         model = "deepseek-coder-v2:16b";
@@ -335,7 +335,6 @@
             command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
           };
         };
-        #"formatter" = "language_server";
       };
       TypeScript = {
         language_servers = [
@@ -361,7 +360,7 @@
     };
     language_models = {
       ollama = {
-        aou_url = "https://locahost:11434";
+        api_url = "http://127.0.0.1:11434/v1";
       };
     };
     prettier = {
@@ -370,10 +369,8 @@
     };
     lsp = {
       nixd = {
-        binary = {
-          path = "${pkgs.nixd}/bin/nixd";
-          arguments = [ ];
-        };
+        command = "${pkgs.nixd}/bin/nixd";
+        arguments = [ "--stdio" ];
       };
     };
     vim = {
