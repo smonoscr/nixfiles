@@ -3,9 +3,23 @@
   environment.systemPackages = with pkgs; [ networkmanagerapplet ];
 
   networking = {
-    wireless.enable = false;
+    wireless = {
+      enable = false;
+      iwd = {
+        enable = true;
+        settings = {
+          IPv6 = {
+            Enabled = false;
+          };
+          Settings = {
+            AutoConnect = false;
+          };
+        };
+      };
+    };
     networkmanager = {
       enable = true;
+      wifi.backend = "iwd";
       dns = "systemd-resolved";
     };
 

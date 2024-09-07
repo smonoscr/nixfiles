@@ -6,7 +6,7 @@ _: {
 
       dnssec = "allow-downgrade";
 
-      dnsovertls = "opportunistic";
+      dnsovertls = "true";
       # ideally our fallbackDns should be something more widely available
       # but I do not want my last resort to sell my data to every company available
       # NOTE: DNS fallback is not a recovery DNS
