@@ -60,10 +60,6 @@ _: {
       "net.ipv4.tcp_wmem" = "4096 65536 16777216";
       "net.ipv4.udp_rmem_min" = 8192;
       "net.ipv4.udp_wmem_min" = 8192;
-      "net.netfilter.nf_conntrack_generic_timeout" = 60;
-      "net.netfilter.nf_conntrack_max" = 1048576;
-      "net.netfilter.nf_conntrack_tcp_timeout_established" = 600;
-      "net.netfilter.nf_conntrack_tcp_timeout_time_wait" = 1;
     };
   };
 }
