@@ -1,3 +1,18 @@
+## [9.2.2](https://gitlab.com/simonoscr/nixfiles/compare/9.2.1...9.2.2) (2024-09-09)
+
+### 📔 Docs
+
+* **README:** remove checkboxes ([1f7fda4](https://gitlab.com/simonoscr/nixfiles/commit/1f7fda4e9cbeac7c70e0746be655514b3de0ef27))
+
+### 📦 Other
+
+* **flake:** update flake ([39b7ae5](https://gitlab.com/simonoscr/nixfiles/commit/39b7ae51e3cdaf879aeed427429cc50ad7f4312b))
+* **flake:** update flake ([85393bc](https://gitlab.com/simonoscr/nixfiles/commit/85393bc5fd83cdd61fefca995454d1481037f984))
+
+### 🛠 Fixes
+
+* **ags:** update and enable systemd-service and remove ags from exec-once in hyprland ([e3a8bc9](https://gitlab.com/simonoscr/nixfiles/commit/e3a8bc938c07cd006600f376185788bf6f2e9f0a))
+
 ## [9.2.1](https://gitlab.com/simonoscr/nixfiles/compare/9.2.0...9.2.1) (2024-09-07)
 
 ### 📦 Other
