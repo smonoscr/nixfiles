@@ -1,3 +1,16 @@
+## [9.3.2](https://gitlab.com/simonoscr/nixfiles/compare/9.3.1...9.3.2) (2024-09-15)
+
+### 📦 Other
+
+* add renovate.json ([89c7380](https://gitlab.com/simonoscr/nixfiles/commit/89c738019f898a442b5ea6485bd1ebb38bb25bc5))
+* **flake:** update flake ([2af6c16](https://gitlab.com/simonoscr/nixfiles/commit/2af6c1672dd0e1253c6b02ef9b46014d8169c3bd))
+* **flake:** update flake ([5403c01](https://gitlab.com/simonoscr/nixfiles/commit/5403c010e4f04813a82918a0252d4687ee3313bc))
+
+### 🛠 Fixes
+
+* remove teamspeak5 ([d92b334](https://gitlab.com/simonoscr/nixfiles/commit/d92b3347569d8ca571a34dad25d16c51464a24fd))
+* **hyprland:** add ts3 shortcut ([77cc08b](https://gitlab.com/simonoscr/nixfiles/commit/77cc08bf4861014371e3d17f5577bd8b3083ac14))
+
 ## [9.3.1](https://gitlab.com/simonoscr/nixfiles/compare/9.3.0...9.3.1) (2024-09-14)
 
 ### 📦 Other
