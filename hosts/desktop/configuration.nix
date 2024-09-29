@@ -12,10 +12,10 @@
     #./kernel # <- this is custom xanmod kernel need too long to build annoying
     ./network
     ./nix
-    ./pkgs/packages.nix
+    ./pkgs
+    ./programs/shell
     ./programs/corectrl.nix
     ./programs/dconf.nix
-    ./programs/direnv.nix
     ./programs/fonts.nix
     ./programs/git.nix
     ./programs/gnupg.nix
@@ -24,7 +24,6 @@
     ./programs/seahorse.nix
     ./programs/xdg.nix
     ./programs/xwayland.nix
-    ./programs/zsh.nix
     ./secrets
     ./security
     ./services/audio.nix
