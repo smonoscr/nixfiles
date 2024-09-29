@@ -1,6 +1,5 @@
 _: {
   imports = [
-    ./aliases.nix
     ./plugins.nix
   ];
   programs.zsh = {

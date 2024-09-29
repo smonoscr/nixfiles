@@ -1,8 +1,8 @@
 _: {
   imports = [
-    ./fish
     ./zsh
     ./bash.nix
+    ./fish.nix
     ./starship.nix
   ];
 }
