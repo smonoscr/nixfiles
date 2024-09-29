@@ -162,20 +162,16 @@
               };
             };
           };
-          devShells.default =
-            let
-              shellName = "nixfiles";
-            in
-            pkgs.mkShell {
-              name = shellName;
-              nativeBuildInputs = config.pre-commit.settings.enabledPackages;
-              shellHook = ''
-                ${config.pre-commit.installationScript}
-                echo -e "\n\033[1;36m  Welcome to the \033[1;33m'${shellName}'\033[1;36m devshell  \033[0m\n"
-              '';
-            };
+          devShells.default = pkgs.mkShell {
+            name = "nixfiles";
+            nativeBuildInputs = config.pre-commit.settings.enabledPackages;
+            shellHook = ''
+              ${config.pre-commit.installationScript}
+            '';
+          };
           formatter = pkgs.nixfmt-rfc-style;
         };
+
       flake = {
         nixosConfigurations = {
           desktop = inputs.nixpkgs.lib.nixosSystem {
@@ -185,14 +181,9 @@
             };
             modules = [
               ./hosts/desktop/configuration.nix
-              #inputs.home-manager.nixosModules.home-manager
-              #{
-              #  home-manager = {
-              #    users.simon.imports = [ ./home/simon/home.nix ];
-              #  };
-              #}
             ];
           };
+
           server = inputs.nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = {
@@ -200,6 +191,7 @@
             };
             modules = [ ./hosts/server/configuration.nix ];
           };
+
           #desktopISO = inputs.nixpkgs.lib.nixosSystem {
           #  system = "x86_64-linux";
           #  specialArgs = {
