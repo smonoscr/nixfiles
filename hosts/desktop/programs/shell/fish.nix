@@ -1,7 +1,6 @@
 _: {
-  imports = [ ];
-
   programs.fish = {
     enable = true;
+    useBabelfish = true;
   };
 }

@@ -18,7 +18,7 @@
     username = "simon";
     homeDirectory = "/home/simon";
     sessionVariables = {
-      SHELL = "${pkgs.zsh}/bin/zsh";
+      SHELL = "${pkgs.fish}/bin/fish";
     };
     stateVersion = "23.11";
   };

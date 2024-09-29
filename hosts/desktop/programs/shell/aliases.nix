@@ -1,5 +1,5 @@
 _: {
-  programs.zsh.shellAliases = {
+  environment.shellAliases = {
     # make sudo use aliases
     sudo = "sudo ";
 
