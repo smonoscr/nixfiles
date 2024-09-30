@@ -23,7 +23,6 @@ let
 in
 {
   home = {
-    sessionVariables.BROWSER = "firefox";
     #file.".mozilla/firefox/${config.programs.firefox.profiles.simon.path}/chrome".source = "${ffultima}/theme";
     file.".mozilla/firefox/${config.programs.firefox.profiles.simon.path}/chrome".source = "${shyfox}/chrome";
   };

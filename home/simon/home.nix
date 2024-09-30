@@ -1,8 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./browser/firefox
-    ./browser/zen
+    ./browser
     ./desktop/wayland/hyprland
     ./editors
     ./gaming
@@ -19,6 +18,7 @@
     homeDirectory = "/home/simon";
     sessionVariables = {
       SHELL = "${pkgs.fish}/bin/fish";
+      BROWSER = "zen";
     };
     stateVersion = "23.11";
   };
