@@ -1,3 +1,28 @@
+## [9.4.0](https://gitlab.com/simonoscr/nixfiles/compare/9.3.4...9.4.0) (2024-10-01)
+
+### 📦 Other
+
+* **flake:** update flake ([cc8c93c](https://gitlab.com/simonoscr/nixfiles/commit/cc8c93ccc83ab987d214dbeede1821daeaa97665))
+* **flake:** update flake ([a219a3a](https://gitlab.com/simonoscr/nixfiles/commit/a219a3a08320c5a83a9926a660ab1d130627795e))
+* **flake:** update flake ([1df7e61](https://gitlab.com/simonoscr/nixfiles/commit/1df7e6127376dc66954f45983d2b4d7f79f3f307))
+* **flake:** update flake inputs ([0f34c5b](https://gitlab.com/simonoscr/nixfiles/commit/0f34c5b43c3a842c9732b1f94c90586880dd84fc))
+
+### 🚀 Features
+
+* add fish to shells ([fab4e75](https://gitlab.com/simonoscr/nixfiles/commit/fab4e753f1f8d810752c3aa014e1c1c1f39ddaf0))
+* add zen browser ([27d61d6](https://gitlab.com/simonoscr/nixfiles/commit/27d61d6028d20b7fb7517e0d00912a84e6f4cb2f))
+* **shell:** add fish, update settings, update default shell to zsh for all users and override for specific user to fish ([f6ee2b0](https://gitlab.com/simonoscr/nixfiles/commit/f6ee2b090e2254ac6196c8c348c27f4dabba1280))
+
+### 🛠 Fixes
+
+* update miscs configurations ([3ffeb71](https://gitlab.com/simonoscr/nixfiles/commit/3ffeb71e574591dc510a35c5ef4d96e41d04157b))
+* **firefox:** settings and default ([49429ea](https://gitlab.com/simonoscr/nixfiles/commit/49429ea30aeae883652bc1324f737ebe788b134a))
+* **home:** move sessionVariables to home.nix and make zen default browser ([de48af2](https://gitlab.com/simonoscr/nixfiles/commit/de48af214a55c31056222a0dbd9c52daa0dcb804))
+* **server:** remove deprecated option noXlibs ([78dbd33](https://gitlab.com/simonoscr/nixfiles/commit/78dbd33a78bf63976fab3bd94ec4f1fdee6ce23f))
+* **zed-editor:** dmove integrated terminal to bottom ([2b0e981](https://gitlab.com/simonoscr/nixfiles/commit/2b0e981d11acb30716d302b65eda321251041d4d))
+* **zed-editor:** update settings ([1be4505](https://gitlab.com/simonoscr/nixfiles/commit/1be45051e7205353c6481d1788f989702aada3d7))
+* **zed:** update config, lsp etc ([4009417](https://gitlab.com/simonoscr/nixfiles/commit/4009417683ed8d4731d04639b006bdff2219f734))
+
 ## [9.3.4](https://gitlab.com/simonoscr/nixfiles/compare/9.3.3...9.3.4) (2024-09-20)
 
 ### 🛠 Fixes
