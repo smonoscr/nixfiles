@@ -10,6 +10,7 @@
       shell = pkgs.fish;
       extraGroups = [
         "audio"
+        "disk"
         "corectrl"
         "gamemode" # https://nixos.wiki/wiki/Gamemode#Known_Errors
         "input"
@@ -20,6 +21,7 @@
         "podman"
         "git"
         "libvirtd"
+        "qemu-libvirtd"
         "nix"
         "network"
       ];
