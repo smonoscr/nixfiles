@@ -1,5 +1,13 @@
-_: {
+{ pkgs, ... }:
+{
   virtualisation = {
+    libvirtd = {
+      enable = true;
+      qemu = {
+        package = pkgs.qemu_kvm;
+        runAsRoot = true;
+      };
+    };
     podman = {
       enable = true;
       # Create a `docker` alias for podman, to use it as a drop-in replacement
