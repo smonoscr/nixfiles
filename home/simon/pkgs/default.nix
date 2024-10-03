@@ -29,5 +29,8 @@
     zip
     unzip
     unrar
+
+    # backup chromium browser
+    brave
   ];
 }
