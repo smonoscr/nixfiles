@@ -30,12 +30,52 @@
       };
 
       cmd_duration = {
-        format = "[$duration]($style) ";
+        format = "[\\[$duration\\]]($style) ";
       };
 
       directory = {
-        style = "bold green";
+        truncation_length = 3;
+        truncate_to_repo = true;
         format = "[  $path]($style) ";
+        style = "bold green";
+        disabled = false;
+        truncation_symbol = "";
+      };
+
+      direnv = {
+        disabled = true;
+      };
+
+      docker_context = {
+        format = "[\\[$symbol$context\\]]($style) ";
+        only_with_files = true;
+        detect_files = [
+          "docker-compose.yml"
+          "docker-compose.yaml"
+          "Dockerfile"
+        ];
+        detect_folders = [ "docker-build-env" ];
+        style = "blue bold";
+        disabled = false;
+      };
+
+      git_branch = {
+        format = "[\\[$symbol$branch\\]]($style) ";
+      };
+
+      helm = {
+        format = "[\\[$symbol($version)\\]]($style) ";
+        version_format = "v$raw";
+        detect_files = [
+          "helmfile.yaml"
+          "helmfile.yml"
+          "Chart.yaml"
+          "Chart.yml"
+          "values.yaml"
+          "values.yml"
+        ];
+        detect_folders = [ "charts" ];
+        disabled = false;
       };
 
       hostname = {
@@ -45,13 +85,14 @@
       kubernetes = {
         disabled = false;
         symbol = "󱃾 ";
-        format = "[$symbol$context]($style) ";
+        format = "[\\[$symbol$context\\]]($style) ";
       };
 
       nix_shell = {
         symbol = " ";
-        format = "[$symbol(\($name\))]($style) ";
-        heuristic = true;
+        format = "[\\[$symbol(\($name\))\\]]($style) ";
+        heuristic = false;
+        disabled = false;
       };
 
       fill = {
