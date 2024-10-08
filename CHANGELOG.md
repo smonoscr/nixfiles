@@ -1,3 +1,15 @@
+## [10.1.1](https://gitlab.com/simonoscr/nixfiles/compare/10.1.0...10.1.1) (2024-10-08)
+
+### 📦 Other
+
+* **flake:** update flake ([27cdf1f](https://gitlab.com/simonoscr/nixfiles/commit/27cdf1fe3b218701a6f0f85d8cfff91a32c90c49))
+* **flake:** update flake ([c90ed19](https://gitlab.com/simonoscr/nixfiles/commit/c90ed19bafedc9591e530628e6f6c53407a4f0a1))
+
+### 🛠 Fixes
+
+* **ags:** busName for ags to hypr to prvent double starting with hyprland ([2e9a3ba](https://gitlab.com/simonoscr/nixfiles/commit/2e9a3bafc8b417a74a640e7e27b3613b4ac0f3e5))
+* **flake:** move zen-browser-flake input from github to gitlab ([b98f459](https://gitlab.com/simonoscr/nixfiles/commit/b98f459c9d7995cfcce4474c9250dafbe58568c3))
+
 ## [10.1.0](https://gitlab.com/simonoscr/nixfiles/compare/10.0.1...10.1.0) (2024-10-08)
 
 ### 📦 Other
