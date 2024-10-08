@@ -1,7 +1,6 @@
 { inputs, ... }:
 let
-  secretsDirectory = builtins.toString inputs.nixsecrets;
-  secretsFile = "${secretsDirectory}/secrets/server/secrets.yaml";
+  secretsFile = "${inputs.nixsecrets}/sops-nix/server/secrets.yaml";
 in
 {
   imports = [ inputs.sops-nix.nixosModules.sops ];
