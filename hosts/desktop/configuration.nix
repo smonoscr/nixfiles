@@ -22,6 +22,7 @@
     ./programs/hyprland.nix
     ./programs/less.nix
     ./programs/seahorse.nix
+    ./programs/ssh.nix
     ./programs/xdg.nix
     ./programs/xwayland.nix
     ./secrets/sops-nix.nix
