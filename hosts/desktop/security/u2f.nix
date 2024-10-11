@@ -10,6 +10,7 @@
       enable = true;
       control = "sufficient";
       settings = {
+        origin = "pam://yubikey";
         cue = true;
         interactive = true;
         authfile = config.sops.secrets."yubikey/u2f_keys".path;
