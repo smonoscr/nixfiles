@@ -1,3 +1,9 @@
+## [10.3.1](https://gitlab.com/simonoscr/nixfiles/compare/10.3.0...10.3.1) (2024-10-12)
+
+### 🛠 Fixes
+
+* **gaming:** disable star-citizen pkgs because its running fine through steam ([b0a5897](https://gitlab.com/simonoscr/nixfiles/commit/b0a5897fafd2f2f5d214af601d2a53f6d306eafe))
+
 ## [10.3.0](https://gitlab.com/simonoscr/nixfiles/compare/10.2.1...10.3.0) (2024-10-12)
 
 ### 📦 Other
