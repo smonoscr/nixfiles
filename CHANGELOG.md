@@ -1,3 +1,15 @@
+## [10.4.0](https://gitlab.com/simonoscr/nixfiles/compare/10.3.1...10.4.0) (2024-10-13)
+
+### 📦 Other
+
+* **flake:** update flake ([cafa126](https://gitlab.com/simonoscr/nixfiles/commit/cafa1262be4f2c0a03f4ac0c202c2ff20b0c1bbd))
+* **flake:** update flake ([9bf9e1c](https://gitlab.com/simonoscr/nixfiles/commit/9bf9e1ce313cb77ae606c31f30376d8d8b5676f9))
+* **flake:** update flake ([c10cbdc](https://gitlab.com/simonoscr/nixfiles/commit/c10cbdc6e1eea2bc08cedab94e3cb3b46af0e733))
+
+### 🚀 Features
+
+* **gaming:** add star-citizen-umu from nix-gaming ([617dd2e](https://gitlab.com/simonoscr/nixfiles/commit/617dd2e53eff57ced6b76b1f48f261df16a72240))
+
 ## [10.3.1](https://gitlab.com/simonoscr/nixfiles/compare/10.3.0...10.3.1) (2024-10-12)
 
 ### 🛠 Fixes
