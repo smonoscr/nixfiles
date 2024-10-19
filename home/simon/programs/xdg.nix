@@ -1,5 +1,8 @@
-{ config, ... }:
+{ lib, config, ... }:
+with lib;
 let
+  cfg = config.module.programs.xdg;
+
   #browser = [ "firefox.desktop" ];
   browser = [ "zen" ];
   chromeBrowser = [ "brave" ];
@@ -40,36 +43,43 @@ let
   };
 in
 {
-  xdg = {
-    enable = true;
-    cacheHome = "${config.home.homeDirectory}/.cache";
-    configHome = "${config.home.homeDirectory}/.config";
-    dataHome = "${config.home.homeDirectory}/.local/share";
-    stateHome = "${config.home.homeDirectory}/.local/state";
 
-    userDirs = {
+  options.module.programs.xdg = {
+    enable = mkEnableOption "Enable xdg";
+  };
+
+  config = mkIf cfg.enable {
+    xdg = {
       enable = true;
-      createDirectories = true;
+      cacheHome = "${config.home.homeDirectory}/.cache";
+      configHome = "${config.home.homeDirectory}/.config";
+      dataHome = "${config.home.homeDirectory}/.local/share";
+      stateHome = "${config.home.homeDirectory}/.local/state";
 
-      # disable unused home dirs
-      download = "${config.home.homeDirectory}/downloads";
-      documents = "${config.home.homeDirectory}/documents";
-      pictures = "${config.home.homeDirectory}/pictures";
-      videos = null;
-      desktop = null;
-      publicShare = null;
-      music = null;
-      templates = null;
+      userDirs = {
+        enable = true;
+        createDirectories = true;
 
-      extraConfig = {
-        XDG_SCREENSHOTS_DIR = "${config.xdg.userDirs.pictures}/screenshots";
+        # disable unused home dirs
+        download = "${config.home.homeDirectory}/downloads";
+        documents = "${config.home.homeDirectory}/documents";
+        pictures = "${config.home.homeDirectory}/pictures";
+        videos = null;
+        desktop = null;
+        publicShare = null;
+        music = null;
+        templates = null;
+
+        extraConfig = {
+          XDG_SCREENSHOTS_DIR = "${config.xdg.userDirs.pictures}/screenshots";
+        };
       };
-    };
 
-    mimeApps = {
-      enable = true;
-      #associations.added = associations;
-      defaultApplications = associations;
+      mimeApps = {
+        enable = true;
+        #associations.added = associations;
+        defaultApplications = associations;
+      };
     };
   };
 }

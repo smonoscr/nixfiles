@@ -30,9 +30,6 @@
     unzip
     unrar
 
-    # backup chromium browser
-    #brave
-
     # needed for graphene installer
     android-udev-rules
     android-tools

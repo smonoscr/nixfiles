@@ -1,7 +1,26 @@
-{ inputs, ... }:
 {
+  config,
+  lib,
+  inputs,
+  ...
+}:
+
+with lib;
+
+let
+  cfg = config.module.services.tailray;
+in
+{
+
   imports = [ inputs.tailray.homeManagerModules.default ];
 
-  # tailscale systray
-  services.tailray.enable = true;
+  options.module.services.tailray = {
+    enable = mkEnableOption "Enable tailray";
+  };
+
+  config = mkIf cfg.enable {
+
+    # tailscale systray
+    services.tailray.enable = true;
+  };
 }
