@@ -1,25 +1,43 @@
-{ pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+
+with lib;
+
+let
+  cfg = config.module.editors.zed-editor;
+in
 {
   imports = [
     ./settings.nix
   ];
 
-  programs.zed-editor = {
-    enable = true;
-    extensions = [
-      "nix"
-      "html"
-      "dockerfile"
-      "toml"
-      "git-firefly"
-      "xml"
-      "vscode-dark-modern"
-      "java"
-      "docker-compose"
-    ];
+  options = {
+    module.editors.zed-editor.enable = mkEnableOption "Enables zed-editor";
   };
 
-  home.packages = with pkgs; [
-    nixd
-  ];
+  config = mkIf cfg.enable {
+
+    programs.zed-editor = {
+      enable = true;
+      extensions = [
+        "nix"
+        "html"
+        "dockerfile"
+        "toml"
+        "git-firefly"
+        "xml"
+        "vscode-dark-modern"
+        "java"
+        "docker-compose"
+      ];
+    };
+
+    home.packages = with pkgs; [
+      nixd
+    ];
+  };
 }
