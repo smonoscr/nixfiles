@@ -1,9 +1,6 @@
 { pkgs, ... }:
-let
-  jsonFormat = pkgs.formats.json { };
-in
 {
-  xdg.configFile."zed/settings.json".source = jsonFormat.generate "zed-settings.json" {
+  programs.zed-editor.userSettings = {
     theme = {
       mode = "system";
       light = "VSCode Dark Modern";
