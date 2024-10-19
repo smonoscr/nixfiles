@@ -2,6 +2,7 @@
   config,
   lib,
   inputs,
+  pkgs,
   ...
 }:
 {
@@ -19,9 +20,12 @@
     # the users.users.<name>.packages option
     useUserPackages = true;
 
-    # Move existing files to the .hm.old suffix rather than failing
-    # with a very long error message about it
-    backupFileExtension = "hm.old";
+    # Move existing files to the backuü-timestamp suffix rather than failing
+    # with a very long error message about it.
+    # with this hm should never be failing because of a already backuped file
+    backupFileExtension =
+      "backup-"
+      + pkgs.lib.readFile "${pkgs.runCommand "timestamp" { } "echo -n `date '+%Y%m%d%H%M%S'` > $out"}";
 
     # Per-user Home Manager configurations.
     # The function below generates an attribute sett of users

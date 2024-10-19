@@ -1,5 +1,15 @@
-{ config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+
+with lib;
+
 let
+  cfg = config.module.desktop.wayland.hyprland.hyprlock;
+
   hypr_gamemode = pkgs.writeShellScriptBin "hypr-gamemode" ''
     HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 
@@ -24,12 +34,18 @@ let
   '';
 in
 {
-  # when activated this sets display and performance settings for gaming
 
-  home.file."${config.xdg.configHome}/hypr/hypr-gamemode.sh" = {
-    text = ''
-      ${hypr_gamemode}/bin/hypr-gamemode
-    '';
-    executable = true;
+  options = {
+    module.desktop.wayland.hyprland.hyprmode.enable = mkEnableOption "Enables hyprmode";
+  };
+
+  config = mkIf cfg.enable {
+    # when activated this sets display and performance settings for gaming
+    home.file."${config.xdg.configHome}/hypr/hypr-gamemode.sh" = {
+      text = ''
+        ${hypr_gamemode}/bin/hypr-gamemode
+      '';
+      executable = true;
+    };
   };
 }

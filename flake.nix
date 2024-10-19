@@ -9,57 +9,32 @@
 
     systems.url = "github:nix-systems/x86_64-linux";
 
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-
+    # nix-community
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs-small";
+    };
+    impermanence.url = "github:nix-community/impermanence";
+
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs-small";
-    };
-
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    # gaming
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        nixpkgs-stable.follows = "";
-      };
-    };
-
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        darwin.follows = "";
-      };
-    };
-
-    zen-browser = {
-      url = "gitlab:simonoscr/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        systems.follows = "systems";
-      };
-    };
-
+    # hyprland
+    hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -82,38 +57,56 @@
         systems.follows = "hyprland/systems";
       };
     };
-
     hyprpanel = {
       url = "github:Jas-SinghFSU/HyprPanel";
     };
 
+    # ags
     ags = {
       url = "github:Aylur/ags";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        systems.follows = "systems";
       };
     };
-
-    impermanence.url = "github:nix-community/impermanence";
-
-    tailray = {
-      url = "github:NotAShelf/tailray";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # private secrets repo
-    nixsecrets = {
-      url = "git+ssh://git@gitlab.com/simonoscr/nixsecrets";
-    };
-
     agsdotfiles = {
       url = "github:Aylur/dotfiles";
       flake = false;
     };
 
-    # gaming
-    nix-gaming.url = "github:fufexan/nix-gaming";
+    # secrets
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        darwin.follows = "";
+        home-manager.follows = "home-manager";
+        systems.follows = "systems";
+      };
+    };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        nixpkgs-stable.follows = "";
+      };
+    };
+    nixsecrets = {
+      url = "git+ssh://git@gitlab.com/simonoscr/nixsecrets";
+    };
+
+    # misc
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    tailray = {
+      url = "github:NotAShelf/tailray";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    zen-browser = {
+      url = "gitlab:simonoscr/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -175,7 +168,7 @@
 
       formatter = eachSystem (system: nixpkgs.legacyPackages.${system}.nixfmt-rfc-style);
 
-      #overlays = import ./overlays { inherit inputs; };
+      #overlays = import "${self}/overlays" { inherit self; }; # no
 
       #packages = eachSystem (
       #  system:
@@ -222,5 +215,7 @@
           ];
         };
       };
+
+      templates = import "${self}/templates" { inherit self; };
     };
 }
