@@ -18,6 +18,19 @@ in
 
   config = mkIf cfg.enable {
 
-    home.packages = with pkgs; [ inputs.nix-gaming.packages.${system}.star-citizen-umu ];
+    home.packages = with pkgs; [
+      (inputs.nix-gaming.packages.${system}.star-citizen.override {
+        useUmu = true;
+        gameScopeEnable = true;
+        gameScopeArgs = [
+          "--rt"
+          "--mangoapp"
+          "--force-grab-cursor"
+        ];
+        preCommands = "";
+        postCommands = "";
+
+      })
+    ];
   };
 }

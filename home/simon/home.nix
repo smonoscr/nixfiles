@@ -71,6 +71,7 @@
     services = {
       audio.enable = true;
       dconf.enable = true;
+      kdeconnect.enable = true;
       polkit.enable = true;
       tailray.enable = true;
       udiskie.enable = true;
