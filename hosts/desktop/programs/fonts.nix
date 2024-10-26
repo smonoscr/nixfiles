@@ -35,7 +35,7 @@
       dejavu_fonts
       liberation_ttf # for PDFs, Roman
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-emoji
       openmoji-color
       openmoji-black
