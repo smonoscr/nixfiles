@@ -1,3 +1,17 @@
+## [11.0.1](https://gitlab.com/simonoscr/nixfiles/compare/11.0.0...11.0.1) (2024-10-26)
+
+### 📦 Other
+
+* **flake:** update flake.lock ([757f1a5](https://gitlab.com/simonoscr/nixfiles/commit/757f1a5f3bfcb7834db8c2c9444c377d5fa8dbf3))
+* **flake:** update flake.lock ([ef91dce](https://gitlab.com/simonoscr/nixfiles/commit/ef91dcee9a7c34b539eda19918de96dc3c6629f2))
+
+### 🛠 Fixes
+
+* add kde-connect ([eb4c28e](https://gitlab.com/simonoscr/nixfiles/commit/eb4c28ee7eb377b7451058b49abf387f47e63b2c))
+* rename fonts, add pkgs ([cf7d865](https://gitlab.com/simonoscr/nixfiles/commit/cf7d8658a1c3963b2eb29f258baa67a1d776bbce))
+* **gamescope:** remove default args ([ccbba85](https://gitlab.com/simonoscr/nixfiles/commit/ccbba85619f7ee59e6d29a5647f48db6c60c20d0))
+* **gaming:** set more ENV for star-citizen ([545749f](https://gitlab.com/simonoscr/nixfiles/commit/545749f881db7b164983e6557a44a1a4bb0b83d1))
+
 ## [11.0.0](https://gitlab.com/simonoscr/nixfiles/compare/10.5.1...11.0.0) (2024-10-19)
 
 ### 🧨 Breaking changes!
