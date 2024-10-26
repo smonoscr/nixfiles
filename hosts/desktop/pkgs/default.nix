@@ -14,5 +14,7 @@
 
     brave
     libarchive
+
+    minikube
   ];
 }
