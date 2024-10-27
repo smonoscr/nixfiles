@@ -1,16 +1,11 @@
-{
-  self,
-  inputs,
-  system,
-  ...
-}:
+{ inputs, system, ... }:
 
 inputs.pre-commit-hooks.lib.${system}.run {
-  src = self;
+  src = ./.;
   excludes = [
-    "${self}/flake.lock"
-    "${self}/CHANGELOG.md"
-    "${self}/LICENSE"
+    "flake.lock"
+    "CHANGELOG.md"
+    "LICENSE"
   ];
   hooks = {
     nixfmt-rfc-style = {
