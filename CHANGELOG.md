@@ -1,3 +1,9 @@
+## [11.1.0](https://gitlab.com/simonoscr/nixfiles/compare/11.0.2...11.1.0) (2024-10-27)
+
+### 🚀 Features
+
+* **templates:** added templates to flake and be able tro selfreference them ([e35ac29](https://gitlab.com/simonoscr/nixfiles/commit/e35ac29cabaf786553dbaa3233ca7dce98c8e008))
+
 ## [11.0.2](https://gitlab.com/simonoscr/nixfiles/compare/11.0.1...11.0.2) (2024-10-27)
 
 ### 📦 Other
