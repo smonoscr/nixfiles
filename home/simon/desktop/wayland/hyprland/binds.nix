@@ -12,7 +12,7 @@
           resizeactive = binding "SUPER CTRL" "resizeactive";
           mvactive = binding "SUPER ALT" "moveactive";
           mvtows = binding "SUPER SHIFT" "movetoworkspace";
-          e = "exec, ags -b hypr";
+          e = "exec, ags";
           arr = [
             1
             2

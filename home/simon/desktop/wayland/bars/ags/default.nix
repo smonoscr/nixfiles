@@ -27,7 +27,6 @@ in
       configDir = ../ags;
       systemd = {
         enable = true;
-        #busName = "hypr";
       };
     };
     home.packages = with pkgs; [
