@@ -41,8 +41,6 @@
         bars = {
           ags = {
             enable = true;
-            aylur.enable = true;
-            hyprpanel.enable = false;
           };
         };
       };

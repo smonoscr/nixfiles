@@ -12,9 +12,7 @@ let
 in
 {
   imports = [
-    inputs.ags.homeManagerModules.ags
-    ./aylur.nix
-    ./hyprpanel.nix
+    inputs.ags.homeManagerModules.default
   ];
 
   options = {
@@ -26,12 +24,13 @@ in
   config = mkIf cfg.enable {
     programs.ags = {
       enable = true;
+      configDir = ../ags;
       systemd = {
         enable = true;
+        #busName = "hypr";
       };
     };
     home.packages = with pkgs; [
-      brightnessctl # not working anyway because of OLED but needed for this ags setup
       bun # needed
       dart-sass # needed
       fd # needed
