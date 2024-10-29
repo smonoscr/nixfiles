@@ -6,6 +6,7 @@
     webcord-vencord
     protonmail-desktop
     (lowPrio proton-pass) # FIXME package collision between proton-mail and proton-pass app.asar
+    protonvpn-gui
     #bitwarden-desktop
     element-desktop-wayland
 

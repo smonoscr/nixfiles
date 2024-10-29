@@ -34,7 +34,7 @@
     };
 
     # hyprland
-    hyprland.url = "github:hyprwm/Hyprland?rev=b6e226c3200276978e487a68a16fd696fcb7e7c8";
+    hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -67,10 +67,6 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
       };
-    };
-    agsdotfiles = {
-      url = "github:Aylur/dotfiles";
-      flake = false;
     };
 
     # secrets
