@@ -29,7 +29,7 @@ let
     fi
     hyprctl keyword monitor "DP-1,3440x1440@165,0x0,1" 2> /dev/null
     hyprctl reload
-    hyprctl dispatch -- exec "ags -b hypr" --single-instance
+    hyprctl dispatch -- exec "ags" --single-instance
     powerprofilesctl set balanced
   '';
 in
