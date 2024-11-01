@@ -1,3 +1,17 @@
+## [11.3.2](https://gitlab.com/simonoscr/nixfiles/compare/11.3.1...11.3.2) (2024-11-01)
+
+### 📦 Other
+
+* update flake ([2a6176f](https://gitlab.com/simonoscr/nixfiles/commit/2a6176f10d66a850cbbebb103d83cc4aaf1937c0))
+
+### 🦊 CI/CD
+
+* update pipeline template file path ([19feea1](https://gitlab.com/simonoscr/nixfiles/commit/19feea1f64aedce696cfb00038f0d669a764efbf))
+
+### 🛠 Fixes
+
+* dont verbose pre-commit-hooks ([c06c153](https://gitlab.com/simonoscr/nixfiles/commit/c06c153ea1542acb148e5cfb94a951e118e015c0))
+
 ## [11.3.1](https://gitlab.com/simonoscr/nixfiles/compare/11.3.0...11.3.1) (2024-11-01)
 
 ### 📦 Other
