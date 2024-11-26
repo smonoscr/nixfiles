@@ -1,3 +1,29 @@
+## [13.1.0](https://gitlab.com/simonoscr/nixfiles/compare/13.0.0...13.1.0) (2024-11-26)
+
+### 📔 Docs
+
+* update README ([9f2ff7a](https://gitlab.com/simonoscr/nixfiles/commit/9f2ff7ac1c6fba319bb98909788d0ecc55c3c92c))
+
+### 📦 Other
+
+* update flake ([45d6b70](https://gitlab.com/simonoscr/nixfiles/commit/45d6b70a58f7e0a8b9ac76201d440a7bdae381be))
+* update flake ([b29d306](https://gitlab.com/simonoscr/nixfiles/commit/b29d30601b80f721382a4f126cbd7be3a20c34fb))
+* update flkae inputs ([a3845b4](https://gitlab.com/simonoscr/nixfiles/commit/a3845b4413d8929822bbed93500417a31a83e2b6))
+
+### 🚀 Features
+
+* replace hyprland systemd with uwsm ([1125949](https://gitlab.com/simonoscr/nixfiles/commit/1125949191fa03fc8c200a36d83a57dd16cb541f))
+
+### 🛠 Fixes
+
+* enable bluetooth ([c9fa869](https://gitlab.com/simonoscr/nixfiles/commit/c9fa869ffd973b4b332055408bfe57d5ef40c609))
+* enable yazi again ([8b38a42](https://gitlab.com/simonoscr/nixfiles/commit/8b38a425808befe343240e913868456d8c129560))
+* remove ags aylur dots ([a65c459](https://gitlab.com/simonoscr/nixfiles/commit/a65c459ac755a179697a6170050cb6eaf5a9d558))
+* update amdgpu envs ([85d2b88](https://gitlab.com/simonoscr/nixfiles/commit/85d2b88c5e7c22f411ffeafd9a49ed9e211f60a8))
+* update network configuration ([88c5577](https://gitlab.com/simonoscr/nixfiles/commit/88c55775b7a95923d2f68ec07b40828f2b822ce9))
+* update teamspeak 3 pkgs name ([eb52d59](https://gitlab.com/simonoscr/nixfiles/commit/eb52d5913d466f1d7e042f1d1681ef0d0520264a))
+* update to LTO cachyos kernel and use rustland sched-ext scheduler ([de9c0fc](https://gitlab.com/simonoscr/nixfiles/commit/de9c0fc6b193537c3c575eacd2938d709cc18baf))
+
 ## [13.0.0](https://gitlab.com/simonoscr/nixfiles/compare/12.1.0...13.0.0) (2024-11-08)
 
 ### 🧨 Breaking changes!
