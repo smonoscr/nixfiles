@@ -15,7 +15,7 @@
               name = "ESP";
               type = "EF00";
               start = "1M";
-              end = "128M";
+              end = "512M";
               content = {
                 type = "filesystem";
                 format = "vfat";
