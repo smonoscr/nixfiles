@@ -15,6 +15,11 @@
   };
   systemd = {
     packages = [ pkgs.lact ];
-    services.lactd.wantedBy = [ "multi-user.target" ];
+    services.lactd = {
+      enable = true;
+      description = "AMDGPU Control Daemon";
+      after = [ "multi-user.target" ];
+      wantedBy = [ "multi-user.target" ];
+    };
   };
 }
