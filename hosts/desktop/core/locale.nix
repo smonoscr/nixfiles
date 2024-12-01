@@ -9,15 +9,14 @@ _: {
 
   i18n =
     let
-      defaultLocale = "en_US.UTF-8";
       de = "de_DE.UTF-8";
     in
     {
-      inherit defaultLocale;
+      defaultLocale = "en_US.UTF-8";
 
       extraLocaleSettings = {
-        LANGUAGE = defaultLocale;
-        LANG = defaultLocale;
+        LANGUAGE = "en_US.UTF-8";
+        LANG = "en_US.UTF-8";
         LC_ALL = de;
         LC_ADDRESS = de;
         LC_IDENTIFICATION = de;
