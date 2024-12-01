@@ -2,16 +2,16 @@
 {
   boot = {
     ## use custom xanmod kernel no
-    kernelPackages = pkgs.linuxPackages_cachyos-lto; # pkgs.linuxPackages_cachyos, pkgs.linuxPackages_xanmod_latest, pkgs.linuxPackages_zen, pkgs.linuxPackages_lqx, linuxPackages_latest
+    kernelPackages = lib.mkForce pkgs.linuxPackages_cachyos; # pkgs.linuxPackages_cachyos, pkgs.linuxPackages_xanmod_latest, pkgs.linuxPackages_zen, pkgs.linuxPackages_lqx, linuxPackages_latest
+
+    kernelModules = [
+      "kvm-amd"
+    ];
 
     supportedFilesystems = [
       "ext4"
       "vfat"
-      "btrfs"
-      "nfts"
-      "xfs"
-      "fat"
-      "exfat"
+      "tmpfs"
     ];
 
     swraid.enable = lib.mkDefault false;
@@ -20,7 +20,7 @@
     binfmt.emulatedSystems = [ "aarch64-linux" ];
 
     loader = {
-      timeout = lib.mkDefault 2;
+      timeout = lib.mkDefault 1;
       generationsDir.copyKernels = true;
       efi.canTouchEfiVariables = true;
 
@@ -29,6 +29,7 @@
         configurationLimit = 15;
         consoleMode = lib.mkDefault "max";
         editor = false;
+        memtest86.enable = false;
       };
     };
 
@@ -84,7 +85,9 @@
 
       # disable watchdog timer
       "nowatchdog"
-      "modprobe.blacklist=sp5100_tco"
+      "modprobe.blacklist=iTCO_wdt"
+
+      ''acpi_osi="Windows 2020"''
     ];
   };
 }
