@@ -1,20 +1,12 @@
-{ config, ... }:
-{
+_: {
   wayland.windowManager.hyprland = {
     settings = {
       exec-once = [
-        # finalize startup
+        # uwsm finalize startup
         "uwsm finalize"
-        "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
-        "uwsm app -- steam -silent"
-        "uwsm app -- corectrl"
-        "uwsm app -- udiskie &"
         "hyprlock"
-        "uwsm app -- hyprpanel"
       ];
       env = [
-        "OZONE_PLATFORM,wayland"
-        "NIXOS_OZONE_WL,1"
         #"SDL_VIDEODRIVER,wayland"
       ];
 

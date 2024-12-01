@@ -43,6 +43,8 @@ in
       SDL_VIDEODRIVER = "wayland";
       GDK_BACKEND = "wayland";
       CLUTTER_BACKEND = "wayland";
+      OZONE_PLATFORM = "wayland";
+      NIXOS_OZONE_WL = 1;
     };
 
     wayland.windowManager.hyprland = {
@@ -57,6 +59,5 @@ in
         ];
       };
     };
-    systemd.user.targets.tray.Unit.Requires = lib.mkForce [ "graphical-session.target" ];
   };
 }
