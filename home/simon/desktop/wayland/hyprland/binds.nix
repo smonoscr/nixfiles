@@ -12,8 +12,6 @@
           resizeactive = binding "SUPER CTRL" "resizeactive";
           mvactive = binding "SUPER ALT" "moveactive";
           mvtows = binding "SUPER SHIFT" "movetoworkspace";
-          ar = "exec, anyrun";
-          e = "exec, ags";
           arr = [
             1
             2
@@ -27,40 +25,36 @@
           ];
         in
         [
-          # ags specific shortcuts
-          "ALT, Space, ${e} -t launcher" # this is for ags Launcher
-          "SUPER, Tab, ${e} -t overview"
-
-          # hyprpanel specific shortcuts
-          "ALT, Space, ${ar}" # anyrun launcher
-
           # screenshots
-          ",Print,exec,hyprshot -m region -o ~/Pictures/Screenshots -- imv"
-          "CTRL,Print,exec,hyprshot -m output -o ~/Pictures/Screenshots -- imv"
-          "SUPER,Print,exec,hyprshot -m window -o ~/Pictures/Screenshots -- imv"
+          ", Print, exec, pgrep hyprshot || uwsm-app -- hyprshot -m region -o ~/Pictures/Screenshots -- imv"
+          "CTRL, Print, exec, pgrep hyprshot || uwsm-app -- hyprshot -m output -o ~/Pictures/Screenshots -- imv"
+          "SUPER, Print, exec, pgrep hyprshot || uwsm-app -- hyprshot -m window -o ~/Pictures/Screenshots -- imv"
 
           # gaming script
           "SUPER, Next, exec, ${config.xdg.configHome}/hypr/hypr-gamemode.sh"
           "SUPER, H, exec, ${config.xdg.configHome}/shortcut_info.sh"
 
-          "SUPER, W, exec, zen"
-          "SUPER, B, exec, firefox"
-          "SUPER, T, exec, wezterm"
-          "SUPER, E, exec, wezterm -e yazi"
-          "SUPER, G, togglegroup"
-          "SUPER, V, togglefloating"
-          "SUPER, F, fullscreen, 0"
-          "SUPER, J, togglesplit"
-          "SUPER, P, pseudo"
-          "SUPER, C, exec, codium"
-          "SUPER, O, exec, ts3client"
-          "SUPER, Z, exec, zeditor"
-          "SUPER, D, exec, webcord"
-          "SUPER, L, exec, pgrep hyprlock || hyprlock"
+          # start programs
+          "SUPER, W, exec, uwsm-app zen"
+          "SUPER, B, exec, uwsm-app firefox"
+          "SUPER, T, exec, uwsm-app wezterm"
+          "SUPER, E, exec, uwsm-app wezterm -e yazi"
+          "SUPER, C, exec, uwsm-app codium"
+          "SUPER, O, exec, uwsm-app ts3client"
+          "SUPER, Z, exec, uwsm-app zeditor"
+          "SUPER, D, exec, uwsm-app webcord"
+
+          # compositor commands
+          "SUPER, G, togglegroup,"
+          "SUPER, V, togglefloating,"
+          "SUPER, F, fullscreen,"
+          "SUPER, J, togglesplit,"
+          "SUPER, P, pseudo,"
+          "SUPER, L, exec, pgrep hyprlock || uwsm-app -- hyprlock"
           "SUPER, M, movetoworkspace, special"
-          "SUPER SHIFT, E, exit"
-          "SUPER SHIFT, Q, killactive"
-          "ALT, Tab, focuscurrentorlast"
+          "SUPER SHIFT, E, exit,"
+          "SUPER SHIFT, Q, killactive,"
+          "ALT, Tab, focuscurrentorlast,"
 
           (mvfocus "up" "u")
           (mvfocus "down" "d")
@@ -99,6 +93,10 @@
       bindm = [
         "SUPER, mouse:273, resizewindow"
         "SUPER, mouse:272, movewindow"
+      ];
+
+      bindr = [
+        "SUPER, Space, exec, pkill anyrun || uwsm-app -- anyrun" # anyrun launcher
       ];
     };
   };
