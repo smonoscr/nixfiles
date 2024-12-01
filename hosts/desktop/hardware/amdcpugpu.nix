@@ -2,13 +2,15 @@ _: {
   environment = {
     variables = {
       AMD_VULKAN_ICD = "RADV";
+      RADV_PERFTEST = "gpl,rt";
     };
   };
 
   boot = {
-    kernelModules = [ "kvm-amd" ];
     kernelParams = [ "amd_pstate=active" ];
-    blacklistedKernelModules = [ ];
+    blacklistedKernelModules = [
+      "ath3k"
+    ];
     extraModulePackages = [ ];
   };
 
