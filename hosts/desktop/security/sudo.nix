@@ -1,8 +1,13 @@
 _: {
   security = {
-    sudo-rs.enable = false;
-    sudo = {
+    sudo-rs = {
       enable = true;
+      wheelNeedsPassword = false;
+      execWheelOnly = true;
+    };
+
+    sudo = {
+      enable = false;
       wheelNeedsPassword = false;
       execWheelOnly = true;
     };
