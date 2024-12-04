@@ -1,3 +1,13 @@
+## [13.2.3](https://gitlab.com/simonoscr/nixfiles/compare/13.2.2...13.2.3) (2024-12-04)
+
+### 📦 Other
+
+* update flake and remove unused inputs ([43f74d8](https://gitlab.com/simonoscr/nixfiles/commit/43f74d878a88d8392e91fe0ed653f60cf9761997))
+
+### 🛠 Fixes
+
+* **secrets:** make nix access-token for github readable by user who executes nix command ([70e2d8b](https://gitlab.com/simonoscr/nixfiles/commit/70e2d8b3ef6157e716b42deacd5f340be4df4924))
+
 ## [13.2.2](https://gitlab.com/simonoscr/nixfiles/compare/13.2.1...13.2.2) (2024-12-04)
 
 ### 🛠 Fixes
