@@ -41,8 +41,7 @@ in
       "yubikey/u2f_keys" = { };
 
       "nix/access-tokens/github" = {
-        mode = "0440";
-        group = config.users.groups.keys.name;
+        mode = "0444";
       };
     };
   };
