@@ -1,3 +1,11 @@
+## [13.2.2](https://gitlab.com/simonoscr/nixfiles/compare/13.2.1...13.2.2) (2024-12-04)
+
+### 🛠 Fixes
+
+* add k9s module ([0964624](https://gitlab.com/simonoscr/nixfiles/commit/0964624786d3e212f9255a45fa16eebad719625c))
+* add k9s module ([cdef805](https://gitlab.com/simonoscr/nixfiles/commit/cdef805706edcb4429ff3dfbe7d4133af5ce8287))
+* update config ([928933c](https://gitlab.com/simonoscr/nixfiles/commit/928933c968466872b8617cf732f57b0decbac185))
+
 ## [13.2.1](https://gitlab.com/simonoscr/nixfiles/compare/13.2.0...13.2.1) (2024-12-02)
 
 ### 📦 Other
