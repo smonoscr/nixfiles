@@ -26,6 +26,8 @@
 
       channel.enable = false;
 
+      daemonCPUSchedPolicy = "idle";
+
       settings = {
         experimental-features = [
           "nix-command"

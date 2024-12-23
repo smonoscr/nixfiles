@@ -1,8 +1,10 @@
-_: {
+{ lib, ... }:
+{
   networking = {
     firewall = {
       enable = true;
       allowPing = true;
+      logRefusedConnections = lib.mkDefault false;
       allowedTCPPorts = [
         80
         443

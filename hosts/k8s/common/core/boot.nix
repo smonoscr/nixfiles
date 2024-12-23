@@ -1,6 +1,13 @@
-{ pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 {
   boot = {
+    growPartition = true;
+
     tmp.cleanOnBoot = true;
 
     loader = {
@@ -27,6 +34,10 @@
       systemd = {
         enable = true;
         strip = true;
+        suppressedUnits = lib.mkIf config.systemd.enableEmergencyMode [
+          "emergency.service"
+          "emergency.target"
+        ];
       };
     };
     kernelPackages = pkgs.linuxPackages_latest; # pkgs.linuxPackages_xanmod_latest, pkgs.linuxPackages_zen, pkgs.linuxPackages_lqx, linuxPackages_latest
