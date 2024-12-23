@@ -24,7 +24,7 @@
     #wineWowPackages.waylandFull
     #winetricks
     #bottles
-    #path-of-building
+    path-of-building
 
     # archives
     zip
