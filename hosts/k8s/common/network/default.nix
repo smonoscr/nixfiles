@@ -2,7 +2,7 @@ _: {
   imports = [
     ./fail2ban.nix
     ./firewall.nix
-    ./networkmanager.nix
+    ./network.nix
     ./openssh.nix
     ./optimize.nix
     ./resolved.nix
