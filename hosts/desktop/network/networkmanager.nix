@@ -4,7 +4,7 @@
     wireless = {
       enable = false;
       iwd = {
-        enable = true;
+        enable = false;
         settings = {
           IPv6 = {
             Enabled = false;
@@ -18,7 +18,7 @@
     networkmanager = {
       enable = true;
       wifi = {
-        backend = "iwd";
+        #backend = "iwd";
         macAddress = "random";
         powersave = true;
         scanRandMacAddress = true;
