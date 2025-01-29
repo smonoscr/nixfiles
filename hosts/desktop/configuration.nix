@@ -31,8 +31,8 @@
     #./secrets/agenix.nix
     ./security
     ./services/audio.nix
-    ./services/cosmic.nix
-    ./services/earlyoom.nix
+    #./services/cosmic.nix
+    #./services/earlyoom.nix
     ./services/fs.nix
     ./services/gnome-services.nix
     ./services/greetd.nix
