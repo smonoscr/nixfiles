@@ -72,7 +72,7 @@ _: {
         error_position = 1;
       };
 
-      monitor = [ "DP-1,3440x1440@165,auto,1" ];
+      monitor = [ "DP-1,3440x1440@165,0x0,1,bitdepth,10" ];
 
       dwindle = {
         pseudotile = true;
