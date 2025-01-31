@@ -72,7 +72,7 @@ _: {
         error_position = 1;
       };
 
-      monitor = [ "DP-1,3440x1440@165,0x0,1,bitdepth,10" ];
+      monitor = [ "DP-1,3440x1440@165,0x0,1" ];
 
       dwindle = {
         pseudotile = true;
@@ -84,9 +84,9 @@ _: {
       ecosystem = {
         no_donation_nag = true;
       };
-      experimental = {
-        wide_color_gamut = true;
-      };
+      #experimental = {
+      #  wide_color_gamut = true;
+      #};
     };
   };
 }
