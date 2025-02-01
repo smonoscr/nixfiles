@@ -1,3 +1,24 @@
+## [13.7.0](https://gitlab.com/simonoscr/nixfiles/compare/13.6.2...13.7.0) (2025-02-01)
+
+### 📔 Docs
+
+* update README ([0e96940](https://gitlab.com/simonoscr/nixfiles/commit/0e96940f8765b839e54c81fe862aa6d35aed9f14))
+
+### 📦 Other
+
+* flake update ([e1bc51c](https://gitlab.com/simonoscr/nixfiles/commit/e1bc51c9e060c68081ff640ecea288d8b59f9a25))
+
+### 🚀 Features
+
+* added second monitor to hyprland setup ([27995b2](https://gitlab.com/simonoscr/nixfiles/commit/27995b2fc65a03cad04104b7178fbf9f392bac1c))
+
+### 🛠 Fixes
+
+* **anyrun:** set terminal to ghostty ([1e779af](https://gitlab.com/simonoscr/nixfiles/commit/1e779af662e89d911b59c4fbca88c5056096300b))
+* **hm:** disable polkit and use hyprpolkitagent ([093d8f8](https://gitlab.com/simonoscr/nixfiles/commit/093d8f843dc28880344516aed571df1ed60b30aa))
+* **start-citizen:** readd gamescope args ([deea4f2](https://gitlab.com/simonoscr/nixfiles/commit/deea4f273a7bb7faae4acfc41686853a350bf75d))
+* **tailray:** module already contains systemd.user ([b31748f](https://gitlab.com/simonoscr/nixfiles/commit/b31748f9f9f71f3526452ba502de8fe0e2d9cc98))
+
 ## [13.6.2](https://gitlab.com/simonoscr/nixfiles/compare/13.6.1...13.6.2) (2025-01-31)
 
 ### 🛠 Fixes
