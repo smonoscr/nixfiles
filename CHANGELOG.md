@@ -1,3 +1,9 @@
+## [13.9.0](https://gitlab.com/simonoscr/nixfiles/compare/13.8.0...13.9.0) (2025-02-14)
+
+### 🚀 Features
+
+* added global aliases for all shells in hm ([6449058](https://gitlab.com/simonoscr/nixfiles/commit/64490589ebf6e70ad2c9159e9d740c73558742bd))
+
 ## [13.8.0](https://gitlab.com/simonoscr/nixfiles/compare/13.7.2...13.8.0) (2025-02-14)
 
 ### 🚀 Features
