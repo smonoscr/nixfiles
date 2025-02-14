@@ -1,3 +1,9 @@
+## [13.8.0](https://gitlab.com/simonoscr/nixfiles/compare/13.7.2...13.8.0) (2025-02-14)
+
+### 🚀 Features
+
+* update mostly server k8s things ([59275a0](https://gitlab.com/simonoscr/nixfiles/commit/59275a0b828e14d384ba49adc85df545cf6e81ed))
+
 ## [13.7.2](https://gitlab.com/simonoscr/nixfiles/compare/13.7.1...13.7.2) (2025-02-09)
 
 ### 📦 Other
