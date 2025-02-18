@@ -54,33 +54,28 @@
                 domain: argocd.simonoscar.me
               configs:
                 cm:
+                  create: true
                   statusbadge.enabled: true
-                  dex.config: |
-                    connectors:
-                      - config:
-                          issuer: https://auth.simonoscar.me/application/o/argocd/
-                          clientID: argocd
-                          clientSecret: "nCvUbTh7Jl3FMmRzKLcq6EHgRlRh8poqPp1NXTntmig9akmrTLRMvuaDObQEA2ygVHXFpppZotzN1biXrBdFuDv0bLWJt9N5tNl3JEKHluwAkUGcF55v01cRoeN5USTm"
-                          insecureEnableGroups: true
-                          scopes:
-                            - openid
-                            - profile
-                            - email
-                        name: authentik
-                        type: oidc
-                        id: authentik
+                  oidc.config: |
+                    name: Authentik
+                    issuer: https://auth.simonoscar.me/application/o/argocd/
+                    clientID: argocd
+                    requestedScopes: ["openid", "profile", "email", "groups"]
+                    enablePKCEAuthentication: true
                 rbac:
                   policy.csv: |
                     g, authentik Admins, role:admin
                 params:
+                  #server.enable.proxy.extension: true
+                  #controller.diff.server.side: true
                   applicationsetcontroller.enable.progressive.syncs: true
                 repositories:
                   gitops-repo:
                     url: "https://gitlab.com/simonoscr/gitops.git"
                     name: gitlab.com/simonoscr/gitops
                     type: git
-              controller:
-                dynamicClusterDistribution: true
+              dex:
+                enabled: false
               server:
                 ingress:
                   enabled: true
@@ -166,7 +161,7 @@
           spec = {
             bootstrap = true;
             chart = "https://127.0.0.1:6443/static/charts/cilium.tgz";
-            version = "1.17.0";
+            version = "1.17.1";
             targetNamespace = "kube-system";
             valuesContent = ''
               upgradeCompatibility: "1.17"
@@ -215,8 +210,7 @@
               #nodePort:
               #  enabled: true
               debug:
-                enabled: true
-                verbose: enovy
+                enabled: false
             '';
           };
         };
@@ -226,8 +220,8 @@
     # Install Cilium before K3s starts
     charts = {
       cilium = pkgs.fetchurl {
-        url = "https://helm.cilium.io/cilium-1.17.0.tgz"; # Fetch Helm chart
-        sha256 = "sha256-cqggvwG7PgLAGFaJKgUI2pLfyUF0+HBce8tduxXiKP4="; # lib.fakeSha256; # Replace with actual sha256 from Helm repo
+        url = "https://helm.cilium.io/cilium-1.17.1.tgz"; # Fetch Helm chart
+        sha256 = "sha256-OB3k+PTF6s5nfTQmqo2JbvjSMYwr9NEXLJlTNFt0RHE="; # lib.fakeSha256; # Replace with actual sha256 from Helm repo
       };
     };
   };
