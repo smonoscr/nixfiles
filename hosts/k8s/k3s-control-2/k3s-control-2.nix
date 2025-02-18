@@ -29,8 +29,8 @@
 
     charts = {
       cilium = pkgs.fetchurl {
-        url = "https://helm.cilium.io/cilium-1.17.0.tgz"; # Fetch Helm chart
-        sha256 = "sha256-cqggvwG7PgLAGFaJKgUI2pLfyUF0+HBce8tduxXiKP4="; # lib.fakeSha256; # Replace with actual sha256 from Helm repo
+        url = "https://helm.cilium.io/cilium-1.17.1.tgz"; # Fetch Helm chart
+        sha256 = "sha256-OB3k+PTF6s5nfTQmqo2JbvjSMYwr9NEXLJlTNFt0RHE="; # lib.fakeSha256; # Replace with actual sha256 from Helm repo
       };
     };
   };

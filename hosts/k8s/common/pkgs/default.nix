@@ -21,6 +21,10 @@
       cilium-cli
       clusterctl
       skopeo
+
+      # HSM for autoiunseal vault/openbao
+      softhsm
+      openssl
     ];
   };
 }
