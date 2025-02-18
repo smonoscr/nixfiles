@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # default
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small"; # faster
     #nixpkgs-git.url = "github:NixOS/nixpkgs/master"; # better not
-    #nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11"; # current stable
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11"; # current stable
 
     systems.url = "github:nix-systems/default-linux";
 
@@ -17,11 +17,6 @@
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs-small";
-    };
-
-    nixos-generators = {
-      url = "github:nix-community/nixos-generators";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     disko = {

@@ -1,6 +1,6 @@
 { inputs, ... }:
 let
-  secretsFile = "${inputs.nixsecrets}/sops-nix/k8s/secrets.yaml";
+  secretsFile = "${inputs.nixsecrets}/sops-nix/server/secrets.yaml";
 in
 {
   imports = [ inputs.sops-nix.nixosModules.sops ];
