@@ -1,3 +1,21 @@
+## [13.11.0](https://gitlab.com/simonoscr/nixfiles/compare/13.10.0...13.11.0) (2025-02-18)
+
+### 📦 Other
+
+* update flake ([bf0c4ce](https://gitlab.com/simonoscr/nixfiles/commit/bf0c4ce86df1a9bf351df1d5b2569fae91e4e67a))
+* update flock ([89a8a73](https://gitlab.com/simonoscr/nixfiles/commit/89a8a7334f7651843ae660d120ac191d3e337ffe))
+
+### 🚀 Features
+
+* added proxmox-server deployment ([089c37f](https://gitlab.com/simonoscr/nixfiles/commit/089c37fc30fa58e821c3df587e5cb40cd2cbb4bb))
+
+### 🛠 Fixes
+
+* try to avoid nixpkgs overlay in hm ([5c2ee27](https://gitlab.com/simonoscr/nixfiles/commit/5c2ee27fcde8c2e40c62ef0e14a130ce58ccd443))
+* update k8s deployment and dont use it anymore ([76f8e02](https://gitlab.com/simonoscr/nixfiles/commit/76f8e0226857fa01fd6e955b5e2e4dec0b668e8c))
+* update ssh settings ([b11bf2f](https://gitlab.com/simonoscr/nixfiles/commit/b11bf2f7c314fca06570a552f7d94d4f5653ced9))
+* **desktop:** update substitutors and nix settings ([f651d1f](https://gitlab.com/simonoscr/nixfiles/commit/f651d1f723911f2dd19a51266856158b707f8cc4))
+
 ## [13.10.0](https://gitlab.com/simonoscr/nixfiles/compare/13.9.0...13.10.0) (2025-02-14)
 
 ### 🚀 Features
