@@ -78,7 +78,7 @@ in
           provider = "copilot_chat";
           model = "claude-3-5-sonnet";
         };
-        version = 2;
+        version = "2";
         button = true;
       };
       #language_models = {
