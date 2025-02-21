@@ -20,6 +20,7 @@ in
       "java"
       "helm"
       "ansible"
+      "material-icon-theme"
     ];
     userSettings = {
       theme = {
@@ -27,15 +28,16 @@ in
         light = "VSCode Dark Modern";
         dark = "VSCode Dark Modern";
       };
+      icon_theme = "Material Icon Theme";
       base_keymap = "VSCode";
       features = {
-        inline_completion_provider = "none";
+        edit_prediction_provider = "zed";
       };
       buffer_font_family = "JetBrainsMono Nerd Font";
-      buffer_font_size = 15;
+      buffer_font_size = 16;
       buffer_line_height = "standard";
       ui_font_family = "Inter";
-      ui_font_size = 16;
+      ui_font_size = 17;
       confirm_quit = true;
       show_whitespaces = "boundary";
       calls = {
@@ -43,10 +45,18 @@ in
         share_on_join = false;
       };
       indent_guides = {
+        enabled = true;
         coloring = "indent_aware";
       };
       inlay_hints = {
         enabled = true;
+      };
+      file_finder = {
+        modal_max_width = "medium";
+      };
+      centered_layout = {
+        left_padding = 0.15;
+        right_padding = 0.15;
       };
       project_panel = {
         indent_size = 15;
@@ -63,8 +73,13 @@ in
         button = true;
       };
       assistant = {
-        enabled = false;
-        button = false;
+        enabled = true;
+        default_model = {
+          provider = "copilot_chat";
+          model = "claude-3-5-sonnet";
+        };
+        version = 2;
+        button = true;
       };
       #language_models = {
       #  ollama = {
@@ -83,6 +98,9 @@ in
         always_show_close_button = true;
         activate_on_close = "neighbour";
         show_diagnostics = "all";
+      };
+      tab_bar = {
+        show = true;
       };
       extend_comment_on_newline = false;
       tab_size = 2;
@@ -106,6 +124,19 @@ in
         "**/Thumbs.db"
         "**/.classpath"
         "**/.settings"
+        #
+        "**/out"
+        "**/dist"
+        "**/.husky"
+        "**/.turbo"
+        "**/.vscode-test"
+        "**/.vscode"
+        "**/.next"
+        "**/.storybook"
+        "**/.tap"
+        "**/.nyc_output"
+        "**/report"
+        "**/node_modules"
       ];
       journal = {
         hour_format = "hour24";
@@ -120,7 +151,12 @@ in
       };
       file_types = {
         "Plain Text" = [ "txt" ];
-        JSON = [ "flake.lock" ];
+        JSON = [
+          "flake.lock"
+          "json"
+          "jsonc"
+          ".code-snippets"
+        ];
         JSONC = [
           "**/.zed/**/*.json"
           "**/zed/**/*.json"
@@ -128,27 +164,27 @@ in
           "**/.vscode/**/*.json"
         ];
         "Shell Script" = [ ".env.*" ];
-        Dockerfile = [ "Dockerfile*" ];
+        Dockerfile = [
+          "Dockerfile*"
+          "Dockerfile"
+          "Dockerfile.*"
+        ];
         TOML = [ "uv.lock" ];
       };
       languages = {
         Nix = {
-          formatter = [
-            {
-              language_server = {
-                name = "nixd";
-              };
-            }
-            {
-              external = {
-                command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
-                arguments = [ ];
-              };
-            }
-          ];
+          formatter = {
+            external = {
+              command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
+              arguments = [
+                "--quiet"
+                "--"
+              ];
+            };
+          };
           language_servers = [
             "nixd"
-            "nil"
+            "!nil"
           ];
         };
         Markdown = {
@@ -164,17 +200,12 @@ in
         };
       };
       lsp = {
-        nix = {
-          binary = {
-            path_lookup = true;
-          };
-        };
         nixd = {
           binary = {
             path_lookup = true;
           };
           settings = {
-            diagnostics = {
+            diagnostic = {
               suppress = [ "sema-extra-with" ];
             };
           };
