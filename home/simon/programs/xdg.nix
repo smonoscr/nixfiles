@@ -1,4 +1,8 @@
-{ lib, config, ... }:
+{
+  lib,
+  config,
+  ...
+}:
 with lib;
 let
   cfg = config.module.programs.xdg;
@@ -80,6 +84,28 @@ in
         #associations.added = associations;
         defaultApplications = associations;
       };
+      ## already set in nixos
+      #portal = {
+      #  enable = true;
+      #  xdgOpenUsePortal = true;
+      #  config = {
+      #    common = {
+      #      default = [
+      #        "gtk"
+      #      ];
+      #    };
+      #    hyprland = {
+      #      default = [
+      #        "hyprland"
+      #        "gtk"
+      #      ];
+      #      "org.freedesktop.impl.portal.Secret" = [
+      #        "gnome-keyring"
+      #      ];
+      #    };
+      #  };
+      #  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      #};
     };
   };
 }
