@@ -1,7 +1,7 @@
 _: {
   services = {
 
-    gnome.gnome-keyring.enable = false;
+    gnome.gnome-keyring.enable = true;
 
     gvfs.enable = true;
   };

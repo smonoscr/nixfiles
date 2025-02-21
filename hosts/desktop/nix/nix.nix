@@ -29,6 +29,7 @@
       daemonCPUSchedPolicy = "idle";
 
       settings = {
+        build-dir = "/var/tmp";
         experimental-features = [
           "nix-command"
           "flakes"
