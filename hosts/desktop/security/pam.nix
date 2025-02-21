@@ -7,6 +7,9 @@ _: {
       hyprlock = {
         enableGnomeKeyring = true;
       };
+      greetd = {
+        enableGnomeKeyring = true;
+      };
     };
   };
 }

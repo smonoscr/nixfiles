@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # default
+    nixpkgs-private.url = "github:simonoscr/nixpkgs/nixos-unstable"; # testing private
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small"; # faster
     #nixpkgs-git.url = "github:NixOS/nixpkgs/master"; # better not
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11"; # current stable
@@ -32,8 +33,6 @@
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    proxmox-nixos.url = "github:SaumonNet/proxmox-nixos";
 
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
@@ -107,10 +106,10 @@
     };
 
     # misc
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #firefox-addons = {
+    #  url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     tailray = {
       url = "github:NotAShelf/tailray";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -148,10 +147,6 @@
 
       #overlays = import "${self}/overlays" { inherit self; }; # no
 
-      #packages = forAllSystems (system: {
-      #  # nix build .#proxmox-image
-      #  proxmox-base-image = self.nixosConfigurations.proxmox-base.config.system.build.VMA;
-      #});
       #packages = forAllSystems (
       #  system:
       #  let
@@ -179,88 +174,6 @@
           modules = [
             ./hosts/desktop/configuration.nix
           ];
-        };
-
-        proxmox-server = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./hosts/proxmox-server/configuration.nix ];
-        };
-
-        k3s-control-1 = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./hosts/k8s/k3s-control-1/configuration.nix ];
-        };
-
-        k3s-control-2 = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./hosts/k8s/k3s-control-2/configuration.nix ];
-        };
-
-        k3s-control-3 = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./hosts/k8s/k3s-control-3/configuration.nix ];
-        };
-
-        installer-iso = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [
-            ./images/installer-iso.nix
-          ];
-        };
-      };
-      colmena = {
-        meta = {
-          name = "k8s";
-          nixpkgs = import inputs.nixpkgs {
-            system = "aarch64-linux";
-          };
-          specialArgs = {
-            inherit inputs;
-          };
-        };
-
-        k3s-control-1 = {
-          deployment = {
-            targetHost = "188.245.201.191";
-            tags = [
-              "control"
-              "k3s"
-            ];
-          };
-          imports = [ ./hosts/k8s/k3s-control-1/configuration.nix ];
-          time.timeZone = "Europe/Berlin";
-        };
-        k3s-control-2 = {
-          deployment = {
-            targetHost = "128.140.113.184";
-            tags = [
-              "control"
-              "k3s"
-            ];
-          };
-          imports = [ ./hosts/k8s/k3s-control-2/configuration.nix ];
-          time.timeZone = "Europe/Berlin";
-        };
-        k3s-control-3 = {
-          deployment = {
-            targetHost = "138.201.88.53";
-            tags = [
-              "control"
-              "k3s"
-            ];
-          };
-          imports = [ ./hosts/k8s/k3s-control-3/configuration.nix ];
-          time.timeZone = "Europe/Berlin";
         };
       };
     };
