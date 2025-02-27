@@ -24,6 +24,7 @@
     ./programs/hyprland.nix
     ./programs/less.nix
     ./programs/seahorse.nix
+    ./programs/via.nix
     ./programs/ssh.nix
     ./programs/xdg.nix
     ./programs/xwayland.nix
