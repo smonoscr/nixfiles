@@ -1,22 +1,17 @@
 _: {
   time.timeZone = "Europe/Berlin";
 
-  services.xserver.xkb = {
-    layout = "de";
-    variant = "";
-    options = "";
-  };
-
   i18n =
     let
       de = "de_DE.UTF-8";
+      en = "en_US.UTF-8";
     in
     {
-      defaultLocale = "en_US.UTF-8";
+      defaultLocale = en;
 
       extraLocaleSettings = {
-        LANGUAGE = "en_US.UTF-8";
-        LANG = "en_US.UTF-8";
+        LANGUAGE = en;
+        LANG = en;
         LC_ALL = de;
         LC_ADDRESS = de;
         LC_IDENTIFICATION = de;

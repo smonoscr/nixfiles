@@ -1,12 +1,10 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   boot = {
-    ## use custom xanmod kernel no
     kernelPackages = pkgs.linuxPackages_cachyos; # pkgs.linuxPackages_cachyos, pkgs.linuxPackages_xanmod_latest, pkgs.linuxPackages_zen, pkgs.linuxPackages_lqx, linuxPackages_latest
 
     kernelModules = [
       "kvm-amd"
-      "tcp_bbr"
     ];
 
     supportedFilesystems = [
@@ -15,22 +13,22 @@
       "tmpfs"
     ];
 
-    swraid.enable = lib.mkDefault false;
+    swraid.enable = false;
 
     # Enable binfmt emulation of aarch64-linux, this is required for cross compilation.
-    binfmt.emulatedSystems = [ "aarch64-linux" ];
+    #binfmt.emulatedSystems = [ "aarch64-linux" ];
 
     loader = {
-      timeout = lib.mkDefault 1;
+      timeout = 1;
       generationsDir.copyKernels = true;
       efi.canTouchEfiVariables = true;
 
       systemd-boot = {
         enable = true;
         configurationLimit = 15;
-        consoleMode = lib.mkDefault "max";
+        consoleMode = "max";
         editor = false;
-        memtest86.enable = false;
+        netbootxyz.enable = true;
       };
     };
 
