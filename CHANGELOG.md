@@ -1,3 +1,25 @@
+## [14.2.0](https://gitlab.com/simonoscr/nixfiles/compare/14.1.2...14.2.0) (2025-03-01)
+
+### 📦 Other
+
+* update flake ([4b8f92a](https://gitlab.com/simonoscr/nixfiles/commit/4b8f92a5144767c32f59717d1cf1e4d87c9ce9e1))
+* update flake ([aa68b8b](https://gitlab.com/simonoscr/nixfiles/commit/aa68b8bbff045f36d0c94c358ab1023637bd8341))
+
+### 🚀 Features
+
+* update hardware and performance related settings and also update core parts ([4f99ec9](https://gitlab.com/simonoscr/nixfiles/commit/4f99ec96d19c7789c82ad72e3463b4790e656503))
+
+### 🛠 Fixes
+
+* disable kde-connect and vscodium ([b1f4785](https://gitlab.com/simonoscr/nixfiles/commit/b1f4785719b9048e139e9d5c688a7090540f0526))
+* disable unused inputs ([2878832](https://gitlab.com/simonoscr/nixfiles/commit/28788322073341f284d02014a96097115978e8e3))
+* **gaming:** update sc, and config little helper ([e5142f0](https://gitlab.com/simonoscr/nixfiles/commit/e5142f065ccd047dcd2896e2215fa5dabb8d5935))
+* **hyprland:** update settings and remove unused plugins ([5b95338](https://gitlab.com/simonoscr/nixfiles/commit/5b95338e45f87bd79a2ed196b87422fceb83b32e))
+* **kernel:** update sysctl config ([cb20fe0](https://gitlab.com/simonoscr/nixfiles/commit/cb20fe06093478a0ed79f6a430c50e5834aefba8))
+* **network:** update rules and configs ([9930861](https://gitlab.com/simonoscr/nixfiles/commit/9930861df2171ee6aa71733e2e69f200b3cde99a))
+* **programs:** remove unused or update other program configs ([5f67991](https://gitlab.com/simonoscr/nixfiles/commit/5f67991f08d8ce342ef5698f4b4e4d80372c891a))
+* **services:** update services ([3731050](https://gitlab.com/simonoscr/nixfiles/commit/3731050f962effdc7c5901c11c433719e806c775))
+
 ## [14.1.2](https://gitlab.com/simonoscr/nixfiles/compare/14.1.1...14.1.2) (2025-02-25)
 
 ### 🛠 Fixes
