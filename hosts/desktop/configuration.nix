@@ -16,7 +16,6 @@
     ./nix
     ./pkgs
     ./programs/shell
-    ./programs/corectrl.nix
     ./programs/dconf.nix
     ./programs/fonts.nix
     ./programs/git.nix
