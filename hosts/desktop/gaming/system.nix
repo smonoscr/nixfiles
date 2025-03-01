@@ -10,6 +10,8 @@ _: {
       # increasing is good for gaming USE MAX_INT
       "vm.max_map_count" = 2147483642;
       "fs.file-max" = 2097152;
+      # Set the maximum watches on files
+      "fs.inotify.max_user_watches" = 524288;
       # Proactive compaction for (Transparent) Hugepage allocation reduces the average but not necessarily the maximum allocation stalls. Disable proactive compaction because it introduces jitter according to kernel documentation (inner workings):
       "vm.compaction_proactiveness" = 0;
       # If you have enough free RAM increase the number of minimum free Kilobytes to avoid stalls on memory allocations: [5][6]. Do not set this below 1024 KB or above 5% of your systems memory. Reserving 1GB:
@@ -22,12 +24,17 @@ _: {
       "kernel.split_lock_mitigate" = 0;
     };
   };
-  systemd.services.set-rtc-max-user-freq = {
-    description = "Set RTC max user frequency";
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      ExecStart = "/bin/sh -c 'echo 3072 > /sys/class/rtc/rtc0/max_user_freq'";
-      Type = "oneshot";
+  systemd.services = {
+    set-rtc-max-user-freq = {
+      description = "Set RTC max user frequency";
+      wantedBy = [ "multi-user.target" ];
+      serviceConfig = {
+        ExecStart = "/bin/sh -c 'echo 3072 > /sys/class/rtc/rtc0/max_user_freq'";
+        Type = "oneshot";
+      };
+    };
+    "user@".serviceConfig = {
+      Delegate = "cpu cpuset io memory pids";
     };
   };
 }
