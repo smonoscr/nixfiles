@@ -26,9 +26,9 @@ let
       "-w 3440"
       "-h 1440"
       "-r 165"
-      #"--force-grab-cursor"
+      "--force-grab-cursor"
       "-b"
-      #"--adaptive-sync"
+      "--adaptive-sync"
       "--backend=wayland"
       "--mangoapp"
       # HDR
