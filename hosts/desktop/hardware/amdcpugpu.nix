@@ -2,7 +2,7 @@ _: {
   environment = {
     variables = {
       AMD_VULKAN_ICD = "RADV";
-      RADV_PERFTEST = "gpl,rt";
+      RADV_PERFTEST = "gpl";
     };
   };
 

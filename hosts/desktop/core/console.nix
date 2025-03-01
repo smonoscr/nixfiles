@@ -1,9 +1,7 @@
 _: {
   console = {
-    useXkbConfig = true;
     earlySetup = true;
-    font = "Lat2-Terminus16";
-    #keyMap = "de";
+    keyMap = "de";
     colors = [
       "171717"
       "d81765"
