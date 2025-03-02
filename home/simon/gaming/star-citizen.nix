@@ -21,13 +21,15 @@ let
     useUmu = true;
     gameScopeEnable = true;
     gameScopeArgs = [
+      "-f"
+      "--expose-wayland"
+      "--force-grab-cursor"
+      "--force-windows-fullscreen"
       "-W 3440"
       "-H 1440"
       "-w 3440"
       "-h 1440"
       "-r 165"
-      "--force-grab-cursor"
-      "-b"
       "--adaptive-sync"
       "--backend=wayland"
       "--mangoapp"

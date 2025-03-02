@@ -2,7 +2,8 @@
 {
   programs.steam = {
     enable = true;
-    extraCompatPackages = [ pkgs.proton-ge-custom ];
+    #localNetworkGameTransfers.openFirewall = true;
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
     #package = pkgs.steam.override {
     #  extraPkgs =
     #    pkgs: with pkgs; [
