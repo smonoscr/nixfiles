@@ -2,11 +2,11 @@
 {
   environment.systemPackages = with pkgs; [
     (lutris.override {
-      extraLibraries = [
-        # List library dependencies here
-      ];
-      extraPkgs = [
-        wineWowPackages.stable
+      #extraLibraries = pkgs: [
+      #  # List library dependencies here
+      #];
+      extraPkgs = pkgs: [
+        pkgs.wineWowPackages.stable
       ];
     })
   ];
