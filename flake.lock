@@ -1312,11 +1312,11 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1740760486,
-        "narHash": "sha256-iIeBo4JFh8KRoiF7yq3lTSQBmOJ3n/kHJukGL/ricd0=",
+        "lastModified": 1742031689,
+        "narHash": "sha256-8QI4iel67aDN/aHYP4Yux4rRmU3lP2ZkX0rgazUEPuc=",
         "ref": "refs/heads/main",
-        "rev": "5ce2252d486654a84a18dc340c095156b0d8273c",
-        "revCount": 90,
+        "rev": "c70fae568a88d172a86ae14c6ae977e694a333dc",
+        "revCount": 92,
         "type": "git",
         "url": "ssh://git@gitlab.com/simonoscr/nixsecrets"
       },
