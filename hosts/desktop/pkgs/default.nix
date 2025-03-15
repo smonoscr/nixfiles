@@ -3,10 +3,15 @@
   environment = {
     homeBinInPath = true;
     systemPackages = with pkgs; [
-      toybox
+      wget
+      dnsutils
       usbutils
       libarchive
       colmena
+
+      zip
+      unzip
+      unrar
     ];
   };
 }

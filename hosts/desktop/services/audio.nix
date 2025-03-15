@@ -127,7 +127,8 @@ in
   security.rtkit.enable = true;
 
   environment.systemPackages = with pkgs; [
-    pavucontrol
+    pavucontrol # pulseaudio volume control
+    #pwvucontrol # pipewire volume control
     playerctl
     pamixer
   ];
