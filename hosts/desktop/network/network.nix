@@ -2,7 +2,7 @@
 {
   networking = {
     hostName = "nixos";
-    useNetworkd = true;
+    useNetworkd = false;
     useDHCP = lib.mkForce true;
     networkmanager = {
       enable = true;
