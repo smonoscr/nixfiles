@@ -1,3 +1,18 @@
+## [14.4.0](https://gitlab.com/simonoscr/nixfiles/compare/14.3.1...14.4.0) (2025-03-27)
+
+### 📦 Other
+
+* update flake.lock ([54e1e3d](https://gitlab.com/simonoscr/nixfiles/commit/54e1e3dca12aa6813d8b3b6fc1b60aec94c781e7))
+
+### 🚀 Features
+
+* add n8n ([f86344f](https://gitlab.com/simonoscr/nixfiles/commit/f86344f4996f64a120acb46eaa87ca1f650cedbf))
+* **hyprland:** update configuration for v0.48.0 release ([4a88a89](https://gitlab.com/simonoscr/nixfiles/commit/4a88a89a6c2507c184d33ed1421e3f24d25fe7c1))
+
+### 🛠 Fixes
+
+* **network:** update dns and disable dhcp ([a28d669](https://gitlab.com/simonoscr/nixfiles/commit/a28d6695f9a384f5f142d0a1af2359e4746d7cf7))
+
 ## [14.3.1](https://gitlab.com/simonoscr/nixfiles/compare/14.3.0...14.3.1) (2025-03-15)
 
 ### 📦 Other
