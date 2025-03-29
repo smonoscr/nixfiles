@@ -106,11 +106,6 @@
       url = "git+ssh://git@codeberg.org/simonoscar/nixsecrets.git";
     };
 
-    # misc
-    #firefox-addons = {
-    #  url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
     tailray = {
       url = "github:NotAShelf/tailray";
       inputs.nixpkgs.follows = "nixpkgs";

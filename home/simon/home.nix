@@ -25,9 +25,8 @@
 
   module = {
     browser = {
-      firefox.enable = false;
       zen-browser.enable = true;
-      brave.enable = false;
+      brave.enable = true;
     };
     desktop = {
       wayland = {
