@@ -25,7 +25,7 @@
 }
 
 #match:hover {
-  background: #f5f5f5;
+  background: #282828;
 }
 #match:selected {
   background: #33d17a;
@@ -34,7 +34,7 @@
 #entry {
   background: #1e1e1e;
   color: #eeeeee;
-  border: 1px solid #1e1e1e;
+  border: 1px solid #33d17a;
   border-radius: 6px;
   padding: 4px 8px;
 }

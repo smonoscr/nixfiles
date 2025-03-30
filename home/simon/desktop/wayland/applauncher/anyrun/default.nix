@@ -23,7 +23,7 @@ in
           applications
           rink
           shell
-          symbols
+          #symbols
           websearch
 
           #inputs.anyrun-nixos-options.packages.${pkgs.system}.default
