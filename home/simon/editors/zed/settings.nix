@@ -73,7 +73,7 @@
         enabled = true;
         default_model = {
           provider = "zed.dev";
-          model = "claude-3-5-sonnet";
+          model = "claude-3-7-sonnet-latest";
         };
         version = "2";
         button = true;
