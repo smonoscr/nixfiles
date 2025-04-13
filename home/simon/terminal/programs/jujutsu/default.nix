@@ -7,8 +7,8 @@ with lib;
 let
   cfg = config.module.terminal.programs.jujutsu;
 
-  email = "13078509-simonoscr@users.noreply.gitlab.com";
-  name = "simonoscr";
+  email = "smonoscr@noreply.codeberg.org";
+  name = "smonoscr";
 in
 {
   imports = [
