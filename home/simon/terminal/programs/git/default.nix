@@ -7,8 +7,8 @@ with lib;
 let
   cfg = config.module.terminal.programs.git;
 
-  email = "simonoscar@noreply.codeberg.org";
-  name = "simonoscr";
+  email = "smonoscr@noreply.codeberg.org";
+  name = "smonoscr";
 in
 {
   imports = [
