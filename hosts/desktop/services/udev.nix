@@ -1,7 +1,11 @@
 { pkgs, ... }:
 {
-  services = {
-    udev.extraRules = ''
+  services.udev = {
+    packages = with pkgs; [
+      platformio-core
+      openocd
+    ];
+    extraRules = ''
       ## rules below set the scheduler to bfq for rotational drives, bfq for SSD/eMMC drives and none for NVMe drives
       # HDD
       ACTION=="add|change", KERNEL=="sd[a-z]*", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="bfq"
@@ -31,5 +35,6 @@
       ENV{ID_VENDOR}=="Yubico",\
       RUN+="${pkgs.systemd}/bin/loginctl lock-sessions"
     '';
+
   };
 }
