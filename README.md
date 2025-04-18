@@ -23,7 +23,7 @@
 
 </div>
 
-henlo and welcome to my nixos setup. please be aware that i'm still in the early stages of learning all this. the setup here was created with the help of multiple examples and inspiration from other dotfile and nix-config repositories (see [credits](https://gitlab.com/simonoscr/nixfiles#credits)).
+henlo and welcome to my nixos setup. please be aware that i'm still in the early stages of learning all this. the setup here was created with the help of multiple examples and inspiration from other dotfile and nix-config repositories (see [credits](#credits)).
 
 feel free to borrow ideas from my configurations, but keep in mind that they might not always represent the best or most correct approach and make sure you've grasped the basics of nixos, nix, flakes, and home-manager.
 
@@ -33,15 +33,17 @@ feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 ## system components
 
-|                 |     |                                                                                   |
-| --------------- | --- | --------------------------------------------------------------------------------- |
-| display manager |     | [greetd/tuigreet](https://github.com/apognu/tuigreet)                             |
-| window manager  |     | [hyprland](https://hyprland.org/)                                                 |
-| bar             |     | [hyprpanel](https://hyprpanel.com/)                                               |
-| terminal        |     | [ghostty](https://ghostty.org/)                                                   |
-| shell           |     | [fish](https://fishshell.com/) + [starship](https://github.com/starship/starship) |
-| text editor     |     | [(neovim)](https://github.com/neovim/neovim)                                      |
-| code editor     |     | [zed-editor](https://github.com/zed-industries/zed)                               |
+|                    |     |                                                                                          |
+| ------------------ | --- | ---------------------------------------------------------------------------------------- |
+| display manager    |     | [greetd/tuigreet](https://github.com/apognu/tuigreet)                                    |
+| window manager     |     | [hyprland](https://hyprland.org/)                                                        |
+| status bar         |     | [hyprpanel](https://github.com/Jas-SinghFSU/HyprPanel)                                   |
+| app launcher       |     | [anyrun](https://github.com/anyrun-org/anyrun)                                           |
+| terminal emulators |     | [ghostty](https://ghostty.org/), [wezterm](https://wezfurlong.org/wezterm/)              |
+| shell              |     | [fish](https://fishshell.com/) + [starship](https://github.com/starship/starship)        |
+| file manager       |     | [yazi](https://github.com/sxyazi/yazi)                                                   |
+| text editors       |     | [neovim](https://github.com/neovim/neovim), [zed](https://github.com/zed-industries/zed) |
+| browsers           |     | zen browser, [brave](https://brave.com/), [ladybird](https://ladybird.dev/)              |
 
 ## systems
 
@@ -62,11 +64,11 @@ feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 </div>
 
-- [**nix-flake**](https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-flake.html): manage nixos and home-manager configurations.
+- [**nix-flake**](https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-flake.html): manage nixos and home-manager configurations with reproducible dependency management.
 
-- [**nix-systems**](https://github.com/nix-systems/nix-systems): easy way to manage systems in a flake.
+- [**nix-systems**](https://github.com/nix-systems/nix-systems): easy way to manage multiple systems in a flake.
 
-- [**home-manager**](https://github.com/nix-community/home-manager): manage your dotfiles, home environment, and user-specific configurations with home-manager.
+- [**home-manager**](https://github.com/nix-community/home-manager): manage dotfiles, home environment, and user-specific configurations with home-manager.
 
 - [**nh**](https://github.com/viperML/nh): "yet-another-nix-helper". `nh` reimplements some basic nix commands. adding functionality on top of the existing solutions, like nixos-rebuild, home-manager cli or nix itself.
 
@@ -76,13 +78,13 @@ feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 </div>
 
-- [**checks**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/checks?ref_type=heads): configuratrion for checks like pre-commit-hook
+- [**checks**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/checks?ref_type=heads): configuration for checks like pre-commit-hook
 
 - [**home**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/home): this folder contains configurations for home-manager. In the profiles subfolder are the differenct home-manager profiles. here i have everything user related in it
 
-- [**hosts**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/hosts?ref_type=heads): the hosts/ folder helps me organize my different hosts
+- [**hosts**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/hosts?ref_type=heads): system-specific configurations
 
-- [**images**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/images?ref_type=heads): .nix files for defining different configs for building iso images
+- [**templates**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/templates?ref_type=heads): templates for custom modules, shells or languages
 
 - [**modules**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/modules?ref_type=heads): own, custom nixos or home-manager modules
 
@@ -90,7 +92,7 @@ feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 - [**packages**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/modules?ref_type=heads): self-packaged pkgs for quick pkgs like packaged appimages etc .
 
-- [**templates**](https://gitlab.com/simonoscr/nixfiles/-/tree/main/templates?ref_type=heads): templates for example for custom modules, shells or languages
+- **customized theming**: coordinated visual appearance across gui and tui applications with consistent colors and styling.
 
 <div align="center">
 
