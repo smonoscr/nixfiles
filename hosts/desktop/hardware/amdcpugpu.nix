@@ -7,7 +7,9 @@ _: {
   };
 
   boot = {
-    kernelParams = [ "amd_pstate=active" ];
+    kernelParams = [
+      "amd_pstate=active"
+    ];
   };
 
   hardware = {
