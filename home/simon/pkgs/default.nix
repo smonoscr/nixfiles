@@ -36,6 +36,16 @@
     kubernetes-helm
 
     # drone
-    betaflight-configurator
+    # Override betaflight-configurator to use an older nwjs version
+    (betaflight-configurator.override {
+      nwjs = pkgs.nwjs.overrideAttrs rec {
+        version = "0.84.0";
+        src = pkgs.fetchurl {
+          url = "https://dl.nwjs.io/v${version}/nwjs-v${version}-linux-x64.tar.gz";
+          hash = "sha256-VIygMzCPTKzLr47bG1DYy/zj0OxsjGcms0G1BkI/TEI=";
+        };
+      };
+    })
+    libatomic_ops
   ];
 }
