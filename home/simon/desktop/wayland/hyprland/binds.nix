@@ -93,7 +93,8 @@
       ];
 
       bindr = [
-        "SUPER, Space, exec, pkill anyrun || anyrun" # anyrun launcher
+        #"SUPER, Space, exec, pkill anyrun || anyrun" # anyrun launcher
+        "SUPER, Space, exec, pkill sherlock || sherlock"
       ];
     };
   };
