@@ -39,7 +39,7 @@
           plugins.enable = true;
         };
         bar = "hyprpanel";
-        applauncher = "anyrun";
+        applauncher = "sherlock";
       };
     };
     editors = {

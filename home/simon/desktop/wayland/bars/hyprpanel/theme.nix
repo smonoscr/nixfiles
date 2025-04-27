@@ -6,7 +6,8 @@ let
   blackgrey = "#ffffff";
   grey = "#282828";
   lightgrey = "#999999";
-  springgreen = "#33d17a";
+  #springgreen = "#33d17a";
+  springgreen = "#2BBF6E";
   red = "#ed333b";
   red2 = "#c01c28";
   blue = "#3584e4";

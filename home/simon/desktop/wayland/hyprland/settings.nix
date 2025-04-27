@@ -12,12 +12,12 @@ _: {
         #"SDL_VIDEODRIVER,wayland"
       ];
       general = {
-        border_size = 1;
+        border_size = 2;
         allow_tearing = true;
         gaps_in = 4;
-        gaps_out = 6;
-        "col.active_border" = "rgba(33d17aff)";
-        "col.inactive_border" = "rgba(282828ff)";
+        gaps_out = 8;
+        "col.active_border" = "0xFF2BBF6E";
+        "col.inactive_border" = "0xFF114D2C";
         resize_on_border = true;
       };
       decoration = {
@@ -49,6 +49,7 @@ _: {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         force_default_wallpaper = 0;
+        background_color = "0x393939";
         vfr = true;
         vrr = 0;
         mouse_move_enables_dpms = true;
