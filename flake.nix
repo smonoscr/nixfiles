@@ -11,9 +11,8 @@
 
     systems.url = "github:nix-systems/default-linux";
 
-    # nix-community
     home-manager = {
-      url = "github:nix-community/home-manager"; # 45c07fcf7d28b5fb3ee189c260dee0a2e4d14317"; # https://github.com/nix-community/home-manager/pull/6172
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-index-database = {
@@ -40,13 +39,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # gaming
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hyprland
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -78,8 +75,13 @@
     anyrun = {
       url = "github:anyrun-org/anyrun";
     };
+    sherlock.url = "github:Skxxtz/sherlock";
 
-    # secrets
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     agenix = {
       url = "github:ryantm/agenix";
       inputs = {
@@ -103,11 +105,6 @@
       url = "github:NotAShelf/tailray";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    zed = {
-      url = "github:zed-industries/zed";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -121,7 +118,7 @@
       inherit (self) outputs;
       inherit (inputs.nixpkgs) lib;
       mylib = import "${self}/lib" { inherit lib; };
-      forAllSystems = nixpkgs.lib.genAttrs (import systems);
+      forAllSystems = lib.genAttrs (import systems);
     in
     {
 

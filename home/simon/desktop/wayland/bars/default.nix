@@ -7,14 +7,15 @@ with lib;
     module.desktop.wayland.bar = mkOption {
       type = types.enum [
         "hyprpanel"
-        "ags"
+        "quickshell"
       ];
       default = "hyprpanel";
-      description = "Selects which bar to enable: either 'hyprpanel' or 'ags'";
+      description = "Selects which bar to enable: either 'hyprpanel' or 'quickshell'";
     };
   };
 
   imports = [
     ./hyprpanel
+    ./quickshell
   ];
 }
