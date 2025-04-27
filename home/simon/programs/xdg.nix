@@ -17,29 +17,37 @@ let
 
   associations = {
     "text/html" = browser;
-    "x-scheme-handler/http" = browser;
-    "x-scheme-handler/https" = browser;
-    "x-scheme-handler/ftp" = browser;
-    "x-scheme-handler/about" = browser;
-    "x-scheme-handler/unknown" = browser;
-    "x-scheme-handler/chrome" = chromeBrowser;
+    "text/xml" = browser;
+    "text/plain" = editor;
+    "application/json" = editor;
+    "application/pdf" = zathura;
+    "application/xml" = browser;
     "application/xhtml+xml" = browser;
+    "application/xhtml_xml" = browser;
+    "application/rdf+xml" = browser;
+    "application/rss+xml" = browser;
     "application/x-extension-htm" = browser;
     "application/x-extension-html" = browser;
     "application/x-extension-shtml" = browser;
-    "application/x-extension-xhtml" = browser;
     "application/x-extension-xht" = browser;
+    "application/x-extension-xhtml" = browser;
+    "application/x-wine-extension-ini" = editor;
+    "x-scheme-handler/about" = browser; # open `about:` url with `browser`
+    "x-scheme-handler/chrome" = chromeBrowser;
+    "x-scheme-handler/ftp" = browser; # open `ftp:` url with `browser`
+    "x-scheme-handler/http" = browser;
+    "x-scheme-handler/https" = browser;
+    #"x-scheme-handler/unknown" = browser;
 
     "inode/directory" = fileManager;
 
     "audio/*" = [ "mpv.desktop" ];
     "video/*" = [ "mpv.desktop" ];
     "image/*" = [ "imv.desktop" ];
-
-    "application/pdf" = zathura;
-
-    "application/json" = editor;
-    "text/plain" = editor;
+    "image/gif" = [ "imv.desktop" ];
+    "image/jpeg" = [ "imv.desktop" ];
+    "image/png" = [ "imv.desktop" ];
+    "image/webp" = [ "imv.desktop" ];
 
     "x-scheme-handler/spotify" = [ "spotify.desktop" ];
     "x-scheme-handler/discord" = [ "WebCord.desktop" ];
