@@ -7,8 +7,8 @@
       common.default = [ "gtk" ];
       hyprland = {
         default = [
-          "gtk"
           "hyprland"
+          "gtk"
         ];
         "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
       };
