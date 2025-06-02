@@ -114,7 +114,8 @@
       # kernel. Some programs, such as powertop, use this interface to gather
       # information about the system, but it is not necessary for the system to
       # actually publish those. I can live without it.
-      "debugfs=off"
+      # doesnt work in combination with scx-ladv scheduler
+      #"debugfs=off"
       # Sometimes certain kernel exploits will cause what is known as an "oops".
       # This parameter will cause the kernel to panic on such oopses, thereby
       # preventing those exploits
