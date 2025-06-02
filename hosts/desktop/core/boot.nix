@@ -61,7 +61,6 @@
       systemd = {
         # enable systemd in initrd
         enable = true;
-        strip = true;
       };
     };
   };

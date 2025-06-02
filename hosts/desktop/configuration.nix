@@ -6,7 +6,11 @@
 {
   imports = [
     inputs.chaotic.nixosModules.default
-    { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+    {
+      nixpkgs.overlays = [
+        inputs.hyprpanel.overlay
+      ];
+    }
     ./core
     ./gaming
     ./hardware
