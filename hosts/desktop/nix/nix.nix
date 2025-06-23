@@ -33,6 +33,7 @@
         experimental-features = [
           "nix-command"
           "flakes"
+          #"repl-flake" # onyl when usi9ng lix
         ];
         # Whether to accept nix configuration from a flake
         # without displaying a Y/N prompt. For those obtuse
