@@ -1,7 +1,5 @@
 { pkgs, ... }:
 {
-  boot.kernelModules = [ "uhid" ];
-
   security.tpm2 = {
     # Enable Trusted Platform Module 2 support
     enable = true;
@@ -27,6 +25,5 @@
   environment.systemPackages = with pkgs; [
     tpm2-tools
     tpm2-tss
-    tpm2-abrmd
   ];
 }

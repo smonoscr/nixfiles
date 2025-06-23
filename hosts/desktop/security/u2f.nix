@@ -1,9 +1,13 @@
 { config, pkgs, ... }:
 {
+  boot.kernelModules = [ "uhid" ];
+
   services = {
     pcscd.enable = true;
     udev.packages = [ pkgs.yubikey-personalization ];
   };
+
+  users.users.simon.extraGroups = [ "pcscd" ];
 
   security.pam = {
     u2f = {
@@ -25,8 +29,7 @@
   environment.systemPackages = with pkgs; [
     #yubikey-manager
     yubikey-personalization
-    yubikey-personalization-gui
     age-plugin-yubikey
-    #yubioath-flutter
+    yubioath-flutter
   ];
 }
