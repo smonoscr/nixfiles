@@ -12,7 +12,7 @@ let
 in
 {
   imports = [
-    #./settings.nix
+    ./settings.nix
   ];
 
   options = {
@@ -24,13 +24,13 @@ in
     programs.zed-editor = {
       enable = true;
       installRemoteServer = true;
+      extraPackages = with pkgs; [
+        nil
+        nixd
+        nixfmt-rfc-style
+        shellcheck
+        shfmt
+      ];
     };
-
-    home.packages = with pkgs; [
-      nil
-      nixd
-      nixfmt-rfc-style
-      prettierd
-    ];
   };
 }

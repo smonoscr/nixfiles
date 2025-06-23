@@ -1,19 +1,22 @@
-{ pkgs, ... }:
-{
+_: {
   programs.zed-editor = {
     extensions = [
-      "dockerfile"
-      "html"
-      "nix"
-      "toml"
-      "xml"
-      "scss"
-      "vscode-dark-modern"
-      "helm"
       "ansible"
-      "material-icon-theme"
+      "basher"
+      "docker-compose"
+      "dockerfile"
+      "fish"
+      "helm"
+      "html"
       "jsonnet"
       "log"
+      "material-icon-theme"
+      "nix"
+      "scss"
+      "terraform"
+      "toml"
+      "vscode-dark-modern"
+      "xml"
     ];
     userSettings = {
       theme = {
@@ -23,44 +26,29 @@
       };
       icon_theme = "Material Icon Theme";
       base_keymap = "VSCode";
-      features = {
-        edit_prediction_provider = "zed";
-      };
       buffer_font_family = "JetBrainsMono Nerd Font";
-      buffer_font_size = 15;
       buffer_line_height = "standard";
       ui_font_family = "Inter";
-      ui_font_size = 16;
       confirm_quit = true;
       show_whitespaces = "boundary";
       calls = {
         mute_on_join = true;
         share_on_join = false;
       };
+      toolbar = {
+        code_actions = true;
+      };
+      title_bar = {
+        show_branch_icon = true;
+      };
       indent_guides = {
-        enabled = true;
         coloring = "indent_aware";
       };
       inlay_hints = {
         enabled = true;
       };
       collaboration_panel = {
-        dock = "right";
         button = false;
-      };
-      assistant = {
-        version = "2";
-        enabled = true;
-        default_model = {
-          provider = "zed.dev";
-          model = "claude-3-5-sonnet-latest";
-        };
-        editor_model = {
-          provider = "zed.dev";
-          model = "claude-3-5-sonnet-latest";
-        };
-        always_allow_tool_actions = false;
-        default_profile = "write";
       };
       autosave = {
         after_delay = {
@@ -116,10 +104,10 @@
           show_commit_summary = true;
         };
       };
+      load_direnv = "shell_hook";
       journal = {
         hour_format = "hour24";
       };
-      load_direnv = "shell_hook";
       terminal = {
         env = {
           EDITOR = "zed --wait";
@@ -128,7 +116,38 @@
         font_size = 14;
       };
       file_types = {
-        "Plain Text" = [ "txt" ];
+        Ansible = [
+          "**.ansible.yml"
+          "**.ansible.yaml"
+          "**/defaults/*.yml"
+          "**/defaults/*.yaml"
+          "**/meta/*.yml"
+          "**/meta/*.yaml"
+          "**/tasks/*.yml"
+          "**/tasks/*.yaml"
+          "**/handlers/*.yml"
+          "**/handlers/*.yaml"
+          "**/group_vars/*.yml"
+          "**/group_vars/*.yaml"
+          "**/host_vars/*.yml"
+          "**/host_vars/*.yaml"
+          "**/playbooks/*.yml"
+          "**/playbooks/*.yaml"
+          "**playbook*.yml"
+          "**playbook*.yaml"
+        ];
+        Dockerfile = [
+          "Dockerfile*"
+          "Dockerfile"
+          "Dockerfile.*"
+        ];
+        Helm = [
+          "**/templates/**/*.tpl"
+          "**/templates/**/*.yaml"
+          "**/templates/**/*.yml"
+          "**/helmfile.d/**/*.yaml"
+          "**/helmfile.d/**/*.yml"
+        ];
         JSON = [
           "flake.lock"
           "json"
@@ -141,19 +160,31 @@
           "**/Zed/**/*.json"
           "**/.vscode/**/*.json"
         ];
+        "Plain Text" = [ "txt" ];
         "Shell Script" = [ ".env.*" ];
-        Dockerfile = [
-          "Dockerfile*"
-          "Dockerfile"
-          "Dockerfile.*"
+        TOML = [
+          "uv.lock"
+          "Cargo.toml"
+          "toml"
         ];
-        TOML = [ "uv.lock" ];
+        XML = [
+          "rdf"
+          "gpx"
+          "kml"
+        ];
       };
       languages = {
+        HTML = {
+          formatter = "language_server";
+        };
+        Markdown = {
+          format_on_save = "on";
+          remove_trailing_whitespace_on_save = false; # If you rely on invisible trailing whitespace being converted to <br />
+        };
         Nix = {
           formatter = {
             external = {
-              command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
+              command = "nixfmt";
               arguments = [
                 "--quiet"
                 "--"
@@ -161,15 +192,25 @@
             };
           };
           language_servers = [
-            "nixd"
-            "!nil"
+            "!nixd"
+            "nil"
           ];
         };
-        Markdown = {
-          format_on_save = "on";
-          remove_trailing_whitespace_on_save = false; # If you rely on invisible trailing whitespace being converted to <br />
+        "Shell Script" = {
+          formatter = {
+            external = {
+              command = "shfmt";
+              arguments = [
+                "--filename"
+                "{buffer_path}"
+                "--indent"
+                "2"
+              ];
+            };
+          };
         };
         YAML = {
+          formatter = "language_server";
           # this fixes wrong error for multiple manifest documents in a single .yaml file. docker-compose extensions fault
           language_servers = [
             "yaml-language-server"
@@ -178,23 +219,77 @@
         };
       };
       lsp = {
-        nixd = {
-          binary = {
-            path_lookup = true;
+        #ansible-language-server = {
+        #  binary = {
+        #    path_lookup = true;
+        #  };
+        #};
+        json-language-server = {
+          settings = {
+            json = {
+              schemas = [
+                {
+                  fileMatch = [
+                    "renovate.json"
+                    ".renocaterc"
+                    ".renovaterc.json"
+                  ];
+                  url = "https://docs.renovatebot.com/renovate-schema.json";
+                }
+              ];
+            };
           };
+        };
+        jsonnet-language-server = {
+          settings = {
+            resolve_paths_with_tanka = true;
+          };
+        };
+        nixd = {
           settings = {
             diagnostic = {
               suppress = [ "sema-extra-with" ];
             };
           };
-        };
-        nil = {
           binary = {
             path_lookup = true;
           };
+        };
+        nil = {
           settings = {
             diagnostics = {
               ignored = [ "unused_binding" ];
+            };
+          };
+          binary = {
+            path_lookup = true;
+          };
+        };
+        terraform-ls = {
+          initialization_options = {
+            experimentalFeatures = {
+              prefillRequiredFields = true;
+            };
+          };
+        };
+        yaml-language-server = {
+          settings = {
+            yaml = {
+              keyOrdering = false;
+              format = {
+                enable = true;
+                singleQuote = false;
+              };
+              completion = true;
+            };
+            schemas = {
+              "https://raw.githubusercontent.com/ansible/ansible/main/lib/ansible/utils/schema/ansible-schema.json" =
+                [
+                  "./inventory/*.yaml"
+                  "./inventory/*.yml"
+                  "hosts.yaml"
+                  "hosts.yml"
+                ];
             };
           };
         };
