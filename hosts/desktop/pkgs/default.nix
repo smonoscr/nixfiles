@@ -12,6 +12,8 @@
       zip
       unzip
       unrar
+
+      libreoffice
     ];
   };
 }
