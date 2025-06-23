@@ -1,6 +1,6 @@
 _: {
   networking = {
-    hostName = "nixos";
+    hostName = "desktop";
     useNetworkd = false;
     useDHCP = false;
     networkmanager = {
