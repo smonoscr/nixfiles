@@ -18,6 +18,7 @@ in
 
     programs.k9s = {
       enable = true;
+
       settings.k9s = {
         ui = {
           enableMouse = false; # can scroll, but dont click. true = cant scroll, but can click
@@ -27,7 +28,15 @@ in
         };
         skipLatestRevCheck = true;
       };
-      plugin.plugin = {
+      aliases.aliases = {
+        cr = "clusterrole";
+        crb = "clusterrolebinding";
+        de = "deployment";
+        dp = "deployment";
+        rb = "rolebinding";
+        sec = "secrets";
+      };
+      plugins = {
         # kubectl-blame by knight42
         # Annotate each line in the given resource's YAML with information from the managedFields to show who last modified the field.
         # Source: https://github.com/knight42/kubectl-blame
@@ -46,19 +55,26 @@ in
             "kubectl-blame $RESOURCE_NAME $NAME -n $NAMESPACE --context $CONTEXT | less"
           ];
         };
-        #--- Create debug container for selected pod in current namespace
-        # See https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#ephemeral-container
-        debug = {
-          shortCut = "Shift-D";
-          description = "Add debug container";
-          dangerous = true;
-          scopes = [ "containers" ];
-          command = "bash";
-          background = false;
+        debug-container-busybox = {
+          shortCut = "Ctrl-D";
+          description = "debug-container-busybox";
           confirm = true;
+          scopes = [ "containers" ];
+          command = "sh";
           args = [
             "-c"
-            "kubectl debug -it --context $CONTEXT -n=$NAMESPACE $POD --target=$NAME --image=nicolaka/netshoot:v0.12 --share-processes -- bash"
+            "kubectl debug -it -n=$NAMESPACE $POD --target=$NAME --image=busybox:1.28 --share-processes"
+          ];
+        };
+        debug-container-netshoot = {
+          shortCut = "Ctrl-E";
+          description = "debug-container-netshoot";
+          confirm = true;
+          scopes = [ "containers" ];
+          command = "sh";
+          args = [
+            "-c"
+            "kubectl debug -it -n=$NAMESPACE $POD --target=$NAME --image=nicolaka/netshoot:v0.11 --share-processes -- bash"
           ];
         };
         dive = {
@@ -90,18 +106,6 @@ in
             "{'metadata':{'finalizers':null}}"
             "--type"
             "merge"
-          ];
-        };
-        watch-events = {
-          shortCut = "Shift-E";
-          confirm = false;
-          description = "Get Events";
-          scopes = [ "all" ];
-          command = "sh";
-          background = false;
-          args = [
-            "-c"
-            "watch -n 5 kubectl get events --context $CONTEXT --namespace $NAMESPACE --field-selector involvedObject.name=$NAME"
           ];
         };
       };
