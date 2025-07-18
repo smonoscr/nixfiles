@@ -25,7 +25,8 @@ in
         theme = "Adwaita Dark";
         font-family = "JetBrainsMono Nerd Font";
         font-size = 10;
-        background-opacity = 1;
+        background-opacity = 0.90;
+        background-blur = true;
         copy-on-select = false;
         gtk-titlebar = false;
         adw-toolbar-style = "flat";
