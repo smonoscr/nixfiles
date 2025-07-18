@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     # desktop apps
     webcord-vencord
+    signal-desktop
     #protonvpn-gui
     #protonvpn-cli
     filen-desktop
@@ -47,5 +48,7 @@
       };
     })
     libatomic_ops
+
+    opencode
   ];
 }
