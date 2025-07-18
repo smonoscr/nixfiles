@@ -1,8 +1,7 @@
 _: {
   networking = {
     hostName = "desktop";
-    useNetworkd = false;
-    useDHCP = false;
+    useNetworkd = true;
     networkmanager = {
       enable = true;
       wifi = {
@@ -39,10 +38,6 @@ _: {
       systemd-networkd.stopIfChanged = false;
       systemd-resolved.stopIfChanged = false;
       NetworkManager-wait-online.enable = false;
-      #NetworkManager-wait-online.serviceConfig.ExecStart = [
-      #  ""
-      #  "${pkgs.networkmanager}/bin/nm-online -q"
-      #];
     };
   };
 }
