@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 
@@ -18,11 +19,15 @@ in
     qt = {
       enable = true;
       platformTheme = {
-        name = "gtk4";
+        name = "gtk"; # old: gtk4 "qtct"
       };
       style = {
         name = "adwaita-dark";
       };
     };
+    home.packages = [
+      pkgs.qt6Packages.qt6ct
+      pkgs.libsForQt5.qt5ct
+    ];
   };
 }
