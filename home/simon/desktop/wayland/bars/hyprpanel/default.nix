@@ -482,7 +482,7 @@ in
           showActionsOnHover = false;
           timeout = 7000;
         };
-        scalingPriority = "both";
+        scalingPriority = "gdk"; # "gdk", "hyprland" or "both"
         tear = true;
         terminal = "${terminal}";
         theme = {
@@ -585,7 +585,7 @@ in
               opacity = 100;
               padding_x = "0.6rem";
               padding_y = "0.0rem";
-              radius = "0.6em";
+              radius = "0.5em";
               spacing = "0.2em";
               style = "default";
               systray = {
@@ -615,10 +615,10 @@ in
                 smartHighlight = true;
                 spacing = "0.5em";
               };
-              y_margins = "0.2em";
+              y_margins = "0.3em";
             };
             dropdownGap = "2.2em";
-            floating = true;
+            floating = false;
             label_spacing = "0.5em";
             layer = "top";
             location = "top";
@@ -633,24 +633,24 @@ in
               buttons.radius = "0.4em";
               card_radius = "0.4em";
               menu = {
-                battery.scaling = 100;
-                bluetooth.scaling = 90;
-                clock.scaling = 85;
+                battery.scaling = 80;
+                bluetooth.scaling = 80;
+                clock.scaling = 80;
                 dashboard = {
-                  confirmation_scaling = 90;
+                  confirmation_scaling = 80;
                   profile.radius = "1.0em";
                   profile.size = "8.0em";
-                  scaling = 100;
+                  scaling = 80;
                 };
                 media = {
                   card.tint = 80;
-                  scaling = 90;
+                  scaling = 80;
                 };
-                network.scaling = 90;
+                network.scaling = 80;
                 notifications = {
                   height = "58em";
                   pager.show = true;
-                  scaling = 85;
+                  scaling = 80;
                   scrollbar = {
                     radius = "0.2em";
                     width = "0.35em";
@@ -658,15 +658,15 @@ in
                 };
                 power = {
                   radius = "0.4em";
-                  scaling = 90;
+                  scaling = 80;
                 };
-                volume.scaling = 90;
+                volume.scaling = 80;
               };
               monochrome = false;
-              opacity = 100;
+              opacity = 95;
               popover = {
                 radius = "0.4em";
-                scaling = 100;
+                scaling = 80;
               };
               progressbar.radius = "0.3rem";
               scroller = {
@@ -683,13 +683,13 @@ in
               };
               tooltip.radius = "0.3em";
             };
-            opacity = 100;
+            opacity = 80;
             outer_spacing = "0.0em";
-            scaling = 90;
+            scaling = 80;
             transparent = false;
           };
           font = {
-            name = "Inter Medium";
+            name = "Inter Variable Regular";
             size = "1.2rem";
             weight = 600;
           };
@@ -702,8 +702,8 @@ in
           };
           notification = {
             border_radius = "0.6em";
-            opacity = 100;
-            scaling = 90;
+            opacity = 95;
+            scaling = 80;
           };
           osd = {
             active_monitor = true;
@@ -713,13 +713,13 @@ in
             margins = "0px 5px 0px 0px";
             monitor = 0;
             muted_zero = true;
-            opacity = 100;
+            opacity = 95;
             orientation = "vertical";
             radius = "0.4em";
             border.size = "0em";
-            scaling = 90;
+            scaling = 80;
           };
-          tooltip.scaling = 90;
+          tooltip.scaling = 80;
         };
         wallpaper = {
           enable = false;
