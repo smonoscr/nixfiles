@@ -48,7 +48,5 @@
       };
     })
     libatomic_ops
-
-    opencode
   ];
 }
