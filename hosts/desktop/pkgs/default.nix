@@ -14,6 +14,8 @@
       unrar
 
       libreoffice
+
+      quickemu
     ];
   };
 }
