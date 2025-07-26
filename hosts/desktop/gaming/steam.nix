@@ -2,7 +2,10 @@
 {
   programs.steam = {
     enable = true;
-    #localNetworkGameTransfers.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+    remotePlay.openFirewall = true;
+    gamescopeSession.enable = true;
+    dedicatedServer.openFirewall = true;
     extraCompatPackages = [ pkgs.proton-ge-bin ];
     #package = pkgs.steam.override {
     #  extraPkgs =
