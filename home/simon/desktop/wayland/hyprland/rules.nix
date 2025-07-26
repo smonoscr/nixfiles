@@ -24,10 +24,16 @@ _: {
 
         # immediate
         #"immediate, fullscreen:1" # immediate for all fullscreen applcations
-        "immediate, content game, class:^(cs2)$"
-        "immediate, content game, class:^(deadlock)$"
-        #"immediate, content:game, class:^(gamescope)$" # Apply fullscreen to gamescope
-        "immediate, content:game, class:^(steam_app).*, title:(.*)" # Apply fullscreen to Steam games
+        "immediate, class:^(cs2)$"
+        "immediate, class:^(deadlock)$"
+        "immediate, class:^(gamescope)$" # Apply fullscreen to gamescope
+        "immediate, class:^(steam_app).*, title:(.*)" # Apply fullscreen to Steam games
+
+        # prevent blur/transparency on gamescope windows
+        "noblur, class:^(gamescope)$"
+        "opaque, class:^(gamescope)$"
+        "noanim, class:^(gamescope)$"
+        "opacity 1.0, class:^(gamescope)$"
 
         # make Firefox PiP window floating and sticky
         "float, title:^(Picture-in-Picture)$"
