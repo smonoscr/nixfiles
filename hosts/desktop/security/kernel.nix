@@ -184,6 +184,7 @@
     blacklistedKernelModules = [
       # Obscure network protocols
       "dccp" # Datagram Congestion Control Protocol
+      "snd_hda_intel"
       "sctp" # Stream Control Transmission Protocol
       "rds" # Reliable Datagram Sockets
       "tipc" # Transparent Inter-Process Communication
