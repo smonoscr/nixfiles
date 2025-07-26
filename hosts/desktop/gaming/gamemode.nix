@@ -6,7 +6,7 @@
     settings = {
       general = {
         softrealtime = "auto";
-        renice = 10;
+        renice = 15;
         inhibit_screensaver = 0; # dont use screensaver anyway
       };
       custom = {
