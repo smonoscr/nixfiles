@@ -9,6 +9,7 @@
     apparmor-profiles
     apparmor-utils
     libapparmor
+    which
   ];
 
   # apparmor configuration
