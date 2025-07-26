@@ -4,7 +4,6 @@ _: {
       exec-once = [
         # uwsm finalize startup
         "uwsm finalize"
-        "uwsm app -- hyprlock"
         "[workspace 3 silent] steam -console"
       ];
       env = [
@@ -66,6 +65,7 @@ _: {
       debug = {
         disable_logs = true;
         error_position = 1;
+        full_cm_proto = true;
       };
       monitor = [
         "DP-1, 3440x1440@164.9, 0x0, 1"
