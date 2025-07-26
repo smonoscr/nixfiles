@@ -8,7 +8,7 @@
     #protonvpn-cli
     filen-desktop
     #bitwarden-desktop
-    #element-desktop-wayland
+    element-desktop
 
     # media
     spotify
@@ -19,12 +19,15 @@
     teamspeak3
     teamspeak5_client
 
+    keepassxc
     # gaming
+    gamescope
     #r2modman
     #lutris
     #wineWowPackages.stable
     #wineWowPackages.waylandFull
-    #winetricks
+    winetricks
+    protontricks
     #bottles
     #path-of-building
     #gfn-electron
