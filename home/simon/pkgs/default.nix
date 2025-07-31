@@ -51,5 +51,7 @@
       };
     })
     libatomic_ops
+
+    claude-code
   ];
 }
