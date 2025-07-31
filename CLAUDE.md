@@ -70,3 +70,18 @@ The repository uses pre-commit hooks for code quality: nixfmt-rfc-style formatti
 - Configuration uses a modular approach with custom enable options throughout
 - The system uses impermanence and SOPS for secrets management
 - Gaming configuration includes Steam, Lutris, GameMode, and various compatibility layers
+
+## Important Style Guidelines
+
+**CRITICAL**: This repository has a strict no-capital-letters policy:
+
+- commit messages must use lowercase (including commit body, not just the type:description)
+- comments in code must use lowercase
+- documentation (README, CLAUDE.md, etc.) must use lowercase
+- the only exceptions are proper nouns (NixOS, GitHub, etc.) and code syntax that requires capitals
+
+**NEVER** add Claude Code attribution or co-author lines to commit messages. Do not include:
+
+- "🤖 Generated with [Claude Code]" references
+- "Co-Authored-By: Claude" lines
+- any other AI attribution in commits or code
