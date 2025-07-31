@@ -2,8 +2,8 @@
   description = "smonoscr's flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # default
-    #nixpkgs.url = "github:NixOS/nixpkgs/0196c0175e9191c474c26ab5548db27ef5d34b05"; # default
+    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # default
+    nixpkgs.url = "github:NixOS/nixpkgs/7fd36ee82c0275fb545775cc5e4d30542899511d"; # default pinned commit hash
     #nixpkgs.url = "github:smonoscr/nixpkgs/vulkanlayer-anti-lag"; # testing private
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small"; # faster
     #nixpkgs-git.url = "github:NixOS/nixpkgs/master"; # better not
