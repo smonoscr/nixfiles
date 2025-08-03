@@ -19,7 +19,7 @@ in
   config = mkIf cfg.enable {
     programs.zsh = {
       enable = true;
-      dotDir = ".zsh";
+      dotDir = "${config.home.homeDirectory}/.zsh";
       enableCompletion = true;
       completionInit = "autoload -U compinit && compinit";
       autosuggestion.enable = true;
@@ -42,11 +42,11 @@ in
       };
 
       dirHashes = {
-        dl = "$HOME/Downloads";
-        docs = "$HOME/Documents";
-        pics = "$HOME/Pictures";
-        vids = "$HOME/Videos";
-        nix = "$HOME/code/nixfiles";
+        dl = "${config.home.homeDirectory}/Downloads";
+        docs = "${config.home.homeDirectory}/Documents";
+        pics = "${config.home.homeDirectory}/Pictures";
+        vids = "${config.home.homeDirectory}/Videos";
+        nix = "${config.home.homeDirectory}/code/nixfiles";
       };
 
       initContent = ''

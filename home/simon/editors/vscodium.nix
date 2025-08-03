@@ -63,7 +63,7 @@ in
             "git.alwaysShowStagedChangesResourceGroup" = true;
             "git.branchRandomName.dictionary" = [ "colors" ];
             "git.branchSortOrder" = "alphabetically";
-            "git.defaultCloneDirectory" = "$HOME/code";
+            "git.defaultCloneDirectory" = "${config.home.homeDirectory}/code";
             "git.rebaseWhenSync" = true;
             "github.gitProtocol" = "ssh";
             "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
