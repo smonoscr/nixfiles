@@ -10,6 +10,8 @@
       trash-cli
       mesa-demos
       vulkan-tools
+      jq
+      yq
 
       zip
       unzip

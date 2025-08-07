@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  inputs,
   ...
 }:
 with lib;
@@ -10,10 +9,6 @@ let
   cfg = config.module.desktop.wayland.applauncher;
 in
 {
-  imports = [
-    inputs.sherlock.homeManagerModules.default
-  ];
-
   config = mkIf (cfg == "sherlock") {
     programs.sherlock = {
       enable = true;
@@ -21,11 +16,6 @@ in
         aliases = {
           WebCord = {
             name = "Discord";
-          };
-        };
-        config = {
-          debug = {
-            try_suppress_warnings = true;
           };
         };
         ignore = ''

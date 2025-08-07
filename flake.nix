@@ -78,7 +78,6 @@
       url = "github:anyrun-org/anyrun";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    sherlock.url = "github:Skxxtz/sherlock";
 
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
