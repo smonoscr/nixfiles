@@ -38,6 +38,8 @@
 
     kubectl
     kubernetes-helm
+    talosctl
+    clusterctl
 
     # drone
     # Override betaflight-configurator to use an older nwjs version
