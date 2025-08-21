@@ -82,17 +82,6 @@ _: {
           ];
           env = { };
         };
-        mcp-server-memory = {
-          source = "custom";
-          enabled = true;
-          command = "nix";
-          args = [
-            "run"
-            "github:natsukium/mcp-servers-nix#mcp-server-memory"
-            "--"
-          ];
-          env = { };
-        };
       };
       toolbar = {
         code_actions = true;
@@ -278,11 +267,6 @@ _: {
         };
       };
       lsp = {
-        ansible-language-server = {
-          binary = {
-            path_lookup = true;
-          };
-        };
         json-language-server = {
           settings = {
             json = {
@@ -310,23 +294,12 @@ _: {
               suppress = [ "sema-extra-with" ];
             };
           };
-          binary = {
-            path_lookup = true;
-          };
         };
         nil = {
           settings = {
             diagnostics = {
               ignored = [ "unused_binding" ];
             };
-          };
-          binary = {
-            path_lookup = true;
-          };
-        };
-        package-version-server = {
-          binary = {
-            path = "package-version-server";
           };
         };
         terraform-ls = {

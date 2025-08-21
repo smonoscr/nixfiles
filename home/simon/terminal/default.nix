@@ -4,6 +4,7 @@ _: {
     ./emulators/kitty.nix
     ./emulators/wezterm.nix
     ./emulators/ghostty.nix
+    ./programs/claude-code
     ./programs/git
     ./programs/jujutsu
     ./programs/yazi

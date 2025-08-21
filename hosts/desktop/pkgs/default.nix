@@ -20,6 +20,8 @@
       libreoffice
 
       quickemu
+
+      apacheHttpd
     ];
   };
 }
