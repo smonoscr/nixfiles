@@ -89,6 +89,7 @@
         yazi.enable = true;
         bat.enable = true;
         btop.enable = true;
+        claude-code.enable = true;
         dircolors.enable = true;
         direnv.enable = true;
         fzf.enable = true;

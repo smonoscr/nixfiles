@@ -1,0 +1,79 @@
+{
+  config,
+  lib,
+  ...
+}:
+with lib;
+
+let
+  cfg = config.module.terminal.programs.claude-code;
+in
+{
+  options.module.terminal.programs.claude-code = {
+    enable = mkEnableOption "Enable claude-code";
+  };
+
+  config = mkIf cfg.enable {
+    home.file.".claude/claude-code-status.sh" = {
+      source = ./claude-code-status.sh;
+      executable = true;
+    };
+
+    home.file.".claude/CLAUDE.md" = {
+      source = ./CLAUDE.md;
+    };
+
+    programs = {
+      claude-code = {
+        enable = true;
+        settings = {
+          model = "opusplan";
+          theme = "dark";
+          includeCoAuthoredBy = false;
+          autoUpdates = false;
+          env = {
+            CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC = "1";
+            DISABLE_ERROR_REPORTING = "1";
+            DISABLE_TELEMETRY = "1";
+            DISABLE_AUTOUPDATER = "1";
+            CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL = "1";
+          };
+          statusLine = {
+            type = "command";
+            padding = 0;
+            command = "${config.home.homeDirectory}/.claude/claude-code-status.sh";
+          };
+          allowedDirectories = [
+            "${config.home.homeDirectory}/code"
+            "${config.xdg.configHome}"
+          ];
+          permissions = {
+
+            #additionalDirectories = [
+            #  "../docs/"
+            #];
+            #ask = [
+            #  "Bash(git push:*)"
+            #];
+
+            #allow = [
+            #  "Bash(git diff:*)"
+            #  "Edit"
+            #];
+
+            #deny = [
+            #  "WebFetch"
+            #  "Bash(curl:*)"
+            #  "Read(./.env)"
+            #  "Read(./secrets/**)"
+            #];
+
+            #defaultMode = "acceptEdits";
+          };
+        };
+        agents = import ./agents.nix;
+        mcpServers = import ./mcp-servers.nix;
+      };
+    };
+  };
+}

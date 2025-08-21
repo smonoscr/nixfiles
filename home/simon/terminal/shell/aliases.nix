@@ -45,7 +45,10 @@ in
       h = "helm";
       d = "docker";
       p = "podman";
-      z = "zed --wait";
+      z = "zeditor";
+
+      # ai
+      claude = "claude --dangerously-skip-permissions";
 
       # kubectl
       kcs = "kubectl config use-context $(kubectl config get-contexts --output=name | fzf)";
