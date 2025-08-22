@@ -6,6 +6,7 @@
 {
   imports = [
     inputs.chaotic.nixosModules.default
+    inputs.disko.nixosModules.disko
     ./core
     ./gaming
     ./hardware
@@ -45,6 +46,9 @@
     ./services/zram.nix
     ../../home/home-manager.nix
   ];
+
+  # Set initial root password for emergency mode
+  users.users.root.initialPassword = "nixos";
 
   ### DON'T TOUCH!
   system.stateVersion = "23.11";
