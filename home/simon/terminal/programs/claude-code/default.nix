@@ -59,9 +59,24 @@ in
             #];
 
             allow = [
+              "Bash(awk:*)"
+              "Bash(cat:*)"
+              "Bash(bat:*)"
+              "Bash(echo:*)"
+              "Bash(cp:*)"
+              "Bash(env)"
+              "Bash(find:*)"
+              "Bash(claude mcp:*)"
+              "Bash(grep:*)"
+              "Bash(ls:*)"
+              "Bash(mkdir:*)"
+              "Bash(mv:*)"
+              "Bash(sed:*)"
               "mcp__sequential-thinking__sequentialthinking"
+              "mcp__context7__get-library-docs"
+              "mcp__context7__resolve-library-id"
+              "WebFetch(domain:docs.anthropic.com)"
               "WebFetch(domain:github.com)"
-              "WebFetch(domain:githubusercontent.com)"
             ];
 
             #deny = [
