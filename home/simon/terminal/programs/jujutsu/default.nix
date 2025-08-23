@@ -26,15 +26,37 @@ in
           inherit email name;
         };
         ui = {
-          editor = "zeditor --wait";
+          default-command = "status"; # or ls?
+          diff-editor = ":builtin";
+          diff-formatter = ":git";
+          editor = "nvim";
+          graph = {
+            style = "curved";
+          };
+          pager = "delta";
+          paginate = "auto";
+        };
+        git = {
+          auto-local-bookmark = true;
+          sign-on-push = true;
         };
         signing = {
           backend = "ssh";
-          sign-all = true;
+          behavior = "drop";
           key = "${config.home.homeDirectory}/.ssh/id_ed25519";
         };
         init = {
           default_branch = "main";
+        };
+        merge-tools = {
+          difft = {
+            program = "difft";
+            diff-args = [
+              "--color=always"
+              "$left"
+              "$right"
+            ];
+          };
         };
       };
     };
