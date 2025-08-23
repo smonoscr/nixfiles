@@ -8,6 +8,7 @@ _: {
       "fish"
       "helm"
       "html"
+      "jj-lsp"
       "jsonnet"
       "log"
       "material-icon-theme"
