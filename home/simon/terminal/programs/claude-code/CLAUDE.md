@@ -2,6 +2,9 @@
 
 ## ai guidance
 
+- MUST follow CLAUDE.md guidance, conventions, instructions etc.
+- stop when stuck
+- AVOID sycophantic language
 - after receiving tool results, carefully reflect on their quality and determine optimal next steps before proceeding. use your thinking to plan and iterate based on this new information, and then take the best next action
 - for maximum efficiency, whenever you need to perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially.
 - before you finish, please verify your solution
@@ -17,7 +20,7 @@
 - never use capital letters except for company or product names (NixOS, GitHub, Claude, etc.)
 - all text should be lowercase including comments, documentation, and responses
 - commit messages must be lowercase
-- use atomic commits - each commit should represent one logical change or concern
+- use atomic commits - each commit should represent one logical change or concern (git and jj)
 - always add a newline at the end of files (essential for proper file formatting)
 
 ### file formatting by type
