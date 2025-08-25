@@ -42,9 +42,12 @@ in
           sign-on-push = true;
         };
         signing = {
-          backend = "ssh";
+          backend = "gpg";
           behavior = "drop";
-          key = "${config.home.homeDirectory}/.ssh/id_ed25519";
+          key = "F6EBB0BC75FCBBA7";
+        };
+        snapshot = {
+          max-new-file-size = 16000000; # ~16mb
         };
         init = {
           default_branch = "main";

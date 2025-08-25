@@ -34,7 +34,7 @@ in
         fixed-list-mode = true;
         no-comments = true;
         no-emit-version = true;
-        no_greeting = true;
+        no-greeting = true;
         keyid-format = "0xlong";
         list-options = "show-uid-validity";
         verify-options = "show-uid-validity";
@@ -44,16 +44,19 @@ in
         armor = true;
         use-agent = true;
         throw-keyids = true;
+        pinentry-mode = "loopback";
       };
     };
     services.gpg-agent = {
       enable = true;
+      enableSshSupport = true;
       pinentry.package = pkgs.pinentry-curses;
       # https://github.com/drduh/config/blob/master/gpg-agent.conf
-      defaultCacheTtl = 60;
-      maxCacheTtl = 120;
+      defaultCacheTtl = 3600;    # 1 hour (3600 seconds)
+      maxCacheTtl = 86400;       # 24 hours max (86400 seconds)
       extraConfig = ''
         ttyname $GPG_TTY
+        allow-loopback-pinentry
       '';
     };
   };
