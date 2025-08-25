@@ -31,6 +31,7 @@ in
       ll = "ls -lah -color";
       la = "ls -A -color";
       grep = "grep --color";
+      gpg = "gpg --pinentry-mode loopback";
 
       # system
       sc = "sudo systemctl";

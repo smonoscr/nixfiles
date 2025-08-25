@@ -72,7 +72,7 @@
       audio.enable = false;
       dconf.enable = true;
       kde-connect.enable = false;
-      polkit.enable = false; # use hyprpolkitagent
+      profile-sync-daemon.enable = false;
       tailray.enable = true;
       udiskie.enable = true;
     };

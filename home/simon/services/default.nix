@@ -3,7 +3,7 @@ _: {
     ./audio.nix
     ./dconf.nix
     ./kdeconnect.nix
-    ./polkit.nix
+    ./psd.nix
     ./tailray.nix
     ./udiskie.nix
   ];

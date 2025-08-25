@@ -18,6 +18,7 @@
         cue = true;
         interactive = true;
         authfile = config.sops.secrets."yubikey/u2f_keys".path;
+        timeout = 10;  # 10 seconds instead of default
       };
     };
     services = {
@@ -27,7 +28,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    #yubikey-manager
+    yubikey-manager
     yubikey-personalization
     age-plugin-yubikey
     yubioath-flutter

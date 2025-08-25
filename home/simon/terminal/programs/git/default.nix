@@ -72,8 +72,8 @@ in
       userName = name;
 
       signing = {
-        key = "${config.home.homeDirectory}/.ssh/id_ed25519";
-        format = "ssh";
+        key = "F6EBB0BC75FCBBA7";
+        format = "openpgp";
         signByDefault = true;
       };
     };
