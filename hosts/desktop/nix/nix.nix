@@ -31,12 +31,11 @@
       daemonIOSchedPriority = 7;
 
       settings = {
-        experimental-features =
-          [
-            "nix-command"
-            "flakes"
-          ]
-          ++ lib.optional (lib.versionOlder (lib.versions.majorMinor config.nix.package.version) "2.22") "repl-flake";
+        experimental-features = [
+          "nix-command"
+          "flakes"
+        ]
+        ++ lib.optional (lib.versionOlder (lib.versions.majorMinor config.nix.package.version) "2.22") "repl-flake";
         # Whether to accept nix configuration from a flake
         # without displaying a Y/N prompt. For those obtuse
         # enough to keep this true, I wish the best of luck.

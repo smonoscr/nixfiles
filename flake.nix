@@ -25,8 +25,15 @@
 
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
-    pre-commit-hooks = {
-      url = "github:cachix/pre-commit-hooks.nix";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
+    git-hooks = {
+      url = "github:cachix/git-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -107,66 +114,59 @@
       url = "git+ssh://git@codeberg.org/smonoscr/wallpaper.git";
       flake = false;
     };
-
-    tailray = {
-      url = "github:NotAShelf/tailray";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
-    {
+    inputs@{
       self,
-      systems,
-      nixpkgs,
+      flake-parts,
       ...
-    }@inputs:
-    let
-      inherit (self) outputs;
-      inherit (inputs.nixpkgs) lib;
-      mylib = import "${self}/lib" { inherit lib; };
-      forAllSystems = lib.genAttrs (import systems);
-    in
-    {
+    }:
+    flake-parts.lib.mkFlake { inherit inputs; } (
+      let
+        inherit (inputs.nixpkgs) lib;
+        mylib = import "${self}/lib" { inherit lib; };
+      in
+      {
+        imports = [
+          ./checks
+        ];
 
-      checks = forAllSystems (system: {
-        pre-commit-check = import "${self}/checks/pre-commit-hook" { inherit self inputs system; };
-      });
+        systems = import inputs.systems;
 
-      devShells = forAllSystems (system: {
-        default = nixpkgs.legacyPackages.${system}.mkShell {
-          name = "nixfiles";
-          inherit (self.checks.${system}.pre-commit-check) shellHook;
-          buildInputs = self.checks.${system}.pre-commit-check.enabledPackages;
-        };
-      });
+        flake = {
+          templates = import "${self}/templates" { inherit self; };
 
-      templates = import "${self}/templates" { inherit self; };
-
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-rfc-style);
-
-      #overlays = import "${self}/overlays" { inherit self; }; # no
-
-      packages = forAllSystems (
-        system:
-        let
-          pkgs = import nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
+          nixosConfigurations = {
+            desktop = inputs.nixpkgs.lib.nixosSystem {
+              specialArgs = {
+                inherit inputs mylib;
+                outputs = self;
+              };
+              modules = [
+                ./hosts/desktop/configuration.nix
+              ];
+            };
           };
-        in
-        import ./packages { inherit pkgs; }
-      );
-
-      nixosConfigurations = {
-        desktop = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs mylib;
-          };
-          modules = [
-            ./hosts/desktop/configuration.nix
-          ];
         };
-      };
-    };
+
+        perSystem =
+          {
+            pkgs,
+            system,
+            config,
+            ...
+          }:
+          {
+            formatter = config.treefmt.build.wrapper;
+
+            devShells.default = pkgs.mkShell {
+              name = "nixfiles";
+              shellHook = ''
+                ${config.pre-commit.installationScript}
+              '';
+            };
+          };
+      }
+    );
 }

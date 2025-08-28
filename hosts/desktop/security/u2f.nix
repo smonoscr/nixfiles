@@ -18,7 +18,7 @@
         cue = true;
         interactive = true;
         authfile = config.sops.secrets."yubikey/u2f_keys".path;
-        timeout = 10;  # 10 seconds instead of default
+        timeout = 10; # 10 seconds instead of default
       };
     };
     services = {
