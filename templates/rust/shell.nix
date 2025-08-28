@@ -17,5 +17,6 @@ mainPkg.overrideAttrs (oa: {
     clippy
     cargo
     rustc
-  ] ++ (oa.nativeBuildInputs or [ ]);
+  ]
+  ++ (oa.nativeBuildInputs or [ ]);
 })
