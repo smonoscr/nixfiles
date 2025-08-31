@@ -9,7 +9,7 @@ let
   cfg = config.module.programs.xdg;
 
   #browser = [ "firefox.desktop" ];
-  browser = [ "zen" ];
+  browser = [ "zen-twilight.desktop" ];
   chromeBrowser = [ "brave" ];
   zathura = [ "zathura" ];
   fileManager = [ "yazi" ];
