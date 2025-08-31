@@ -28,16 +28,6 @@ in
 
     # secrets
     secrets = {
-      #"ssh/id_ed25519.pub" = {
-      #  path = "${config.users.users.simon.home}/.ssh/id_ed25519.pub";
-      #  owner = "simon";
-      #  mode = "0600";
-      #};
-      #"ssh/id_ed25519" = {
-      #  path = "${config.users.users.simon.home}/.ssh/id_ed25519";
-      #  owner = "simon";
-      #  mode = "0600";
-      #};
       "yubikey/id_yubikey.pub" = {
         path = "${config.users.users.simon.home}/.ssh/id_yubikey.pub";
         owner = "simon";
