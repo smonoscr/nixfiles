@@ -8,7 +8,7 @@
 with lib;
 
 let
-  wallpaper1 = "${inputs.wallpaper}/astronaut-high.jpg";
+  wallpaper1 = "${inputs.wallpaper}/a_forest_with_moss_and_trees.jpg";
   wallpaper2 = "${inputs.wallpaper}/astronaut-high.jpg";
 
   cfg = config.module.desktop.wayland.hyprland.hyprpaper;

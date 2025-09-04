@@ -19,10 +19,10 @@ in
       enable = true;
       package = pkgs.ghostty;
       settings = {
-        theme = "Adwaita Dark";
+        theme = "Brogrammer";
         font-family = "JetBrainsMono Nerd Font";
         font-size = 10; # default: 12
-        background-opacity = 0.90; # default: 1.0
+        background-opacity = 0.80; # default: 1.0
         background-blur = true; # default: false
 
         copy-on-select = false; # default: true
