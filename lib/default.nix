@@ -2,16 +2,21 @@
 {
   scanPaths =
     path:
-    builtins.map (f: (path + "/${f}")) (
-      builtins.attrNames (
+    {
+      exclude ? [ ],
+    }:
+    let
+      allFiles = builtins.attrNames (
         lib.attrsets.filterAttrs (
-          path: _type:
+          filename: _type:
           (_type == "directory") # include directories
           || (
-            (path != "default.nix") # ignore default.nix
-            && (lib.strings.hasSuffix ".nix" path) # include .nix files
+            (filename != "default.nix") # ignore default.nix
+            && (lib.strings.hasSuffix ".nix" filename) # include .nix files
+            && (!lib.any (excluded: filename == excluded) exclude) # exclude files in exclude list
           )
         ) (builtins.readDir path)
-      )
-    );
+      );
+    in
+    builtins.map (f: (path + "/${f}")) allFiles;
 }

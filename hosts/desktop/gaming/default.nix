@@ -1,4 +1,9 @@
 { mylib, ... }:
 {
-  imports = mylib.scanPaths ./.;
+  imports = mylib.scanPaths ./. {
+    exclude = [
+      "ananicy-cpp.nix"
+      "gamescope.nix"
+    ];
+  };
 }

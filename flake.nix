@@ -153,7 +153,6 @@
         perSystem =
           {
             pkgs,
-            system,
             config,
             ...
           }:
