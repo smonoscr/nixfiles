@@ -24,17 +24,4 @@ _: {
       "kernel.split_lock_mitigate" = 0;
     };
   };
-  systemd.services = {
-    set-rtc-max-user-freq = {
-      description = "Set RTC max user frequency";
-      wantedBy = [ "multi-user.target" ];
-      serviceConfig = {
-        ExecStart = "/bin/sh -c 'echo 3072 > /sys/class/rtc/rtc0/max_user_freq'";
-        Type = "oneshot";
-      };
-    };
-    "user@".serviceConfig = {
-      Delegate = "cpu cpuset io memory pids";
-    };
-  };
 }

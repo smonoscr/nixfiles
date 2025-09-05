@@ -1,5 +1,4 @@
 {
-  mylib,
   inputs,
   pkgs,
   ...

@@ -1,7 +1,7 @@
 _: {
   services = {
     ollama = {
-      enable = true;
+      enable = false;
       acceleration = "rocm";
       rocmOverrideGfx = "11.0.2";
       openFirewall = true;

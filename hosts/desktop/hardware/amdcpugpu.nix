@@ -26,12 +26,25 @@ _: {
       enable32Bit = true;
     };
   };
-  systemd.services.set-amd-x3d-mode = {
-    description = "Set AMD X3D vcache mode to cache";
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      ExecStart = "/bin/sh -c 'echo cache > /sys/bus/platform/drivers/amd_x3d_vcache/AMDI0101:00/amd_x3d_mode'";
-      Type = "oneshot";
+  systemd.services = {
+    set-amd-x3d-mode = {
+      description = "Set AMD X3D vcache mode to cache";
+      wantedBy = [ "multi-user.target" ];
+      serviceConfig = {
+        ExecStart = "/bin/sh -c 'echo cache > /sys/bus/platform/drivers/amd_x3d_vcache/AMDI0101:00/amd_x3d_mode'";
+        Type = "oneshot";
+      };
+    };
+    set-rtc-max-user-freq = {
+      description = "Set RTC max user frequency";
+      wantedBy = [ "multi-user.target" ];
+      serviceConfig = {
+        ExecStart = "/bin/sh -c 'echo 3072 > /sys/class/rtc/rtc0/max_user_freq'";
+        Type = "oneshot";
+      };
+    };
+    "user@".serviceConfig = {
+      Delegate = "cpu cpuset io memory pids";
     };
   };
 }

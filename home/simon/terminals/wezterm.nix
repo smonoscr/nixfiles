@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  ...
-}:
-{
+_: {
   programs.wezterm = {
     enable = true;
 

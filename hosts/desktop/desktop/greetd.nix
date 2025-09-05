@@ -9,7 +9,7 @@
   #};
   services = {
     greetd = {
-      enable = false;
+      enable = true;
       settings = {
         terminal.vt = 1;
         default_session = {
