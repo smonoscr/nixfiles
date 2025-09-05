@@ -1,6 +1,4 @@
-_: {
-  imports = [
-    ./fish.nix
-    ./zsh.nix
-  ];
+{ mylib, ... }:
+{
+  imports = mylib.scanPaths ./. { };
 }

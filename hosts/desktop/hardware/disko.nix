@@ -1,6 +1,9 @@
 # Disko configuration for NVMe disk with BTRFS impermanence
 # Based on https://www.notashelf.dev/posts/impermanence
+{ inputs, ... }:
 {
+  imports = [ inputs.disko.nixosModules.disko ];
+
   disko.devices = {
     disk = {
       main = {

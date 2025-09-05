@@ -2,7 +2,7 @@
 {
   imports = mylib.scanPaths ./. {
     exclude = [
-      "ollama.nix"
+      "agenix.nix"
     ];
   };
 }
