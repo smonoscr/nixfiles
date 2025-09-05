@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
-  users = {
-    users.simon = {
+  users.users = {
+    simon = {
       isNormalUser = true;
       createHome = true;
       home = "/home/simon";
@@ -28,5 +28,7 @@
         "plugdev"
       ];
     };
+    # Set initial root password for emergency mode
+    root.initialPassword = "nixos";
   };
 }

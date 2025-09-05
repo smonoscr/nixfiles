@@ -1,4 +1,5 @@
 _: {
+  environment.variables.NH_FLAKE = "/home/simon/code/nixfiles";
 
   programs.nh = {
     enable = true;
