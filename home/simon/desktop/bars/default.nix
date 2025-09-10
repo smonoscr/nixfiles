@@ -1,4 +1,9 @@
 { mylib, ... }:
 {
-  imports = mylib.scanPaths ./. { };
+  imports = mylib.scanPaths ./. {
+    exclude = [
+      "noctalia"
+      "caelestia"
+    ];
+  };
 }
