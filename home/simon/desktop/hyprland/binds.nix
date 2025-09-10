@@ -37,7 +37,7 @@
           "SUPER, W, exec, zen"
           "SUPER, T, exec, ghostty"
           "SUPER, E, exec, ghostty -e yazi"
-          "SUPER, O, exec, TeamSpeak"
+          "SUPER, O, exec, ts3client"
           "SUPER, Z, exec, zeditor"
           "SUPER, D, exec, webcord"
 
@@ -48,6 +48,7 @@
           "SUPER, J, togglesplit,"
           "SUPER, P, pseudo,"
           "SUPER, L, exec, loginctl lock-session"
+          "SUPER SHIFT, L, exec, noctalia-shell ipc call lockScreen toggle"
           "SUPER, M, movetoworkspace, special"
           "SUPER SHIFT, E, exit,"
           "SUPER SHIFT, Q, killactive,"
@@ -71,12 +72,8 @@
           (mvactive "left" "-20 0")
 
           # global shortcuts/keybinds/hotkeys
-          # old pass approach (doesn't work with electron apps)
-          #", F9, pass, class:^(TeamSpeak)$"
-          #", F10, pass, class:^(TeamSpeak)$"
-          # new script-based approach
-          ", F9, exec, ${config.xdg.configHome}/hypr/global-electron-sc.sh \", F9\" class TeamSpeak"
-          ", F10, exec, ${config.xdg.configHome}/hypr/global-electron-sc.sh \", F10\" class TeamSpeak"
+          ", F9, pass, class:^(TeamSpeak 3)$"
+          ", F10, pass, class:^(TeamSpeak 3)$"
         ]
         ++ (map (i: ws (toString i) (toString i)) arr)
         ++ (map (i: mvtows (toString i) (toString i)) arr);
@@ -99,6 +96,7 @@
       bindr = [
         #"SUPER, Space, exec, pkill anyrun || anyrun" # anyrun launcher
         "SUPER, Space, exec, pkill sherlock || sherlock"
+        "SUPER SHIFT, Space, exec, noctalia-shell ipc call launcher toggle"
       ];
     };
   };

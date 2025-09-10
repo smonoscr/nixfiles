@@ -2,7 +2,7 @@ _: {
   qt = {
     enable = true;
     platformTheme = {
-      name = "gtk4";
+      name = "kde"; # gtk4
     };
     style = {
       name = "adwaita-dark";
