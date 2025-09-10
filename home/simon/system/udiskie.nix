@@ -1,7 +1,7 @@
 { lib, ... }:
 {
   services.udiskie = {
-    enable = true;
+    enable = false;
     automount = false;
     notify = true;
     tray = "auto";

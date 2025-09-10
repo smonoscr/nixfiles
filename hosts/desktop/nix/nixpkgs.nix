@@ -13,7 +13,9 @@ _: {
       allowUnfree = true;
       # Default to none, add more as necessary. This is usually where
       # electron packages go when they reach EOL.
-      permittedInsecurePackages = [ ];
+      permittedInsecurePackages = [
+        "qtwebengine-5.15.19"
+      ];
       # Nixpkgs sets internal package aliases to ease migration from other
       # distributions easier, or for convenience's sake. Even though the manual
       # and the description for this option recommends this to be true, I prefer
