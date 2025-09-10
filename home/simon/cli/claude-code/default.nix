@@ -5,6 +5,7 @@
 }:
 {
   imports = mylib.scanPaths ./. { };
+
   home.file.".claude/claude-code-status.sh" = {
     source = ./claude-code-status.sh;
     executable = true;
