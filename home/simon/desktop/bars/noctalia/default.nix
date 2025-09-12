@@ -10,7 +10,6 @@
   home.packages = with pkgs; [
     inputs.quickshell.packages.${system}.default
     inputs.noctalia.packages.${system}.default
-    cliphist
   ];
 
   systemd.user.services.noctalia = {
