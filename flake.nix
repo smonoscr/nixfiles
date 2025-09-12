@@ -93,6 +93,7 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";
     };
     caelestia-shell = {
       url = "github:caelestia-dots/shell";
