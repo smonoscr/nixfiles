@@ -5,5 +5,5 @@
 {
   imports = mylib.scanPaths ./. { };
 
-  xdg.configFile."AGENT.md".source = ./AGENT.md;
+  xdg.configFile."AGENTS.md".source = ./AGENTS.md;
 }

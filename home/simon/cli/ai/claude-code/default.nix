@@ -12,7 +12,7 @@
   };
 
   home.file.".claude/CLAUDE.md" = {
-    source = ./CLAUDE.md;
+    source = ../AGENTS.md;
   };
 
   programs = {
