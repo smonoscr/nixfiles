@@ -5,19 +5,22 @@
 }:
 {
   imports = [
-    inputs.dankmaterialshell.homeModules.dankMaterialShell
+    #inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
+    inputs.dankmaterialshell.homeModules.dankMaterialShell.default
   ];
 
   #xdg.configFile."DankMaterialShell/colors.json".source = ./colors.json;
 
   programs.dankMaterialShell = {
     enable = true;
-    enableKeybinds = false;
     enableSystemd = true;
-    enableSpawn = false;
     enableBrightnessControl = false;
     enableNightMode = false;
     enableCalendarEvents = false;
+    #niri = {
+    #  enableKeybinds = false;
+    #  enableSpawn = false;
+    #};
     quickshell.package = inputs.quickshell.packages.${pkgs.system}.default;
   };
 }
