@@ -8,7 +8,6 @@
     #package = pkgs.zed-editor_git;
     installRemoteServer = true;
     extraPackages = with pkgs; [
-      ansible-language-server
       nil
       nixd
       nixfmt-rfc-style
