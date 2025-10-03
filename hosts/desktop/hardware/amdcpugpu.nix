@@ -1,7 +1,6 @@
 _: {
   environment = {
     variables = {
-      AMD_VULKAN_ICD = "RADV";
       RADV_PERFTEST = "gpl";
     };
   };
@@ -17,9 +16,6 @@ _: {
       overdrive.enable = true;
       initrd.enable = true;
       opencl.enable = true; # ROCM maybe for LLM
-      amdvlk = {
-        enable = false; # I am using RADV
-      };
     };
     graphics = {
       enable = true;
