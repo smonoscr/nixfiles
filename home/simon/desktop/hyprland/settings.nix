@@ -23,8 +23,8 @@ _: {
         #layout = "scrolling";
         border_size = 0;
         allow_tearing = true;
-        gaps_in = 5;
-        gaps_out = 10;
+        gaps_in = 8;
+        gaps_out = 16;
         "col.active_border" = "0xFF2BBF6E";
         "col.inactive_border" = "0xFF114D2C";
         resize_on_border = true;

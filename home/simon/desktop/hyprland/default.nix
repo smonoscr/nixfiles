@@ -6,6 +6,9 @@
 {
   imports = mylib.scanPaths ./. {
     exclude = [
+      "hyprpaper.nix"
+      "hypridle.nix"
+      "hyprlock.nix"
     ];
   };
 
