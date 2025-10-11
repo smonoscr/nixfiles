@@ -42,7 +42,7 @@
 
     # gaming
     nix-gaming = {
-      url = "github:fufexan/nix-gaming";
+      url = "github:fufexan/nix-gaming/8b636f0470cb263aa1472160457f4b2fba420425";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -88,6 +88,7 @@
     # private
     nixsecrets = {
       url = "git+ssh://git@codeberg.org/smonoscr/nixsecrets.git";
+      flake = false;
     };
     wallpaper = {
       url = "git+ssh://git@codeberg.org/smonoscr/wallpaper.git";
