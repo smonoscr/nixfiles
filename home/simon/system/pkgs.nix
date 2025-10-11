@@ -10,7 +10,7 @@
     #protonvpn-cli
     filen-desktop
     #bitwarden-desktop
-    element-desktop
+    #element-desktop
 
     # media
     spotify
@@ -18,7 +18,7 @@
     obsidian
 
     # audio
-    teamspeak3
+    #teamspeak3
     teamspeak6-client
 
     #keepassxc
@@ -28,8 +28,8 @@
     #lutris
     #wineWowPackages.stable
     #wineWowPackages.waylandFull
-    winetricks
-    protontricks
+    #winetricks
+    #protontricks
     #bottles
     #path-of-building
     #gfn-electron
@@ -56,6 +56,5 @@
     #  };
     #})
     libatomic_ops
-    solaar
   ];
 }
