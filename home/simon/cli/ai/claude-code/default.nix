@@ -19,7 +19,6 @@
     claude-code = {
       enable = true;
       settings = {
-        model = "opusplan";
         theme = "dark";
         includeCoAuthoredBy = false;
         autoUpdates = false;
