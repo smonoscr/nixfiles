@@ -1,4 +1,5 @@
-_: {
+{ pkgs, ... }:
+{
   environment = {
     variables = {
       RADV_PERFTEST = "gpl";
@@ -20,6 +21,9 @@ _: {
     graphics = {
       enable = true;
       enable32Bit = true;
+      extraPackages = with pkgs; [
+        rocmPackages.clr.icd
+      ];
     };
   };
   systemd.services = {

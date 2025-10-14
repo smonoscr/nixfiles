@@ -58,7 +58,7 @@
           #"SUPER, Space, exec, pkill sherlock || sherlock"
 
           #noctalia
-          "SUPER,  Space, exec, noctalia-shell ipc call launcher toggle"
+          "SUPER, SPACE, exec, noctalia-shell ipc call launcher toggle"
           ", F9, exec, noctalia-shell ipc call volume muteInput"
           ", F10, exec, noctalia-shell ipc call volume muteOutput"
 
@@ -88,12 +88,21 @@
 
       # keyboard hotkeys
       bindle = [
-        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.0"
-        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- --limit 0.0"
-        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        #", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.0"
+        #", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- --limit 0.0"
+        #", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", XF86AudioRaiseVolume, exec, noctalia-shell ipc call volume increase"
+        ", XF86AudioLowerVolume, exec, noctalia-shell ipc call volume decrease"
         ", XF86AudioPlay, exec, playerctl --player=spotify,firefox play-pause"
         ", XF86AudioPrev, exec, playerctl --player=spotify,firefox previous"
         ", XF86AudioNext, exec, playerctl --player=spotify,firefox next"
+
+        ", XF86MonBrightnessUp, exec, qs -c noctalia-shell ipc call brightness increase"
+        ", XF86MonBrightnessDown, exec, qs -c noctalia-shell ipc call brightness decrease"
+
+      ];
+      bindl = [
+        ", XF86AudioMute, exec, noctalia-shell ipc call volume muteOutput"
       ];
 
       bindm = [

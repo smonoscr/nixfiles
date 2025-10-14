@@ -56,5 +56,7 @@
     #  };
     #})
     libatomic_ops
+
+    colmena
   ];
 }
