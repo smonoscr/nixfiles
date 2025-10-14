@@ -3,8 +3,8 @@
   imports = mylib.scanPaths ./. {
     exclude = [
       "hyprpanel"
-      "noctalia"
-      #"dankmaterialshell"
+      #"noctalia"
+      "dankmaterialshell"
     ];
   };
 }

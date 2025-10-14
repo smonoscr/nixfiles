@@ -34,7 +34,6 @@
 
       bar = {
         backgroundOpacity = 0.8;
-        density = "comfortable";
         floating = false;
         marginHorizontal = 0.25;
         marginVertical = 0.25;
