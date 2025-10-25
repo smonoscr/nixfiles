@@ -39,6 +39,8 @@
         # without displaying a Y/N prompt. For those obtuse
         # enough to keep this true, I wish the best of luck.
         accept-flake-config = false;
+        # increase buffer size for large remote deployments to prevent transfer failures
+        download-buffer-size = 256 * 1024 * 1024; # 256 MB
         auto-optimise-store = true;
         builders-use-substitutes = true;
         allowed-users = [
