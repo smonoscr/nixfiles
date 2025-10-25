@@ -31,7 +31,6 @@
           flake-checker.enable = true;
           nil.enable = true;
           deadnix.enable = true;
-          statix.enable = true;
           detect-private-keys.enable = true;
         };
       };
