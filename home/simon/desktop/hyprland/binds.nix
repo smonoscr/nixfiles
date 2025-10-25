@@ -48,19 +48,13 @@
           "SUPER, J, togglesplit,"
           "SUPER, P, pseudo,"
           "SUPER, L, exec, loginctl lock-session"
-          "SUPER SHIFT, L, exec, noctalia-shell ipc call lockScreen toggle"
           "SUPER, M, movetoworkspace, special"
           "SUPER SHIFT, E, exit,"
           "SUPER SHIFT, Q, killactive,"
           "ALT, Tab, focuscurrentorlast,"
 
           #"SUPER, Space, exec, pkill anyrun || anyrun" # anyrun launcher
-          #"SUPER, Space, exec, pkill sherlock || sherlock"
-
-          #noctalia
-          "SUPER, SPACE, exec, noctalia-shell ipc call launcher toggle"
-          ", F9, exec, noctalia-shell ipc call volume muteInput"
-          ", F10, exec, noctalia-shell ipc call volume muteOutput"
+          "SUPER, Space, exec, pkill sherlock || sherlock"
 
           (mvfocus "up" "u")
           (mvfocus "down" "d")
@@ -88,21 +82,12 @@
 
       # keyboard hotkeys
       bindle = [
-        #", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.0"
-        #", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- --limit 0.0"
-        #", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ", XF86AudioRaiseVolume, exec, noctalia-shell ipc call volume increase"
-        ", XF86AudioLowerVolume, exec, noctalia-shell ipc call volume decrease"
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.0"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- --limit 0.0"
+        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ", XF86AudioPlay, exec, playerctl --player=spotify,firefox play-pause"
         ", XF86AudioPrev, exec, playerctl --player=spotify,firefox previous"
         ", XF86AudioNext, exec, playerctl --player=spotify,firefox next"
-
-        ", XF86MonBrightnessUp, exec, qs -c noctalia-shell ipc call brightness increase"
-        ", XF86MonBrightnessDown, exec, qs -c noctalia-shell ipc call brightness decrease"
-
-      ];
-      bindl = [
-        ", XF86AudioMute, exec, noctalia-shell ipc call volume muteOutput"
       ];
 
       bindm = [

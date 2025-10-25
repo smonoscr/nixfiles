@@ -1,6 +1,6 @@
 _: {
   programs.git = {
-    aliases = {
+    settings.alias = {
       a = "add --patch";
       ad = "add";
 

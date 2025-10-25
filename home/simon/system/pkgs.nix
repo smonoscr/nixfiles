@@ -58,5 +58,6 @@
     libatomic_ops
 
     colmena
+    deploy-rs
   ];
 }

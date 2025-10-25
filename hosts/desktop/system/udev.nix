@@ -28,11 +28,11 @@
       KERNEL=="hidraw*", SUBSYSTEM=="hidraw", KERNELS=="0005:054C:09CC.*", MODE="0666"
 
       # this locks the screen when yubikey is unplugged
-      ACTION=="remove",\
-      ENV{ID_BUS}=="usb",\
-      ENV{ID_MODEL_ID}=="0407",\
-      ENV{ID_VENDOR_ID}=="1050",\
-      ENV{ID_VENDOR}=="Yubico",\
+      ACTION=="remove", \
+      ENV{ID_BUS}=="usb", \
+      ENV{ID_MODEL_ID}=="0407", \
+      ENV{ID_VENDOR_ID}=="1050", \
+      ENV{ID_VENDOR}=="Yubico", \
       RUN+="${pkgs.systemd}/bin/loginctl lock-sessions"
 
       ## Betaflight fpv rules
