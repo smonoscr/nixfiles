@@ -9,15 +9,17 @@ in
 {
   imports = mylib.scanPaths ./. { };
 
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+    options.dark = true;
+  };
+
   programs.git = {
     enable = true;
     lfs.enable = true;
     #riff.enable = true; # maybe?
-    delta = {
-      enable = true;
-      options.dark = true;
-    };
-    extraConfig = {
+    settings = {
       branch = {
         autosetuprebase = "always";
         sort = "-committerdate";
@@ -55,9 +57,10 @@ in
         updateRefs = true;
       };
       tag.sort = "version:refname";
+      user = {
+        inherit email name;
+      };
     };
-    userEmail = email;
-    userName = name;
 
     signing = {
       key = "F6EBB0BC75FCBBA7";

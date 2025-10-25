@@ -1,21 +1,21 @@
 {
+  mylib,
   pkgs,
   inputs,
   ...
 }:
 {
   imports = [
-    #inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
-    inputs.dankmaterialshell.homeModules.dankMaterialShell.default
-  ];
-
+    #inputs.dms.homeModules.dankMaterialShell.niri
+    inputs.dms.homeModules.dankMaterialShell.default
+  ]
+  ++ mylib.scanPaths ./. { };
   #xdg.configFile."DankMaterialShell/colors.json".source = ./colors.json;
 
   programs.dankMaterialShell = {
     enable = true;
     enableSystemd = true;
     enableBrightnessControl = false;
-    enableNightMode = false;
     enableCalendarEvents = false;
     #niri = {
     #  enableKeybinds = false;
