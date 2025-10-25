@@ -22,7 +22,7 @@
         theme = "dark";
         includeCoAuthoredBy = false;
         autoUpdates = false;
-        outputStyle = "Learning";
+        outputStyle = "Explanatory";
         env = {
           CLAUDE_CODE_ENABLE_TELEMETRY = "0";
           CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC = "1";
