@@ -62,10 +62,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.quickshell.follows = "quickshell";
     };
-    dankmaterialshell = {
-      url = "github:AvengeMedia/DankMaterialShell";
+    dgop = {
+      url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.quickshell.follows = "quickshell";
+    };
+    dms-cli = {
+      url = "github:AvengeMedia/danklinux";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        dgop.follows = "dgop";
+        dms-cli.follows = "dms-cli";
+      };
     };
 
     # secrets
