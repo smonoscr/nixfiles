@@ -2,7 +2,7 @@
 {
   services = {
     ollama = {
-      enable = true;
+      enable = false;
       #package = inputs.nixpkgs-stable.legacyPackages.${pkgs.system}.ollama;
 
       #package =
