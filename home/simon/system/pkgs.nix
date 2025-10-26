@@ -59,5 +59,9 @@
 
     colmena
     deploy-rs
+
+    lmstudio
+
+    winboat
   ];
 }

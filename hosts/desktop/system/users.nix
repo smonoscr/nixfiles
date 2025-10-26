@@ -11,6 +11,7 @@
       extraGroups = [
         "audio"
         "disk"
+        "docker"
         "gamemode"
         "input"
         "networkmanager"
@@ -19,10 +20,8 @@
         "power"
         "podman"
         "git"
-        "libvirtd"
         "qemu-libvirtd"
         "kvm"
-        "nix"
         "network"
         "dialout"
         "plugdev"
