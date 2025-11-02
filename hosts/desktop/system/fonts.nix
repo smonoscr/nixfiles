@@ -41,7 +41,7 @@
       liberation_ttf # for PDFs, Roman
       noto-fonts
       noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       openmoji-color
       openmoji-black
       roboto

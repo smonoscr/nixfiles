@@ -3,7 +3,7 @@
   environment.systemPackages = [ pkgs.cifs-utils ];
 
   fileSystems."/mnt/shares/simon" = {
-    device = "//10.10.10.30/simon";
+    device = "//10.0.0.104/simon";
     fsType = "cifs";
     options =
       let
@@ -13,7 +13,7 @@
   };
 
   fileSystems."/mnt/shares/shared" = {
-    device = "//10.10.10.30/shared";
+    device = "//10.0.0.104/shared";
     fsType = "cifs";
     options =
       let
