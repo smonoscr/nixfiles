@@ -4,6 +4,7 @@
     exclude = [
       "ananicy-cpp.nix"
       "gamescope.nix"
+      "lutris.nix"
     ];
   };
 }
