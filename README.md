@@ -37,9 +37,7 @@ feel free to borrow ideas from my configurations, but keep in mind that they mig
 | **desktop**      | simon-desktop (amd ryzen 7 7800x3d, rx 7800xt, 32gb ddr5)                                                                                                                                              |
 | **proxmox lxc**  | arr, backup, dashboard, fileserver, gateway, immich, llm, media, monitoring, nextcloud, oidc, paperless, reverseproxy, vaultwarden                                                                     |
 | **cloud vps**    | hzc-pango (hetzner cloud cx22: 2 cpu, 4gb ram, 40gb disk)                                                                                                                                              |
-| **config mgmt**  | [clan-core](https://docs.clan.lol/)                                                                                                                                                                     |
-| **secrets**      | [sops-nix](https://github.com/Mic92/sops-nix) with age encryption + yubikey                                                                                                                            |
-| **disk config**  | [disko](https://github.com/nix-community/disko) for declarative disk partitioning                                                                                                                      |
+| **config mgmt**  | [clan-core](https://docs.clan.lol/) (includes sops-nix for secrets, disko for disk config)                                                                                                             |
 | **persistence**  | [impermanence](https://github.com/nix-community/impermanence) for opt-in state                                                                                                                         |
 | **home config**  | [home-manager](https://github.com/nix-community/home-manager)                                                                                                                                          |
 | **desktop env**  | [hyprland](https://hyprland.org/) + [hyprpanel](https://hyprpanel.com/) + [ghostty](https://ghostty.org/) + [zed](https://zed.dev/) + [fish](https://fishshell.com/) + [yazi](https://yazi-rs.github.io/) |
@@ -50,13 +48,9 @@ feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 </div>
 
-- **[clan-core](https://docs.clan.lol/)**: role-based configuration management with inventory system for organizing machines by tags and deploying configurations across multiple hosts.
-
-- **[sops-nix](https://github.com/Mic92/sops-nix)**: secure secrets management using age encryption with yubikey support. secrets organized per-machine and per-user with symlink-based structure.
+- **[clan-core](https://docs.clan.lol/)**: role-based configuration management with inventory system for organizing machines by tags and deploying configurations across multiple hosts. integrates sops-nix for secrets management and disko for declarative disk partitioning.
 
 - **[flake-parts](https://github.com/hercules-ci/flake-parts)**: modular flake framework for better organization and reusability across the entire infrastructure.
-
-- **[disko](https://github.com/nix-community/disko)**: declarative disk partitioning and formatting with btrfs subvolumes for reproducible system installations.
 
 - **[impermanence](https://github.com/nix-community/impermanence)**: opt-in state persistence for improved system reproducibility. root filesystem cleared on boot, only persisting explicitly declared paths.
 
@@ -234,9 +228,7 @@ roles are assigned to machines via tags, enabling dry configuration where common
 
 </div>
 
-using sops-nix with age encryption for secure secrets management:
-
-### structure
+clan-core integrates sops-nix with age encryption for secure secrets management:
 
 ```
 sops/
@@ -254,102 +246,6 @@ vars/
         ├── openssh/
         ├── root-password/
         └── user-password-*/
-```
-
-### symlink structure
-
-the vars system uses symlinks to reference sops keys, eliminating duplication:
-
-- `vars/per-machine/{machine}/*/users/simon` → `../../../../../../sops/users/simon`
-- `vars/per-machine/{machine}/*/machines/{machine}` → `../../../../../../sops/machines/{machine}`
-
-### yubikey integration
-
-age encryption supports yubikey for hardware-backed secrets management:
-
-```nix
-secrets.age.plugins = [ "age-plugin-yubikey" ];
-```
-
-<div align="center">
-
-## conventions
-
-</div>
-
-- **lowercase everything**: except product names (NixOS, GitHub, Proxmox)
-- **conventional commits**: `type(scope): description` format
-- **kiss principles**: simple, maintainable patterns over complex abstractions
-- **dry**: single source of truth, auto-generate from it
-- **newline at eof**: all files end with newline
-- **formatting**: nixfmt-rfc-style (2-space indentation)
-
-### commit types
-
-- **feat**: new features (minor version)
-- **fix**: bug fixes (patch version)
-- **chore**: maintenance tasks
-- **docs**: documentation updates
-- **refactor**: code refactoring
-- **ci**: ci/cd changes
-
-<div align="center">
-
-## checks and quality
-
-</div>
-
-pre-commit hooks enforce code quality:
-
-- **nixfmt-rfc-style**: consistent nix formatting
-- **deadnix**: detect unused nix code
-- **nil**: nix language server checks
-- **treefmt**: format all file types
-- **detect-private-keys**: prevent secret leaks
-
-run manually:
-
-```bash
-nix flake check    # all checks
-nix fmt           # format all files
-```
-
-<div align="center">
-
-## troubleshooting
-
-</div>
-
-### flake doesn't see new files
-
-nix flakes only see git-tracked files:
-
-```bash
-git add path/to/new/file
-```
-
-### clan vars errors about key groups
-
-ensure symlinks in `vars/per-machine/` and `sops/secrets/` are correct and point to proper sops key directories.
-
-### ssh host key verification failed
-
-remove old host key and accept new one:
-
-```bash
-ssh-keygen -R <host-ip>
-```
-
-### disko duplicate import error
-
-clan-core already imports disko module. remove explicit `inputs.disko.nixosModules.disko` imports from machine configs.
-
-### secrets not accessible
-
-regenerate machine vars:
-
-```bash
-clan vars generate <machine-name>
 ```
 
 <div align="center">
