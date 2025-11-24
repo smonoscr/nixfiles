@@ -58,10 +58,6 @@ henlo and welcome to my nixos infrastructure. this repository manages my persona
 
 - **[impermanence](https://github.com/nix-community/impermanence)**: opt-in state persistence for improved system reproducibility. root filesystem cleared on boot, only persisting explicitly declared paths.
 
-> **Warning**
->
-> impermanence wipes the root filesystem on every boot. only explicitly declared paths in `/persist` survive reboots.
-
 - **[home-manager](https://github.com/nix-community/home-manager)**: manage dotfiles, home environment, and user-specific configurations declaratively.
 
 - **tag-based organization**: machines organized with tags (desktop, lxc, px-prd1, hetzner) for flexible role assignment and deployment targeting.
@@ -157,15 +153,11 @@ nix flake check
 nix fmt
 ```
 
-> **Important**
->
-> nix flakes only see git-tracked files. remember to `git add` new files before building or checking.
-
 ### managing machines
 
 ```bash
 # update machine configuration
-clan machines update simon-desktop
+clan machines update <machine-name>
 
 # build specific machine
 nix build .#clanInternals.machines.x86_64-linux.simon-desktop.config.system.build.toplevel
@@ -178,10 +170,10 @@ clan vars generate --all
 
 ```bash
 # generate secrets for a machine
-clan vars generate simon-desktop root-password
+clan vars generate <machine-name> root-password
 
 # list all vars for a machine
-clan vars list simon-desktop
+clan vars list <machine-name>
 
 # rekey secrets (agenix-rekey)
 agenix-rekey
@@ -191,10 +183,10 @@ agenix-rekey
 
 ```bash
 # deploy using clan
-clan machines install simon-desktop
+clan machines install <machine-name>
 
 # or using nixos-rebuild
-nixos-rebuild switch --flake .#simon-desktop
+nixos-rebuild switch --flake .#<machine-name>
 ```
 
 ### terraform (infrastructure)
