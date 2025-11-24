@@ -22,9 +22,13 @@
 
 henlo and welcome to my nixos infrastructure. this repository manages my personal nix infrastructure using [clan-core](https://docs.clan.lol/) for nixos configuration management across desktop machines, lxc containers, and cloud vms.
 
-feel free to borrow ideas from my configurations, but keep in mind that they might not always represent the best or most correct approach. make sure you've grasped the basics of nixos, nix, flakes, and clan-core before diving in.
-
+> **Note**
+>
 > this repository is a work in progress, constantly evolving as i learn more about nixos and its ecosystem.
+
+> **Warning**
+>
+> these configurations are personal and may not represent best practices. make sure you understand nixos, nix flakes, and clan-core basics before using these configs in your own setup.
 
 <div align="center">
 
@@ -53,6 +57,10 @@ feel free to borrow ideas from my configurations, but keep in mind that they mig
 - **[flake-parts](https://github.com/hercules-ci/flake-parts)**: modular flake framework for better organization and reusability across the entire infrastructure.
 
 - **[impermanence](https://github.com/nix-community/impermanence)**: opt-in state persistence for improved system reproducibility. root filesystem cleared on boot, only persisting explicitly declared paths.
+
+> **Warning**
+>
+> impermanence wipes the root filesystem on every boot. only explicitly declared paths in `/persist` survive reboots.
 
 - **[home-manager](https://github.com/nix-community/home-manager)**: manage dotfiles, home environment, and user-specific configurations declaratively.
 
@@ -148,6 +156,10 @@ nix flake check
 # format code
 nix fmt
 ```
+
+> **Important**
+>
+> nix flakes only see git-tracked files. remember to `git add` new files before building or checking.
 
 ### managing machines
 
