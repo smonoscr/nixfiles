@@ -36,7 +36,7 @@ feel free to borrow ideas from my configurations, but keep in mind that they mig
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **desktop**      | simon-desktop (amd ryzen 7 7800x3d, rx 7800xt, 32gb ddr5)                                                                                                                                              |
 | **proxmox lxc**  | arr, backup, dashboard, fileserver, gateway, immich, llm, media, monitoring, nextcloud, oidc, paperless, reverseproxy, vaultwarden                                                                     |
-| **cloud vps**    | hzc-pango (hetzner cloud)                                                                                                                                                                               |
+| **cloud vps**    | hzc-pango (hetzner cloud cx22: 2 cpu, 4gb ram, 40gb disk)                                                                                                                                              |
 | **config mgmt**  | [clan-core](https://docs.clan.lol/)                                                                                                                                                                     |
 | **secrets**      | [sops-nix](https://github.com/Mic92/sops-nix) with age encryption + yubikey                                                                                                                            |
 | **disk config**  | [disko](https://github.com/nix-community/disko) for declarative disk partitioning                                                                                                                      |
@@ -104,9 +104,9 @@ feel free to borrow ideas from my configurations, but keep in mind that they mig
 
 ### cloud vps
 
-| machine   | provider       | purpose              | ip             |
-| --------- | -------------- | -------------------- | -------------- |
-| hzc-pango | hetzner cloud  | public services      | 138.201.155.21 |
+| machine   | provider              | type  | specs                          | purpose              | ip             |
+| --------- | --------------------- | ----- | ------------------------------ | -------------------- | -------------- |
+| hzc-pango | hetzner cloud (cx22)  | vps   | 2 cpu, 4gb ram, 40gb disk      | public services      | 138.201.155.21 |
 
 <div align="center">
 
