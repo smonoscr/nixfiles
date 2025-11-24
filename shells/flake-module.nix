@@ -24,7 +24,7 @@
     {
       devShells = {
         default = pkgs.mkShellNoCC {
-          name = "nixinfra";
+          name = "nixfiles";
           shellHook = ''
             ${config.pre-commit.installationScript}
           '';

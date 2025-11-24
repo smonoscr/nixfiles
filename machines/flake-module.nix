@@ -11,7 +11,7 @@ in
     };
 
     meta = {
-      name = "nixinfra";
+      name = "nixfiles";
       description = "personal nix infrastructure";
     };
 
