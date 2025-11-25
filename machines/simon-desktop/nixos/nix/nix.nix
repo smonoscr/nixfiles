@@ -74,9 +74,9 @@
       optimise = {
         automatic = true;
       };
-      #extraOptions = ''
-      #  !include ${config.sops.secrets."nix/access-tokens/github".path}
-      #'';
+      extraOptions = ''
+        !include ${config.sops.secrets."nix-access-tokens".path}
+      '';
     };
   # Make builds to be more likely killed than important services.
   # 100 is the default for user slices and 500 is systemd-coredumpd@

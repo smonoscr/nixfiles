@@ -17,7 +17,7 @@
       "/var/lib/bluetooth"
       "/var/lib/nixos"
       "/var/lib/pipewire"
-      "/var/lib/sops-nix/"
+      # /var/lib/sops-nix has its own btrfs subvolume (not managed by impermanence)
       "/var/lib/systemd/coredump"
       "/var/cache/tailscale"
       "/var/lib/tailscale"
@@ -26,7 +26,8 @@
       # Essential system files
       "/etc/machine-id"
 
-      # SSH host keys (critical!)
+      # SSH host keys - handled directly in openssh.nix via /persist paths
+      # See: https://github.com/nix-community/impermanence/issues/192
       #"/etc/ssh/ssh_host_ed25519_key"
       #"/etc/ssh/ssh_host_ed25519_key.pub"
       #"/etc/ssh/ssh_host_rsa_key"

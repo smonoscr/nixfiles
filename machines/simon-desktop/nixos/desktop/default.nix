@@ -2,7 +2,7 @@
 {
   imports = mylib.scanPaths ./. {
     exclude = [
-      "dms.nix"
+      "greetd.nix"
     ];
   };
 }

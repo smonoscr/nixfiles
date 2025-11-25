@@ -22,10 +22,14 @@
 
     # system
     systems.url = "github:nix-systems/default-linux";
+
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
+
+    srvos.url = "github:nix-community/srvos";
+
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     disko = {

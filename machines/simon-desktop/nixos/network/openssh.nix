@@ -5,6 +5,8 @@
       enable = true;
       openFirewall = true;
       startWhenNeeded = true;
+      # Use /persist paths directly to avoid impermanence bind-mount timing issues
+      # See: https://github.com/nix-community/impermanence/issues/192
       hostKeys = [
         {
           path = "/persist/etc/ssh/ssh_host_ed25519_key";

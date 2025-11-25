@@ -77,10 +77,13 @@ in
         ];
 
         # vps on hetzner cloud
-        hzc-pango.tags = [
-          "hetzner"
-          "vm"
-        ];
+        hzc-pango = {
+          deploy.targetHost = "root@138.201.155.21";
+          tags = [
+            "hetzner"
+            "vm"
+          ];
+        };
 
         # desktop deployments
         simon-desktop = {
@@ -101,8 +104,10 @@ in
 
         simon-user = {
           module.name = "users";
+          module.input = "clan-core";
 
           roles.default.tags.desktop = { };
+          roles.default.machines.simon-desktop = { };
 
           roles.default.settings = {
             user = "simon";
@@ -167,7 +172,6 @@ in
             arr.settings.host = "10.0.0.110";
             media.settings.host = "10.0.0.111";
             nextcloud.settings.host = "10.0.0.112";
-            hzc-pango.settings.host = "138.201.155.21";
           };
         };
       };
