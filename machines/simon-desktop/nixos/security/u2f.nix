@@ -22,15 +22,22 @@
       };
     };
     services = {
-      login.u2fAuth = false; # Disable for first boot - secret file may not exist yet
-      greetd.u2fAuth = false; # Disable for first boot - secret file may not exist yet
+      login.u2fAuth = true;
+      greetd.u2fAuth = true;
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    yubikey-manager
-    yubikey-personalization
-    age-plugin-yubikey
-    yubioath-flutter
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      yubikey-manager
+      yubikey-personalization
+      age-plugin-yubikey
+      yubioath-flutter
+    ];
+
+    sessionVariables = {
+      # tell sops to use yubikey plugin for age decryption
+      SOPS_AGE_KEY_CMD = "age-plugin-yubikey --identity";
+    };
+  };
 }

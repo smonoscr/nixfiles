@@ -121,11 +121,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1764066385,
-        "narHash": "sha256-ojDULscYS5A/l5gcUZAFU1GWrdgAXNwuel2SrkAak3M=",
-        "rev": "519f9b90247cb3fb99ea17a2b7592eaf3ea4f85b",
+        "lastModified": 1764087755,
+        "narHash": "sha256-eDefOLWaWYpEJMFtlkcB13uEitMnfldRUJhUJJavJug=",
+        "rev": "e93ca7bc30905ac0da414d564f107659b78eaff8",
         "type": "tarball",
-        "url": "https://git.clan.lol/api/v1/repos/clan/clan-core/archive/519f9b90247cb3fb99ea17a2b7592eaf3ea4f85b.tar.gz"
+        "url": "https://git.clan.lol/api/v1/repos/clan/clan-core/archive/e93ca7bc30905ac0da414d564f107659b78eaff8.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -273,11 +273,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764081430,
-        "narHash": "sha256-zzSbmpBnl9cF1kR+r17wvRd/+RpBZ91lrk+HZHeiHnQ=",
+        "lastModified": 1764086558,
+        "narHash": "sha256-EZYKjLZGe1Lk1hNUvRs/2uXI7Tz4J98CHZ6GtICYtXU=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "c17bb9e171eae3979df658919512f54afd4f0602",
+        "rev": "4035c9cc5fe0942a42eb9779c6ba78b379522f7a",
         "type": "github"
       },
       "original": {
@@ -1285,11 +1285,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764082225,
-        "narHash": "sha256-1GbUEEwrYEo1tWS3cQMSf8KyNDQQ0vrmfaej318L1lQ=",
+        "lastModified": 1764086591,
+        "narHash": "sha256-8qN+epZQmqRmqd+FCN/Cxx19tUGxrhBpx6fS14CzM8M=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "3f08493134256e18d21a2d504e34b9b85ff562dd",
+        "rev": "5a247f9de4fda0d1a00e3ff3b381d57cb2eac4a2",
         "type": "github"
       },
       "original": {

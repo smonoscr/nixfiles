@@ -63,7 +63,7 @@ in
     };
 
     signing = {
-      key = "F6EBB0BC75FCBBA7";
+      key = "1394DCC0EC169ED4";
       format = "openpgp";
       signByDefault = true;
     };
