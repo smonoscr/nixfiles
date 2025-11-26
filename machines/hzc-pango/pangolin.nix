@@ -14,7 +14,15 @@
       group = "fossorial";
       mode = "0755";
     }
+    {
+      directory = "/var/lib/sops-nix";
+      mode = "0755";
+    }
   ];
+
+  fileSystems = {
+    "/var/lib/sops-nix".neededForBoot = true;
+  };
 
   services.pangolin = {
     baseDomain = "simonoscar.me";

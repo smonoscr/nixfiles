@@ -153,7 +153,7 @@
         "Media" = [
           {
             "Immich" = {
-              href = "https://photos.simonoscar.me";
+              href = "https://photos.osscar.me";
               icon = "immich.png";
               siteMonitor = "http://10.0.0.107:2283";
               widget = {
