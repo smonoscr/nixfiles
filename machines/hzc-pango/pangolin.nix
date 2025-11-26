@@ -19,7 +19,7 @@
   services.pangolin = {
     baseDomain = "simonoscar.me";
     dashboardDomain = "pangolin.simonoscar.me";
-    environmentFile = config.age.secrets.envs-hzx.path;
+    environmentFile = config.sops.secrets."hzc-pango.env".path;
 
     # add additional domains beyond the base domain
     #settings.domains = {

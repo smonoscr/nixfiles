@@ -5,15 +5,6 @@ let
   storageBoxPort = "23";
 in
 {
-  imports = [
-    ../secrets
-  ];
-
-  age.secrets = {
-    restic-encryption-password.generator.script = "alnum";
-    restic-ssh-privkey.generator.script = "ssh-ed25519";
-  };
-
   # add storage box ssh host key
   programs.ssh = {
     knownHosts."${storageBoxHost}" = {
@@ -29,10 +20,12 @@ in
 
     repository = "sftp://${storageBoxUser}@${storageBoxHost}:${storageBoxPort}/${config.networking.hostName}";
 
-    passwordFile = config.age.secrets.restic-encryption-password.path;
+    passwordFile = config.sops.secrets."restic-encryption-password".path;
 
     extraOptions = [
-      "sftp.command='ssh -p ${storageBoxPort} -i ${config.age.secrets.restic-ssh-privkey.path} -o IdentitiesOnly=yes -o ServerAliveInterval=60 -o ServerAliveCountMax=3 ${storageBoxUser}@${storageBoxHost} -s sftp'"
+      "sftp.command='ssh -p ${storageBoxPort} -i ${
+        config.sops.secrets."restic-ssh-key".path
+      } -o IdentitiesOnly=yes -o ServerAliveInterval=60 -o ServerAliveCountMax=3 ${storageBoxUser}@${storageBoxHost} -s sftp'"
     ];
 
     # schedule

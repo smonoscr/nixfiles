@@ -1,18 +1,10 @@
-{ inputs, ... }:
+{ ... }:
 {
-  imports = [
-    ../../modules/secrets
-  ];
+  sops.secrets = {
+    "immich.env" = { };
 
-  age.secrets = {
-    immich-envs = {
-      rekeyFile = "${inputs.nixsecrets}/agenix/nixinfra/immich/envs.age";
-    };
-    immich-oauth-client-id = {
-      rekeyFile = "${inputs.nixsecrets}/agenix/nixinfra/immich/oauth-client-id.age";
-    };
-    immich-oauth-client-secret = {
-      rekeyFile = "${inputs.nixsecrets}/agenix/nixinfra/immich/oauth-client-secret.age";
-    };
+    "immich-oidc-client-secret" = { };
+
+    "immich-oidc-client-id" = { };
   };
 }

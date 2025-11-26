@@ -10,7 +10,7 @@
     host = "10.0.0.107";
     port = 2283;
     mediaLocation = "/mnt/immich";
-    secretsFile = config.age.secrets.immich-envs.path;
+    secretsFile = config.sops.secrets."immich.env".path;
 
     openFirewall = true;
 
@@ -58,8 +58,8 @@
         issuerUrl = "https://auth.simonoscar.me";
         scope = "openid email profile";
         buttonText = "login with passkey";
-        clientId._secret = config.age.secrets.immich-oauth-client-id.path;
-        clientSecret._secret = config.age.secrets.immich-oauth-client-secret.path;
+        clientId._secret = config.sops.secrets."immich-oidc-client-id".path;
+        clientSecret._secret = config.sops.secrets."immich-oidc-client-secret".path;
         autoRegister = true;
         autoLaunch = false;
 
