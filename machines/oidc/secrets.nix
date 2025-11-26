@@ -1,12 +1,6 @@
-{ inputs, ... }:
+{ ... }:
 {
-  imports = [
-    ../../modules/secrets
-  ];
-
-  age.secrets = {
-    envs = {
-      rekeyFile = "${inputs.nixsecrets}/agenix/nixinfra/pocket-id/envs.age";
-    };
+  sops.secrets = {
+    "pocket-id.env" = { };
   };
 }

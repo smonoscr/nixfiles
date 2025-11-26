@@ -1,21 +1,21 @@
 { pkgs, ... }:
-let
-  jellyfin-ffmpeg-overlay = (
-    _final: prev: {
-      jellyfin-ffmpeg = prev.jellyfin-ffmpeg.override {
-        # Exact version depends on jellyfin-ffmpeg package
-        # In 24.11 it's ffmpeg_7-full
-        ffmpeg_7-full = prev.ffmpeg_7-full.override {
-          withMfx = false; # Older media driver
-          withVpl = true; # New driver for Arc GPUs
-          withUnfree = true;
-        };
-      };
-    }
-  );
-in
+#let
+#  jellyfin-ffmpeg-overlay = (
+#    _final: prev: {
+#      jellyfin-ffmpeg = prev.jellyfin-ffmpeg.override {
+#        # Exact version depends on jellyfin-ffmpeg package
+#        # In 24.11 it's ffmpeg_7-full
+#        ffmpeg_7-full = prev.ffmpeg_7-full.override {
+#          withMfx = false; # Older media driver
+#          withVpl = true; # New driver for Arc GPUs
+#          withUnfree = true;
+#        };
+#      };
+#    }
+#  );
+#in
 {
-  nixpkgs.overlays = [ jellyfin-ffmpeg-overlay ];
+  #nixpkgs.overlays = [ jellyfin-ffmpeg-overlay ];
 
   # jellyfin media server
   services.jellyfin = {

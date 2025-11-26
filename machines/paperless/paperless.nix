@@ -14,9 +14,9 @@
     # local postgresql database
     database.createLocally = true;
 
-    environmentFile = config.age.secrets.paperless-envs.path;
+    environmentFile = config.sops.secrets."paperless.env".path;
     # admin password from secrets
-    passwordFile = config.age.secrets.paperless-admin-password.path;
+    passwordFile = config.sops.secrets."admin-password".path;
 
     settings = {
       PAPERLESS_ADMIN_USER = "admin";

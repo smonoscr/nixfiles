@@ -16,7 +16,7 @@
 
     hostName = "nextcloud";
     config = {
-      adminpassFile = config.age.secrets.nextcloud-admin-pw.path;
+      adminpassFile = config.sops.secrets."admin-password".path;
       adminuser = "admin";
 
       dbtype = "pgsql";

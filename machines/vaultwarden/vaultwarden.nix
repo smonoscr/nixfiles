@@ -5,7 +5,7 @@
     dbBackend = "sqlite";
     #backupDir = "";
 
-    environmentFile = config.age.secrets.vaultwarden-envs.path;
+    environmentFile = config.sops.secrets."vaultwarden.env".path;
 
     config = {
       # server settings
@@ -22,8 +22,8 @@
       SSO_SIGNUPS_MATCH_EMAIL = true;
       SSO_AUTHORITY = "https://auth.simonoscar.me";
       SSO_PKCE = true;
-      SSO_CLIENT_ID = config.age.secrets.vaultwarden-oidc-client-id.path;
-      SSO_CLIENT_SECRET = config.age.secrets.vaultwarden-oidc-client-secret.path;
+      SSO_CLIENT_ID = config.sops.secrets."vaultwarden-oidc-client-id".path;
+      SSO_CLIENT_SECRET = config.sops.secrets."vaultwarden-oidc-client-secret".path;
 
       # admin panel (token in environmentFile)
       # ADMIN_TOKEN is set via environmentFile for security

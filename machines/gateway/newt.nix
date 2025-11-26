@@ -7,6 +7,6 @@
   # inputs.nixos-unstable!
   services.newt = {
     enable = true;
-    environmentFile = config.age.secrets.newt-envs.path;
+    environmentFile = config.sops.secrets."newt.env".path;
   };
 }

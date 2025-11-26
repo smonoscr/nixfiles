@@ -4,6 +4,7 @@
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
+      intel-ocl # Generic OpenCL support
       intel-media-driver # for broadwell and newer
       intel-compute-runtime
       vpl-gpu-rt # oneVPL (QSV) runtime

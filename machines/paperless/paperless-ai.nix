@@ -15,7 +15,7 @@
         OLLAMA_KEEP_ALIVE = "-1";
       };
 
-      environmentFiles = [ config.age.secrets.paperless-envs.path ];
+      environmentFiles = [ config.sops.secrets."paperless.env".path ];
 
       log-driver = "journald";
 

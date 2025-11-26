@@ -1,15 +1,8 @@
-{ inputs, ... }:
+{ ... }:
 {
-  imports = [
-    ../../modules/secrets
-  ];
+  sops.secrets = {
+    "admin-password" = { };
 
-  age.secrets = {
-    paperless-admin-password = {
-      rekeyFile = "${inputs.nixsecrets}/agenix/nixinfra/paperless/admin-password.age";
-    };
-    paperless-envs = {
-      rekeyFile = "${inputs.nixsecrets}/agenix/nixinfra/paperless/envs.age";
-    };
+    "paperless.env" = { };
   };
 }

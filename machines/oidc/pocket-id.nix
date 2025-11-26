@@ -5,7 +5,7 @@
 {
   services.pocket-id = {
     enable = true;
-    environmentFile = config.age.secrets.envs.path;
+    environmentFile = config.sops.secrets."pocket-id.env".path;
     settings = {
       APP_URL = "https://auth.simonoscar.me";
       TRUST_PROXY = true;

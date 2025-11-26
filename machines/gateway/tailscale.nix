@@ -3,7 +3,7 @@ _: {
     tailscale = {
       enable = true;
       openFirewall = true;
-      extraSetFlags = [ "--advertise-routes=10.0.0.0/24,192.168.10.0/24" ];
+      extraSetFlags = [ "--advertise-routes=10.0.0.0/24" ];
       interfaceName = "userspace-networking"; # The interface name for tunnel traffic. Use “userspace-networking” (beta) to not use TUN.
     };
   };

@@ -1,6 +1,6 @@
 { ... }:
 {
   sops.secrets = {
-    "pangolin-envs" = { };
+    "pangolin.env" = { };
   };
 }

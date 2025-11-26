@@ -6,19 +6,16 @@
       group = "grafana";
     };
 
-    "grafana-oauth-client-id" = {
+    "grafana-oidc-client-id" = {
       owner = "grafana";
       group = "grafana";
     };
 
-    "grafana-oauth-client-secret" = {
+    "grafana-oidc-client-secret" = {
       owner = "grafana";
       group = "grafana";
     };
 
-    "pve-exporter-envs" = {
-      owner = "pve-exporter";
-      group = "pve-exporter";
-    };
+    "pve-exporter.env" = { };
   };
 }

@@ -9,7 +9,7 @@
       "/var/lib/paperless-gpt/pdf:/app/pdf:U"
     ];
 
-    environmentFiles = [ config.age.secrets.paperless-envs.path ];
+    environmentFiles = [ config.sops.secrets."paperless.env".path ];
 
     environment = {
       PAPERLESS_BASE_URL = "http://localhost:28981";

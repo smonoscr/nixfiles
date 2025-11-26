@@ -21,7 +21,7 @@ in
 
     baseDomain = "osscar.me";
     dashboardDomain = "rproxy.osscar.me";
-    environmentFile = config.sops.secrets.pangolin-envs.path;
+    environmentFile = config.sops.secrets."pangolin.env".path;
 
     # configure dns provider for dns-01 challenge
     # see: https://doc.traefik.io/traefik/https/acme/#providers
@@ -64,5 +64,5 @@ in
   };
 
   # ensure traefik service gets dns provider credentials
-  services.traefik.environmentFiles = [ config.sops.secrets.pangolin-envs.path ];
+  services.traefik.environmentFiles = [ config.sops.secrets."pangolin.env".path ];
 }
