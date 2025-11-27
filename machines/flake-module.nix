@@ -20,61 +20,103 @@ in
     inventory = {
       machines = {
         # lxc containers on px-prd1
-        arr.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        backup.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        dashboard.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        fileserver.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        gateway.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        immich.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        llm.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        media.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        monitoring.tags = [
-          "px-prd1"
-        ];
-        nextcloud.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        oidc.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        paperless.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        reverseproxy.tags = [
-          "px-prd1"
-          "lxc"
-        ];
-        vaultwarden.tags = [
-          "px-prd1"
-          "lxc"
-        ];
+        arr = {
+          deploy.targetHost = "root@10.0.0.110";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        backup = {
+          deploy.targetHost = "root@10.0.0.98";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        dashboard = {
+          deploy.targetHost = "root@10.0.0.103";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        fileserver = {
+          deploy.targetHost = "root@10.0.0.104";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        gateway = {
+          deploy.targetHost = "root@10.0.0.100";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        immich = {
+          deploy.targetHost = "root@10.0.0.107";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        llm = {
+          deploy.targetHost = "root@10.0.0.106";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        media = {
+          deploy.targetHost = "root@10.0.0.111";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        monitoring = {
+          deploy.targetHost = "root@10.0.0.102";
+          tags = [
+            "px-prd1"
+          ];
+        };
+        nextcloud = {
+          deploy.targetHost = "root@10.0.0.112";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        oidc = {
+          deploy.targetHost = "root@10.0.0.105";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        paperless = {
+          deploy.targetHost = "root@10.0.0.108";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        reverseproxy = {
+          deploy.targetHost = "root@10.0.0.101";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
+        vaultwarden = {
+          deploy.targetHost = "root@10.0.0.109";
+          tags = [
+            "px-prd1"
+            "lxc"
+          ];
+        };
 
         # vps on hetzner cloud
         hzc-pango = {
@@ -153,25 +195,6 @@ in
           module = {
             name = "trusted-nix-caches";
             input = "clan-core";
-          };
-        };
-
-        internet = {
-          roles.default.machines = {
-            backup.settings.host = "10.0.0.98";
-            gateway.settings.host = "10.0.0.100";
-            reverseproxy.settings.host = "10.0.0.101";
-            monitoring.settings.host = "10.0.0.102";
-            dashboard.settings.host = "10.0.0.103";
-            fileserver.settings.host = "10.0.0.104";
-            oidc.settings.host = "10.0.0.105";
-            llm.settings.host = "10.0.0.106";
-            immich.settings.host = "10.0.0.107";
-            paperless.settings.host = "10.0.0.108";
-            vaultwarden.settings.host = "10.0.0.109";
-            arr.settings.host = "10.0.0.110";
-            media.settings.host = "10.0.0.111";
-            nextcloud.settings.host = "10.0.0.112";
           };
         };
       };
