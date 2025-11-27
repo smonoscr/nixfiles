@@ -1092,22 +1092,6 @@
         "type": "github"
       }
     },
-    "nixsecrets": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1764193408,
-        "narHash": "sha256-libtA8rWqwmYNOjAiKjakiwmzmXQBrxk3aCT4A2PgC0=",
-        "ref": "refs/heads/main",
-        "rev": "eba73ecdd5e6ad0e3910064ac830b1eff63061e4",
-        "revCount": 186,
-        "type": "git",
-        "url": "ssh://git@codeberg.org/smonoscr/nixsecrets.git"
-      },
-      "original": {
-        "type": "git",
-        "url": "ssh://git@codeberg.org/smonoscr/nixsecrets.git"
-      }
-    },
     "noctalia": {
       "inputs": {
         "nixpkgs": [
@@ -1210,7 +1194,6 @@
         "nix-gaming": "nix-gaming",
         "nixos-generators": "nixos-generators",
         "nixpkgs": "nixpkgs_2",
-        "nixsecrets": "nixsecrets",
         "noctalia": "noctalia",
         "proxmox-nixos": "proxmox-nixos",
         "quickshell": "quickshell",
@@ -1409,11 +1392,11 @@
         "rev": "257e775e3b058e2d021890feb847c7167e53bbe4",
         "revCount": 5,
         "type": "git",
-        "url": "ssh://git@codeberg.org/smonoscr/wallpaper.git"
+        "url": "ssh://git@codeberg.org/osscar/wallpaper.git"
       },
       "original": {
         "type": "git",
-        "url": "ssh://git@codeberg.org/smonoscr/wallpaper.git"
+        "url": "ssh://git@codeberg.org/osscar/wallpaper.git"
       }
     },
     "xdph": {

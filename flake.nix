@@ -104,12 +104,8 @@
     };
 
     # priv repos
-    nixsecrets = {
-      url = "git+ssh://git@codeberg.org/smonoscr/nixsecrets.git";
-      flake = false;
-    };
     wallpaper = {
-      url = "git+ssh://git@codeberg.org/smonoscr/wallpaper.git";
+      url = "git+ssh://git@codeberg.org/osscar/wallpaper.git";
       flake = false;
     };
   };
