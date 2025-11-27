@@ -74,11 +74,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1764220269,
-        "narHash": "sha256-rSSmhTCjfZLZog3qO6Q5C58pINmDv8EheGUhcojxd6c=",
-        "rev": "c70c04d09477ceee5820a8da4d9c0d1b50eb6cc6",
+        "lastModified": 1764248474,
+        "narHash": "sha256-cnwbkEQX8KQkl/Vp2TDo0zNYseP8y2rp6ZY5OrxXGnU=",
+        "rev": "0ced96947b9c822e4d8e1dfd88f377d83340bd36",
         "type": "tarball",
-        "url": "https://git.clan.lol/api/v1/repos/clan/clan-core/archive/c70c04d09477ceee5820a8da4d9c0d1b50eb6cc6.tar.gz"
+        "url": "https://git.clan.lol/api/v1/repos/clan/clan-core/archive/0ced96947b9c822e4d8e1dfd88f377d83340bd36.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -1099,11 +1099,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764232440,
-        "narHash": "sha256-cDMlYVMwUToIf60ufZLQ2X5at2JlCJIjMjyyIxFG53M=",
+        "lastModified": 1764252019,
+        "narHash": "sha256-sDf0XvoS+i15HlK6RCI3sbid3bXxDIwZAkbpZjAMd+8=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "778dce21c146b3495ad80be1fbbdc73bf3f96ae5",
+        "rev": "2fe915e3bc476ab045c6639857a693f32dd215ac",
         "type": "github"
       },
       "original": {

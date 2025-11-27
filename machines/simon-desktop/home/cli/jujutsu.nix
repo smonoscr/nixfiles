@@ -1,7 +1,7 @@
 _:
 let
-  email = "smonoscr@noreply.codeberg.org";
-  name = "smonoscr";
+  email = "osscar@noreply.codeberg.org";
+  name = "osscar";
 in
 {
   imports = [
